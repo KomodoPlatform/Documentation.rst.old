@@ -2,17 +2,18 @@
 Installing and Using Komodo Platform (barterDEX)
 ************************************************
 
-**This guide is intended for developers and advanced users (Linux & MacOS) only using command line interface (CLI). GUI users, get `BarterDEX GUI`_. For Windows installations please refer to this guide and use this link for the binaries.**
+**This guide is intended for developers and advanced users (Linux & MacOS) only using command line interface (CLI). GUI users, get** `BarterDEX GUI`_ **. For Windows installations please refer to this guide and use this link for the binaries.**
 
 Komodo Platform (barterDEX) is capable of working with Electrum servers. This means it is not necessary to download blockchain data in your computer. As a matter of fact, you don't need even download and run native coin wallet or daemon. Check the list of current Electrum servers here: Electrum Servers List.
 
 If you however choose to use a native coin daemon, please make sure it is fully synced. For Komodo and other assetchains use the latest Agama installer or use the KomodoOcean-QT.
 
-For a list of currently supported native coins and instructions for the coin specific configuration file, see support.supernet.org/support/solutions/articles/29000014808-installation-script-for-various-coins
+For a list of currently supported native coins and instructions for the coin specific configuration file, see `Supported Native Coins`_
 
 You may want to back up your system or clone it after everything is synced and running correctly BEFORE you start installing coin daemons.
 
 .. _BarterDEX GUI : https://github.com/KomodoPlatform/BarterDEX
+.. _Supported Native Coins : https://support.supernet.org/support/solutions/articles/29000014808-installation-script-for-various-coins
 
 TODO: Deal with Links in the above paragraph
 
@@ -139,6 +140,6 @@ Stopping ``killing marketmaker`` / Close the app
 
 If you want to close barterDEX, issue ``pkill -15 marketmaker`` every time. This ensures all BarterDEX process is killed safely.
 
-**Check the doc** :doc:`BarterDEX API Summary by Category <barterDEX-API>` **for more info on different API calls that barterDEX supports. e.g.: buy, sell, orderbook, balance etc. Just edit them for your liking and run them in 2nd terminal.**
+**Check the doc** :doc:`BarterDEX API:Summary by Category <barterDEX-API>` **for more info on different API calls that barterDEX supports. e.g.: buy, sell, orderbook, balance etc. Just edit them for your liking and run them in 2nd terminal.**
 
 
