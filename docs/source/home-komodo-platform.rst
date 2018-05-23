@@ -1,59 +1,21 @@
+****
+HOME
+****
+
 Welcome to the KomodoPlatform wiki!
 
-Here you should find a list of important topics related to installing and using barterDEX (Komodo Platform).
+Here you should find a list of important guides related to installing and using barterDEX (Komodo Platform).
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Install
 
-Install
-=======
+   komodoplatform/install-barterDEX-CLI
+   komodoplatform/install-ETOMIC-barterDEX
 
-`Installing Komodo Platform (barterDEX)`
-`Installing BarterDEX for ETH/ERC20 Token swaps (Experimental)`
+.. toctree::
+   :maxdepth: 1
+   :caption: Compile Static ``marketmaker`` and ``iguana``
 
-Compile Static ``marketmaker`` and ``iguana``
-=============================================
-
-`Compile marketmaker Binary with Static nanomsg in Linux`
-`Compile marketmaker Binary with Static nanomsg in MacOS`
-
-Use
-===
-
-:doc:`barterDEX API Summary <api_summary.rst>`
-
-`BarterDEX Documentation by @jorian (will be updated when he gets free time)`_
-
-`Enabling Native Wallet Coins`
-
-`Enabling Electrum Wallet Coins`
-
-`Electrum Servers List`
-
-`Funding the Smart Adress`
-
-`Trade`
-
-`0conf Deposit & Claim`
-
-`Manually Claim Legacy 0conf Deposits`
-
-`Extracting WIF/Private Key from Passphrase`
-
-`How to be LP node?`
-
-`Private swap using barterDEX`
-
-.. _BarterDEX Documentation by @jorian (will be updated when he gets free time): https://barterdex.readthedocs.io
-
-Setup Guide
-===========
-
-`Setup LP Node using barterDEX CLI`
-
-`Setup ElectrumX server`
-
-`barterDEX Network Optimizations`
-
-List of all KomodoPlatform projects
-===================================
-
-`List of all KomodoPlatform Project links`
+   komodoplatform/compile-marketmaker-binary-with-static-nanomsg-in-Linux
+   komodoplatform/compile-marketmaker-binary-with-static-nanomsg-in-MacOS

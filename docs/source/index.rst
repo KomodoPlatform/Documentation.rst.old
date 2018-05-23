@@ -9,7 +9,7 @@ Welcome to Komodo Platform's documentation!
 .. _whitepapers:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Whitepapers
 
    dPoW-Whitepaper
@@ -17,12 +17,10 @@ Welcome to Komodo Platform's documentation!
    JUMBLR-Whitepaper
    dICO-Whitepaper
 
-Here you should find a list of important guides related to installing and using BarterDEX (Komodo Platform).
-
 .. _install-build:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Install and Build
 
    home-komodo-platform
@@ -35,36 +33,13 @@ Here you should find a list of important guides related to installing and using 
 .. _developers:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Developers
 
-   barterDEX-API
+   komodoplatform/barterDEX-API.rst
    create-assetchain
    iguana-API
    doing-PAX-deposits
    using-JUMBLR
    using-Key-Value
    0conf-swaps
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-..
-Indices and tables
-==================
-..
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
