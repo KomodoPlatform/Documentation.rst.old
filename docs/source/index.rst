@@ -6,14 +6,45 @@
 Welcome to Komodo Platform's documentation!
 ===========================================
 
-.. _komodo-platform:
+.. _whitepapers:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Komodo Platform
+   :caption: Whitepapers
 
-   home_komodo_platform
+   dPoW-Whitepaper
+   barterDEX-Whitepaper-v2
+   JUMBLR-Whitepaper
+   dICO-Whitepaper
 
+Here you should find a list of important guides related to installing and using BarterDEX (Komodo Platform).
+
+.. _install-build:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Install and Build
+
+   home-komodo-platform
+   installing-komodo
+   install-barterDEX-CLI
+   install-ETOMIC-barterDEX
+   ElectrumX-guide-for-barterDEX
+   barterDEX-network-optimisation
+
+.. _developers:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Developers
+
+   barterDEX-API
+   create-assetchain
+   iguana-API
+   doing-PAX-deposits
+   using-JUMBLR
+   using-Key-Value
+   0conf-swaps
 
 
 
