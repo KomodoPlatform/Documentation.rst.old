@@ -78,6 +78,8 @@ Install ``LevelDB``
 Delete local ``nanomsg`` from home directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. code-block:: shell
+
 	cd ~
 	rm -rf nanomsg
 
