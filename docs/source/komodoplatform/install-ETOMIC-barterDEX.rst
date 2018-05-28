@@ -10,7 +10,7 @@ Step by Step Setup Guide for ETH (ERC20) Token Swap Using barterDEX
 
 	**THIS GUIDE IS HIGHLY EXPERIMENTAL, DON'T TRY UNLESS YOU KNOW WHAT YOU ARE DOING!**
 
-**This guide will set you up with ETH swaps in BarterDEX. If you are not looking for non ETH based token swap, please follow this installation guide. The project is still in development. It is for ETH testnet, but mainnet for the BTC protocol coins. This guide may change accordingly in the future. Make sure you are following the latest guide before reporting anything is broken.**
+**This guide will set you up with ETH swaps in BarterDEX. If you are not looking for non ETH based token swap, please follow this** :doc:`installation guide </komodoplatform/install-barterDEX-CLI>` **. The project is still in development. It is for ETH testnet, but mainnet for the BTC protocol coins. This guide may change accordingly in the future. Make sure you are following the latest guide before reporting anything is broken.**
 
 Installation steps
 ==================
@@ -98,12 +98,16 @@ To install latest cmake 3.10.2, gcc 7.3.0 and Leveldb 1.20.2
 To upgrade to latest cmake 3.10.2, gcc 7.3.0 and Leveldb 1.20.2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. code-block:: shell
+
 	brew upgrade cmake
 	brew upgrade gcc
 	brew ugprade leveldb
 
 To check which version of cmake, gcc and leveldb
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: shell
 
 	brew info cmake
 	brew info gcc
@@ -239,6 +243,6 @@ Example ``enable`` script:
 	curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"enable\",\"coin\":\"JST\"}"
 	curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"enable\",\"coin\":\"ETH\"}"
 
-And, rest of things are same as normal BarterDEX. More helpful info using the following links: :doc:`Komodo Platform HOME <>` , :doc:BarterDEX API Summary HOME <>` , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Enabling-Native-Wallet-Coins-for-Trading , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Enabling-Electrum-Wallet-Coins , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Electrum-servers-list , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Trade
+And, rest of things are same as normal BarterDEX. More helpful info is available in the following links: :doc:`Komodo Platform HOME </home-komodo-platform>`, :doc:`BarterDEX API Summary </komodoplatform/barterDEX-API>` , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Enabling-Native-Wallet-Coins-for-Trading , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Enabling-Electrum-Wallet-Coins , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Electrum-servers-list , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Trade
 
 .. _this faucet : http://atomicexplorer.com/#/faucet

@@ -2,7 +2,7 @@
 Installing and Using Komodo Platform (barterDEX)
 ************************************************
 
-**This guide is intended for developers and advanced users (Linux & MacOS) only using command line interface (CLI). GUI users, get** `BarterDEX GUI`_ **. For Windows installations please refer to this** :doc:`guide <install-barterDEX-CLI-windows>` **and use this** `link for the binaries.`_
+**This guide is intended for developers and advanced users (Linux & MacOS) only using command line interface (CLI). GUI users, get** `BarterDEX GUI`_ **. For Windows installations please refer to this** :doc:`guide </komodoplatform/install-barterDEX-CLI-windows>` **and use this** `link for the binaries.`_
 
 Komodo Platform (barterDEX) is capable of working with Electrum servers. This means it is not necessary to download blockchain data in your computer. As a matter of fact, you don't need even download and run native coin wallet or daemon. Check the list of current Electrum servers here: `Electrum Servers List.`_
 
@@ -144,6 +144,6 @@ Stopping ``killing marketmaker`` / Close the app
 
 If you want to close barterDEX, issue ``pkill -15 marketmaker`` every time. This ensures all BarterDEX process is killed safely.
 
-**Check the doc** :doc:`BarterDEX API:Summary by Category <barterDEX-API>` **for more info on different API calls that barterDEX supports. e.g.: buy, sell, orderbook, balance etc. Just edit them for your liking and run them in 2nd terminal.**
+**Check the doc** :doc:`BarterDEX API:Summary by Category </komodoplatform/barterDEX-API>` **for more info on different API calls that barterDEX supports. e.g.: buy, sell, orderbook, balance etc. Just edit them for your liking and run them in 2nd terminal.**
 
 
