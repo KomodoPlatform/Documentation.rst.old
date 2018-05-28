@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Komodo Platform's documentation!
-===========================================
+Welcome to Komodo Platform's documentation!(WORK IN PROGRESS)
+=============================================================
+
+Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://github.com/KomodoPlatform/komodo/wiki while these docs get updated.
 
 .. _whitepapers:
 
