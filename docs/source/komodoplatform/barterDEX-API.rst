@@ -1,5 +1,7 @@
-API Summary by Category
-=======================
+BarterDEX API Summary by Category
+=================================
+
+:doc:`BarterDEX-CLI Installation guide <install-barterDEX-CLI>`
 
 List of API by Category
 -----------------------
