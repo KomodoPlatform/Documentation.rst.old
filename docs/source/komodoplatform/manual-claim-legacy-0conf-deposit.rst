@@ -47,17 +47,26 @@ Copy these files inside ``~/SuperNET/iguana/DB/`` dir to be used by the CLI.
 Users with txid only
 ^^^^^^^^^^^^^^^^^^^^
 
-This can be used by all users. You need to put the txid of the 0conf deposit in an instantdex.json file inside KomodoPlatform/iguana/DB/ dir. The content inside instantdex.json should look like following: ["d5705d948a5a4e0171acec3eb718ca1421ef998b37d0af5c37ac3b440898aef5"]. You can use multiple txid usig a , inbetween the txids. Once you start native KMD and run BarterDEX the deposit files will be created automatically.
+This can be used by all users. You need to put the ``txid`` of the 0conf deposit in an ``instantdex.json`` file inside ``~/SuperNET/iguana/DB/`` dir. The content inside ``instantdex.json`` should look like following:
+
+.. code-block::
+
+	["d5705d948a5a4e0171acec3eb718ca1421ef998b37d0af5c37ac3b440898aef5"]. 
+
+You can use multiple txid usig a ``,`` inbetween the txids. Once you start native KMD and run BarterDEX the deposit files will be created automatically.
 
 Process of claiming
-By now you should have all the deposit files ready inside KomodoPlatform/iguana/DB/ if you been following this guide without any errors. Now, is the time to claim them.
+===================
 
-Start KMD in native mode using Agama or komodod, let the blockchain load.
-Start BarterDEX by issuing ./client script in one terminal and let it running. Output from this terminal is very important for troubleshooting purposes.
-Open another terminal and use ./buy or any other script as the first API call which will not do anything except showing you coin wallet smartaddress and info.
-KMD will be activated automatically if you are running native mode.
-Verify you have the deposits working by issuing ./balance script for KMD smarataddress. It will show you zcredits and the amount in the output.
-Use ./claim script. This will claim your 0conf deposit. You may have to wait some time to get back your deposit as this may not be instant.
-Useful Links: KomodoPlatform/KomodoPlatform/wiki KomodoPlatform/KomodoPlatform/wiki/Processing-InstantDEX-swap-on-barterDEX
+By now you should have all the deposit files ready inside ``~/SuperNET/iguana/DB/`` if you been following this guide without any errors. Now, is the time to claim them.
+
+#. Start KMD in native mode using Agama or ``komodod``, let the blockchain load.
+#. Start BarterDEX by issuing ``./client`` script in one terminal and let it running. Output from this terminal is very important for troubleshooting purposes.
+#. Open another terminal and use ``./buy`` or any other script as the first API call which will not do anything except showing you coin wallet smartaddress and info.
+#. KMD will be activated automatically if you are running native mode.
+#. Verify you have the deposits working by issuing ``./balance`` script for KMD smarataddress. It will show you ``zcredits`` and the amount in the output.
+#. Use ``./claim`` script. This will claim your 0conf deposit. You may have to wait some time to get back your deposit as this may not be instant.
+
+Useful Links: :doc:`Processing InstantDEX swap on barterDEX <0conf-deposit-claim>`
 
 
