@@ -14,10 +14,10 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    :maxdepth: 1
    :caption: Whitepapers
 
-   dPoW-Whitepaper
-   barterDEX-Whitepaper-v2
-   JUMBLR-Whitepaper
-   dICO-Whitepaper
+   /whitepaper/dPoW-Whitepaper
+   /whitepaper/barterDEX-Whitepaper-v2
+   /whitepaper/JUMBLR-Whitepaper
+   /whitepaper/dICO-Whitepaper
 
 .. _install-build:
 
@@ -26,11 +26,11 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    :caption: Install and Build
 
    home-komodo-platform
-   installing-komodo
-   install-barterDEX-CLI
-   install-ETOMIC-barterDEX
-   ElectrumX-guide-for-barterDEX
-   barterDEX-network-optimisation
+   /komodo/installing-komodo
+   /komodoplatform/install-barterDEX-CLI
+   /komodoplatform/install-ETOMIC-barterDEX
+   /komodoplatform/ElectrumX-guide-for-barterDEX
+   /komodoplatform/barterDEX-network-optimisation
 
 .. _developers:
 
@@ -38,10 +38,11 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    :maxdepth: 1
    :caption: Developers
 
-   komodoplatform/barterDEX-API.rst
-   create-assetchain
+   /komodoplatform/barterDEX-API.rst
+   /komodo/komodo-API.rst
    iguana-API
-   doing-PAX-deposits
-   using-JUMBLR
-   using-Key-Value
-   0conf-swaps
+   /komodoplatform/create-assetchain
+   /komodoplatform/doing-PAX-deposits
+   /komodoplatform/using-JUMBLR
+   /komodoplatform/using-Key-Value
+   /komodoplatform/0conf-swaps
