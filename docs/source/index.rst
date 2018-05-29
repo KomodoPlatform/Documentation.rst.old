@@ -8,6 +8,19 @@ Welcome to Komodo Platform's documentation!(WORK IN PROGRESS)
 
 Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://github.com/KomodoPlatform/komodo/wiki while these docs get updated.
 
+.. _developers:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Docs for Developers
+
+   /komodoplatform/barterDEX-API.rst
+   /komodo/komodo-API.rst
+   iguana-API
+   komodo/create-Komodo-Assetchain
+   /komodoplatform/using-Key-Value
+   
+
 .. _whitepapers:
 
 .. toctree::
@@ -19,32 +32,64 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    /whitepaper/JUMBLR-Whitepaper
    /whitepaper/dICO-Whitepaper
 
+.. _quicklinks:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Quick-Links
+   
+   komodoplatform/list-all-KomodoPlatform-Project-links
+   home-komodo-platform
+   home-komodo
+   home-agama
+   
 .. _install-build:
 
 .. toctree::
    :maxdepth: 1
    :caption: Install and Build
 
-   home-komodo-platform
-   home-komodo
    /komodo/installing-komodo
    /komodoplatform/install-barterDEX-CLI
    /komodoplatform/install-ETOMIC-barterDEX
    /komodoplatform/install-barterDEX-CLI-windows
-   /komodoplatform/setup-electrumX-server
-   /komodoplatform/barterDEX-Network-Optimizations
 
-.. _developers:
+.. _setup:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Developers
+   :caption: Setups
+   
+   /komodoplatform/setup-electrumX-server
+   /komodoplatform/barterDEX-Network-Optimizations
 
-   /komodoplatform/barterDEX-API.rst
-   /komodo/komodo-API.rst
-   iguana-API
-   komodo/create-Komodo-Assetchain
-   /komodoplatform/doing-PAX-deposits
+.. _using:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Using Komodo Platform
+
    /komodo/using-JUMBLR
-   /komodoplatform/using-Key-Value
+   /komodoplatform/doing-PAX-deposits
    /komodoplatform/0conf-deposit-claim
+
+.. _notorynodes:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Notory Nodes
+
+   notorynode/setup-Komodo-Notory-Node
+   notorynode/security-setup-Komodo-Notory-Node
+   notorynode/updating-Komodo-Notory-Node
+   notorynode/monitoring-Komodo-Notory-Node
+   notorynode/assetchains-guide-Komodo-Notory-Node
+   
+.. _testing:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: For testers
+
+   testing/test-komodo-source-jl777-branch
+   testing/debug-Komodo
