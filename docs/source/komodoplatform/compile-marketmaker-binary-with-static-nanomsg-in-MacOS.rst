@@ -12,8 +12,8 @@ Install Dependency packages:
 	sudo apt-get update
 	sudo apt-get install cmake git libcurl4-openssl-dev build-essential
 
-Install nanomsg
----------------
+Install ``nanomsg``
+-------------------
 
 You'll need to install ``homebrew`` (Google how to do it)
 

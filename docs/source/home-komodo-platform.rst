@@ -1,10 +1,10 @@
-****
-HOME
-****
+*************************
+HOMEPAGE - KomodoPlatform
+*************************
 
 Welcome to the KomodoPlatform wiki!
 
-Here you should find a list of important guides related to installing and using barterDEX (Komodo Platform).
+Here you can find a list of important documentation related to installing and using barterDEX (Komodo Platform).
 
 .. toctree::
    :maxdepth: 1
@@ -35,8 +35,6 @@ Here you should find a list of important guides related to installing and using 
    komodoplatform/0conf-deposit-claim
    komodoplatform/manual-claim-legacy-0conf-deposit
    komodoplatform/extract-wif-privkey-from-passphrase
-   komodoplatform/how-to-be-LP-node
-   komodoplatform/private-swap-using-barterDEX
    komodoplatform/using-remote-narketmaker-binary-with-GUI
 
 .. toctree::
@@ -44,6 +42,7 @@ Here you should find a list of important guides related to installing and using 
    :caption: Setup Guides
 
    komodoplatform/setup-LP-node-using-barterDEX-CLI
+   komodoplatform/private-swap-using-barterDEX
    komodoplatform/setup-electrumX-server
    komodoplatform/barterDEX-Network-Optimizations
 
