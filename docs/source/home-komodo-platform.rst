@@ -12,6 +12,7 @@ Here you should find a list of important guides related to installing and using 
 
    komodoplatform/install-barterDEX-CLI
    komodoplatform/install-ETOMIC-barterDEX
+   komodoplatform/install-barterDEX-CLI-windows
 
 .. toctree::
    :maxdepth: 1

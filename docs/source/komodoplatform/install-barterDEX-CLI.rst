@@ -1,10 +1,10 @@
-************************************************
-Installing and Using Komodo Platform (barterDEX)
-************************************************
+********************************************************************
+Installing and Using Komodo Platform (barterDEX) (in linux or MacOS)
+********************************************************************
 
 **This guide is intended for developers and advanced users (Linux & MacOS) only using command line interface (CLI). GUI users, get** `BarterDEX GUI`_ **. For Windows installations please refer to this** :doc:`guide </komodoplatform/install-barterDEX-CLI-windows>` **and use this** `link for the binaries.`_
 
-Komodo Platform (barterDEX) is capable of working with Electrum servers. This means it is not necessary to download blockchain data in your computer. As a matter of fact, you don't need even download and run native coin wallet or daemon. Check the list of current Electrum servers here: `Electrum Servers List.`_
+Komodo Platform (barterDEX) is capable of working with Electrum servers. This means it is not necessary to download blockchain data in your computer. As a matter of fact, you don't need even download and run native coin wallet or daemon. Check the list of current Electrum servers here: :doc:`Electrum Servers List </komodoplatform/electrum-servers-list>`.
 
 If you however choose to use a native coin daemon, please make sure it is fully synced. For Komodo and other assetchains use the `latest Agama installer`_ or use the `KomodoOcean-QT`_.
 
@@ -13,13 +13,10 @@ For a list of currently supported native coins and instructions for the coin spe
 You may want to back up your system or clone it after everything is synced and running correctly BEFORE you start installing coin daemons.
 
 .. _BarterDEX GUI : https://github.com/KomodoPlatform/BarterDEX
-.. _link for the binaries. : https://github.com/KomodoPlatform/BarterDEX/tree/v0.8/assets/bin/win64
-.. _Electrum Servers List. : https://github.com/KomodoPlatform/KomodoPlatform/wiki/Electrum-servers-list
+.. _link for the binaries. : https://github.com/KomodoPlatform/BarterDEX/tree/dev/assets/bin/win64
 .. _latest Agama installer : https://artifacts.supernet.org/latest/
 .. _KomodoOcean-QT : https://github.com/DeckerSU/komodo-qt/releases
 .. _Supported Native Coins : https://support.supernet.org/support/solutions/articles/29000014808-installation-script-for-various-coins
-
-TODO: Deal with Links in the above paragraph
 
 Installing Komodo Platform (barterDEX)
 ======================================
@@ -144,6 +141,6 @@ Stopping ``killing marketmaker`` / Close the app
 
 If you want to close barterDEX, issue ``pkill -15 marketmaker`` every time. This ensures all BarterDEX process is killed safely.
 
-**Check the doc** :doc:`BarterDEX API:Summary by Category </komodoplatform/barterDEX-API>` **for more info on different API calls that barterDEX supports. e.g.: buy, sell, orderbook, balance etc. Just edit them for your liking and run them in 2nd terminal.**
+**Check the doc**: :doc:`BarterDEX API:Summary by Category </komodoplatform/barterDEX-API>` **for more info on different API calls that barterDEX supports. e.g.: buy, sell, orderbook, balance etc. Just edit them for your liking and run them in 2nd terminal.**
 
 
