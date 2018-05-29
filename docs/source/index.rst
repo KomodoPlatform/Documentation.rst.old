@@ -26,6 +26,7 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    :caption: Install and Build
 
    home-komodo-platform
+   home-komodo
    /komodo/installing-komodo
    /komodoplatform/install-barterDEX-CLI
    /komodoplatform/install-ETOMIC-barterDEX

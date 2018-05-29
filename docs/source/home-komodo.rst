@@ -12,47 +12,35 @@ Here you will find more information about Komodo (KMD)
 
    komodo/install-Komodo-manually
    komodo/update-Komodo-manually
-   komodo/debug-Komodo
    komodo/useful-KMD-BTC-commands
+   komodo/komodo-API.rst
    komodo/create-Komodo-Assetchain
    komodo/Smartaddress-FAQ
    komodo/using-JUMBLR
 
 .. toctree::
    :maxdepth: 1
-   :caption: Compile Static marketmaker and iguana
+   :caption: Notory Node
 
-   komodoplatform/compile-marketmaker-binary-with-static-nanomsg-in-Linux
-   komodoplatform/compile-marketmaker-binary-with-static-nanomsg-in-MacOS
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Use
-
-   komodoplatform/barterDEX-API
-   Beginner friendly BarterDEX documantation by jorian (Work in Progress) <https://barterdex.readthedocs.io/en/latest/>
-   komodoplatform/enable-native-wallet-coins
-   komodoplatform/enable-electrum-wallet-coins
-   komodoplatform/electrum-servers-list
-   komodoplatform/funding-smart-address
-   komodoplatform/trade
-   komodoplatform/0conf-deposit-claim
-   komodoplatform/manual-claim-legacy-0conf-deposit
-   komodoplatform/extract-wif-privkey-from-passphrase
-   komodoplatform/using-remote-narketmaker-binary-with-GUI
+   notorynode/setup-Komodo-Notory-Node
+   notorynode/security-setup-Komodo-Notory-Node
+   notorynode/updating-Komodo-Notory-Node
+   notorynode/monitoring-Komodo-Notory-Node
+   notorynode/assetchains-guide-Komodo-Notory-Node
+   notorynode/useful-commands-Komodo-Notory-Node
 
 .. toctree::
    :maxdepth: 1
-   :caption: Setup Guides
+   :caption: Whitepapers
 
-   komodoplatform/setup-LP-node-using-barterDEX-CLI
-   komodoplatform/private-swap-using-barterDEX
-   komodoplatform/setup-electrumX-server
-   komodoplatform/barterDEX-Network-Optimizations
+   /whitepaper/dPoW-Whitepaper
+   /whitepaper/barterDEX-Whitepaper-v2
+   /whitepaper/JUMBLR-Whitepaper
+   /whitepaper/dICO-Whitepaper
 
 .. toctree::
    :maxdepth: 1
-   :caption: List of all KomodoPlatform projects
+   :caption: Testing & QA
 
-   komodoplatform/list-all-KomodoPlatform-Project-links
-	
+   testing/test-komodo-source-jl777-branch
+   testing/debug-Komodo
