@@ -31,8 +31,8 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    /komodoplatform/install-barterDEX-CLI
    /komodoplatform/install-ETOMIC-barterDEX
    /komodoplatform/install-barterDEX-CLI-windows
-   /komodoplatform/ElectrumX-guide-for-barterDEX
-   /komodoplatform/barterDEX-network-optimisation
+   /komodoplatform/setup-electrumX-server
+   /komodoplatform/barterDEX-Network-Optimizations
 
 .. _developers:
 
@@ -43,8 +43,8 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    /komodoplatform/barterDEX-API.rst
    /komodo/komodo-API.rst
    iguana-API
-   /komodoplatform/create-assetchain
+   komodo/create-Komodo-Assetchain
    /komodoplatform/doing-PAX-deposits
-   /komodoplatform/using-JUMBLR
+   /komodo/using-JUMBLR
    /komodoplatform/using-Key-Value
-   /komodoplatform/0conf-swaps
+   /komodoplatform/0conf-deposit-claim

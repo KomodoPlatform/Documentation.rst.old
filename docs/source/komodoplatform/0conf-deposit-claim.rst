@@ -7,7 +7,7 @@ InstantDEX SWAP
 
 Fastest swaps are here now as InstantDEX Swap. All nodes can be doing this at the same time, any ``bob`` to any ``alice``. All you need to have is some amount of KMD deposit for dynamic trust. It does require a deposit that matches your trade size.
 
-If you are selling 20 at at time, deposit 20. If you are selling 50 at a time, deposit 50. And, you can trade without any deposit if you want to wait for coin confirmations. Use ``InstantDEX swap``, just wait for deposit coin confirmations, you can sell all. The deposit just has to cover the amount you have pending in swaps, not anything regarding your total amount.
+If you are selling 20 at a time, deposit 20. If you are selling 50 at a time, deposit 50. And, you can trade without any deposit if you want to wait for coin confirmations. Use ``InstantDEX swap``, just wait for deposit coin confirmations, you can sell all. The deposit just has to cover the amount you have pending in swaps, not anything regarding your total amount.
 
 You can see your balance using the regular ``balance`` API. After verification your ``zcredits`` will be displayed with your KMD balance like this:
 
