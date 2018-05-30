@@ -36,7 +36,8 @@ Here you can find a list of important documentation related to installing and us
    komodoplatform/manual-claim-legacy-0conf-deposit
    komodoplatform/extract-wif-privkey-from-passphrase
    komodoplatform/using-remote-narketmaker-binary-with-GUI
-
+   /komodoplatform/using-Key-Value
+   
 .. toctree::
    :maxdepth: 1
    :caption: Setup Guides

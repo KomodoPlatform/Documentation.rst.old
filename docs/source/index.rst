@@ -3,10 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Komodo Platform's documentation!(WORK IN PROGRESS)
-=============================================================
-
-Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://github.com/KomodoPlatform/komodo/wiki while these docs get updated.
+Welcome to Komodo Platform's documentation!
+===========================================
 
 .. _developers:
 
@@ -49,7 +47,7 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    :maxdepth: 1
    :caption: Install and Build
 
-   /komodo/installing-komodo
+   /komodo/install-Komodo-manually
    /komodoplatform/install-barterDEX-CLI
    /komodoplatform/install-ETOMIC-barterDEX
    /komodoplatform/install-barterDEX-CLI-windows
@@ -60,6 +58,7 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    :maxdepth: 1
    :caption: Setups
    
+   komodoplatform/setup-LP-node-using-barterDEX-CLI
    /komodoplatform/setup-electrumX-server
    /komodoplatform/barterDEX-Network-Optimizations
 
@@ -70,8 +69,9 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    :caption: Using Komodo Platform
 
    /komodo/using-JUMBLR
-   /komodoplatform/doing-PAX-deposits
    /komodoplatform/0conf-deposit-claim
+   komodoplatform/using-remote-narketmaker-binary-with-GUI
+   Beginner friendly BarterDEX documantation by jorian (Work in Progress) <https://barterdex.readthedocs.io/en/latest/>
 
 .. _notorynodes:
 
@@ -80,10 +80,10 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
    :caption: Notory Nodes
 
    notorynode/setup-Komodo-Notory-Node
-   notorynode/security-setup-Komodo-Notory-Node
    notorynode/updating-Komodo-Notory-Node
-   notorynode/monitoring-Komodo-Notory-Node
+   notorynode/update-Komodo-manually
    notorynode/assetchains-guide-Komodo-Notory-Node
+   notorynode/useful-commands-Komodo-Notory-Node
    
 .. _testing:
 
