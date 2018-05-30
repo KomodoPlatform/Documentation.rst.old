@@ -92,7 +92,7 @@ html_theme_options = {'canonical_url': 'http://komodo-platform.readthedocs.io/en
     'collapse_navigation': False,
     'sticky_navigation': True,
     'stickysidebar': True,
-    'navigation_depth': 2}
+    'navigation_depth': 3}
     #'includehidden': True,
     #'titles_only': False}
 

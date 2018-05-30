@@ -10,14 +10,16 @@ Click any of the api options below to be taken to their summary.
 Then navigate using the links in the Navigation bar on the left side. Or press the ``Home`` button on your keyboard to come back to the top again. 
 As the docs are full of code samples and terminal outputs, it's best viewed on a laptop/desktop (i.e, any device that is bigger than a handheld).
 
-**barterDEX Operation**
+:ref:`List: BarterDEX Operation <BarterDEX Operation>`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :ref:`client`, :ref:`client-osx`, :ref:`convaddress`, :ref:`debug`, :ref:`disable`, 
 :ref:`electrum`, :ref:`enable`, :ref:`getcoin`, :ref:`getcoins`, :ref:`getpeers`, :ref:`getpeersIP`, 
 :ref:`help`, :ref:`jpg`, :ref:`millis`, :ref:`notarizations`, :ref:`parselog`, :ref:`run`, 
 :ref:`setpassphrase`, :ref:`sleep`, :ref:`stop`, :ref:`trust`, :ref:`trusted`
 
-**barterDEX Trading**
+:ref:`List: BarterDEX Trading <BarterDEX Trading>`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :ref:`autoprice`, :ref:`buy`, :ref:`getfee`, :ref:`getprices`, 
 :ref:`goal`, :ref:`goals`, :ref:`myprice`, :ref:`myprices`, 
@@ -28,17 +30,20 @@ As the docs are full of code samples and terminal outputs, it's best viewed on a
 
 > :ref:`autoprice-using-usdpeg`
 
-**Status / Info**
+:ref:`List: Status/Info <Status/Info>`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :ref:`getendpoint`, :ref:`pendings`, :ref:`swapstatus`, :ref:`baserelswaps`, 
 :ref:`pendingswaps`, :ref:`coinswaps`, :ref:`swapstatus-requestid-quoteid-pending`, :ref:`recentswaps`
 
-**TradeBots**
+:ref:`List: TradeBots <TradeBots>`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :ref:`bot_buy`, :ref:`bot_list`, :ref:`bot_pause`, :ref:`bot_resume`, :ref:`bot_sell`, 
 :ref:`bot_settings`, :ref:`bot_status`, :ref:`bot_stop`
 
-**Coin Wallet Features**
+:ref:`List: Coin Features <Coin Features>`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :ref:`balance`, :ref:`balances`, :ref:`calcaddress`, :ref:`fundvalue`, 
 :ref:`getrawtransaction`, :ref:`inuse`, :ref:`listtransactions`, 
@@ -46,15 +51,18 @@ As the docs are full of code samples and terminal outputs, it's best viewed on a
 :ref:`supernet`, :ref:`timelock-and-unlockedspend`, 
 :ref:`withdraw`, :ref:`eth_withdraw`, :ref:`opreturn`, :ref:`opreturndecrypt`
 
-**Statistics**
+:ref:`List: Statistics <Statistics>`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :ref:`guistats`, :ref:`pricearray`, :ref:`statsdisp`, :ref:`ticker`, :ref:`tradesarray`
 
-**Communication**
+:ref:`List: Communication <Communication>`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :ref:`deletemessages`, :ref:`getmessages`, :ref:`message`
 
-**Revenue Sharing/Operations**
+:ref:`List: Revenue Sharing/Operations <Revenue Sharing/Operations>`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :ref:`dividends`, :ref:`snapshot`, 
 :ref:`snapshot-balance`, :ref:`snapshot-loop`
@@ -2375,8 +2383,8 @@ Sample File Content:
 
 	curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"statsdisp\",\"starttime\":0,\"endtime\":0,\"pubkey\":\"a2593155464e37fcc88245780240a412a38cf3d316809445aad73f4e7789187d\"}"
 
-Status / Info
--------------
+Status/Info
+-----------
 
 getendpoint
 ^^^^^^^^^^^

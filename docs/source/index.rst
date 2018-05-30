@@ -93,3 +93,6 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
 
    testing/test-komodo-source-jl777-branch
    testing/debug-Komodo
+
+.. role:: underline
+    :class: underline
