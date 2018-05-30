@@ -12,7 +12,7 @@ Please visit https://github.com/KomodoPlatform/KomodoPlatform/wiki and https://g
 
 .. toctree::
    :maxdepth: 1
-   :caption: Docs for Developers
+   :caption: API Docs for Developers
 
    /komodoplatform/barterDEX-API.rst
    /komodo/komodo-API.rst
