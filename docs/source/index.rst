@@ -17,6 +17,8 @@ Welcome to Komodo Platform's documentation!
    iguana-API
    komodo/create-Komodo-Assetchain
    /komodoplatform/using-Key-Value
+   agama/add-Komodo-Assetchains-Agama-Desktop
+   agama/add-Bitcoin-Compatible-coin-Agama-Desktop
    
 
 .. _whitepapers:

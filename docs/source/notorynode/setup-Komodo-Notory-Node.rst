@@ -412,7 +412,7 @@ Build Chips
 	cd ~/chips3
 	./autogen.sh
 	./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" -without-gui -without-miniupnpc --disable-tests --disable-bench --with-gui=no
-make -j$(nproc)
+	make -j$(nproc)
 
 Create ``chips.conf`` file with random username, password, txindex and daemon turned on:
 
