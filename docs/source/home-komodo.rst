@@ -25,7 +25,7 @@ Here you will find more information about Komodo (KMD)
    notorynode/setup-Komodo-Notory-Node
    notorynode/security-setup-Komodo-Notory-Node
    notorynode/updating-Komodo-Notory-Node
-   notorynode/monitoring-Komodo-Notory-Node
+   notorynode/monitor-your-Komodo-Notory-Node
    notorynode/assetchains-guide-Komodo-Notory-Node
    notorynode/useful-commands-Komodo-Notory-Node
 
