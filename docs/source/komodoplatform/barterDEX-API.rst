@@ -1410,7 +1410,7 @@ Sample File Content:
 
 Sample Output:
 
-.. image:: _static/images/millis-sample-output.png
+.. image:: /_static/images/millis-sample-output.png
    :align: center
                       
 notarizations
