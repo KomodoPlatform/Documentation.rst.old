@@ -11,9 +11,17 @@ If you are selling 20 at a time, deposit 20. If you are selling 50 at a time, de
 
 You can see your balance using the regular ``balance`` API. After verification your ``zcredits`` will be displayed with your KMD balance like this:
 
-.. code-blocks:: shell
+.. code-block:: json
 
-	{"result":"success","coin":"KMD","address":"RANyPgfZZLhSjQB9jrzztSw66zMMYDZuxQ","balance":363.94840658,"zcredits":50}
+        [
+            {
+                "result": "success",
+                "coin": "KMD",
+                "address": "RANyPgfZZLhSjQB9jrzztSw66zMMYDZuxQ",
+                "balance": 363.94840658,
+                "zcredits": 50
+            }
+        ]
 
 instantdex_deposit
 ^^^^^^^^^^^^^^^^^^
@@ -26,7 +34,7 @@ It creates a binary file in DB with the unique deposit txids on an append only b
 
 Sample script:
 
-.. code-blocks:: shell
+.. code-block:: shell
 
 	curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"instantdex_deposit\",\"weeks\":1,\"amount\":10.0001,\"broadcast\":1}"
 
@@ -34,7 +42,7 @@ Sample script:
 
 Sample Output:
 
-.. code-blocks:: json
+.. code-block:: json
 
     {
         "rawtx": "01000000014c9758944771d62c731f9b06246ccd3301ea0e198a6bdbdcb22csdffasdc7010fgdfg00ffffffff0300ca9asdf17a914d9da8esdfsfbe957273f842617132c361546e7b8743420f00000000001976a91492816449164623c4e744009923356ff4832ba388ac998e6d07000000001976a9140c1007fc1f406a0a519886c0e59327e9c43a634088ac2b08175a",
