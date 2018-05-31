@@ -80,9 +80,7 @@ If you have docker installed you can get the BarterDEX API running on Windows, M
 
 	docker run -e PASSPHRASE="secure passphrase" -p 127.0.0.1:7783:7783 lukechilds/barterdex-api
 
-`GitHub link`_
-
-.. _GitHub link : "https://github.com/lukechilds/docker-barterdex-api"
+`GitHub link <https://github.com/lukechilds/docker-barterdex-api>`_
 
 Summary info for each API by Category:
 
