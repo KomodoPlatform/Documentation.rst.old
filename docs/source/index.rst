@@ -19,7 +19,7 @@ Welcome to Komodo Platform's documentation!
    /komodoplatform/using-Key-Value
    agama/add-Komodo-Assetchains-Agama-Desktop
    agama/add-Bitcoin-Compatible-coin-Agama-Desktop
-   
+   barterDEX/zeroconf-API-implementation-BarterDEX-GUI
 
 .. _whitepapers:
 
@@ -42,6 +42,7 @@ Welcome to Komodo Platform's documentation!
    home-komodo-platform
    home-komodo
    home-agama
+   home-barterdex
    
 .. _install-build:
 
@@ -63,6 +64,7 @@ Welcome to Komodo Platform's documentation!
    komodoplatform/setup-LP-node-using-barterDEX-CLI
    /komodoplatform/setup-electrumX-server
    /komodoplatform/barterDEX-Network-Optimizations
+   barterDEX/setup-Bitcoin-Cash-BarterDEX
 
 .. _using:
 
@@ -96,5 +98,3 @@ Welcome to Komodo Platform's documentation!
    testing/test-komodo-source-jl777-branch
    testing/debug-Komodo
 
-.. role:: underline
-    :class: underline
