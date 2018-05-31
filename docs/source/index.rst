@@ -20,6 +20,7 @@ Welcome to Komodo Platform's documentation!
    agama/add-Komodo-Assetchains-Agama-Desktop
    agama/add-Bitcoin-Compatible-coin-Agama-Desktop
    barterDEX/zeroconf-API-implementation-BarterDEX-GUI
+   barterDEX/MarketmakerErrors.rst
 
 .. _whitepapers:
 
