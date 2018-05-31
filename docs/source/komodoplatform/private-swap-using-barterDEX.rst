@@ -2,7 +2,7 @@
 Private Trading using BarterDEX
 *******************************
 
-You can use BarterDEX with 14,000+ different :ref:`netid`s. For private trading, both LP node and client need to use a same ``netid`` and ``seednode``. It is better to choose higher number netid (i.e.: 1000+).
+You can use BarterDEX with 14,000+ different :ref:`ref-netid`. For private trading, both LP node and client need to use a same ``netid`` and ``seednode``. It is better to choose higher number netid (i.e.: 1000+).
 
 LP Node
 -------

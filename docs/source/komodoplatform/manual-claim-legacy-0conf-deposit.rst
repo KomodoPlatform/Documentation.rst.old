@@ -49,7 +49,7 @@ Users with txid only
 
 This can be used by all users. You need to put the ``txid`` of the 0conf deposit in an ``instantdex.json`` file inside ``~/SuperNET/iguana/DB/`` dir. The content inside ``instantdex.json`` should look like following:
 
-.. code-block::
+.. code-block:: shell
 
 	["d5705d948a5a4e0171acec3eb718ca1421ef998b37d0af5c37ac3b440898aef5"]. 
 

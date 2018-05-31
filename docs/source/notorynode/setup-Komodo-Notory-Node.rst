@@ -354,6 +354,7 @@ Import BTC Priv Key (BTCwif)
 
 	bitcoin-cli importprivkey BTCwif &
 	# replace BTCwif with the key you received earlier (like: L3Qm5bB3frS2rdMNtmZrEMReRvYKMReALwxMaf00oz9YahvZaB4a)
+
 Run the following to confirm it has imported properly.
 
 .. code-block:: shell

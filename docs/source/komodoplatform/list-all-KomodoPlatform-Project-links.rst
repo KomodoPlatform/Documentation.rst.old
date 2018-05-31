@@ -19,6 +19,7 @@ Latest installer
 * Linux: https://artifacts.supernet.org/latest/installer_linux.html
 * macOS: https://artifacts.supernet.org/latest/installer_osx.html
 * Windows: https://artifacts.supernet.org/latest/installer_windows.html
+
 Agama Mobile
 ============
 
@@ -51,6 +52,7 @@ BarterDEX GUI
 
 * Source code: https://github.com/KomodoPlatform/BarterDEX
 * Release package: https://github.com/KomodoPlatform/BarterDEX/releases
+
 CHIPS
 =====
 

@@ -62,7 +62,7 @@ Install ``cmake 3.10.2``
 ``accept license`` when it asks "Do you want to include the subdirectory cmake-3.10.2-Linux-x86_64" choose ``NO``
 
 Install ``LevelDB``
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -76,7 +76,7 @@ Install ``LevelDB``
 	sudo ldconfig
 
 Delete local ``nanomsg`` from home directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 

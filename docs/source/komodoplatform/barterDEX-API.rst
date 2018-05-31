@@ -112,6 +112,8 @@ Sample File Contents:
 
 Fields that can be used: ``gui:nogui`` or ``gui:SimpleUI`` - to identify the CLI/GUI being used to run marketmaker. ``client:1`` - to start marketmaker as client mode. ``"userhome\":\"/${HOME#"/"`` - defines the data dir for barterDEX. DB dir contains PRICES, SWAPS, UNSPENTS and instantdex_deposit (0conf) files. ``passphrase:$passphrase`` - is to set the passphrase to run the marketmaker with, to run and login into marketmaker using WIF (Wallet Import Format) key instead of passphrase. You need to use the WIF key as passphrase inside ``passphrase`` file. barterDEX supports login using WIF Key for all supported coins instead of passphrase. ``wif:1`` - will display the passphrase's WIF during the first api return. ``rpcport:port`` - to change the 7782 port to other open port of choice.
 
+.. _ref-netid:
+
 netid
 ^^^^^
 

@@ -87,4 +87,3 @@ FAQ
 	* How much KV storage cost in it's transaction fee?
 	A. You pay a fee depending on key **and** value size. But it depends on which chain you want to store the kv-entry. You can use KMD and pay the fee in KMD or you can use KV chain and use it there. But each assetchain has the KV capability. So you could even use your own chain for it (due to costs).
 
-

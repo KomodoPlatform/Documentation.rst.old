@@ -46,8 +46,18 @@ You will need to edit this script based on the info the orderbook prints. The sc
 
 If you found an order in the orderbook with duration in the command, you should include that in the ``./buy`` method as well:
 
-.. code-block:: shell
- 	"{"userpass":"$userpass","method":"autotrade","duration":10000,"base":"REVS","rel":"KMD","relvolume":12.5,"price":10}"**
+.. code-block:: json
+
+    {
+        "userpass": "$userpass",
+        "method": "autotrade",
+        "duration": 10000,
+        "base": "REVS",
+        "rel": "KMD",
+        "relvolume": 12.5,
+        "price": 10
+    }
+        
 
 SELLING (bob utxos)
 ===================

@@ -125,7 +125,7 @@ And nothing works.
 .. image:: /_static/images/conemu-jq.png
    :align: center
 
-Also it is recommended to install `Far Manager <https://www.farmanager.com/index.php?l=en>`_ - this is a powerful console file manager for Windows, like Midnight Commander in *nix.
+Also it is recommended to install `Far Manager <https://www.farmanager.com/index.php?l=en>`_ - this is a powerful console file manager for Windows, like Midnight Commander in unix.
 
 4. What additional dependencies are required by marketmaker?
 

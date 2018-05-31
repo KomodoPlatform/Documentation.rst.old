@@ -47,7 +47,7 @@ Step 5 - Disable password login and root access
 
 	PermitRootLogin yes
 
-* Now find the following: ``PasswordAuthentication`` and set this to ``NO`. So it will look like this:
+* Now find the following: ``PasswordAuthentication`` and set this to ``NO``. So it will look like this:
 
 .. code-block:: shell
 
