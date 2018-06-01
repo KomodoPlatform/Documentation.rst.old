@@ -1,9 +1,9 @@
-README!
+# README!
 
 Documentation for https://komodo-platform.readthedocs.io/
 -----
 
-This documentation is being written using the Restructured Text(reST, .rst) format. To be hosted at http://komodo-platform.readthedocs.io/en/latest/ with the theme sphinx_rtd.
+This documentation is being written using the reStructuredText(reST, .rst) format. To be hosted at http://komodo-platform.readthedocs.io/en/latest/ with the theme sphinx_rtd.
 
 -----
 To suggest edits, fork this repo, edit your fork and submit a PR
@@ -20,11 +20,11 @@ git clone https://github.com/gcharang/KomodoPlatformdocs.git
 ```
 Add images to be used in the directory: docs/source/_static/images/
 
-The content of the document is in: docs/source/*.rst files
+The content of the documentation is in: docs/source/*.rst files
 
-To edit a section go to the appropriately named .rst file and make the changes.
+To edit a document go to the appropriately named .rst file and make the changes.
 
-To add a new section add a new .rst file to the directory docs/source/ and add the name of the file to index.rst
+To add a new document add a new .rst file in the directory docs/source/ (or create an appropriately named sub-directory) and add the name of the file (along with it's path relative to the position of index.rst) to index.rst
 
 index.rst keeps track of all the other files and is used to build the table of contents.
 

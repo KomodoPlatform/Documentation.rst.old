@@ -1,5 +1,5 @@
 ****************************
-Komodo - API - Docomentation
+Komodo - API - Documentation
 ****************************
 
 You can access this API while ``komodod`` is running. Just go to another terminal and run ``./komodo-cli help``.
