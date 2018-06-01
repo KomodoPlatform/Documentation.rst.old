@@ -29,13 +29,13 @@ Now, the other nodes which need to use the same Assetchain will need to connect 
 
 .. code-block:: shell
 
-	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<ipaddr of 1st node>
+	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<ipaddr of 1st node> -gen
 
 So, for example, the first node which spawned this new Assetchain had Public static IPv4 "123.123.123.123". The command for nodes connecting to this assetchain will look like this:
 
 .. code-block:: shell
 
-	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=123.123.123.123
+	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=123.123.123.123 -gen
 
 Secure this Assetchain with Delayed Proof of Work
 =================================================
