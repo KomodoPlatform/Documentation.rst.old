@@ -81,21 +81,190 @@ Addressindex
 getaddressbalance
 -----------------
 
+Returns the balance for an address(es) (requires addressindex to be enabled).
+
+Arguments:
+
+::
+
+	{
+	  "addresses"
+	    [
+	      "address"  (string) The base58check encoded address
+	      ,...
+	    ]
+	}
+
+Result:
+::
+
+	{
+	  "balance"  (string) The current balance in satoshis
+	  "received"  (string) The total number of satoshis received (including change)
+	}
+
+Examples:
+
+::
+
+	> komodo-cli getaddressbalance '{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}'
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressbalance", "params": [{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getaddressdeltas
 ----------------
 
+Returns all changes for an address (requires addressindex to be enabled).
+
+Arguments:
+
+::
+
+	{
+	  "addresses"
+	    [
+	      "address"  (string) The base58check encoded address
+	      ,...
+	    ]
+	  "start" (number) The start block height
+	  "end" (number) The end block height
+	  "chainInfo" (boolean) Include chain info in results, only applies if start and end specified
+	}
+
+Result:
+
+::
+
+	[
+	  {
+	    "satoshis"  (number) The difference of satoshis
+	    "txid"  (string) The related txid
+	    "index"  (number) The related input or output index
+	    "height"  (number) The block height
+	    "address"  (string) The base58check encoded address
+	  }
+	]
+
+Examples:
+
+::
+
+	> komodo-cli getaddressdeltas '{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}'
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressdeltas", "params": [{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getaddressmempool
 -----------------
 
+Returns all mempool deltas for an address (requires addressindex to be enabled).
+
+Arguments:
+
+::
+
+	{
+	  "addresses"
+	    [
+	      "address"  (string) The base58check encoded address
+	      ,...
+	    ]
+	}
+
+Result:
+
+::
+
+	[
+	  {
+	    "address"  (string) The base58check encoded address
+	    "txid"  (string) The related txid
+	    "index"  (number) The related input or output index
+	    "satoshis"  (number) The difference of satoshis
+	    "timestamp"  (number) The time the transaction entered the mempool (seconds)
+	    "prevtxid"  (string) The previous txid (if spending)
+	    "prevout"  (string) The previous transaction output index (if spending)
+	  }
+	]
+
+Examples:
+
+::
+
+	> komodo-cli getaddressmempool '{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}'
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressmempool", "params": [{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getaddresstxids
 ---------------
 
+Returns the txids for an address(es) (requires addressindex to be enabled).
+
+Arguments:
+
+::
+
+	{
+	  "addresses"
+	    [
+	      "address"  (string) The base58check encoded address
+	      ,...
+	    ]
+	  "start" (number) The start block height
+	  "end" (number) The end block height
+	}
+
+Result:
+
+::
+	
+	[
+	  "transactionid"  (string) The transaction id
+	  ,...
+	]
+
+Examples:
+
+::
+
+	> komodo-cli getaddresstxids '{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}'
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddresstxids", "params": [{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getaddressutxos
 ---------------
+
+Returns all unspent outputs for an address (requires addressindex to be enabled).
+
+Arguments:
+
+::
+
+	{
+	  "addresses"
+	    [
+	      "address"  (string) The base58check encoded address
+	      ,...
+	    ],
+	  "chainInfo"  (boolean) Include chain info with results
+	}
+
+Result:
+
+::
+
+	[
+	  {
+	    "address"  (string) The address base58check encoded
+	    "txid"  (string) The output txid
+	    "height"  (number) The block height
+	    "outputIndex"  (number) The output index
+	    "script"  (strin) The script hex encoded
+	    "satoshis"  (number) The number of satoshis of the output
+	  }
+	]
+
+Examples:
+
+::
+
+	> komodo-cli getaddressutxos '{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}'
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressutxos", "params": [{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 Blockchain
 ==========
@@ -115,18 +284,147 @@ calc_MoM height MoMdepth
 getbestblockhash
 ----------------
 
+Returns the hash of the best (tip) block in the longest block chain.
+
+Result:
+
+::
+
+	"hex"      (string) the block hash hex encoded
+
+Examples:
+
+::
+
+	> komodo-cli getbestblockhash 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbestblockhash", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getblock "hash|height" ( verbose )
 ----------------------------------
+
+* If verbose is ``false``, returns a string that is serialized, hex-encoded data for block 'hash|height'.
+* If verbose is ``true``, returns an Object with information about block <hash|height>.
+
+Arguments:
+
+::
+
+	1. "hash|height"     (string, required) The block hash or height
+	2. verbose           (boolean, optional, default=true) true for a json object, false for the hex encoded data
+
+Result (for verbose = ``true``):
+
+::
+
+        {
+            "hash": "hash",       (string) the block hash (same as provided hash)
+  "confirmations": n,   (numeric) The number of confirmations, or -1 if the block is not on the main chain
+  "size": n,            (numeric) The block size
+  "height": n,          (numeric) The block height or index (same as provided height)
+  "version": n,         (numeric) The block version
+  "merkleroot": "xxxx", (string) The merkle root
+  "tx": [               (array of string) The transaction ids
+     "transactionid"     (string) The transaction id
+     ,...
+            ],
+            "time": ttt,          (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
+  "nonce": n,           (numeric) The nonce
+  "bits": "1d00ffff",   (string) The bits
+  "difficulty": x.xxx,  (numeric) The difficulty
+  "previousblockhash": "hash",  (string) The hash of the previous block
+  "nextblockhash": "hash"       (string) The hash of the next block
+        }
+
+Result (for verbose=``false``):
+
+::
+
+	"data"             (string) A string that is serialized, hex-encoded data for block 'hash'.
+
+Examples:
+::
+
+	> komodo-cli getblock "00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblock", "params": ["00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
+	> komodo-cli getblock 12800
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblock", "params": [12800] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 getblockchaininfo
 -----------------
 
+Returns an object containing various state info regarding block chain processing.
+
+ *Note that when the chain tip is at the last block before a network upgrade activation,*
+``consensus.chaintip != consensus.nextblock``.
+
+Result:
+
+::
+
+    {
+        "chain": "xxxx",        (string) current network name as defined in BIP70 (main, test, regtest)
+  "blocks": xxxxxx,         (numeric) the current number of blocks processed in the server
+  "headers": xxxxxx,        (numeric) the current number of headers we have validated
+  "bestblockhash": "...", (string) the hash of the currently best block
+  "difficulty": xxxxxx,     (numeric) the current difficulty
+  "verificationprogress": xxxx, (numeric) estimate of verification progress [0..1
+        ]
+  "chainwork": "xxxx"     (string) total amount of work in active chain, in hexadecimal
+  "commitments": xxxxxx,    (numeric) the current number of note commitments in the commitment tree
+  "softforks": [            (array) status of softforks in progress
+     {
+                "id": "xxxx",        (string) name of softfork
+        "version": xx,         (numeric) block version
+        "enforce": {           (object) progress toward enforcing the softfork rules for new-version blocks
+           "status": xx,       (boolean) true if threshold reached
+           "found": xx,        (numeric) number of blocks with the new version found
+           "required": xx,     (numeric) number of blocks required to trigger
+           "window": xx,       (numeric) maximum size of examined window of recent blocks
+                },
+                "reject": { ...
+                }      (object) progress toward rejecting pre-softfork blocks (same fields as "enforce")
+            }, ...
+        ],
+        "upgrades": {                (object) status of network upgrades
+     "xxxx": {                (string) branch ID of the upgrade
+        "name": "xxxx",        (string) name of upgrade
+        "activationheight": xxxxxx,  (numeric) block height of activation
+        "status": "xxxx",      (string) status of upgrade
+        "info": "xxxx",        (string) additional information about upgrade
+            }, ...
+        },
+        "consensus": {               (object) branch IDs of the current and upcoming consensus rules
+     "chaintip": "xxxxxxxx",   (string) branch ID used to validate the current chain tip
+     "nextblock": "xxxxxxxx"   (string) branch ID that the next block will be validated under
+        }
+    }
+
+Examples:
+
+::
+
+	> komodo-cli getblockchaininfo 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockchaininfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
+
 
 getblockcount
 -------------
 
+Returns the number of blocks in the best valid block chain.
+
+Result:
+
+::
+
+	n    (numeric) The current block count
+
+Examples:
+
+::
+
+	> komodo-cli getblockcount 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockcount", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getblockhash index
 ------------------
