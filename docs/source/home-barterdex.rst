@@ -12,3 +12,4 @@ Here you will find more information about BarterDEX
 
    barterDEX/zeroconf-API-implementation-BarterDEX-GUI
    barterDEX/setup-Bitcoin-Cash-BarterDEX
+   barterDEX/MarketmakerErrors.rst
