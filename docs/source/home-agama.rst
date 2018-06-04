@@ -12,3 +12,4 @@ Here you will find more information about Agama
 
    agama/add-Komodo-Assetchains-Agama-Desktop
    agama/add-Bitcoin-Compatible-coin-Agama-Desktop
+   agama/change-log-agama-desktop

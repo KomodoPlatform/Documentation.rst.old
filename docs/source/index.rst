@@ -40,6 +40,7 @@ Welcome to Komodo Platform's documentation!
    :caption: Quick-Links
    
    komodoplatform/list-all-KomodoPlatform-Project-links
+   whats-new
    home-komodo-platform
    home-komodo
    home-agama
