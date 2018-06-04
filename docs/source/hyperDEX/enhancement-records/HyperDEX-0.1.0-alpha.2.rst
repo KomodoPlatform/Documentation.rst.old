@@ -6,7 +6,7 @@ HyperDEX-0.1.0-alpha.2 Enhancements
 
 2. Added the Denarius (DNR) currency.
 
-a. Denarius currency is now access on the Settings screen
+a. Denarius currency is now accessible on the Settings screen
 
 .. image:: images/HyperDEX-0.1.0-alpha.2/image1.png
    :align: center
@@ -18,7 +18,7 @@ b. Once added it is now visible in the Dashboard
    :align: center
    :scale: 75 %
 
-c. Also when added DNR is available for exchange
+c. Also when added, DNR is available for exchange
 
 .. image:: images/HyperDEX-0.1.0-alpha.2/image3.png
    :align: center
