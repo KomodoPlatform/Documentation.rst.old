@@ -20,4 +20,4 @@ What's new!
    :maxdepth: 1
    :caption: HyperDEX
 
-   hyperDEX/
+   hyperDEX/change-log-hyperDEX

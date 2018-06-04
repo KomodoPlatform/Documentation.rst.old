@@ -44,7 +44,8 @@ Welcome to Komodo Platform's documentation!
    home-komodo-platform
    home-komodo
    home-agama
-   home-barterdex
+   home-barterDEX
+   home-hyperDEX
    Setup Bob/Marketmaker nodes using easy scripts by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>
    barterDEX/list-of-all-coins-tradable
    
