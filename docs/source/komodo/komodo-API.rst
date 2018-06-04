@@ -2158,8 +2158,7 @@ Result:
 
 	n :    (numeric) estimated fee-per-kilobyte
 
-	-1.0 is returned if not enough transactions and
-blocks have been observed to make an estimate.
+	-1.0 is returned if not enough transactions and blocks have been observed to make an estimate.
 
 Example:
 
@@ -2186,8 +2185,7 @@ Result:
 
 	n :    (numeric) estimated priority
 
-	-1.0 is returned if not enough transactions and
-blocks have been observed to make an estimate.
+	-1.0 is returned if not enough transactions and blocks have been observed to make an estimate.
 
 Example:
 
@@ -2370,6 +2368,7 @@ Wallet
 
 addmultisigaddress nrequired ["key",...] ( "account" )
 ------------------------------------------------------
+
 
 
 backupwallet "destination"

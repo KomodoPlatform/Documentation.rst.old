@@ -44,6 +44,7 @@ Welcome to Komodo Platform's documentation!
    home-komodo
    home-agama
    home-barterdex
+   Setup Bob/Marketmaker nodes using easy scripts  by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>
    
 .. _install-build:
 
