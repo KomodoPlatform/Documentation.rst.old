@@ -215,7 +215,7 @@ to query data.
 
 Optional: This entry goes to ``coins.json`` file (add this if this is not there). 
 
-.. code-block:: json
+.. code-block:: shell
 
 	{\"coin\":\"BCH\",\"name\":\"bch\",\"active\":1,\"rpcport\":33333,\"pubtype\":0,\"p2shtype\":5,\"wiftype\":128,\"txfee\":1000}
 

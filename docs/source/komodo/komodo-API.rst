@@ -6,6 +6,8 @@ You can access this API while ``komodod`` is running. Just go to another termina
 
 For help about a particular API option execute ``./komodo-cli help getwalletinfo``
 
+*In some of the explanation of API calls if you find ``Zcash`` consider it replaced by ``Komodo`` and ``zcashaddress`` replaced by ``komodoaddress`` 
+
 :doc:`Guide to install Komodo <install-Komodo-manually>`
 
 List of API by Category
@@ -1347,7 +1349,8 @@ Arguments:
 
 	1. "hexdata"    (string, required) the hex-encoded block data to submit
 	2. "jsonparametersobject"     (string, optional) object of optional parameters
-.. code-block:: json
+
+::
 
 	    {
 	      "workid" : "id"    (string, optional) if the server provided a workid, it MUST be included with submissions
@@ -1415,7 +1418,8 @@ Immediately disconnects from the specified node.
 Arguments:
 
 ::
-	1. "node"     (string, required) The node (see getpeerinfo for nodes)
+
+	1."node"     (string, required) The node (see getpeerinfo for nodes)
 
 Examples:
 
@@ -2369,237 +2373,1972 @@ Wallet
 addmultisigaddress nrequired ["key",...] ( "account" )
 ------------------------------------------------------
 
+Add a nrequired-to-sign multisignature address to the wallet.
+Each key is a Komodo address or hex-encoded public key.
+If 'account' is specified (DEPRECATED), assign address to that account.
 
+Arguments:
+
+::
+
+	1. nrequired        (numeric, required) The number of required signatures out of the n keys or addresses.
+	2. "keysobject"   (string, required) A json array of Zcash addresses or hex-encoded public keys
+	     [
+	       "address"  (string) Zcash address or hex-encoded public key
+	       ...,
+	     ]
+	3. "account"      (string, optional) DEPRECATED. If provided, MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+
+Result:
+
+::
+
+	"zcashaddress"  (string) A Zcash address associated with the keys.
+
+Examples:
+
+Add a multisig address from 2 addresses
+
+::
+
+	> komodo-cli addmultisigaddress 2 "[\"t16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"t171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"
+
+As json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "addmultisigaddress", "params": [2, "[\"t16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"t171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 backupwallet "destination"
 --------------------------
 
+Safely copies wallet.dat to destination filename
+
+Arguments:
+
+::
+
+	1. "destination"   (string, required) The destination filename, saved in the directory set by -exportdir option.
+
+Result:
+
+::
+
+	"path"             (string) The full path of the destination file
+
+Examples:
+
+::
+
+	> komodo-cli backupwallet "backupdata"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "backupwallet", "params": ["backupdata"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 dumpprivkey "komodoaddress"
 ---------------------------
+
+Reveals the private key corresponding to 'komodoaddress'.
+Then the importprivkey can be used with this output
+
+Arguments:
+
+::
+
+	1. "zcashaddress"   (string, required) The zcash address for the private key
+
+Result:
+
+::
+
+	"key"                (string) The private key
+
+Examples:
+
+::
+
+	> komodo-cli dumpprivkey "myaddress"
+	> komodo-cli importprivkey "mykey"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpprivkey", "params": ["myaddress"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 dumpwallet "filename"
 ---------------------
 
+Dumps taddr wallet keys in a human-readable format.  Overwriting an existing file is not permitted.
+
+Arguments:
+
+::
+
+	1. "filename"    (string, required) The filename, saved in folder set by zcashd -exportdir option
+
+Result:
+
+::
+
+	"path"           (string) The full path of the destination file
+
+Examples:
+
+::
+
+	> komodo-cli dumpwallet "test"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpwallet", "params": ["test"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 encryptwallet "passphrase"
 --------------------------
+
+**WARNING**: Wallet encryption is **DISABLED**. This call always fails.
+
+Encrypts the wallet with ``passphrase``. This is for first time encryption.
+After this, any calls that interact with private keys such as sending or signing 
+will require the passphrase to be set prior the making these calls.
+Use the ``walletpassphrase`` call for this, and then ``walletlock`` call.
+If the wallet is already encrypted, use the ``walletpassphrasechange`` call.
+Note that this will shutdown the server.
+
+Arguments:
+
+::
+
+	1. "passphrase"    (string) The pass phrase to encrypt the wallet with. It must be at least 1 character, but should be long.
+
+Examples:
+
+Encrypt you wallet
+
+::
+
+	> komodo-cli encryptwallet "my pass phrase"
+
+Now set the passphrase to use the wallet, such as for signing or sending Zcash
+
+::
+
+	> komodo-cli walletpassphrase "my pass phrase"
+
+Now we can so something like sign
+
+::
+
+	> komodo-cli signmessage "zcashaddress" "test message"
+
+Now lock the wallet again by removing the passphrase
+
+::
+
+	> komodo-cli walletlock 
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "encryptwallet", "params": ["my pass phrase"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 getaccount "KMD_address"
 ------------------------
 
+**DEPRECATED**. Returns the account associated with the given address.
+
+Arguments:
+
+1. "komodoaddress"  (string, required) The Komodo address for account lookup.
+
+Result:
+
+::
+
+	"accountname"        (string) the account address
+
+Examples:
+
+::
+
+	> komodo-cli getaccount "t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaccount", "params": ["t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getaccountaddress "account"
 ---------------------------
 
+**DEPRECATED**. Returns the current Komodo address for receiving payments to this account.
+
+Arguments:
+
+::
+
+	1. "account"       (string, required) MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+
+Result:
+
+	"komodoaddress"   (string) The account Komodo address
+
+Examples:
+
+::
+
+	> komodo-cli getaccountaddress 
+	> komodo-cli getaccountaddress ""
+> komodo-cli getaccountaddress "myaccount"
+> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaccountaddress", "params": ["myaccount"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getaddressesbyaccount "account"
 -------------------------------
 
+**DEPRECATED**. Returns the list of addresses for the given account.
+
+Arguments:
+
+::
+
+	1. "account"  (string, required) MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+
+Result:
+
+::
+
+	[                     (json array of string)
+	  "zcashaddress"  (string) a Zcash address associated with the given account
+	  ,...
+	]
+
+Examples:
+
+::
+
+	> komodo-cli getaddressesbyaccount "tabby"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressesbyaccount", "params": ["tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getbalance ( "account" minconf includeWatchonly )
 -------------------------------------------------
 
+Returns the server's total available balance.
+
+Arguments:
+
+::
+
+	1. "account"      (string, optional) DEPRECATED. If provided, it MUST be set to the empty string "" or to the string "*", either of which will give the total available balance. Passing any other string will result in an error.
+	2. minconf          (numeric, optional, default=1) Only include transactions confirmed at least this many times.
+	3. includeWatchonly (bool, optional, default=false) Also include balance in watchonly addresses (see 'importaddress')
+
+Result:
+
+::
+
+	amount              (numeric) The total amount in ZEC received for this account.
+
+Examples:
+
+The total amount in the wallet
+
+::
+
+	> komodo-cli getbalance 
+
+The total amount in the wallet at least 5 blocks confirmed
+
+::
+
+	> komodo-cli getbalance "*" 6
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbalance", "params": ["*", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getnewaddress ( "account" )
 ---------------------------
 
+Returns a new Komodo address for receiving payments.
+
+Arguments:
+
+::
+
+	1. "account"        (string, optional) DEPRECATED. If provided, it MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+
+Result:
+
+::
+
+	"zcashaddress"    (string) The new Zcash address
+
+Examples:
+
+::
+
+	> komodo-cli getnewaddress 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnewaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getrawchangeaddress
 -------------------
 
+Returns a new Komodo address, for receiving change.
+This is for use with raw transactions, NOT normal use.
+
+Result:
+
+::
+
+	"address"    (string) The address
+
+Examples:
+
+::
+
+	> komodo-cli getrawchangeaddress 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawchangeaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getreceivedbyaccount "account" ( minconf )
 ------------------------------------------
 
+**DEPRECATED**. Returns the total amount received by addresses with <account> in transactions with at least [minconf] confirmations.
+
+Arguments:
+
+::
+
+	1. "account"      (string, required) MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+	2. minconf          (numeric, optional, default=1) Only include transactions confirmed at least this many times.
+
+Result:
+
+::
+
+	amount              (numeric) The total amount in ZEC received for this account.
+
+Examples:
+
+Amount received by the default account with at least 1 confirmation
+
+::
+
+	> komodo-cli getreceivedbyaccount ""
+
+Amount received at the tabby account including unconfirmed amounts with zero confirmations
+
+::
+
+	> komodo-cli getreceivedbyaccount "tabby" 0
+
+The amount with at least 6 confirmation, very safe
+
+::
+
+	> komodo-cli getreceivedbyaccount "tabby" 6
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getreceivedbyaccount", "params": ["tabby", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getreceivedbyaddress "KMD_address" ( minconf )
 ----------------------------------------------
+
+Returns the total amount received by the given Zcash address in transactions with at least minconf confirmations.
+
+Arguments:
+
+::
+
+	1. "zcashaddress"  (string, required) The Zcash address for transactions.
+	2. minconf             (numeric, optional, default=1) Only include transactions confirmed at least this many times.
+
+Result:
+
+::
+
+	amount   (numeric) The total amount in ZEC received at this address.
+
+Examples:
+
+The amount from transactions with at least 1 confirmation
+
+::
+
+	> komodo-cli getreceivedbyaddress "t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1"
+
+The amount including unconfirmed transactions, zero confirmations
+
+::
+
+	> komodo-cli getreceivedbyaddress "t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1" 0
+
+The amount with at least 6 confirmations, very safe
+
+::
+
+	> komodo-cli getreceivedbyaddress "t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1" 6
+
+As a json rpc call
+
+::
+
+> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getreceivedbyaddress", "params": ["t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 gettransaction "txid" ( includeWatchonly )
 ------------------------------------------
 
+Get detailed information about in-wallet transaction <txid>
+
+Arguments:
+
+::
+
+	1. "txid"    (string, required) The transaction id
+	2. "includeWatchonly"    (bool, optional, default=false) Whether to include watchonly addresses in balance calculation and details[]
+
+Result:
+
+::
+
+	{
+	  "amount" : x.xxx,        (numeric) The transaction amount in ZEC
+	  "confirmations" : n,     (numeric) The number of confirmations
+	  "blockhash" : "hash",  (string) The block hash
+	  "blockindex" : xx,       (numeric) The block index
+	  "blocktime" : ttt,       (numeric) The time in seconds since epoch (1 Jan 1970 GMT)
+	  "txid" : "transactionid",   (string) The transaction id.
+	  "time" : ttt,            (numeric) The transaction time in seconds since epoch (1 Jan 1970 GMT)
+	  "timereceived" : ttt,    (numeric) The time received in seconds since epoch (1 Jan 1970 GMT)
+	  "details" : [
+	    {
+	      "account" : "accountname",  (string) DEPRECATED. The account name involved in the transaction, can be "" for the default account.
+	      "address" : "zcashaddress",   (string) The Zcash address involved in the transaction
+	      "category" : "send|receive",    (string) The category, either 'send' or 'receive'
+	      "amount" : x.xxx                  (numeric) The amount in ZEC
+	      "vout" : n,                       (numeric) the vout value
+	    }
+	    ,...
+	  ],
+	  "vjoinsplit" : [
+	    {
+	      "anchor" : "treestateref",          (string) Merkle root of note commitment tree
+	      "nullifiers" : [ string, ...]      (string) Nullifiers of input notes
+	      "commitments" : [ string, ...]     (string) Note commitments for note outputs
+	      "macs" : [ string, ...]            (string) Message authentication tags
+	      "vpub_old" : x.xxx                  (numeric) The amount removed from the transparent value pool
+	      "vpub_new" : x.xxx,                 (numeric) The amount added to the transparent value pool
+	    }
+	    ,...
+	  ],
+	  "hex" : "data"         (string) Raw data for transaction
+	}
+
+Examples:
+
+::
+
+	> komodo-cli gettransaction "1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"
+	> komodo-cli gettransaction "1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d" true
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettransaction", "params": ["1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getunconfirmedbalance
 ---------------------
 
+Returns the server's total unconfirmed balance
 
 getwalletinfo
 -------------
+
+Returns an object containing various wallet state info.
+
+Result:
+
+::
+
+	{
+	  "walletversion": xxxxx,     (numeric) the wallet version
+	  "balance": xxxxxxx,         (numeric) the total confirmed balance of the wallet in ZEC
+	  "unconfirmed_balance": xxx, (numeric) the total unconfirmed balance of the wallet in ZEC
+	  "immature_balance": xxxxxx, (numeric) the total immature balance of the wallet in ZEC
+	  "txcount": xxxxxxx,         (numeric) the total number of transactions in the wallet
+	  "keypoololdest": xxxxxx,    (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool
+	  "keypoolsize": xxxx,        (numeric) how many new keys are pre-generated
+	  "unlocked_until": ttt,      (numeric) the timestamp in seconds since epoch (midnight Jan 1 1970 GMT) that the wallet is unlocked for transfers, 	or 0 if the wallet is locked
+	  "paytxfee": x.xxxx,         (numeric) the transaction fee configuration, set in KMD/KB
+	}
+
+Examples:
+
+::
+
+	> komodo-cli getwalletinfo 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getwalletinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 importaddress "address" ( "label" rescan )
 ------------------------------------------
 
+Adds an address or script (in hex) that can be watched as if it were in your wallet but cannot be used to spend.
+
+Arguments:
+
+::
+
+	1. "address"          (string, required) The address
+	2. "label"            (string, optional, default="") An optional label
+	3. rescan               (boolean, optional, default=true) Rescan the wallet for transactions
+
+**Note**: This call can take minutes to complete if rescan is true.
+
+Examples:
+
+Import an address with rescan
+> komodo-cli importaddress "myaddress"
+
+Import using a label without rescan
+> komodo-cli importaddress "myaddress" "testing" false
+
+As a JSON-RPC call
+> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importaddress", "params": ["myaddress", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
+
 
 importprivkey "komodoprivkey" ( "label" rescan )
 ------------------------------------------------
 
+Adds a private key (as returned by dumpprivkey) to your wallet.
+
+Arguments:
+
+::
+
+	1. "zcashprivkey"   (string, required) The private key (see dumpprivkey)
+	2. "label"            (string, optional, default="") An optional label
+	3. rescan               (boolean, optional, default=true) Rescan the wallet for transactions
+
+Note: This call can take minutes to complete if rescan is true.
+
+Examples:
+
+Dump a private key
+
+::
+
+	> komodo-cli dumpprivkey "myaddress"
+
+Import the private key with rescan
+
+::
+
+
+	> komodo-cli importprivkey "mykey"
+
+Import using a label and without rescan
+
+::
+
+	> komodo-cli importprivkey "mykey" "testing" false
+
+As a JSON-RPC call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importprivkey", "params": ["mykey", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 importwallet "filename"
 -----------------------
 
+Imports taddr keys from a wallet dump file (see dumpwallet).
+
+Arguments:
+
+::
+
+	1. "filename"    (string, required) The wallet file
+
+Examples:
+
+Dump the wallet
+
+::
+
+	> komodo-cli dumpwallet "nameofbackup"
+
+Import the wallet
+
+::
+
+	> komodo-cli importwallet "path/to/exportdir/nameofbackup"
+
+Import using the json rpc call
+
+::
+
+> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importwallet", "params": ["path/to/exportdir/nameofbackup"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 keypoolrefill ( newsize )
 -------------------------
 
+Fills the keypool.
+
+Arguments
+
+::
+
+	1. newsize     (numeric, optional, default=100) The new keypool size
+
+Examples:
+
+::
+
+	> komodo-cli keypoolrefill 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "keypoolrefill", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 listaccounts ( minconf includeWatchonly)
 ----------------------------------------
+
+**DEPRECATED**. Returns Object that has account names as keys, account balances as values.
+
+Arguments:
+
+::
+
+	1. minconf          (numeric, optional, default=1) Only include transactions with at least this many confirmations
+	2. includeWatchonly (bool, optional, default=false) Include balances in watchonly addresses (see 'importaddress')
+
+Result:
+
+::
+
+	{                      (json object where keys are account names, and values are numeric balances
+	  "account": x.xxx,  (numeric) The property name is the account name, and the value is the total balance for the account.
+	  ...
+	}
+
+Examples:
+
+List account balances where there at least 1 confirmation
+
+::
+
+	> komodo-cli listaccounts 
+
+List account balances including zero confirmation transactions
+
+::
+
+	> komodo-cli listaccounts 0
+
+List account balances for 6 or more confirmations
+
+::
+
+	> komodo-cli listaccounts 6
+
+As json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listaccounts", "params": [6] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 listaddressgroupings
 --------------------
 
+Lists groups of addresses which have had their common ownership
+made public by common use as inputs or as the resulting change
+in past transactions
+
+Result:
+
+::
+
+	[
+	  [
+	    [
+	      "zcashaddress",     (string) The zcash address
+	      amount,                 (numeric) The amount in ZEC
+	      "account"             (string, optional) The account (DEPRECATED)
+	    ]
+	    ,...
+	  ]
+	  ,...
+	]
+
+Examples:
+
+::
+
+	> komodo-cli listaddressgroupings 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listaddressgroupings", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 listlockunspent
 ---------------
+
+Returns list of temporarily unspendable outputs.
+See the lockunspent call to lock and unlock transactions for spending.
+
+Result:
+
+::
+
+	[
+	  {
+	    "txid" : "transactionid",     (string) The transaction id locked
+	    "vout" : n                      (numeric) The vout value
+	  }
+	  ,...
+	]
+
+Examples:
+
+List the unspent transactions
+
+::
+
+	> komodo-cli listunspent 
+
+Lock an unspent transaction
+
+::
+
+	> komodo-cli lockunspent false "[{\"txid\":\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\",\"vout\":1}]"
+
+List the locked transactions
+
+::
+
+	> komodo-cli listlockunspent 
+
+Unlock the transaction again
+
+::
+
+	> komodo-cli lockunspent true "[{\"txid\":\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\",\"vout\":1}]"
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listlockunspent", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 listreceivedbyaccount ( minconf includeempty includeWatchonly)
 --------------------------------------------------------------
 
+**DEPRECATED**. List balances by account.
+
+Arguments:
+
+::
+
+	1. minconf      (numeric, optional, default=1) The minimum number of confirmations before payments are included.
+	2. includeempty (boolean, optional, default=false) Whether to include accounts that haven't received any payments.
+	3. includeWatchonly (bool, optional, default=false) Whether to include watchonly addresses (see 'importaddress').
+
+Result:
+
+::
+
+	[
+	  {
+	    "involvesWatchonly" : true,   (bool) Only returned if imported addresses were involved in transaction
+	    "account" : "accountname",  (string) The account name of the receiving account
+	    "amount" : x.xxx,             (numeric) The total amount received by addresses with this account
+	    "confirmations" : n           (numeric) The number of confirmations of the most recent transaction included
+	  }
+	  ,...
+	]
+
+Examples:
+
+::
+
+	> komodo-cli listreceivedbyaccount 
+	> komodo-cli listreceivedbyaccount 6 true
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaccount", "params": [6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 listreceivedbyaddress ( minconf includeempty includeWatchonly)
 --------------------------------------------------------------
 
+List balances by receiving address.
+
+Arguments:
+
+::
+
+	1. minconf       (numeric, optional, default=1) The minimum number of confirmations before payments are included.
+	2. includeempty  (numeric, optional, default=false) Whether to include addresses that haven't received any payments.
+	3. includeWatchonly (bool, optional, default=false) Whether to include watchonly addresses (see 'importaddress').
+
+Result:
+
+::
+
+	[
+	  {
+	    "involvesWatchonly" : true,        (bool) Only returned if imported addresses were involved in transaction
+	    "address" : "receivingaddress",  (string) The receiving address
+	    "account" : "accountname",       (string) DEPRECATED. The account of the receiving address. The default account is "".
+	    "amount" : x.xxx,                  (numeric) The total amount in ZEC received by the address
+	    "confirmations" : n                (numeric) The number of confirmations of the most recent transaction included
+	  }
+	  ,...
+	]
+
+Examples:
+
+::
+
+	> komodo-cli listreceivedbyaddress 
+	> komodo-cli listreceivedbyaddress 6 true
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaddress", "params": [6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 listsinceblock ( "blockhash" target-confirmations includeWatchonly)
 -------------------------------------------------------------------
+
+Get all transactions in blocks since block [blockhash], or all transactions if omitted
+
+Arguments:
+
+::
+	
+	1. "blockhash"   (string, optional) The block hash to list transactions since
+	2. target-confirmations:    (numeric, optional) The confirmations required, must be 1 or more
+	3. includeWatchonly:        (bool, optional, default=false) Include transactions to watchonly addresses (see 'importaddress')
+
+Result:
+
+::
+
+	{
+	  "transactions": [
+  	  "account":"accountname",       (string) DEPRECATED. The account name associated with the transaction. Will be "" for the default account.
+  	  "address":"zcashaddress",    (string) The Zcash address of the transaction. Not present for move transactions (category = move).
+  	  "category":"send|receive",     (string) The transaction category. 'send' has negative amounts, 'receive' has positive amounts.
+  	  "amount": x.xxx,          (numeric) The amount in ZEC. This is negative for the 'send' category, and for the 'move' category for moves 
+                                          outbound. It is positive for the 'receive' category, and for the 'move' category for inbound funds.
+    	"vout" : n,               (numeric) the vout value
+	    "fee": x.xxx,             (numeric) The amount of the fee in ZEC. This is negative and only available for the 'send' category of transactions.
+	    "confirmations": n,       (numeric) The number of confirmations for the transaction. Available for 'send' and 'receive' category of transactions.
+	    "blockhash": "hashvalue",     (string) The block hash containing the transaction. Available for 'send' and 'receive' category of transactions.
+	    "blockindex": n,          (numeric) The block index containing the transaction. Available for 'send' and 'receive' category of transactions.
+	    "blocktime": xxx,         (numeric) The block time in seconds since epoch (1 Jan 1970 GMT).
+	    "txid": "transactionid",  (string) The transaction id. Available for 'send' and 'receive' category of transactions.
+    	"time": xxx,              (numeric) The transaction time in seconds since epoch (Jan 1 1970 GMT).
+	    "timereceived": xxx,      (numeric) The time received in seconds since epoch (Jan 1 1970 GMT). Available for 'send' and 'receive' category of transactions.
+	    "comment": "...",       (string) If a comment is associated with the transaction.
+	    "to": "...",            (string) If a comment to is associated with the transaction.
+	  ],
+	  "lastblock": "lastblockhash"     (string) The hash of the last block
+	}
+
+Examples:
+
+::
+
+	> komodo-cli listsinceblock 
+	> komodo-cli listsinceblock "000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad" 6
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listsinceblock", "params": ["000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 listtransactions ( "account" count from includeWatchonly)
 ---------------------------------------------------------
 
+Returns up to 'count' most recent transactions skipping the first 'from' transactions for account 'account'.
+
+Arguments:
+
+::
+
+	1. "account"    (string, optional) DEPRECATED. The account name. Should be "*".
+	2. count          (numeric, optional, default=10) The number of transactions to return
+	3. from           (numeric, optional, default=0) The number of transactions to skip
+	4. includeWatchonly (bool, optional, default=false) Include transactions to watchonly addresses (see 'importaddress')
+
+Result:
+
+::
+
+	[
+	  {
+	    "account":"accountname",       (string) DEPRECATED. The account name associated with the transaction. 
+	                                                It will be "" for the default account.
+	    "address":"zcashaddress",    (string) The Zcash address of the transaction. Not present for 
+	                                                move transactions (category = move).
+	    "category":"send|receive|move", (string) The transaction category. 'move' is a local (off blockchain)
+	                                                transaction between accounts, and not associated with an address,
+	                                                transaction id or block. 'send' and 'receive' transactions are 
+	                                                associated with an address, transaction id and block details
+	    "amount": x.xxx,          (numeric) The amount in ZEC. This is negative for the 'send' category, and for the
+	                                         'move' category for moves outbound. It is positive for the 'receive' category,
+	                                         and for the 'move' category for inbound funds.
+	    "vout" : n,               (numeric) the vout value
+	    "fee": x.xxx,             (numeric) The amount of the fee in ZEC. This is negative and only available for the 
+	                                         'send' category of transactions.
+	    "confirmations": n,       (numeric) The number of confirmations for the transaction. Available for 'send' and 
+	                                         'receive' category of transactions.
+	    "blockhash": "hashvalue", (string) The block hash containing the transaction. Available for 'send' and 'receive'
+	                                          category of transactions.
+	    "blockindex": n,          (numeric) The block index containing the transaction. Available for 'send' and 'receive'
+	                                          category of transactions.
+	    "txid": "transactionid", (string) The transaction id. Available for 'send' and 'receive' category of transactions.
+	    "time": xxx,              (numeric) The transaction time in seconds since epoch (midnight Jan 1 1970 GMT).
+	    "timereceived": xxx,      (numeric) The time received in seconds since epoch (midnight Jan 1 1970 GMT). Available 
+	                                          for 'send' and 'receive' category of transactions.
+	    "comment": "...",       (string) If a comment is associated with the transaction.
+	    "otheraccount": "accountname",  (string) For the 'move' category of transactions, the account the funds came 
+	                                          from (for receiving funds, positive amounts), or went to (for sending funds,
+	                                          negative amounts).
+	    "size": n,                (numeric) Transaction size in bytes
+	  }
+	]
+
+Examples:
+
+List the most recent 10 transactions in the systems
+
+::
+
+	> komodo-cli listtransactions 
+
+List transactions 100 to 120
+
+::
+
+	> komodo-cli listtransactions "*" 20 100
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listtransactions", "params": ["*", 20, 100] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
+
 
 listunspent ( minconf maxconf  ["address",...] )
 ------------------------------------------------
+
+Returns array of unspent transaction outputs
+with between minconf and maxconf (inclusive) confirmations.
+Optionally filter to only include txouts paid to specified addresses.
+Results are an array of Objects, each of which has:
+{txid, vout, scriptPubKey, amount, confirmations}
+
+Arguments:
+
+::
+
+	1. minconf          (numeric, optional, default=1) The minimum confirmations to filter
+	2. maxconf          (numeric, optional, default=9999999) The maximum confirmations to filter
+	3. "addresses"    (string) A json array of Zcash addresses to filter
+
+	    [
+	      "address"   (string) Zcash address
+	      ,...
+	    ]
+	
+Result:
+
+::
+
+	[                   (array of json object)
+	  {
+	    "txid" : "txid",        (string) the transaction id 
+	    "vout" : n,               (numeric) the vout value
+	    "generated" : true|false  (boolean) true if txout is a coinbase transaction output
+	    "address" : "address",  (string) the Zcash address
+	    "account" : "account",  (string) DEPRECATED. The associated account, or "" for the default account
+	    "scriptPubKey" : "key", (string) the script key
+	    "amount" : x.xxx,         (numeric) the transaction amount in ZEC
+	    "confirmations" : n       (numeric) The number of confirmations
+	  }
+	  ,...
+	]
+
+Examples:
+
+::
+
+	> komodo-cli listunspent 
+	> komodo-cli listunspent 6 9999999 "[\"t1PGFqEzfmQch1gKD3ra4k18PNj3tTUUSqg\",\"t1LtvqCaApEdUGFkpKMM4MstjcaL4dKg8SP\"]"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": [6, 9999999 "[\"t1PGFqEzfmQch1gKD3ra4k18PNj3tTUUSqg\",\"t1LtvqCaApEdUGFkpKMM4MstjcaL4dKg8SP\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 lockunspent unlock [{"txid":"txid","vout":n},...]
 -------------------------------------------------
 
+Updates list of temporarily unspendable outputs.
+Temporarily lock (unlock=false) or unlock (unlock=true) specified transaction outputs.
+A locked transaction output will not be chosen by automatic coin selection, when spending Zcash.
+Locks are stored in memory only. Nodes start with zero locked outputs, and the locked output list
+is always cleared (by virtue of process exit) when a node stops or fails.
+Also see the listunspent call
+
+Arguments:
+
+::
+
+	1. unlock            (boolean, required) Whether to unlock (true) or lock (false) the specified transactions
+	2. "transactions"  (string, required) A json array of objects. Each object the txid (string) vout (numeric)
+	     [           (json array of json objects)
+	       {
+	         "txid":"id",    (string) The transaction id
+	         "vout": n         (numeric) The output number
+	       }
+	       ,...
+	     ]
+
+Result:
+
+::
+
+	true|false    (boolean) Whether the command was successful or not
+
+Examples:
+
+List the unspent transactions
+
+::
+
+	> komodo-cli listunspent 
+
+Lock an unspent transaction
+
+::
+
+	> komodo-cli lockunspent false "[{\"txid\":\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\",\"vout\":1}]"
+
+List the locked transactions
+
+::
+
+	> komodo-cli listlockunspent 
+
+Unlock the transaction again
+
+::
+
+	> komodo-cli lockunspent true "[{\"txid\":\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\",\"vout\":1}]"
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "lockunspent", "params": [false, "[{\"txid\":\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\",\"vout\":1}]"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 move "fromaccount" "toaccount" amount ( minconf "comment" )
 -----------------------------------------------------------
+
+**DEPRECATED**. Move a specified amount from one account in your wallet to another.
+
+Arguments:
+
+::
+
+	1. "fromaccount"   (string, required) MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+	2. "toaccount"     (string, required) MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+	3. amount            (numeric) Quantity of ZEC to move between accounts.
+	4. minconf           (numeric, optional, default=1) Only use funds with at least this many confirmations.
+	5. "comment"       (string, optional) An optional comment, stored in the wallet only.
+
+Result:
+
+::
+
+	true|false           (boolean) true if successful.
+
+Examples:
+
+Move 0.01 ZEC from the default account to the account named tabby
+
+::
+
+	> komodo-cli move "" "tabby" 0.01
+
+Move 0.01 ZEC timotei to akiko with a comment and funds have 6 confirmations
+
+::
+
+	> komodo-cli move "timotei" "akiko" 0.01 6 "happy birthday!"
+
+As a json rpc call
+
+::
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "move", "params": ["timotei", "akiko", 0.01, 6, "happy birthday!"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 resendwallettransactions
 ------------------------
 
+Immediately re-broadcast unconfirmed wallet transactions to all peers.
+Intended only for testing; the wallet code periodically re-broadcasts
+automatically.
+
+Returns array of transaction ids that were re-broadcast.
 
 sendfrom "fromaccount" "toKMDaddress" amount ( minconf "comment" "comment-to" )
 -------------------------------------------------------------------------------
+
+**DEPRECATED** (use sendtoaddress). Sent an amount from an account to a Zcash address.
+The amount is a real and is rounded to the nearest 0.00000001.
+
+Arguments:
+
+::
+
+	1. "fromaccount"       (string, required) MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+	2. "tozcashaddress"  (string, required) The Zcash address to send funds to.
+	3. amount                (numeric, required) The amount in ZEC (transaction fee is added on top).
+	4. minconf               (numeric, optional, default=1) Only use funds with at least this many confirmations.
+	5. "comment"           (string, optional) A comment used to store what the transaction is for. 
+	                                     This is not part of the transaction, just kept in your wallet.
+	6. "comment-to"        (string, optional) An optional comment to store the name of the person or organization 
+                                     to which you're sending the transaction. This is not part of the transaction, 
+                                     it is just kept in your wallet.
+
+Result:
+
+::
+
+	"transactionid"        (string) The transaction id.
+
+Examples:
+
+Send 0.01 ZEC from the default account to the address, must have at least 1 confirmation
+
+::
+
+	> komodo-cli sendfrom "" "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.01
+
+Send 0.01 from the tabby account to the given address, funds must have at least 6 confirmations
+
+::
+
+	> komodo-cli sendfrom "tabby" "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.01 6 "donation" "seans outpost"
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendfrom", "params": ["tabby", "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.01, 6, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
 -----------------------------------------------------------------------------------
 
+Send multiple times. Amounts are double-precision floating point numbers.
+
+Arguments:
+
+::
+
+	1. "fromaccount"         (string, required) MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+	2. "amounts"             (string, required) A json object with addresses and amounts
+	    {
+	      "address":amount   (numeric) The Zcash address is the key, the numeric amount in ZEC is the value
+	      ,...
+	    }
+	3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.
+	4. "comment"             (string, optional) A comment
+	5. subtractfeefromamount   (string, optional) A json array with addresses.
+	                           The fee will be equally deducted from the amount of each selected address.
+	                           Those recipients will receive less Zcash than you enter in their corresponding amount field.
+	                           If no addresses are specified here, the sender pays the fee.
+	    [
+	      "address"            (string) Subtract fee from this address
+	      ,...
+	    ]
+
+Result:
+
+::
+
+	"transactionid"          (string) The transaction id for the send. Only 1 transaction is created regardless of 
+                                    the number of addresses.
+
+Examples:
+
+Send two amounts to two different addresses:
+
+::
+
+	> komodo-cli sendmany "" "{\"t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1\":0.01,\"t1353tsE8YMTA4EuV7dgUXGjNFf9KpVvKHz\":0.02}"
+
+Send two amounts to two different addresses setting the confirmation and comment:
+
+::
+
+	> komodo-cli sendmany "" "{\"t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1\":0.01,\"t1353tsE8YMTA4EuV7dgUXGjNFf9KpVvKHz\":0.02}" 6 "testing"
+
+Send two amounts to two different addresses, subtract fee from amount:
+
+::
+
+	> komodo-cli sendmany "" "{\"t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1\":0.01,\"t1353tsE8YMTA4EuV7dgUXGjNFf9KpVvKHz\":0.02}" 1 "" "[\"t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1\",\"t1353tsE8YMTA4EuV7dgUXGjNFf9KpVvKHz\"]"
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendmany", "params": ["", "{\"t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1\":0.01,\"t1353tsE8YMTA4EuV7dgUXGjNFf9KpVvKHz\":0.02}", 6, "testing"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 sendtoaddress "KMD_address" amount ( "comment" "comment-to" subtractfeefromamount )
 -----------------------------------------------------------------------------------
 
+Send an amount to a given address. The amount is a real and is rounded to the nearest 0.00000001
+
+Arguments:
+
+::
+
+	1. "komodoaddress"  (string, required) The Komodo address to send to.
+	2. "amount"      (numeric, required) The amount in Komodo to send. eg 0.1
+	3. "comment"     (string, optional) A comment used to store what the transaction is for. 
+	                             This is not part of the transaction, just kept in your wallet.
+	4. "comment-to"  (string, optional) A comment to store the name of the person or organization 
+	                             to which you're sending the transaction. This is not part of the 
+	                             transaction, just kept in your wallet.
+	5. subtractfeefromamount  (boolean, optional, default=false) The fee will be deducted from the amount being sent.
+	                             The recipient will receive less Zcash than you enter in the amount field.
+
+Result:
+
+::
+
+	"transactionid"  (string) The transaction id.
+
+Examples:
+
+::
+
+	> komodo-cli sendtoaddress "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1
+	> komodo-cli sendtoaddress "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1 "donation" "seans outpost"
+	> komodo-cli sendtoaddress "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1 "" "" true
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": ["t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 setaccount "KMD_address" "account"
 ----------------------------------
 
+**DEPRECATED**. Sets the account associated with the given address.
+
+Arguments:
+
+::
+
+	1. "zcashaddress"  (string, required) The Zcash address to be associated with an account.
+	2. "account"         (string, required) MUST be set to the empty string "" to represent the default account. Passing any other string will result in an error.
+
+Examples:
+
+::
+
+	> komodo-cli setaccount "t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1" "tabby"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setaccount", "params": ["t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1", "tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 settxfee amount
 ---------------
 
+Set the transaction fee per kB.
+
+Arguments:
+
+::
+
+	1. amount         (numeric, required) The transaction fee in ZEC/kB rounded to the nearest 0.00000001
+
+Result
+
+::
+
+	true|false        (boolean) Returns true if successful
+
+Examples:
+
+::
+
+	> komodo-cli settxfee 0.00001
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "settxfee", "params": [0.00001] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 signmessage "KMD address" "message"
 -----------------------------------
+
+Sign a message with the private key of an address
+
+Arguments:
+
+::
+
+	1. "zcashaddress"  (string, required) The Zcash address to use for the private key.
+	2. "message"         (string, required) The message to create a signature of.
+
+Result:
+
+::
+
+	"signature"          (string) The signature of the message encoded in base 64
+
+Examples:
+
+Unlock the wallet for 30 seconds
+
+::
+
+	> komodo-cli walletpassphrase "mypassphrase" 30
+
+Create the signature
+
+::
+
+	> komodo-cli signmessage "t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1" "my message"
+
+Verify the signature
+
+::
+
+	> komodo-cli verifymessage "t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1" "signature" "my message"
+
+As json rpc
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signmessage", "params": ["t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1", "my message"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 
 z_exportkey "zaddr"
 -------------------
 
+Reveals the zkey corresponding to 'zaddr'.
+Then the z_importkey can be used with this output
+
+Arguments:
+
+::
+
+	1. "zaddr"   (string, required) The zaddr for the private key
+
+Result:
+
+::
+
+	"key"                  (string) The private key
+
+Examples:
+
+::
+
+	> komodo-cli z_exportkey "myaddress"
+	> komodo-cli z_importkey "mykey"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_exportkey", "params": ["myaddress"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_exportviewingkey "zaddr"
 --------------------------
 
+Reveals the viewing key corresponding to 'zaddr'.
+Then the z_importviewingkey can be used with this output
+
+Arguments:
+
+::
+
+	1. "zaddr"   (string, required) The zaddr for the viewing key
+
+Result:
+
+::
+
+	"vkey"                  (string) The viewing key
+
+Examples:
+
+	> komodo-cli z_exportviewingkey "myaddress"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_exportviewingkey", "params": ["myaddress"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_exportwallet "filename"
 -------------------------
 
+Exports all wallet keys, for taddr and zaddr, in a human-readable format.  Overwriting an existing file is not permitted.
+
+Arguments:
+
+::
+
+	1. "filename"    (string, required) The filename, saved in folder set by zcashd -exportdir option
+
+Result:
+
+	"path"           (string) The full path of the destination file
+
+Examples:
+
+::
+
+	> komodo-cli z_exportwallet "test"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_exportwallet", "params": ["test"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_getbalance "address" ( minconf )
 ----------------------------------
 
+Returns the balance of a taddr or zaddr belonging to the node’s wallet.
+
+``CAUTION``: If address is a watch-only zaddr, the returned balance may be larger than the actual balance,
+because spends cannot be detected with incoming viewing keys.
+
+Arguments:
+
+::
+
+	1. "address"      (string) The selected address. It may be a transparent or private address.
+	2. minconf          (numeric, optional, default=1) Only include transactions confirmed at least this many times.
+
+Result:
+
+::
+
+	amount              (numeric) The total amount in KMD received for this address.
+
+Examples:
+
+The total amount received by address "myaddress"
+
+::
+
+	> komodo-cli z_getbalance "myaddress"
+
+The total amount received by address "myaddress" at least 5 blocks confirmed
+
+::
+
+	> komodo-cli z_getbalance "myaddress" 5
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_getbalance", "params": ["myaddress", 5] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_getnewaddress
 ---------------
 
+Returns a new zaddr for receiving payments.
+
+Arguments:
+
+Result:
+
+::
+	
+	"zcashaddress"    (string) The new zaddr
+
+Examples:
+
+::
+
+	> komodo-cli z_getnewaddress 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_getnewaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_getoperationresult (["operationid", ...]) 
 ---------------------------------------------
 
+Retrieve the result and status of an operation which has finished, and then remove the operation from memory.
+
+Arguments:
+
+::
+
+	1. "operationid"         (array, optional) A list of operation ids we are interested in.  If not provided, examine all operations known to the node.
+
+Result:
+
+::
+
+	"    [object, ...]"      (array) A list of JSON objects
+
+Examples:
+
+::
+
+	> komodo-cli z_getoperationresult '["operationid", ... ]'
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_getoperationresult", "params": ['["operationid", ...]'] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_getoperationstatus (["operationid", ...]) 
 ---------------------------------------------
 
+Get operation status and any associated result or error data.  The operation will remain in memory.
+
+Arguments:
+
+::
+
+	1. "operationid"         (array, optional) A list of operation ids we are interested in.  If not provided, examine all operations known to the node.
+
+Result:
+
+::
+
+	"    [object, ...]"      (array) A list of JSON objects
+
+Examples:
+
+::
+
+	> komodo-cli z_getoperationstatus '["operationid", ... ]'
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_getoperationstatus", "params": ['["operationid", ...]'] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_gettotalbalance ( minconf includeWatchonly )
 ----------------------------------------------
 
+Return the total value of funds stored in the node’s wallet.
+
+**CAUTION**: If the wallet contains watch-only zaddrs, the returned private balance may be larger than the actual balance,
+because spends cannot be detected with incoming viewing keys.
+
+Arguments:
+
+::
+
+	1. minconf          (numeric, optional, default=1) Only include private and transparent transactions confirmed at least this many times.
+	2. includeWatchonly (bool, optional, default=false) Also include balance in watchonly addresses (see 'importaddress' and 'z_importviewingkey')
+
+Result:
+
+::
+
+	{
+	  "transparent": xxxxx,     (numeric) the total balance of transparent funds
+	  "private": xxxxx,         (numeric) the total balance of private funds
+	  "total": xxxxx,           (numeric) the total balance of both transparent and private funds
+	}
+
+Examples:
+
+The total amount in the wallet
+
+::
+
+	> komodo-cli z_gettotalbalance 
+
+The total amount in the wallet at least 5 blocks confirmed
+
+::
+
+	> komodo-cli z_gettotalbalance 5
+
+As a json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_gettotalbalance", "params": [5] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_importkey "zkey" ( rescan startHeight )
 -----------------------------------------
 
+Adds a zkey (as returned by z_exportkey) to your wallet.
+
+Arguments:
+
+::
+
+	1. "zkey"             (string, required) The zkey (see z_exportkey)
+	2. rescan             (string, optional, default="whenkeyisnew") Rescan the wallet for transactions - can be "yes", "no" or "whenkeyisnew"
+	3. startHeight        (numeric, optional, default=0) Block height to start rescan from
+
+**Note**: This call can take minutes to complete if rescan is true.
+
+Examples:
+
+Export a zkey
+
+::
+
+	> komodo-cli z_exportkey "myaddress"
+
+Import the zkey with rescan
+
+::
+
+	> komodo-cli z_importkey "mykey"
+
+Import the zkey with partial rescan
+
+::
+
+	> komodo-cli z_importkey "mykey" whenkeyisnew 30000
+
+Re-import the zkey with longer partial rescan
+
+::
+
+	> komodo-cli z_importkey "mykey" yes 20000
+
+As a JSON-RPC call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_importkey", "params": ["mykey", "no"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_importviewingkey "vkey" ( rescan startHeight )
 ------------------------------------------------
 
+Adds a viewing key (as returned by z_exportviewingkey) to your wallet.
+
+Arguments:
+
+::
+
+	1. "vkey"             (string, required) The viewing key (see z_exportviewingkey)
+	2. rescan             (string, optional, default="whenkeyisnew") Rescan the wallet for transactions - can be "yes", "no" or "whenkeyisnew"
+	3. startHeight        (numeric, optional, default=0) Block height to start rescan from
+
+**Note**: This call can take minutes to complete if rescan is true.
+
+Examples:
+
+Import a viewing key
+
+::
+
+	> komodo-cli z_importviewingkey "vkey"
+
+Import the viewing key without rescan
+
+::
+
+	> komodo-cli z_importviewingkey "vkey", no
+
+Import the viewing key with partial rescan
+
+::
+
+	> komodo-cli z_importviewingkey "vkey" whenkeyisnew 30000
+
+Re-import the viewing key with longer partial rescan
+
+::
+
+	> komodo-cli z_importviewingkey "vkey" yes 20000
+
+As a JSON-RPC call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_importviewingkey", "params": ["vkey", "no"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_importwallet "filename"
 -------------------------
 
+Imports taddr and zaddr keys from a wallet export file (see z_exportwallet).
+
+Arguments:
+
+::
+
+	1. "filename"    (string, required) The wallet file
+
+Examples:
+
+Dump the wallet
+
+::
+
+	> komodo-cli z_exportwallet "nameofbackup"
+
+Import the wallet
+
+::
+
+	> komodo-cli z_importwallet "path/to/exportdir/nameofbackup"
+
+Import using the json rpc call
+
+::
+
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_importwallet", "params": ["path/to/exportdir/nameofbackup"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_listaddresses ( includeWatchonly )
 ------------------------------------
 
+Returns the list of zaddr belonging to the wallet.
+
+Arguments:
+
+::
+
+	1. includeWatchonly (bool, optional, default=false) Also include watchonly addresses (see 'z_importviewingkey')
+
+Result:
+
+::
+
+	[                     (json array of string)
+	  "zaddr"           (string) a zaddr belonging to the wallet
+	  ,...
+	]
+
+Examples:
+
+::
+
+	> komodo-cli z_listaddresses 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_listaddresses", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_listoperationids
 ------------------
 
+Returns the list of operation ids currently known to the wallet.
+
+Arguments:
+
+::
+
+	1. "status"         (string, optional) Filter result by the operation's state e.g. "success".
+
+Result:
+
+::
+
+	[                     (json array of string)
+	  "operationid"       (string) an operation id belonging to the wallet
+	  ,...
+	]
+
+Examples:
+
+::
+
+	> komodo-cli z_listoperationids 
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_listoperationids", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_listreceivedbyaddress "address" ( minconf )
 ---------------------------------------------
 
+Return a list of amounts received by a zaddr belonging to the node’s wallet.
+
+Arguments:
+
+::
+
+	1. "address"      (string) The private address.
+	2. minconf          (numeric, optional, default=1) Only include transactions confirmed at least this many times.
+
+Result:
+
+::
+
+	{
+	  "txid": xxxxx,     (string) the transaction id
+	  "amount": xxxxx,   (numeric) the amount of value in the note
+	  "memo": xxxxx,     (string) hexademical string representation of memo field
+	}
+
+Examples:
+
+::
+
+	> komodo-cli z_listreceivedbyaddress "ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_listreceivedbyaddress", "params": ["ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_mergetoaddress ["fromaddress", ...] "toaddress" ( fee ) ( transparent_limit ) ( shielded_limit ) ( memo )
 ------------------------------------------------------------------------------------------------------------
 
+**WARNING**: z_mergetoaddress is DISABLED but can be enabled as an experimental feature.
+
+Merge multiple UTXOs and notes into a single UTXO or note.  Coinbase UTXOs are ignored; use ``z_shieldcoinbase``
+to combine those into a single note.
+
+This is an asynchronous operation, and UTXOs selected for merging will be locked.  If there is an error, they
+are unlocked.  The RPC call `listlockunspent` can be used to return a list of locked UTXOs.
+
+The number of UTXOs and notes selected for merging can be limited by the caller.  If the transparent limit
+parameter is set to zero, the -mempooltxinputlimit option will determine the number of UTXOs.  Any limit is
+constrained by the consensus rule defining a maximum transaction size of 100000 bytes.
+
+Arguments:
+
+::
+	
+	1. fromaddresses         (string, required) A JSON array with addresses.
+    	                     The following special strings are accepted inside the array:
+    	                         - "*": Merge both UTXOs and notes from all addresses belonging to the wallet.
+    	                         - "ANY_TADDR": Merge UTXOs from all t-addrs belonging to the wallet.
+    	                         - "ANY_ZADDR": Merge notes from all z-addrs belonging to the wallet.
+    	                     If a special string is given, any given addresses of that type will be ignored.
+    	[
+    	  "address"          (string) Can be a t-addr or a z-addr
+    	  ,...
+    	]
+	2. "toaddress"           (string, required) The t-addr or z-addr to send the funds to.
+	3. fee                   (numeric, optional, default=0.0001) The fee amount to attach to this transaction.
+	4. transparent_limit     (numeric, optional, default=50) Limit on the maximum number of UTXOs to merge.  Set to 0 to use node option -mempooltxinputlimit.
+	4. shielded_limit        (numeric, optional, default=10) Limit on the maximum number of notes to merge.  Set to 0 to merge as many as will fit in the transaction.
+	5. "memo"                (string, optional) Encoded as hex. When toaddress is a z-addr, this will be stored in the memo field of the new note.
+
+Result:
+
+::
+
+	{
+	  "remainingUTXOs": xxx               (numeric) Number of UTXOs still available for merging.
+	  "remainingTransparentValue": xxx    (numeric) Value of UTXOs still available for merging.
+	  "remainingNotes": xxx               (numeric) Number of notes still available for merging.
+	  "remainingShieldedValue": xxx       (numeric) Value of notes still available for merging.
+	  "mergingUTXOs": xxx                 (numeric) Number of UTXOs being merged.
+	  "mergingTransparentValue": xxx      (numeric) Value of UTXOs being merged.
+	  "mergingNotes": xxx                 (numeric) Number of notes being merged.
+	  "mergingShieldedValue": xxx         (numeric) Value of notes being merged.
+	  "opid": xxx          (string) An operationid to pass to z_getoperationstatus to get the result of the operation.
+	}
+
+Examples:
+
+::
+
+	> komodo-cli z_mergetoaddress '["t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd"]' ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_mergetoaddress", "params": [["t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd"], "ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_sendmany "fromaddress" [{"address":...,"amount":...},...] ( minconf ) ( fee )
 --------------------------------------------------------------------------------
 
+Send multiple times. Amounts are double-precision floating point numbers.
+Change from a taddr flows to a new taddr address, while change from zaddr returns to itself.
+When sending coinbase UTXOs to a zaddr, change is not allowed. The entire value of the UTXO(s) must be consumed.
+Currently, the maximum number of zaddr outputs is 54 due to transaction size limits.
+
+Arguments:
+
+::
+
+	1. "fromaddress"         (string, required) The taddr or zaddr to send the funds from.
+	2. "amounts"             (array, required) An array of json objects representing the amounts to send.
+	    [{
+	      "address":address  (string, required) The address is a taddr or zaddr
+	      "amount":amount    (numeric, required) The numeric amount in KMD is the value
+	      "memo":memo        (string, optional) If the address is a zaddr, raw data represented in hexadecimal string format
+	    }, ...]
+	3. minconf               (numeric, optional, default=1) Only use funds confirmed at least this many times.
+	4. fee                   (numeric, optional, default=0.0001) The fee amount to attach to this transaction.
+
+Result:
+
+::
+
+	"operationid"          (string) An operationid to pass to z_getoperationstatus to get the result of the operation.
+
+Examples:
+
+::
+
+	> komodo-cli z_sendmany "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" '[{"address": "ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf" ,"amount": 5.0}]'
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_sendmany", "params": ["t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", [{"address": "ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf" ,"amount": 5.0}]] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 z_shieldcoinbase "fromaddress" "tozaddress" ( fee ) ( limit )
 -------------------------------------------------------------
 
+Shield transparent coinbase funds by sending to a shielded zaddr.  This is an asynchronous operation and utxos
+selected for shielding will be locked.  If there is an error, they are unlocked.  The RPC call `listlockunspent`
+can be used to return a list of locked utxos.  The number of coinbase utxos selected for shielding can be limited
+by the caller.  If the limit parameter is set to zero, the -mempooltxinputlimit option will determine the number
+of uxtos.  Any limit is constrained by the consensus rule defining a maximum transaction size of 100000 bytes.
+
+Arguments:
+
+::
+
+	1. "fromaddress"         (string, required) The address is a taddr or "*" for all taddrs belonging to the wallet.
+	2. "toaddress"           (string, required) The address is a zaddr.
+	3. fee                   (numeric, optional, default=0.0001) The fee amount to attach to this transaction.
+	4. limit                 (numeric, optional, default=50) Limit on the maximum number of utxos to shield.  Set to 0 to use node option -mempooltxinputlimit.
+
+Result:
+
+::
+
+	{
+	  "remainingUTXOs": xxx       (numeric) Number of coinbase utxos still available for shielding.
+	  "remainingValue": xxx       (numeric) Value of coinbase utxos still available for shielding.
+	  "shieldingUTXOs": xxx        (numeric) Number of coinbase utxos being shielded.
+	  "shieldingValue": xxx        (numeric) Value of coinbase utxos being shielded.
+	  "opid": xxx          (string) An operationid to pass to z_getoperationstatus to get the result of the operation.
+	}
+
+Examples:
+
+::
+
+	> komodo-cli z_shieldcoinbase "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" "ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "z_shieldcoinbase", "params": ["t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", "ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 zcbenchmark benchmarktype samplecount
 -------------------------------------
 
+Runs a benchmark of the selected type samplecount times,
+returning the running times of each sample.
+
+Output: 
+
+::
+
+	[
+	  {
+	    "runningtime": runningtime
+	  },
+	  {
+	    "runningtime": runningtime
+	  }
+	  ...
+	]
 
 zcrawjoinsplit rawtx inputs outputs vpub_old vpub_new
 -----------------------------------------------------
 
+  inputs: a JSON object mapping {note: zcsecretkey, ...}
+  outputs: a JSON object mapping {zcaddr: value, ...}
+
+**DEPRECATED**. Splices a joinsplit into rawtx. Inputs are unilaterally confidential.
+Outputs are confidential between sender/receiver. The vpub_old and
+vpub_new values are globally public and move transparent value into
+or out of the confidential value store, respectively.
+
+Note: The caller is responsible for delivering the output enc1 and
+enc2 to the appropriate recipients, as well as signing rawtxout and
+ensuring it is mined. (A future RPC call will deliver the confidential
+payments in-band on the blockchain.)
+
+Output: 
+
+::
+
+	{
+	  "encryptednote1": enc1,
+	  "encryptednote2": enc2,
+	  "rawtxn": rawtxout
+	}
 
 zcrawkeygen
 -----------
 
+**DEPRECATED**. Generate a zcaddr which can send and receive confidential values.
+
+Output: 
+
+::
+
+	{
+	  "zcaddress": zcaddr,
+	  "zcsecretkey": zcsecretkey,
+	  "zcviewingkey": zcviewingkey,
+	}
 
 zcrawreceive zcsecretkey encryptednote
 --------------------------------------
 
+**DEPRECATED**. Decrypts encryptednote and checks if the coin commitments
+are in the blockchain as indicated by the "exists" result.
+
+Output: 
+
+::
+
+	{
+	  "amount": value,
+	  "note": noteplaintext,
+	  "exists": exists
+	}
 
 zcsamplejoinsplit
 -----------------
 
-
+Perform a joinsplit and return the JSDescription.
