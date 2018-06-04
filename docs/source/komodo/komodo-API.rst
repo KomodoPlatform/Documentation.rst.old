@@ -6,7 +6,7 @@ You can access this API while ``komodod`` is running. Just go to another termina
 
 For help about a particular API option execute ``./komodo-cli help getwalletinfo``
 
-*In some of the explanation of API calls if you find ``Zcash`` consider it replaced by ``Komodo`` and ``zcashaddress`` replaced by ``komodoaddress`` 
+In some of the explanation of API calls if you find ``Zcash`` consider it replaced by ``Komodo`` and ``zcashaddress`` replaced by ``komodoaddress`` 
 
 :doc:`Guide to install Komodo <install-Komodo-manually>`
 
