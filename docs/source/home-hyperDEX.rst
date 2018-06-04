@@ -11,3 +11,4 @@ Here you will find more information about HyperDEX
    :caption: HyperDEX - Developer - Docs
 
    hyperDEX/change-log-hyperDEX
+   hyperDEX/enhancement-records/*
