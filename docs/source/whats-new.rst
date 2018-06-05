@@ -7,7 +7,7 @@ What's new!
    :caption: Agama
    
    agama/change-log-agama-desktop
-   agama/
+   agama/release-notes/agama-v0.2.38-updates
 
 
 .. toctree::

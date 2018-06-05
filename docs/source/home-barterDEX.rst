@@ -15,3 +15,7 @@ Here you will find more information about BarterDEX
    barterDEX/MarketmakerErrors.rst
    Setup Bob/Marketmaker nodes using easy scripts by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>
    barterDEX/list-of-all-coins-tradable
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Release Notes
