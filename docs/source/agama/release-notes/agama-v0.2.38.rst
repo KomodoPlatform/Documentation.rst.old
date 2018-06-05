@@ -2,7 +2,7 @@
 Agama-v0.2.38-Updates
 *********************
 	
-1. Spv max vin parse settings
+1. Spv max vin parse settings has been added.
 
 a. SPV parse settings may be found in Settings -> App Config
 
@@ -10,11 +10,11 @@ a. SPV parse settings may be found in Settings -> App Config
    :align: center
    :scale: 75 %
 
-2. Login quick menu click outside fix, remove spv coins option
+2. Login quick menu click outside fix, Added an option to ``Remove all SPV Coins`` 
 
 a. Open Agama then select a coin from the SPV dropdown
 
-b. With the login screen displayed select the Quick Access link then select the new option Remove all SPV Coins
+b. With the login screen displayed select the Quick Access link then select the new option ``Remove all SPV Coins``
 
 .. image:: images/Agama-v0.2.38/image2.png
    :align: center

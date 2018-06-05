@@ -14,7 +14,7 @@ What's new!
    :maxdepth: 1
    :caption: BarterDEX
 
-   barterDEX/
+   barterDEX/change-log-barterDEX-GUI
 
 .. toctree::
    :maxdepth: 1

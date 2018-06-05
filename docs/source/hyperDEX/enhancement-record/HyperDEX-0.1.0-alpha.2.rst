@@ -12,13 +12,13 @@ a. Denarius currency is now accessible on the Settings screen
    :align: center
    :scale: 75 %
 		
-b. Once added it is now visible in the Dashboard
+b. Once added, it is now visible in the Dashboard.
 
 .. image:: images/HyperDEX-0.1.0-alpha.2/image2.png
    :align: center
    :scale: 75 %
 
-c. Also when added, DNR is available for exchange
+c. Also when added, DNR is available for trading.
 
 .. image:: images/HyperDEX-0.1.0-alpha.2/image3.png
    :align: center
@@ -26,9 +26,9 @@ c. Also when added, DNR is available for exchange
 
 3. Fixed the Electrum port for BTCH and CRYPTO. - **Dev Only**
 
-4. Fixed a problem with typing zero after a decimal point in input fields
+4. Fixed a problem with typing zero after a decimal point in input fields.
 		
-a. User is now able to enter integers (original bug listed zeros only) in the buy/sell fields of the exchange
+a. User is now able to enter integers (original bug listed zeros only) in the buy/sell fields of the exchange.
 
 .. image:: images/HyperDEX-0.1.0-alpha.2/image4.png
    :align: center
@@ -62,7 +62,7 @@ d. Exchange
    :align: center
    :scale: 75 %
 
-7. Now shows the "View" button also in the "Open Orders" view.
+7. "View" button is now shown in the "Open Orders" view too.
 
 .. image:: images/HyperDEX-0.1.0-alpha.2/image9.png
    :align: center
@@ -72,21 +72,21 @@ d. Exchange
    :align: center
    :scale: 75 %
 
-8. Added a Copy Swap Debug Data button to the swap modal dialog, so you can more easily share debug data with us.
+8. Added a ``Copy Swap Debug Data`` button to the swap modal dialog, so you can more easily share debug data with us.
 
-a. The Copy Swap Debug Data button has been added to the swap dialog from the view button of the swap
+a. The ``Copy Swap Debug Data`` button has been added to the swap dialog from the view button of the swap.
 
 .. image:: images/HyperDEX-0.1.0-alpha.2/image11.png
    :align: center
    :scale: 75 %
 
-b. Once copied paste into desired location (in this example Notepad)
+b. Once copied, paste into desired location (in this example Notepad)
 
 .. image:: images/HyperDEX-0.1.0-alpha.2/image12.png
    :align: center
    :scale: 75 %
 
-9. PIZZA and BEER no longer shows a price since they're just test currencies.
+9. PIZZA and BEER no longer show a price since they're just test currencies.
 
 a. BEER now shows $0 value
 

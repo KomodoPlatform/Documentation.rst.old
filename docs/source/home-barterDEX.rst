@@ -19,3 +19,5 @@ Here you will find more information about BarterDEX
 .. toctree::
    :maxdepth: 1
    :caption: Release Notes
+
+   barterDEX/change-log-barterDEX-GUI

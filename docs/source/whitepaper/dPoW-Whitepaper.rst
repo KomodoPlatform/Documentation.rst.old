@@ -6,7 +6,7 @@ Delayed Proof of Work (dPoW) Whitepaper
 
 *v1.1*
 
-**Abstract:** In this whitepaper we discuss a completely new cryptocurrency consensus mechanism, that is as secure as the proof-of-work blockchain to which it attaches itself to (In this case: Bitcoin), but does not require computing power and energy to be wasted. This system is called Delayed Proof of Work (dPoW) and is achieved by notarizing blocks created in the initial blockchain on the Bitcoin blockchain, ensuring that once the information is engraved on the Bitcoin blockchain, it would be required both blockchains in question to be compromised.
+**Abstract:** In this whitepaper we discuss a completely new cryptocurrency consensus mechanism, that is as secure as the proof-of-work blockchain to which it attaches itself to (In this case: Bitcoin), but does not require computing power and energy to be wasted. This system is called Delayed Proof of Work (dPoW) and is achieved by notarizing blocks created in the initial blockchain on the Bitcoin blockchain, ensuring that once the information is engraved on the Bitcoin blockchain, it would be required both blockchains in question to be compromised to carry out a consensus attack on the initial chain.
 
 Introduction
 ============
