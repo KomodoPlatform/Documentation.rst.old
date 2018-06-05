@@ -1,5 +1,5 @@
 ***********************************
-HyperDEX-0.1.0-alpha.2 Enhancements
+HyperDEX-0.1.0-alpha.2-Enhancements
 ***********************************
 	
 1. Various user-interface improvements. Larger text in some places. Less scrollbars.

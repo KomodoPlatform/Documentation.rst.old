@@ -7,7 +7,7 @@ What's new!
    :caption: Agama
    
    agama/change-log-agama-desktop
-   agama/release-notes/agama-v0.2.38-updates
+   agama/release-notes/agama-v0.2.38
 
 
 .. toctree::
@@ -21,4 +21,4 @@ What's new!
    :caption: HyperDEX
 
    hyperDEX/change-log-hyperDEX
-   hyperDEX/enhancement-records/HyperDEX-0.1.0-alpha.2
+   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.2

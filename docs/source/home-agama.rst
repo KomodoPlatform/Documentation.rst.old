@@ -18,4 +18,4 @@ Here you will find more information about Agama
    :caption: Release Notes
 
    agama/change-log-agama-desktop
-   agama/release-notes/agama-v0.2.38-updates
+   agama/release-notes/agama-v0.2.38
