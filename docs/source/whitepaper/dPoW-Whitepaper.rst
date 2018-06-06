@@ -11,13 +11,13 @@ Delayed Proof of Work (dPoW) Whitepaper
 Introduction
 ============
 
-In 2008, Satoshi Nakamoto published the white paper introducing Bitcoin, the first form of peer to peer, trustless cryptographic currency, a system that relies on Proof of Work to mint new coins and to maintain itself. In PoW, contribution is weighted by the computational power, rather than one threshold signature contribution per party, which allows anonymous membership without risk of a Sybil attack.
+In 2008, Satoshi Nakamoto published the white paper introducing Bitcoin, the first form of peer to peer, trustless cryptographic currency, a system that relies on Proof of Work to mint new coins and to secure itself. In PoW, contribution is weighted by the computational power, rather than one threshold signature contribution per party, which allows anonymous membership without risk of a Sybil attack.
 
 Bitcoin focuses on the transfer of value from point A to point B, but since the inception of Bitcoin, hundreds of new cryptocurrencies have surfaced. Some focus on improving this system with faster, cheaper or anonymous transactions, while others use the blockchain to create completely new systems or applications. These cryptocurrencies (excluding the clones of clones) often serve a specific purpose or function.
 
-Many types of consensus systems have been created over the years, but despite being more efficient than Bitcoin, they often pale in comparison to Bitcoin's security, and thus are not suitable for use in high value transactions. Today, thousands of nodes secure the Bitcoin network and more than half a million dollars are used daily to secure one single cryptocurrency. The question then arises about how we could make the overall system more efficient?
+Many types of consensus systems have been created over the years, but despite being more efficient than Bitcoin, they often pale in comparison to Bitcoin's security, and thus are not suitable for use in high value transactions. Today, thousands of nodes secure the Bitcoin network and more than half a million dollars are used daily to secure one single cryptocurrency. The question that arises then is about how we could make the overall system more efficient?
 
-For other cryptocurrencies to become as secure as bitcoin they would have to secure their network with as large hashing power. However this is not economically possible and would make the overall system even more energy inefficient. The solution would be to allow other other cryptocurrencies to take advantage of bitcoin’s hashing power.
+For other cryptocurrencies to become as secure as bitcoin they would have to secure their network with as large hashing power as bitcoin's. However this is not economically possible and would make the overall system even more energy inefficient. The solution would be to allow other cryptocurrencies to take advantage of bitcoin’s hashing power.
 
 Delayed Proof of Work is a solution that utilizes multiple existing methods into a single hybrid consensus system that at the same time is as energy efficient as PoS while being secured by bitcoin PoW. Thus dPoW allows even the weakest of blockchains to benefit from bitcoin's hashrate and this in turn makes Bitcoin's power usage much more eco-friendly as it is securing the entire ecosystem of dPoW in addition to itself.
 
