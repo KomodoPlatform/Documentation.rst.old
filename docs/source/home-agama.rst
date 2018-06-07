@@ -16,6 +16,8 @@ Here you will find more information about Agama
 .. toctree::
    :maxdepth: 1
    :caption: Release Notes
+   :glob:
+   :reversed:
 
+   agama/release-notes/*
    agama/change-log-agama-desktop
-   agama/release-notes/agama-v0.2.38

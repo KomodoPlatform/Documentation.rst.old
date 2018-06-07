@@ -53,6 +53,15 @@ BarterDEX GUI
 * Source code: https://github.com/KomodoPlatform/BarterDEX
 * Release package: https://github.com/KomodoPlatform/BarterDEX/releases
 
+
+HyperDEX
+========
+
+* Source code: https://github.com/lukechilds/hyperdex
+* Release package: https://github.com/lukechilds/hyperdex/releases
+* Nightly bulds: https://github.com/lukechilds/hyperdex-nightlies/releases/latest
+* Download Instructions: https://github.com/lukechilds/hyperdex/blob/master/README.md
+
 CHIPS
 =====
 
