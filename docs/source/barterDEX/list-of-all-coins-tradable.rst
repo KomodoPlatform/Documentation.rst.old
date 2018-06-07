@@ -23,6 +23,8 @@ Bitcoin compatible and other general cryptocurrencies
 ======  =====================
 TICKER    NAME
 ======  =====================
+BTC     Bitcoin
+KMD     Komodo
 SPK     Sparks
 ORE     Galactrum
 PEW     Brofist
@@ -258,7 +260,7 @@ Komodo Asset Chains
 ===================
 
 ========  ================
-coin      fname
+TICKER      NAME
 ========  ================
 EQL       Equaliser
 OOT       Utrum
