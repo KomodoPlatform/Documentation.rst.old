@@ -111,9 +111,7 @@ Paste this in your ``bitcoin.conf`` (replace recuser and rpcpassword)
 	txindex=1
 	rpcuser=bitcoinrpc
 	rpcpassword=password
-	bind=127.0.0.1
-	rpcbind=127.0.0.1
-
+	
 secure the ``bitcoin.conf`` file
 
 .. code-block:: shell
