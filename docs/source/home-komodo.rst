@@ -29,14 +29,11 @@ Here you will find more information about Komodo (KMD)
    notorynode/assetchains-guide-Komodo-Notory-Node
    notorynode/useful-commands-Komodo-Notory-Node
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Whitepapers
+Whitepaper
+----------
 
-   /whitepaper/dPoW-Whitepaper
-   /whitepaper/barterDEX-Whitepaper-v2
-   /whitepaper/JUMBLR-Whitepaper
-   /whitepaper/dICO-Whitepaper
+   :download:`Whitepaper </whitepaper/Komodo-Whitepaper-June-3.pdf>`
+
 
 .. toctree::
    :maxdepth: 1

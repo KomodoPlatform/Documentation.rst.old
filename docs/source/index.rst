@@ -22,17 +22,11 @@ Welcome to Komodo Platform's documentation!
    barterDEX/zeroconf-API-implementation-BarterDEX-GUI
    barterDEX/MarketmakerErrors.rst
 
-.. _whitepapers:
+Whitepaper
+----------
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Whitepapers
-
-   /whitepaper/dPoW-Whitepaper
-   /whitepaper/barterDEX-Whitepaper-v2
-   /whitepaper/JUMBLR-Whitepaper
-   /whitepaper/dICO-Whitepaper
-
+   :download:`Whitepaper </whitepaper/Komodo-Whitepaper-June-3.pdf>`
+   
 .. _quicklinks:
 
 .. toctree::
