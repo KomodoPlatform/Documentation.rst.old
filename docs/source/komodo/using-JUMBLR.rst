@@ -2,6 +2,11 @@
 Using JUMBLR
 ************
 
+Introduction and Explanation
+============================
+
+For instructions jump to :ref:`Instructions for using JUMBLR`
+
 ``komodod`` now has ``jumblr_deposit`` and ``jumblr_secret`` RPC calls.
 
 Jumblr works like described :doc:`in the whitepaper </whitepaper/JUMBLR-Whitepaper>` where all the nodes with jumblr active synchronize their ``tx`` activity during the same block to maximize the mixing effect. However, unlike all other mixers/tumblers, you never give up control of your coins to anybody else. JUMBLR uses a one to many allocations of funds, ie. one deposit address and many secret addresses. You can always run multiple ``komodod`` daemons to get multiple active deposit addresses.
@@ -40,3 +45,55 @@ Instead of generating 1 secret address, generate 100 and make a script file with
 	./komodo-cli jumblr_secret
 
 And make sure to delete all traces of this when the JUMBLR is finished. You will end up with 100 addresses that have an average of 1000 KMD each. So as long as you are careful and don't do a 10,000 KMD transaction (that will link 10 of your secret addresses together), you can appear as 100 different people each with 1000 KMD.
+
+Instructions for using JUMBLR
+=============================
+
+1. Install Komodo following the :doc:`installation guide <install-Komodo-manually>`
+
+2. Start the Komodo daemon
+
+.. code-block:: shell
+
+	cd komodo/src
+
+	./komodod &
+
+3. Designate an address with funds. (``jumblr_deposit``)
+
+(The funds that are already within or deposited in the future of the specified address will go through Jumblr. 10 coins is the minimum plus the Jumblr fee which is 1/777 of the transaction. Therefore you should deposit atleast 10.024 KMD)
+
+
+.. code-block:: shell
+
+	./komodo-cli jumblr_deposit "KMD Address with Funds"
+
+#Example:
+
+.. code-block:: shell
+
+	./komodo-cli jumblr_deposit RT4mSUjG35QeuGcedsfpHtP5MhDeEGTAqb
+
+
+4. Designate an address to deposit Jumblr'ed funds. (``jumblr_secret``)
+
+(Now that the Jumblr process has started, you should wait at least 20 minutes before this step. We want to designate an address non-related to your wallet where you will receive the Jumblr'ed funds.)
+
+.. code-block:: shell
+
+	./komodo-cli jumblr_secret "Address where unlinked funds will go"
+
+#Example:
+
+.. code-block:: shell
+
+	./komodo-cli jumblr_secret RS46GZ5iTkt2exdauQG3JJ8fdnZNJUvAc1
+
+5. Wait for funds to arrive.....and you have successfully tumbled coins with zcash privacy!
+
+.. warning::
+
+	Jumblr is created to be resistant against time-based analysis. That means it is not meant to be fast. Make sure you initiate the Jumblr process only if you have plenty of time for the process to finish.
+
+
+
