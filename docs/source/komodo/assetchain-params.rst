@@ -2,6 +2,8 @@
 Asset Chain Parameters
 **********************
 
+For instructions on how to create an assetchain see :doc:`create-Komodo-Assetchain`
+
 -ac_name
 ========
 
