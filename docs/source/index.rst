@@ -61,7 +61,8 @@ Whitepaper
    :maxdepth: 1
    :caption: Setups
    
-   komodoplatform/setup-LP-node-using-barterDEX-CLI
+   komodoplatform/setup-Bob-node-using-barterDEX-CLI
+   komodoplatform/setup-FR-full-relay-node-barterDEX
    /komodoplatform/setup-electrumX-server
    /komodoplatform/barterDEX-Network-Optimizations
    barterDEX/setup-Bitcoin-Cash-BarterDEX

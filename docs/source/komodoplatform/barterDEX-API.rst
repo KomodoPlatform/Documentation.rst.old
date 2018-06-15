@@ -15,7 +15,7 @@ As the docs are full of code samples and command-line outputs, it's best viewed 
 
 :ref:`client`, :ref:`client-osx`, :ref:`convaddress`, :ref:`debug`, :ref:`disable`, 
 :ref:`electrum`, :ref:`enable`, :ref:`getcoin`, :ref:`getcoins`, :ref:`getpeers`, :ref:`getpeersIP`, 
-:ref:`help`, :ref:`jpg`, :ref:`millis`, :ref:`notarizations`, :ref:`parselog`, :ref:`run`, 
+:ref:`help`, :ref:`jpg`, :ref:`millis`, :ref:`notarizations`, :ref:`parselog`, 
 :ref:`setpassphrase`, :ref:`sleep`, :ref:`stop`, :ref:`trust`, :ref:`trusted`
 
 :ref:`Category: BarterDEX Trading <BarterDEX Trading>`
@@ -55,11 +55,6 @@ As the docs are full of code samples and command-line outputs, it's best viewed 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :ref:`guistats`, :ref:`pricearray`, :ref:`statsdisp`, :ref:`ticker`, :ref:`tradesarray`
-
-:ref:`Category: Communication <Communication>`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-:ref:`deletemessages`, :ref:`getmessages`, :ref:`message`
 
 :ref:`Category: Revenue Sharing/Operations <Revenue Sharing/Operations>`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1472,25 +1467,6 @@ Sample Output:
 	    "unknown": 0
 	}
 
-run
-^^^
-
-``./run`` starts barterDEX in LP (Liquid Provider) mode while ``./client`` is for client mode. After it starts (takes a tiny bit time to complete) execute your API calls from the ``dexscripts`` directory. Don't use this API unless you have reliable internet connection from datacenter or vps.
-
-Sample File Contents:
-
-.. code-block:: shell
-
-	#!/bin/bash
-	source passphrase
-	source coins
-	./stop
-	git pull;
-	cd ..; 
-	./m_mm;
-	pkill -15 marketmaker; 
-	stdbuf -oL $1 ./marketmaker "{\"gui\":\"nogui\", \"profitmargin\":0.01, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$passphrase\", \"coins\":$coins}" &
-
 setpassphrase
 ^^^^^^^^^^^^^
 
@@ -1576,7 +1552,7 @@ barterDEX Trading
 
 Default timeout for a trade is 10 seconds, which means if no response, must wait 10 seconds between trade requests. It will generate an error if Alice tries to submit a trade while a previous request is pending.
 
-However if the other side responds, you can do another trade and we are seeing virtually instant responses from the live LP nodes.
+However if the other side responds, you can do another trade and we are seeing virtually instant responses from the live FR (Full Relay) nodes.
 
 Trade Negotiation Sequence:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3858,68 +3834,6 @@ Sample output:
 	 [1511481840, 1.63195519, 1.55147942, 1.63195519, 1.55147942, 0.09980000, 0.06273967, 1.59070011, 2],
 	 [1511481960, 1.82528276, 1.82528276, 1.82528276, 1.82528276, 0.04990000, 0.02733823, 1.82528276, 1],
 	 [1511482680, 1.77777461, 1.77777461, 1.77777461, 1.77777461, 0.04990000, 0.02806880, 1.77777461, 1]]
-
-Communication
--------------
-
-deletemessages
-^^^^^^^^^^^^^^
-
-As the name suggests this API will let you delete messages received from other nodes.
-
-Sample File Contents:
-
-.. code-block:: shell
-
-	curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"deletemessages\",\"firsti\":0,\"num\":10}"
-
-Sample Output:
-
-.. code-block:: json
-
-	{
-	  	"result": "success"
-	}
-
-getmessages
-^^^^^^^^^^^
-
-This API will allow to retrieve messages sent from other nodes.
-
-Sample File Contents:
-
-.. code-block:: shell
-
-	curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"getmessages\",\"firsti\":0,\"num\":10}"
-
-Sample Output:
-
-.. code-block:: json
-
-	{
-		  "messages": []
-	}
-
-message
-^^^^^^^
-
-The ``./message`` script let nodes communicate with each other with end to end encryption. It is recommended to message a node first before doing an actual trade to make sure they can communicate.
-
-To send a message you need to have the recipients public key. The public key can be found when launching the ``./client`` or running any other script the first time after launching ``./client``. Edit the ``./message`` script to write your custom message. Execute ``./message <pubkey of recipient>`` to send the message.
-
-Sample File Contents:
-
-.. code-block:: shell
-
-	curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"pubkey\":\"$1\",\"method\":\"sendmessage\",\"message\":\"some sort of message\"}"
-
-Sample Output:
-
-.. code-block:: json
-
-	{
-		  "result": "success"
-	}
 
 Revenue Sharing/Operations
 --------------------------

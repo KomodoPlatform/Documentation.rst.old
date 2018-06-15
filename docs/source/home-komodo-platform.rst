@@ -42,7 +42,8 @@ Here you can find a list of important documentation related to installing and us
    :maxdepth: 1
    :caption: Setup Guides
 
-   komodoplatform/setup-LP-node-using-barterDEX-CLI
+   komodoplatform/setup-Bob-node-using-barterDEX-CLI
+   komodoplatform/setup-FR-full-relay-node-barterDEX
    komodoplatform/private-swap-using-barterDEX
    komodoplatform/setup-electrumX-server
    komodoplatform/barterDEX-Network-Optimizations

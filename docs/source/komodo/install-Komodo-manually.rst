@@ -60,7 +60,7 @@ Installing Komodo
 	cd ~
 	git clone https://github.com/jl777/komodo
 	cd komodo
-	git checkout beta
+	git checkout dev
 	./zcutil/fetch-params.sh
 
 ``-j8`` uses 8 threads - replace ``8`` with number of threads you want to use or use the ``nproc`` variable
@@ -162,7 +162,7 @@ If you had already installed Komodo from it's source code on your machine, and n
 .. code-block:: shell
 
 	cd ~/komodo/src/
-	git checkout beta
+	git checkout dev
 	git pull
 	make -j$(nproc)
 
@@ -171,7 +171,7 @@ if you get any error executing make command, then do these commands:
 .. code-block:: shell
 
 	cd ~/komodo/
-	git checkout beta
+	git checkout dev
 	git pull
 	./zcutil/build.sh -j$(nproc)
 
@@ -225,23 +225,23 @@ Now install the dependency packages:
 
 	brew tap discoteq/discoteq; brew install flock
 	brew install autoconf autogen automake
-	brew install gcc
-	brew install cmake
-	brew install leveldb
+	brew install gcc5
 	brew install binutils
 	brew install protobuf
 	brew install coreutils
 	brew install wget
 	brew install nanomsg
-	
-(thanks to radix42)
+
+or
+
+``brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc5 binutils protobuf coreutils wget nanomsg```
 
 Clone the Komodo repository
 ---------------------------
 
 .. code-block:: shell
 
-	git clone https://github.com/jl777/komodo
+	git clone https://github.com/KomodoPlatform/komodo
 
 Get the proving keys:
 ---------------------
@@ -256,7 +256,7 @@ And now build Komodo
 
 .. code-block:: shell
 
-	git checkout beta
+	git checkout dev
 	./zcutil/build-mac.sh
 
 This can take some time, so let's create a configuration file in the mean time.

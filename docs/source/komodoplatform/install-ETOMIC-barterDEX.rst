@@ -205,7 +205,7 @@ Copy the ``userpass`` file from ``exchanges`` dir to ``dexscripts`` dir and ente
 	cd ~/SuperNET/iguana/dexscripts
 	nano userpass
 
-Enter the passphrase we got earlier in between "", save the file and close nano editor using ``CTRL+X`` then ``Y`` then ``ENTER``. All these scripts found in ``~/SuperNET/iguana/dexscripts`` are expecting a userpass file, which contains the definition of the ``$userpass`` variable (found inside scripts) to authenticate API access. This avoids evil webpages that try to issue port 7783 calls to steal your money.
+Enter the passphrase we got earlier in between "", save the file and close nano editor using ``CTRL+X`` then ``Y`` then ``ENTER``. All these scripts found in ``~/SuperNET/iguana/dexscripts`` are expecting a userpass file, which contains the definition of the ``$userpass`` variable (found inside scripts) to authenticate API access. This is to prevent malicious webpages from issuing port 7783 calls to steal your money.
 
 Edit ``coins`` file to add ``DEC8`` & ``JST`` token
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
