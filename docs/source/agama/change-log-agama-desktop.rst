@@ -2,6 +2,26 @@
 Change Log (Agama-Desktop)
 **************************
 
+v0.2.40
+=======
+
+    * custom electrum servers config
+    * extended argv
+    * kv electrum list
+    * load coins list from file on app init
+    * native send result table css overflow fix
+    * send native max balance shortcut, per address basis
+    * kv electrum servers list
+    * kv null history display fix
+    * kv history refresh fix
+    * kv history refresh btn fix
+    * spv watchonly hide kmd claim button
+    * updated support page
+    * spv balance subtract unconf balance, display info icon
+    * tx history csv export
+    * spv send no valid utxo message handling
+    * spv send confirm with pin
+
 v0.2.39
 =======
  
