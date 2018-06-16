@@ -5,11 +5,11 @@ Creating New Assetchain
 Requirements
 ============
 
-* 2 Computers with the ability to open ports and have static IP (It's simplest to use VPS)
+* 2 Computers with the ability to open ports. (It's easier if they have static IP addresses or you are using a VPS)
 * At least 4gb RAM each
 * At least 2 CPU cores each
 * 64-bit Linux Operating System (Ubuntu 16.04 recommended)
-* Komodod built on each, see :ref:`Installing Komodo Manually` (No need to download Komodo block chain)
+* ``komodod`` built on each, see :ref:`Installing Komodo Manually` (No need to download the Komodo blockchain)
 
 Creating a new blockchain
 =========================
@@ -19,22 +19,17 @@ Note:
 
 Do not include the ``<>`` characters in commands. If you are using windows, replace ``./komodod`` and ``./komodo-cli`` with ``komodod.exe`` and ``komodo-cli.exe`` for each step.
 
-In first node change the directory to ``~/komodo/src/``
-
-.. code-block:: shell
-
-	cd 
-	cd komodo/src
+In the first node, change the working-directory to ``~/komodo/src/`` : ``cd ~/komodo/src``
 
 Then execute the following command for running the first *daemon*
 
 .. code-block:: shell
 
-	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<IP address of the other node> &
+	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<IP address of the second node> &
 
 Leave this running.
 
-This is the simplest possible set of parameters. This will create a coin with the ticker symbol ``EXAMPLECHAIN`` with ``1000000`` premined coins.
+These are the simplest possible set of parameters. This will create a coin with the ticker symbol ``EXAMPLECHAIN`` with ``1000000`` premined coins.
 
 .. note::
 
@@ -46,9 +41,9 @@ This is the simplest possible set of parameters. This will create a coin with th
 
 .. warning::
 
-	A maximum supply of 500 million is good to use, to avoid 64 bit overflows.
+	A maximum supply of 500 million is a good limit. This is to avoid 64 bit overflows.
 
-Blocks will be on-demand after block 128(the chain is only mined when a transaction is in the mempool) and the block reward will be ``.0001``.  Please refer to :ref:`Asset Chain Parameters` for a full list of parameters that can be used to customize your Blockchain.
+Blocks will be on-demand after block 128 (i.e., the chain is only mined when a transaction is in the mempool) and the block reward will be ``.0001``.  Please refer to :ref:`Asset Chain Parameters` for a full list of parameters that can be used to customize your Blockchain.
 
 After issuing this command, you will see the p2p port in the terminal window. 
 
@@ -56,34 +51,29 @@ After issuing this command, you will see the p2p port in the terminal window.
 
 	>>>>>>>>>> EXAMPLECHAIN: p2p.8096 rpc.8097 magic.c89a5b16 3365559062 1000000 coins
 
-This p2p port must not be blocked by a firewall. If the computers do not have a public IP address, you will need to port forward the p2p port and append the forwarded port to the IP. For example:
+This p2p port must not be blocked by a firewall. If the computers do not have a public IP address, you will need to port-forward the p2p port and append the forwarded port to the IP. For example:
 
 .. code-block:: shell
 
-	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<IP of other node>:8096
+	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<IP of the second node>:8096
 
 
-Connecting with the other node
-==============================
+Connecting with the second node
+===============================
 
-On the second node, you now need to issue the same command with the first node's IP address along with setting ``-gen``.
+On the second node, you now need to issue the same command, but with the first node's IP address along with setting ``-gen``.
 
-In the second node, change the directory to ``~/komodo/src/``
-
-.. code-block:: shell
-
-	cd 
-	cd komodo/src
+In the second node, change the working-directory to ``~/komodo/src/`` : ``cd ~/komodo/src``
 
 Then execute the following command for running the second *daemon*
 
 .. code-block:: shell
 
-	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<ipaddr of 1st node> -gen
+	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<IP address of the first node> -gen
 
 .. note::
 
-	Notice that the IP address in -addnode point to First Node
+	Notice that the IP address in -addnode points to the First Node
 
 When this second node connects to the first node, the second node will begin to mine blocks. The premine will be mined in the genesis block to the wallet of the node that set ``-gen``.
 
@@ -94,7 +84,7 @@ You can check the contents of the wallet by executing the following command in a
 	cd ~/komodo/src
 	./komodod -ac_name=EXAMPLECHAIN getwalletinfo
 
-More info can be found in the debug.log of the chain found at ``~/.komodo/EXAMPLECHAIN/debug.log`` on linux or ``%appdata%\komodo\EXAMPLECHAIN\debug.log`` on windows.
+More info can be found in the debug.log of the chain found at ``~/.komodo/EXAMPLECHAIN/debug.log`` or ``%appdata%\komodo\EXAMPLECHAIN\debug.log`` on windows.
 
 Querying the Assetchain
 =======================
@@ -114,7 +104,8 @@ Use the ``help`` command for a list of commands:
 Secure this Assetchain with Delayed Proof of Work
 =================================================
 
-Your new chain can be secured via dPOW by the Komodo notary nodes giving it Bitcoin level security. The current rate for this is 300 KMD and 800 of the coin per year. If you are interested in having a new chain notarized, please contact @siu on the Komodo slack or discord. 
+Your new chain can be secured via dPOW by the Komodo notary nodes giving it Bitcoin level security. The current rate for this is 300 KMD and 800 of the coin to be secured per year. If you are interested in having a new chain notarized, please contact @siu on the Komodo discord. 
 
 .. [credit] 
-          Document written by Alright based on previous guides by siu and PTYX. Please send any critiques to Alright on matrix, slack or discord.
+
+	Document written by Alright based on previous guides by siu and PTYX. Please send any critiques to Alright on matrix, slack or discord.

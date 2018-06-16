@@ -17,7 +17,7 @@ It is just ``marketmaker`` launched with ``client:0`` parameter.
 Install the following dependency packages:
 ------------------------------------------
 
-.. code-block::shell
+.. code-block:: shell
 
 	sudo apt-get update
 	sudo apt-get install cmake git libcurl4-openssl-dev build-essential
@@ -25,7 +25,7 @@ Install the following dependency packages:
 Install ``nanomsg``
 -------------------
 
-.. code-block::shell
+.. code-block:: shell
 
 	cd ~
 	git clone https://github.com/nanomsg/nanomsg
@@ -40,7 +40,7 @@ Clone the `SuperNET repo <https://github.com/jl777/SuperNET>` from github & Inst
 
 Clone the repo, checkout ``dev`` branch for latest and install.
 
-.. code-block::shell
+.. code-block:: shell
 
 	cd ~
 	git clone https://github.com/jl777/SuperNET
@@ -53,7 +53,7 @@ Copy the ``passphrase`` file & using seed passphrase
 
 From the same dir in terminal type the following commands to copy the ``passphrase`` file to ``~/SuperNET/iguana/dexscripts`` dir and add a strong 24 words seed passphrase in between ``""``. Save your passphrase properly without changing any word or space. Same seed ``passphrase`` will always show you the same ``smartaddress``.
 
-.. code-block::shell
+.. code-block:: shell
 
 	cp passphrase ../dexscripts/passphrase
 	cd ../dexscripts
@@ -72,7 +72,7 @@ All these scripts are expecting a ``userpass`` file, which contains the definiti
 
 Open a new terminal and type the following:
 
-.. code-block::shell
+.. code-block:: shell
 
 	cd ~/SuperNET/iguana/dexscripts
 	./client &
@@ -84,7 +84,7 @@ Edit the ``userpass`` file
 
 Now copy the ``userpass`` example file to ``~/SuperNET/iguana/dexscripts`` dir and edit the file to save the userpass you got from the ``./setpassphrase`` script output.
 
-.. code-block::shell
+.. code-block:: shell
 
 	cd ~/SuperNET/iguana/exchanges
 	cp userpass ../dexscripts/userpass
@@ -100,7 +100,7 @@ Running barterDEX
 
 Every time you want to run **barterDEX**, open a new terminal window and type the following:
 
-.. code-block::shell
+.. code-block:: shell
 
 	cd ~/SuperNET/iguana/dexscripts
 	./client &
