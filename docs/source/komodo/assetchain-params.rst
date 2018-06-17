@@ -86,4 +86,6 @@ To create a chain using this parameter, start the first node with ``-pubkey`` an
 
 
 .. [credit] 
-          Document written by Alright based on previous guides by siu and PTYX. Please send any critiques to Alright on matrix, slack or discord.
+          Document written by Alright based on previous guides by siu and PTYX. Please send any critiques to Alright on matrix or discord.
+
+`Discord Invite <https://discord.gg/SCdf4eh>`_

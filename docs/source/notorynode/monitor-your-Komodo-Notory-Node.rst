@@ -4,7 +4,7 @@ Monitor your Komodo Notary Node
 
 When your Komodo Notary Node has been setup, it would be nice to monitor it. Normally I take Zabbix for this, but there is a nicer way then Zabbix. It is called New-Relic. New-Relic is a commercial company, but do offer a free package to monitor your server(s).
 
-So let's grab those until we find a way to monitor the servers in Slack.
+So let's grab those until we find a way to monitor the servers in `Discord <https://discord.gg/SCdf4eh>`_.
 
 Signup with New-Relic
 =====================

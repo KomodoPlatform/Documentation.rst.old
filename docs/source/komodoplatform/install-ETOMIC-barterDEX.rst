@@ -15,7 +15,7 @@ Step by Step Setup Guide for ETH (ERC20) Token Swap Using barterDEX
 Installation steps
 ==================
 
-Please follow all the steps by their order of appearance in this guide. If you get any error for any step and skip to the next, things will not work for you. If you have any questions or need help, head over to ``#etomic`` channel in Komodo Platform Slack and ask there.
+Please follow all the steps by their order of appearance in this guide. If you get any error for any step and skip to the next, things will not work for you. If you have any questions or need help, head over to ``#etomic`` channel in Komodo Platform `Discord <https://discord.gg/SCdf4eh>`_ and ask there.
 
 Install required dependencies
 -----------------------------
@@ -221,7 +221,7 @@ Run ETOMIC
 
 You need to have ETOMIC running in native mode or electrum mode and KMD or other coins either running native or electrum (native is faster). If running native mode, make sure you have blockchain synced and seed passphrase / WIF key / private key imported into the chain.
 
-For ETOMIC you need to have utxos. You can get free BEER from `this faucet`_ and swap it for ETOMIC in normal BarterDEX. You also need to have ETH testnet coins as long as we are testing testnet. Use main-net ETH when testing main-net. If you are unsure which net to use, ask in Slack.
+For ETOMIC you need to have utxos. You can get free BEER from `this faucet`_ and swap it for ETOMIC in normal BarterDEX. You also need to have ETH testnet coins as long as we are testing testnet. Use main-net ETH when testing main-net. If you are unsure which net to use, ask in `Discord <https://discord.gg/SCdf4eh >`_.
 
 .. code-block:: shell
 

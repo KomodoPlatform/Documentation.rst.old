@@ -2,7 +2,7 @@
 Collection of all KomodoPlatform Repositories and Releases
 **********************************************************
 
-**This page will link all related Komodo and SuperNET project source repositories and builds. Please let us know in Slack if any information needs to be updated.**
+**This page will link all related Komodo and SuperNET project source repositories and builds. Please let us know in** `Discord <https://discord.gg/SCdf4eh>`_ **if any information needs to be updated.**
 
 Agama (Desktop)
 ===============

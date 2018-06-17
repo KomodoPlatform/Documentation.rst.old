@@ -76,7 +76,7 @@ Second file (who's future is unclear) is ``userhome.txt`` in same directory. Nob
 
 Now you can try to compile everything. Command is just ``make`` or ``make -j$(nproc)``. Last will try to use all availible CPU's (nproc) to speed up compile process. This should work without errors if you not ignored recommendation to use ``beta`` branch.
 
-It's good idea to clean chain files before start if you have not done so in a 1-2 weeks or if you see strange errors after all other checks. You can monitor slack channel #notarynode day by day to see when it's really needed. But if you have missed that moment - nobody can tell you if you need resync right now or no. There is no exact moment in records. Current chain resync should take no more than 30 minutes, unless youre not on SSD. To resync - go to folder ``~/.komodo`` and remove everything but files ``wallet.dat`` and ``komodo.conf``.
+It's good idea to clean chain files before start if you have not done so in a 1-2 weeks or if you see strange errors after all other checks. You can monitor `Discord <https://discord.gg/SCdf4eh>`_ channel #notarynode day by day to see when it's really needed. But if you have missed that moment - nobody can tell you if you need resync right now or no. There is no exact moment in records. Current chain resync should take no more than 30 minutes, unless youre not on SSD. To resync - go to folder ``~/.komodo`` and remove everything but files ``wallet.dat`` and ``komodo.conf``.
 
 Dont forget to verify ``komodo.conf`` file. There is no more need to keep addnode lines there. Only this lines:
 
@@ -106,7 +106,7 @@ Lesson 5: Starting iguana
 .. code-block:: shell
 
 	cd ~/SuperNET/iguana
-	cat ./wp_7776     # <-- post this to slack
+	cat ./wp_7776     # <-- post this to Discord
 	./m_notary
 
 Lesson 6: Starting assetchains

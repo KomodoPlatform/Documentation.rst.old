@@ -108,4 +108,6 @@ Your new chain can be secured via dPOW by the Komodo notary nodes giving it Bitc
 
 .. [credit] 
 
-	Document written by Alright based on previous guides by siu and PTYX. Please send any critiques to Alright on matrix, slack or discord.
+	Document written by Alright based on previous guides by siu and PTYX. Please send any critiques to Alright on matrix or discord.
+
+`Discord Invite <https://discord.gg/SCdf4eh>`_

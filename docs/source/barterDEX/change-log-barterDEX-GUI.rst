@@ -2,6 +2,12 @@
 Change Log (BarterDEX-GUI)
 **************************
 
+v1.0.7
+======
+
+	* New Coins: SPK, CRDS, ATB, HXX, VRSC, MLM, XSN, DCN, ELF, GPN, SRN, LRC, DROP, SANC, UCASH, RVT
+	* Updated Marketmaker binaries
+
 v1.0.6
 ======
  
@@ -67,7 +73,7 @@ v0.8.11
 =======
 
 	* Default Startup Coins feature added
-	* New coin added: ``BTCP`` (BitcoinPrivate), ``ROI``coin, ``XCOIN``
+	* New coin added: ``BTCP`` (BitcoinPrivate), ``ROI`` coin, ``XCOIN``
 	* Changed ``-`` to ``n/a`` in orderbook
 	* Latest ``marketmaker`` binary
 	* Added ``Pizza`` and ``Beer`` Electrum Servers

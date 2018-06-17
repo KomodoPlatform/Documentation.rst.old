@@ -1,7 +1,7 @@
 ***********************
 Marketmaker Error codes
 ***********************
-There are various errors codes a user could receive while using the marketmaker. This document intends to list each possible error along with a brief description of why a particular error may occur. Please send any critiques to @Alright on the slack. 
+There are various errors codes a user could receive while using the marketmaker. This document intends to list each possible error along with a brief description of why a particular error may occur. Please send any critiques to @Alright on the `Discord <https://discord.gg/SCdf4eh>`_. 
 
 Alice errors
 ============
