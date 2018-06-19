@@ -78,17 +78,17 @@ Whitepaper
    komodoplatform/using-remote-narketmaker-binary-with-GUI
    Beginner friendly BarterDEX documantation by jorian (Work in Progress) <https://barterdex.readthedocs.io/en/latest/>
 
-.. _notorynodes:
+.. _notarynodes:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Notory Nodes
+   :caption: Notary Nodes
 
-   notorynode/setup-Komodo-Notory-Node
-   notorynode/updating-Komodo-Notory-Node
-   notorynode/update-Komodo-manually
-   notorynode/assetchains-guide-Komodo-Notory-Node
-   notorynode/useful-commands-Komodo-Notory-Node
+   notarynode/setup-Komodo-Notary-Node
+   notarynode/updating-Komodo-Notary-Node
+   notarynode/update-Komodo-manually
+   notarynode/assetchains-guide-Komodo-Notary-Node
+   notarynode/useful-commands-Komodo-Notary-Node
    
 .. _testing:
 

@@ -20,14 +20,14 @@ Here you will find more information about Komodo (KMD)
 
 .. toctree::
    :maxdepth: 1
-   :caption: Notory Node
+   :caption: Notary Node
 
-   notorynode/setup-Komodo-Notory-Node
-   notorynode/updating-Komodo-Notory-Node
+   notorynode/setup-Komodo-Notary-Node
+   notorynode/updating-Komodo-Notary-Node
    notorynode/update-Komodo-manually
-   notorynode/monitor-your-Komodo-Notory-Node
-   notorynode/assetchains-guide-Komodo-Notory-Node
-   notorynode/useful-commands-Komodo-Notory-Node
+   notorynode/monitor-your-Komodo-Notary-Node
+   notorynode/assetchains-guide-Komodo-Notary-Node
+   notorynode/useful-commands-Komodo-Notary-Node
 
 Whitepaper
 ----------
