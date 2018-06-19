@@ -4,7 +4,7 @@ Be a marketmaker or Bob node using barterDEX CLI
 
 It is very easy to be a marketmaker or Bob in barterDEX. Anyone can be Bob using any supported coin and can provide liquidity for any pair in the market.
 
-Benefits of being an LP node:
+Benefits of being a Bob node:
 =============================
 
 * Bob node / marketmaker doesn't have to pay 0.15% DEX fee
@@ -19,7 +19,7 @@ Requirements:
 APIs needed
 ===========
 
-You will only need :ref:`client`, :ref:`setpassphrase`, :ref:`enable`, :ref:`autoprice` to be a marketmaker or LP in barterDEX. All the API usage is explained in the below steps.
+You will only need :ref:`client`, :ref:`setpassphrase`, :ref:`enable`, :ref:`autoprice` to be a marketmaker in barterDEX. All the API usage is explained in the below steps.
 
 Steps:
 ------

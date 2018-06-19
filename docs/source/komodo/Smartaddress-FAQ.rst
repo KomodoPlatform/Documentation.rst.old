@@ -32,7 +32,7 @@ A. Currently there are coin types for DEX atomic swaps into that coin. The type 
 
 **Q. What does DEXratio do?**
 
-A. By default a DEX client requires 99.5% of theoretical value to accept a DEX offer. This sounds good, but in practice it requires an accommodating LP node to offer such a low margin. Using a DEXratio that is lower allows trades to happen faster. However, if you are not in a hurry, then 99.5% will be a way to maximize your funds.
+A. By default a DEX client requires 99.5% of theoretical value to accept a DEX offer. This sounds good, but in practice it requires an accommodating Bob node to offer such a low margin. Using a DEXratio that is lower allows trades to happen faster. However, if you are not in a hurry, then 99.5% will be a way to maximize your funds.
 
 **Q. Will smartaddress DEX swap happen instantly?**
 

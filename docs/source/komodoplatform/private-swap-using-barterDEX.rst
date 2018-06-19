@@ -4,8 +4,8 @@ Private Trading using BarterDEX
 
 You can use BarterDEX with 14,000+ different :ref:`ref-netid`. For private trading, both Bob node and client need to use a same ``netid`` and ``seednode``. It is better to choose higher number netid (i.e.: 1000+).
 
-LP Node
--------
+Bob Node
+--------
 
 You need to edit your ``client`` and ``setpassphrase`` with same ``netid`` and ``seednode`` like ``\"netid\":1024,\"seednode\":\"51.255.10.25\"`` and follow the steps above. Your orders will not be visible in the global netid and orderbook. Only users who are connected to that specific netid on that ip can perform swaps. Check the example file below:
 

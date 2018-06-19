@@ -12,7 +12,7 @@ Alice errors
 
 -9998: ``"time expired for Alice_request"`` – Alice made a request that was not filled. The order timed out. 
 
--9999: ``"uuid canceled"`` – Alice made an order. No LP was willing to fill it. The order timed out. 
+-9999: ``"uuid canceled"`` – Alice made an order. No Bob was willing to fill it. The order timed out. 
 
 ``"error":"quote validation error"`` - The quote given by Bob is no longer valid.
 
@@ -32,7 +32,7 @@ Alice errors
 
 ``"error":"not enough utxo, please make more deposits"`` - You don't have the appropriate UTXOs for the trade you are attempting to make. You need UTXOs in a ratio of X:>(X/777). X is the amount you would like to trade.
 
-``"error":"no orderbook entry found to handle request"`` - No LP was willing to fill your request. If you do see LPs in the orderbook, try different UTXOs sizes or a higher price.
+``"error":"no orderbook entry found to handle request"`` - No Bob was willing to fill your request. If you do see Bobs in the orderbook, try different UTXOs sizes or a higher price.
 
 ``"error":"cant find a deposit that is close enough in size. make another deposit that is just a bit larger than what you want to trade"`` - You don't have the appropriate UTXOs for the trade you are attempting to make. If you do in fact have the UTXOs, it is possible they may be locked from previous failed swaps. Restart the marketmaker if so.
 
@@ -89,8 +89,8 @@ Bob errors
 ``"error":"invalid parameter"`` - maxprice and relvolume must be >0.
 
 
-The -2XXX subset of error codes deal with a swap failing at some point while trading as Bob(liquidity provider). These can be caused by network issues or a misconfigured node.
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The -2XXX subset of error codes deal with a swap failing at some point while trading as Bob. These can be caused by network issues or a misconfigured node.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -2000: ``"error waitsend pubkeys”`` - The swap was initiated between the two parties. Alice did not send her set of pubkeys.
 
@@ -111,8 +111,8 @@ The -2XXX subset of error codes deal with a swap failing at some point while tra
 -2008: ``"error sending bobpayment”`` - Swap failed at 4/7. Your node failed to send bobpayment.
 
 
-The -4XXX subset of errors deal with a swap failing to start while trading as Bob(liquidity provider).
-------------------------------------------------------------------------------------------------------
+The -4XXX subset of errors deal with a swap failing to start while trading as Bob
+---------------------------------------------------------------------------------
 
 -4000: ``"{"result","update stats"}`` - Your node received a request that was intended for a different node. This request is then relayed to other nodes.
 

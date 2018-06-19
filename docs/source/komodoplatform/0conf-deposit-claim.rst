@@ -28,7 +28,7 @@ instantdex_deposit
 
 You can ``deposit`` KMD using the following script into b addresses which will accrue interest as well. This will allow you to do InstantDEX swaps which finishes a swap within 5-20 seconds. The more KMD you deposit for InstantDEX trading, the more limit you can have. It is a *timelocked* deposit, keeps the honest traders honest. Gives other traders the assurance that you have a valid deposit to cover any hack attempt.
 
-``instantdex_deposit`` the values are 1 to 52 weeks and the amount (minimum of 10.0001). These figures are calibrated to the 5% APR, ie. 1 weeks interest is approx the BOTS 0.1% fee, 52 weeks is the most the 5% APR accrues, 10.0001 KMD is min required for interest. It can take few minutes (about 10 confirmations) for the LP nodes to recognise you. This creates a dynamic trust between nodes and swaps are faster. Just issue normal buy and the LP nodes will respond with InstantDEX swaps.
+``instantdex_deposit`` the values are 1 to 52 weeks and the amount (minimum of 10.0001). These figures are calibrated to the 5% APR, ie. 1 weeks interest is approx the BOTS 0.1% fee, 52 weeks is the most the 5% APR accrues, 10.0001 KMD is min required for interest. It can take few minutes (about 10 confirmations) for the Bob nodes to recognise you. This creates a dynamic trust between nodes and swaps are faster. Just issue normal buy and the Bob nodes will respond with InstantDEX swaps.
 
 It creates a binary file in DB with the unique deposit txids on an append only basis. The first time, it seeds it with the contents of the existing ``instantdex.json`` files. from the deposits file the ``instantdex_address_append.json`` is directly created and the ``instantdex.json`` file is created by removing the already spent deposits.
 
