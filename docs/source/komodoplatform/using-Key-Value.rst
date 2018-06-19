@@ -2,13 +2,13 @@
 Using Key Value
 ***************
 
-To search key in the whole blockchain database use the following command:
+To search for a key in the whole blockchain database, use the following command:
 
 .. code-block:: shell
 
 	$ ./komodo-cli kvsearch hello
 
-Output
+Output:
 
 .. code-block:: json
 
@@ -26,7 +26,7 @@ To create or update a new Key/Value entry in blockchain and also securing it wit
 
 	$ ./komodo-cli kvupdate hello "ehlo world" testpassphrase
 
-Output
+Output:
 
 .. code-block:: json
 
@@ -43,7 +43,7 @@ Output
 	  "txid": "9e662c19bbd5c8b011d60ddb86f15d115b365e243c333780e5833d399167f102"
 	}
 
-After updating you'll find the details of the same key/value entry in blockchain will reflect new data.
+After updating you'll find the details of the same key/value entry in blockchain will reflect the new data.
 
 .. code-block:: shell
 
@@ -84,6 +84,6 @@ testpassphrase = passphrase for key hello
 FAQ
 ===
 
-	* How much KV storage cost in it's transaction fee?
-	A. You pay a fee depending on key **and** value size. But it depends on which chain you want to store the kv-entry. You can use a Komodo Asset Chain and pay the fee in the Asset Chain's tokens or you can use KV chain and use it there. But each assetchain has the KV capability. So you could even use your own chain for it (due to difference in costs).
+	* How much does KV storage cost?
+	A. You pay a transaction fee depending on both the key **and** value size. But it depends on which chain you want to store the kv-entry. You can use a Komodo Asset Chain and pay the fee in the Asset Chain's tokens or you can use KV chain and use it there. But each assetchain has the KV capability. So you could even use your own chain for it (due to difference in costs).
 
