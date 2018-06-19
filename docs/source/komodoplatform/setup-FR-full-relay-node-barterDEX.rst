@@ -33,8 +33,8 @@ Install ``nanomsg``
 	sudo make install
 	sudo ldconfig
 
-Clone the `SuperNET repo <https://github.com/jl777/SuperNET>` from github & Install:
-------------------------------------------------------------------------------------
+Clone the SuperNET repo from github & Install:
+----------------------------------------------
 
 Clone the repo, checkout ``dev`` branch for latest and install.
 
