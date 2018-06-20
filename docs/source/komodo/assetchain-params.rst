@@ -4,6 +4,8 @@ Asset Chain Parameters
 
 For instructions on how to create an assetchain see :doc:`create-Komodo-Assetchain`
 
+For examples see :doc:`test-chains`
+
 -ac_name
 ========
 
@@ -85,7 +87,7 @@ To create a chain using this parameter, start the first node with ``-pubkey`` an
 
 
 
-.. [credit] 
-          Document written by Alright based on previous guides by siu and PTYX. Please send any critiques to Alright on matrix or discord.
+
+Please send any critiques or feedback to Alright or gcharang on matrix or discord.
 
 `Discord Invite <https://discord.gg/SCdf4eh>`_
