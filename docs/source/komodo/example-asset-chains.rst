@@ -2,21 +2,16 @@
 Example Asset Chains
 ********************
 
-The purpose of this is to give a better understanding of asset chain parameters via examples. These chains are categorized simply by the amount of parameters used in each. As new parameters are added, the new combinations will be tested and added here. 
+The purpose of this document is to give a better understanding of asset chain parameters via examples. These chains are grouped simply by the number of parameters used in customizing each. As new parameters are added, the new combinations will be tested and added here. 
 
 Please see :doc:`create-Komodo-Assetchain` and :doc:`assetchain-params` if you haven't already. 
 
-All chains must have at least ``ac_name`` and ``ac_supply`` set. The ``ac_pubkey`` parameter can be used with any of these chains. If ``ac_perc`` is not set, the only effect ``ac_pubkey`` has  is to have the genesis block be mined to the pubkey that has been specified.
+All chains must have at least ``ac_name`` and ``ac_supply`` set. The ``ac_pubkey`` parameter can be used with any of these chains. If ``ac_perc`` is not set, the only effect ``ac_pubkey`` has  is to have the genesis block be mined to the pubkey that has been specified. The parameters ``ac_name`` , ``ac_supply`` , ``ac_pubkey`` are not counted when grouping based on the ``Number of parameters``.
 
-Here, the names of the chains are assigned somewhat arbitrarily to give an idea of how a chain is customized and it's behaviour.
+The names of the asset-chains are assigned somewhat arbitrarily to give an idea of how a chain is customized and it's behaviour.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Quick links for Navigation
-
-   komodo/example-asset-chains
-1
-*
+Number of parameters: 1
+***********************
 
 ac_reward
 =========
@@ -81,8 +76,8 @@ Chain adjusts difficulty so 90% of blocks are proof of stake, 10% proof of work
 
 It’s important to start staking immediately for high percentages of POS. If too many POW blocks are mined consecutively at the start of the chain, the POW difficulty may increase enough to stop the chain entirely, meaning you can’t send a transaction to staking nodes. 
 
-2
-*
+Number of parameters: 2
+***********************
 
 ac_reward ac_halving
 ====================
@@ -251,8 +246,8 @@ ac_perc ac_pubkey ac_staked
 If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work at all because ``ac_reward`` is not set.
 
 
-3
-*
+Number of parameters: 3
+***********************
 
 ac_reward ac_halving ac_decay
 =============================
@@ -505,8 +500,8 @@ ac_end ac_perc ac_pubkey ac_staked
 
 If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work at all because ``ac_reward`` is not set.
 
-4
-*
+Number of parameters: 4
+***********************
 
 ac_reward ac_halving ac_decay ac_end
 ====================================
@@ -719,8 +714,8 @@ ac_decay ac_end ac_perc ac_pubkey ac_staked
 
 If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work at all because ``ac_reward`` is not set.
 
-5
-*
+Number of parameters: 5
+***********************
 
 ac_reward ac_halving ac_decay ac_end ac_perc ac_pubkey
 ======================================================
@@ -826,8 +821,8 @@ ac_halving ac_decay ac_end ac_perc ac_pubkey ac_staked
 
 If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work at all because ``ac_reward`` is not set.
 
-6
-*
+Number of parameters: 6
+***********************
 
 ac_reward ac_halving ac_decay ac_end ac_perc ac_pubkey ac_staked
 =================================================================
