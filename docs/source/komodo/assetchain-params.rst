@@ -4,7 +4,7 @@ Asset Chain Parameters
 
 For instructions on how to create an assetchain see :doc:`create-Komodo-Assetchain`
 
-For examples see :doc:`test-chains`
+For examples see :doc:`example-asset-chains`
 
 -ac_name
 ========

@@ -6,8 +6,15 @@ The purpose of this is to give a better understanding of asset chain parameters 
 
 Please see :doc:`create-Komodo-Assetchain` and :doc:`assetchain-params` if you haven't already. 
 
-All chains must have at least ``ac_name`` and ``ac_supply`` set. The ``ac_pubkey`` parameters can be used with any of these chains. The only effect ``ac_pubkey`` has if ``ac_perc`` is not set is to have the genesis block be mined to that pubkey. 
+All chains must have at least ``ac_name`` and ``ac_supply`` set. The ``ac_pubkey`` parameter can be used with any of these chains. If ``ac_perc`` is not set, the only effect ``ac_pubkey`` has  is to have the genesis block be mined to the pubkey that has been specified.
 
+Here, the names of the chains are assigned somewhat arbitrarily to give an idea of how a chain is customized and it's behaviour.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Quick links for Navigation
+
+   komodo/example-asset-chains
 1
 *
 
@@ -53,7 +60,7 @@ Default block reward of 0.0001 coin; On demand blocks after block 128
 Block reward ends at block 25000.
 
 
-ac_perc_ac_pubkey
+ac_perc ac_pubkey
 =================
 
 ``./komodod -ac_name=1PERC -ac_supply=999999 -ac_perc=5000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -110,7 +117,7 @@ ac_reward ac_end
 
 Block reward ends at block 200.
 
-ac_reward ac_perc_ac_pubkey
+ac_reward ac_perc ac_pubkey
 ===========================
 
 ``./komodod -ac_name=2REWPERC -ac_supply=999999 -ac_reward=500000000 -ac_perc=5000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -161,7 +168,7 @@ Block reward ends at block 10000
 
 ``ac_halving`` has no effect without ``ac_reward`` being set.
 
-ac_halving ac_perc_ac_pubkey
+ac_halving ac_perc ac_pubkey
 ============================
 
 ``./komodod -ac_name=2HALVPERC -ac_supply=999999 -ac_halving=2000 -ac_perc=5000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -194,7 +201,7 @@ Block reward ends at block 10000.
 
 ``ac_decay`` has no effect without ``ac_halving`` and ``ac_reward`` both set.
 
-ac_decay ac_perc_ac_pubkey
+ac_decay ac_perc ac_pubkey
 ==========================
 
 ``./komodod -ac_name=2DECPERC -ac_supply=999999 -ac_decay=75000000 -ac_perc=10000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -216,7 +223,7 @@ Default block reward of 0.0001 coin
 
 Chain adjusts difficulty so 50% of blocks are proof of stake, 50% proof of work.
 
-ac_end ac_perc_ac_pubkey
+ac_end ac_perc ac_pubkey
 ========================
 
 ``./komodod -ac_name=2ENDPERC -ac_supply=999999 -ac_end=10000 -ac_perc=5000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -236,7 +243,7 @@ Block reward ends at block 10000.
 
 Chain adjusts difficulty so 5% of blocks are proof of stake, 95% proof of work.
 
-ac_perc_ac_pubkey ac_staked
+ac_perc ac_pubkey ac_staked
 ===========================
 
 ``./komodod -ac_name=2PERCSTAKE -ac_supply=999999 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=50``
@@ -271,7 +278,7 @@ Block reward decreases by 50% every 2000 blocks
 
 Block reward ends at block 10000
 
-ac_reward ac_halving ac_perc_ac_pubkey
+ac_reward ac_halving ac_perc ac_pubkey
 ======================================
 
 ``./komodod -ac_name=3REWHALVPERC -ac_supply=999999 -ac_reward=500000000 -ac_halving=1440 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_perc=50000000``
@@ -315,7 +322,7 @@ Block reward ends at block 5000.
 
 ``ac_decay`` has no effect without ``ac_halving`` and ``ac_reward`` both set.
 
-ac_reward ac_decay ac_perc_ac_pubkey
+ac_reward ac_decay ac_perc ac_pubkey
 ====================================
 
 ``./komodod -ac_name=3REWDECPERC -ac_supply=999999 -ac_reward=500000000  -ac_decay=75000000 -ac_perc=10000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -346,7 +353,7 @@ ac_reward ac_decay ac_staked
 Chain adjusts difficulty so 50% of blocks are proof of stake, 50% proof of work.
 
 
-ac_reward ac_end ac_perc_ac_pubkey
+ac_reward ac_end ac_perc ac_pubkey
 ==================================
 
 ``./komodod -ac_name=3ENDPERCREW -ac_supply=999999 -ac_reward=5000000000 -ac_end=10000 -ac_perc=5000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -376,7 +383,7 @@ Block reward ends at block 15000.
 
 Chain adjusts difficulty so 60% of blocks are proof of stake, 40% proof of work.
 
-ac_reward ac_perc_ac_pubkey ac_staked
+ac_reward ac_perc ac_pubkey ac_staked
 =====================================
 
 ``./komodod -ac_name=3REWPERCSTAKE -ac_supply=1000000 -ac_reward=1000000000 -ac_perc=10000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=50``
@@ -406,7 +413,7 @@ Block reward ends at block 100000.
 
 ``ac_halving`` has no effect if ``ac_reward`` is not set.
 
-ac_halving ac_decay ac_perc_ac_pubkey
+ac_halving ac_decay ac_perc ac_pubkey
 =====================================
 
 ``./komodod -ac_name=3HALVDECPERC -ac_supply=999999 -ac_halving=2000 -ac_decay=25000000 -ac_perc=90000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -428,7 +435,7 @@ ac_halving ac_decay ac_staked
 Chain adjusts difficulty so 40% of blocks are proof of stake, 60% proof of work.
 
 
-ac_halving ac_end ac_perc_ac_pubkey
+ac_halving ac_end ac_perc ac_pubkey
 ===================================
 ``./komodod -ac_name=3HALVENDPERC -ac_supply=999 -ac_halving=1441 -ac_end=20000 -ac_perc=10000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
 
@@ -452,7 +459,7 @@ Block reward ends at block 10000.
 Chain adjusts difficulty so 50% of blocks are proof of stake, 50% proof of work.
 
 
-ac_halving ac_perc_ac_pubkey ac_staked
+ac_halving ac_perc ac_pubkey ac_staked
 ======================================
 ``./komodod -ac_name=3HALVPERCSTAKE -ac_supply=99999 -ac_halving=2000 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=10``
 
@@ -460,7 +467,7 @@ ac_halving ac_perc_ac_pubkey ac_staked
 
 If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work at all because ``ac_reward`` is not set.
 
-ac_decay ac_end ac_perc_ac_pubkey
+ac_decay ac_end ac_perc ac_pubkey
 =================================
 ``./komodod -ac_name=3DECENDPERC -ac_supply=10000 -ac_decay=75000000 -ac_end=100000 -ac_perc=10000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
 
@@ -483,7 +490,7 @@ Block reward ends at block 20000.
 
 Chain adjusts difficulty so 60% of blocks are proof of stake, 40% proof of work.
 
-ac_decay ac_perc_ac_pubkey ac_staked
+ac_decay ac_perc ac_pubkey ac_staked
 ====================================
 ``./komodod -ac_name=3DECPERCSTAKE -ac_supply=77777 -ac_decay=40000000 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
 
@@ -492,7 +499,7 @@ ac_decay ac_perc_ac_pubkey ac_staked
 If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work at all because ``ac_reward`` is not set.
 
 
-ac_end ac_perc_ac_pubkey ac_staked
+ac_end ac_perc ac_pubkey ac_staked
 ==================================
 ``./komodod -ac_name=3ENDPERCSTAKE -ac_supply=999999 -ac_end=70000 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=10``
 
@@ -514,7 +521,7 @@ Block reward decreases by 75% every 10000 blocks.
 
 Block reward ends at block 100000.
 
-ac_reward ac_halving ac_decay ac_perc_ac_pubkey
+ac_reward ac_halving ac_decay ac_perc ac_pubkey
 ===============================================
 
 ``./komodod -ac_name=4REWHALVDECPERC -ac_supply=999999 -ac_reward=1000000000 -ac_halving=5000 -ac_decay=60000000 -ac_perc=5000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -545,7 +552,7 @@ Block reward decreases by 40% every 2000 blocks.
 
 Chain adjusts difficulty so 50% of blocks are proof of stake, 50% proof of work.
 
-ac_reward ac_halving ac_end ac_perc_ac_pubkey
+ac_reward ac_halving ac_end ac_perc ac_pubkey
 =============================================
 
 ``./komodod -ac_name=4REWPERCENDHALV -ac_supply=999999 -ac_reward=1000000000 -ac_halving=2000 -ac_end=60005 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_perc=10000000``
@@ -579,7 +586,7 @@ Block reward ends at block 50000.
 
 Chain adjusts difficulty so 40% of blocks are proof of stake, 60% proof of work.
 
-ac_reward ac_halving ac_perc_ac_pubkey ac_staked
+ac_reward ac_halving ac_perc ac_pubkey ac_staked
 ================================================
 
 ``./komodod -ac_name=4PERCREWHALVSTAKE -ac_supply=999999 -ac_reward=1000000000 -ac_halving=2000 -ac_perc=5000000 -ac_staked=50 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -598,7 +605,7 @@ Pubkey address receives an additional 5% for every transaction made on the chain
 
 ``ac_perc`` chains are currently incompatible with z-nomp. The coinbase transaction vout type must be ``pubkey`` as opposed to ``pubkeyhash``. 
 
-ac_reward ac_decay ac_end ac_perc_ac_pubkey
+ac_reward ac_decay ac_end ac_perc ac_pubkey
 ===========================================
 ``./komodod -ac_name=4REWDECENDPERC -ac_supply=70000 -ac_reward=700000000 -ac_decay=80000000 -ac_end=10000 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
 
@@ -630,7 +637,7 @@ Block rewards ends at block 12000.
 
 Chain adjusts difficulty so 40% of blocks are proof of stake, 60% proof of work.
 
-ac_reward ac_decay ac_perc_ac_pubkey ac_staked
+ac_reward ac_decay ac_perc ac_pubkey ac_staked
 ==============================================
 ``./komodod -ac_name=4REWDECPERCSTAKE -ac_supply=9000 -ac_reward=1000000000 -ac_decay=80000000 -ac_perc=2000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=80``
 
@@ -647,7 +654,7 @@ Pubkey address receives an additional 2% for every transaction made on the chain
 ``ac_perc`` chains are currently incompatible with z-nomp. The coinbase transaction vout type must be ``pubkey`` as opposed to ``pubkeyhash``. 
 
 
-ac_reward ac_end ac_perc_ac_pubkey ac_staked
+ac_reward ac_end ac_perc ac_pubkey ac_staked
 ============================================
 
 ``./komodod -ac_name=4REWENDPERCSTAKE -ac_supply=999999 -ac_reward=5000000000 -ac_end=10000 -ac_staked=33 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -666,7 +673,7 @@ Pubkey address receives an additional 1% for every transaction made on the chain
 
 ``ac_perc`` chains are currently incompatible with z-nomp. The coinbase transaction vout type must be ``pubkey`` as opposed to ``pubkeyhash``. 
 
-ac_halving ac_decay ac_end ac_perc_ac_pubkey
+ac_halving ac_decay ac_end ac_perc ac_pubkey
 ============================================
 ``./komodod -ac_name=4HALVDECENDPERC -ac_supply=11 -ac_halving=5000000 -ac_decay=1000000 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
 
@@ -688,7 +695,7 @@ Block reward ends at block 25000
 
 Chain adjusts difficulty so 10% of blocks are proof of stake, 90% proof of work.
 
-ac_halving ac_decay ac_perc_ac_pubkey ac_staked
+ac_halving ac_decay ac_perc ac_pubkey ac_staked
 ===============================================
 ``./komodod -ac_name=4HALVDECPERCSTAKE -ac_supply=40000 -ac_halving=5000 -ac_decay=75000000 -ac_perc=10000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=60``
 
@@ -696,7 +703,7 @@ ac_halving ac_decay ac_perc_ac_pubkey ac_staked
 
 If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work at all because ``ac_reward`` is not set.
 
-ac_halving ac_end ac_perc_ac_pubkey ac_staked
+ac_halving ac_end ac_perc ac_pubkey ac_staked
 =============================================
 ``./komodod -ac_name=4HALVENDPERCSTAKE -ac_supply=99999 -ac_halving=6000 -ac_end=60000 -ac_perc=10000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=30``
 
@@ -704,7 +711,7 @@ ac_halving ac_end ac_perc_ac_pubkey ac_staked
 
 If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work at all because ``ac_reward`` is not set.
 
-ac_decay ac_end ac_perc_ac_pubkey ac_staked
+ac_decay ac_end ac_perc ac_pubkey ac_staked
 ===========================================
 ``./komodod -ac_name=4DECENDPERCSTAKE -ac_supply=999999 -ac_decay=75000000 -ac_end=100000 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=40``
 
@@ -715,7 +722,7 @@ If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work 
 5
 *
 
-ac_reward ac_halving ac_decay ac_end ac_perc_ac_pubkey
+ac_reward ac_halving ac_decay ac_end ac_perc ac_pubkey
 ======================================================
 
 ``./komodod -ac_name=5REWHALVDECENDPERC -ac_supply=999999 -ac_reward=10000000000 -ac_halving=10000 -ac_decay=75000000 -ac_end=100000 -ac_perc=2000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392``
@@ -750,7 +757,7 @@ Block reward ends at block 100000.
 Chain adjusts difficulty so 80% of blocks are proof of stake, 20% proof of work.
 
 
-ac_reward ac_halving ac_decay ac_perc_ac_pubkey ac_staked
+ac_reward ac_halving ac_decay ac_perc ac_pubkey ac_staked
 =========================================================
 
 ``./komodod -ac_name=5REWHALVDECPERCSTAKE -ac_supply=1 -ac_reward=50000000000 -ac_halving=2000 -ac_decay=25000000 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=50``
@@ -770,7 +777,7 @@ Pubkey address receives an additional 1% for every transaction made on the chain
 ``ac_perc`` chains are currently incompatible with z-nomp. The coinbase transaction vout type must be ``pubkey`` as opposed to ``pubkeyhash``. 
 
 
-ac_reward ac_halving ac_end ac_perc_ac_pubkey ac_staked
+ac_reward ac_halving ac_end ac_perc ac_pubkey ac_staked
 =======================================================
 
 ``./komodod -ac_name=5REWHALVENDPERCSTAKE -ac_supply=100 -ac_reward=100000000 -ac_halving=20000 -ac_end=100000 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=90``
@@ -791,7 +798,7 @@ Pubkey address receives an additional 1% for every transaction made on the chain
 
 ``ac_perc`` chains are currently incompatible with z-nomp. The coinbase transaction vout type must be ``pubkey`` as opposed to ``pubkeyhash``.
 
-ac_reward ac_decay ac_end ac_perc_ac_pubkey ac_staked
+ac_reward ac_decay ac_end ac_perc ac_pubkey ac_staked
 =====================================================
 ``./komodod -ac_name=5REWDECENDPERCSTAKE -ac_supply=1000 -ac_reward=500000000 -ac_decay=75000000 -ac_end=10000 -ac_perc=10000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=60``
 
@@ -811,7 +818,7 @@ Pubkey address receives an additional 10% for every transaction made on the chai
 
 ``ac_perc`` chains are currently incompatible with z-nomp. The coinbase transaction vout type must be ``pubkey`` as opposed to ``pubkeyhash``.
 
-ac_halving ac_decay ac_end ac_perc_ac_pubkey ac_staked
+ac_halving ac_decay ac_end ac_perc ac_pubkey ac_staked
 ======================================================
 ``./komodod -ac_name=5HALVDECENDPERCSTAKE -ac_supply=1000000 -ac_halving=10000 -ac_decay=75000000 -ac_end=100000 -ac_perc=1000000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=50``
 
@@ -822,7 +829,7 @@ If ``ac_perc`` is set, ``ac_reward`` must be set also. This chain does not work 
 6
 *
 
-ac_reward ac_halving ac_decay ac_end ac_perc_ac_pubkey ac_staked
+ac_reward ac_halving ac_decay ac_end ac_perc ac_pubkey ac_staked
 =================================================================
 
 ``./komodod -ac_name=6REWHALVDECENDPERCSTAKE -ac_supply=100000000 -ac_reward=100000000000 -ac_halving=100000 -ac_decay=75000000 -ac_end=1000000 -ac_perc=500000 -ac_pubkey=027dc7b5cfb5efca96674b45e9fda18df069d040b9fd9ff32c35df56005e330392 -ac_staked=1``

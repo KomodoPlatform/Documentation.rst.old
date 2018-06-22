@@ -15,6 +15,8 @@ Here you will find more information about Komodo (KMD)
    komodo/security-setup-Komodo-Node
    komodo/useful-KMD-BTC-commands
    komodo/create-Komodo-Assetchain
+   komodo/assetchain-params
+   komodo/example-asset-chains.rst
    komodo/Smartaddress-FAQ
    komodo/using-JUMBLR
 
