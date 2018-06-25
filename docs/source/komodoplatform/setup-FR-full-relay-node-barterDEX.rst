@@ -2,15 +2,15 @@
 Setting up a Full Relay(FR) Node for BarterDEX
 **********************************************
 
-What is Full Relay (FR) node?
-=============================
+What is a Full Relay (FR) node?
+===============================
 
-Full Relay node (FR) creates the p2p network & only relays packets for BarterDEX and allows ordermatch to happen. They don't trade. FR nodes never touch any funds of any sort and are just a bulletin board. 0 balance needed to run an FR node. Bob and Alice connect to the FR network. Bob places orders and Alice fills the orders. It is ideal to have at least 3 FR nodes in each netid.
+Full Relay nodes (FR) create the p2p network & only relays data-packets for BarterDEX and allows ordermatching to happen. They don't trade. FR nodes never touch any funds of any sort and are equivalent to a bulletin board. There is no need to fund the wallet of a FR node. Bob and Alice connect to the FR network. Bob places orders and Alice fills the orders. It is ideal to have at least 3 FR nodes in each netid.
 
 How to setup an FR node?
 ========================
 
-It is just ``marketmaker`` launched with ``client:0`` parameter. Very easy to setup, just follow along without skipping any step.
+A FR node is just ``marketmaker`` launched with ``client:0`` parameter. Very easy to setup, just follow along without skipping any steps.
 
 Install the following dependency packages:
 ------------------------------------------
@@ -49,7 +49,7 @@ Clone the repo, checkout ``dev`` branch for latest and install.
 Edit the ``client`` script
 --------------------------
 
-The client script inside the directory ``~/SuperNET/iguana/dexscripts`` should look as follows to be running as a FR node.
+The client script inside the directory ``~/SuperNET/iguana/dexscripts`` should look as follows to be running a FR node.
 
 .. code-block:: shell
 
@@ -69,17 +69,17 @@ barterDEX is now installed in your system.
 Starting FR node
 ----------------
 
-Every time you want to run Full Relay (FR) open a new terminal window and type the following:
+Every time you want to run a Full Relay node (FR), open a new terminal window and type the following:
 
 .. code-block:: shell
 
 	cd ~/SuperNET/iguana/dexscripts
 	./client &
 
-How to setup FR nodes for different netid?
-==========================================
+How to setup FR nodes for different netids?
+===========================================
 
-You need to edit the value of ``netid`` in the ``client`` script along with ``client:0`` param.
+You need to edit the value of ``netid`` in the ``client`` script along with ``client:0`` parameter.
 
 ``client``
 ----------
