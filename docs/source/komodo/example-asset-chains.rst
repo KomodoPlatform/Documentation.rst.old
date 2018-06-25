@@ -8,7 +8,7 @@ Please see :doc:`create-Komodo-Assetchain` and :doc:`assetchain-params` if you h
 
 All chains must have at least ``ac_name`` and ``ac_supply`` set. The ``ac_pubkey`` parameter can be used with any of these chains. If ``ac_perc`` is not set, the only effect ``ac_pubkey`` has  is to have the genesis block be mined to the pubkey that has been specified. The parameters ``ac_name`` , ``ac_supply`` , ``ac_pubkey`` are not counted when grouping based on the ``Number of parameters``.
 
-All values other than ``ac_name`` in these examples are completely arbitrary.
+The values of parameters other than ``ac_name`` in these examples are completely arbitrary. The names of these example-asset-chains are assigned based on how a chain is customized and it's grouping.
 
 Number of parameters: 1
 ***********************
