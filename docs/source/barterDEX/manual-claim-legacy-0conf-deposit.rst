@@ -10,7 +10,7 @@ Requirements:
 
 #. Komodo (KMD) running in native mode, blockchain fully synced and passphrase imported - https://artifacts.supernet.org/latest/
 #. Deposit txid/deposit files
-#. Latest barterDEX CLI - :doc:`Instructions </komodoplatform/install-barterDEX-CLI>`
+#. Latest barterDEX CLI - :doc:`Instructions </barterDEX/install-barterDEX-CLI>`
 
 Prepare the 0conf deposit files
 ===============================

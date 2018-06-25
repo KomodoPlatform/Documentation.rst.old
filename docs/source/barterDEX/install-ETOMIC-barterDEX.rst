@@ -10,7 +10,7 @@ Step by Step Setup Guide for ETH (ERC20) Token Swap Using barterDEX
 
 	**THIS GUIDE IS HIGHLY EXPERIMENTAL, DON'T TRY UNLESS YOU KNOW WHAT YOU ARE DOING!**
 
-**This guide will set you up with ETH swaps in BarterDEX. If you are not looking for non ETH based token swap, please follow this** :doc:`installation guide </komodoplatform/install-barterDEX-CLI>` **. The project is still in development. It is for ETH testnet, but mainnet for the BTC protocol coins. This guide may change accordingly in the future. Make sure you are following the latest guide before reporting anything is broken.**
+**This guide will set you up with ETH swaps in BarterDEX. If you are not looking for non ETH based token swap, please follow this** :doc:`installation guide </barterDEX/install-barterDEX-CLI>` **. The project is still in development. It is for ETH testnet, but mainnet for the BTC protocol coins. This guide may change accordingly in the future. Make sure you are following the latest guide before reporting anything is broken.**
 
 Installation steps
 ==================
@@ -221,7 +221,7 @@ Run ETOMIC
 
 You need to have ETOMIC running in native mode or electrum mode and KMD or other coins either running native or electrum (native is faster). If running native mode, make sure you have blockchain synced and seed passphrase / WIF key / private key imported into the chain.
 
-For ETOMIC you need to have utxos. You can get free BEER from `this faucet`_ and swap it for ETOMIC in normal BarterDEX. You also need to have ETH testnet coins as long as we are testing testnet. Use main-net ETH when testing main-net. If you are unsure which net to use, ask in `Discord <https://discord.gg/SCdf4eh >`_.
+For ETOMIC you need to have utxos. You can get free BEER from `this faucet`_ and swap it for ETOMIC in normal BarterDEX. You also need to have ETH testnet coins as long as we are testing testnet. Use main-net ETH when testing main-net. If you are unsure which net to use, ask in `Discord <https://discord.gg/SCdf4eh>`_.
 
 .. code-block:: shell
 
@@ -243,6 +243,6 @@ Example ``enable`` script:
 	curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"enable\",\"coin\":\"JST\"}"
 	curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"enable\",\"coin\":\"ETH\"}"
 
-And, rest of things are same as normal BarterDEX. More helpful info is available in the following links: :doc:`Komodo Platform HOME </home-komodo-platform>`, :doc:`BarterDEX API Summary </komodoplatform/barterDEX-API>` , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Enabling-Native-Wallet-Coins-for-Trading , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Enabling-Electrum-Wallet-Coins , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Electrum-servers-list , https://github.com/KomodoPlatform/KomodoPlatform/wiki/Trade
+And, rest of things are same as normal BarterDEX. More helpful info is available in the following links: :doc:`Komodo Platform HOME </home-barterDEX>`, :doc:`BarterDEX API Summary </barterDEX/barterDEX-API>`, :doc:`enable-native-wallet-coins`, :doc:`enable-electrum-wallet-coins`, :doc:`electrum-servers-list` , :doc:`trade`
 
 .. _this faucet : http://atomicexplorer.com/#/faucet

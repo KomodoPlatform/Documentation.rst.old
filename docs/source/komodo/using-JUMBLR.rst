@@ -9,7 +9,7 @@ For instructions jump to :ref:`Instructions for using JUMBLR`
 
 ``komodod`` now has ``jumblr_deposit`` and ``jumblr_secret`` RPC calls.
 
-Jumblr works like described :doc:`in the whitepaper </whitepaper/JUMBLR-Whitepaper>` where all the nodes with jumblr active synchronize their ``tx`` activity during the same block to maximize the mixing effect. However, unlike all other mixers/tumblers, you never give up control of your coins to anybody else. JUMBLR uses a one to many allocations of funds, ie. one deposit address and many secret addresses. You can always run multiple ``komodod`` daemons to get multiple active deposit addresses.
+Jumblr works like described in the whitepaper where all the nodes with jumblr active synchronize their ``tx`` activity during the same block to maximize the mixing effect. However, unlike all other mixers/tumblers, you never give up control of your coins to anybody else. JUMBLR uses a one to many allocations of funds, ie. one deposit address and many secret addresses. You can always run multiple ``komodod`` daemons to get multiple active deposit addresses.
 
 JUMBLR implements ``t -> z, z -> z`` and ``z -> t`` transactions to maximize privacy of the destination ``t`` (transparent) address. So while it is transparent, its first activity is, funds coming from an untraceable ``z`` address.
 
@@ -23,7 +23,7 @@ There are three sizes of a jumblr transaction: 10.1 KMD, 101 KMD, 7777 KMD. Ther
 
 **Practical Advice:** *Obtaining privacy used to be very difficult. JUMBLR makes it as simple as issuing two command line calls. Higher level layers can be added to help manage the addresses, ie. linking them at the passphrase level. Such matters are left to each implementation.*
 
-Once obtained, it is very easy to lose all the privacy. With a single errant transaction that combines some previously used address and the ``secretaddress``, well, the ``secretaddress`` is no longer so private.
+*Once obtained, it is very easy to lose all the privacy. With a single errant transaction that combines some previously used address and the* ``secretaddress``, well, the ``secretaddress`` *is no longer so private.*
 
 **The advice is to setup a totally separate node!**
 

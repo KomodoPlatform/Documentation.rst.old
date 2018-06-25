@@ -38,14 +38,14 @@ barterDEX CLI (normal)
 ======================
 
 * Source code: https://github.com/jl777/SuperNET
-* Setup guide: :doc:`install-barterDEX-CLI`
-* Knowledge base : :doc:`/home-komodo-platform`
+* Setup guide: :doc:`/barterDEX/install-barterDEX-CLI`
+* Knowledge base : :doc:`/home-barterDEX`
 
 barterDEX CLI (etomic)
 ======================
 
 * Source code: https://github.com/artemii235/SuperNET/tree/etomic
-* Setup guide: :doc:`install-ETOMIC-barterDEX`
+* Setup guide: :doc:`/barterDEX/install-ETOMIC-barterDEX`
 
 BarterDEX GUI
 =============

@@ -2,7 +2,7 @@
 Compile marketmaker Binary with Static nanomsg in Linux
 *******************************************************
 
-This guide will help you to compile your own marketmaker binary in Linux with static nanomsg. Follow this :doc:`guide </komodoplatform/compile-marketmaker-binary-with-static-nanomsg-in-MacOS>` to compile for macOS.
+This guide will help you to compile your own marketmaker binary in Linux with static nanomsg. Follow this :doc:`guide </general/compile-marketmaker-binary-with-static-nanomsg-in-MacOS>` to compile for macOS.
 
 Install Dependency packages:
 ----------------------------

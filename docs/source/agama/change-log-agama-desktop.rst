@@ -48,8 +48,8 @@ v0.2.38
 
 v0.2.37
 =======
-    
-	* arg electrum port fix
+
+    * arg electrum port fix
     * custom ac genproclimit dropdown
 
 v0.2.36

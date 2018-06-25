@@ -24,12 +24,12 @@ Here you will find more information about Komodo (KMD)
    :maxdepth: 1
    :caption: Notary Node
 
-   notorynode/setup-Komodo-Notary-Node
-   notorynode/updating-Komodo-Notary-Node
-   notorynode/update-Komodo-manually
-   notorynode/monitor-your-Komodo-Notary-Node
-   notorynode/assetchains-guide-Komodo-Notary-Node
-   notorynode/useful-commands-Komodo-Notary-Node
+   notarynode/setup-Komodo-Notary-Node
+   notarynode/updating-Komodo-Notary-Node
+   notarynode/update-Komodo-manually
+   notarynode/monitor-your-Komodo-Notary-Node
+   notarynode/assetchains-guide-Komodo-Notary-Node
+   notarynode/useful-commands-Komodo-Notary-Node
 
 Whitepaper
 ----------

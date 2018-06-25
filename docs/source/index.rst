@@ -12,13 +12,12 @@ Welcome to Komodo Platform's documentation!
    :maxdepth: 1
    :caption: API Docs for Developers
 
-   /komodoplatform/barterDEX-API.rst
-   /komodo/komodo-API.rst
-   iguana-API
+   barterDEX/barterDEX-API.rst
+   komodo/komodo-API.rst
    komodo/create-Komodo-Assetchain
    komodo/assetchain-params
    komodo/example-asset-chains
-   /komodoplatform/using-Key-Value
+   general/using-Key-Value
    agama/add-Komodo-Assetchains-Agama-Desktop
    agama/add-Bitcoin-Compatible-coin-Agama-Desktop
    barterDEX/zeroconf-API-implementation-BarterDEX-GUI
@@ -35,9 +34,9 @@ Whitepaper
    :maxdepth: 1
    :caption: Quick-Links
    
-   komodoplatform/list-all-KomodoPlatform-Project-links
+   general/list-all-KomodoPlatform-Project-links
    whats-new
-   home-komodo-platform
+   general-documentation
    home-komodo
    home-agama
    home-barterDEX
@@ -52,20 +51,22 @@ Whitepaper
    :caption: Install and Build
 
    /komodo/install-Komodo-manually
-   /komodoplatform/install-barterDEX-CLI
-   /komodoplatform/install-ETOMIC-barterDEX
-   /komodoplatform/install-barterDEX-CLI-windows
-
+   /barterDEX/install-barterDEX-CLI
+   /barterDEX/install-ETOMIC-barterDEX
+   /barterDEX/install-barterDEX-CLI-windows
+   general/compile-marketmaker-binary-with-static-nanomsg-in-Linux
+   general/compile-marketmaker-binary-with-static-nanomsg-in-MacOS
+   
 .. _setup:
 
 .. toctree::
    :maxdepth: 1
    :caption: Setups
    
-   komodoplatform/setup-Bob-node-using-barterDEX-CLI
-   komodoplatform/setup-FR-full-relay-node-barterDEX
-   /komodoplatform/setup-electrumX-server
-   /komodoplatform/barterDEX-Network-Optimizations
+   barterDEX/setup-Bob-node-using-barterDEX-CLI
+   barterDEX/setup-FR-full-relay-node-barterDEX
+   barterDEX/setup-electrumX-server
+   barterDEX/barterDEX-Network-Optimizations
    barterDEX/setup-Bitcoin-Cash-BarterDEX
 
 .. _using:
@@ -74,9 +75,10 @@ Whitepaper
    :maxdepth: 1
    :caption: Using Komodo Platform
 
-   /komodo/using-JUMBLR
-   /komodoplatform/0conf-deposit-claim
-   komodoplatform/using-remote-narketmaker-binary-with-GUI
+   komodo/using-JUMBLR
+   general/using-Key-Value
+   barterDEX/0conf-deposit-claim
+   barterDEX/using-remote-narketmaker-binary-with-GUI
    Beginner friendly BarterDEX documantation by jorian (Work in Progress) <https://barterdex.readthedocs.io/en/latest/>
 
 .. _notarynodes:

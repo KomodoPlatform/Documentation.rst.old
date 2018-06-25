@@ -360,8 +360,7 @@ getblockchaininfo
 
 Returns an object containing various state info regarding block chain processing.
 
- *Note that when the chain tip is at the last block before a network upgrade activation,*
-``consensus.chaintip != consensus.nextblock``.
+ *Note that when the chain tip is at the last block before a network upgrade activation,* ``consensus.chaintip != consensus.nextblock``.
 
 Result:
 
