@@ -23,6 +23,10 @@ Note: Do not include the ``<>`` characters in commands. If you are using windows
 
 This is the simplest possible set of parameters. This will create a coin with the ticker symbol ``EXAMPLECHAIN`` with ``1000000`` premined coins. Blocks will be on-demand after block 128(the chain is only mined when a transaction is in the mempool) and the block reward will be ``.0001``. 
 
+.. note::
+
+	The parameter -ac_supply should be set to a whole number without any decimals places and it should be to set to less than 500000000 to avoid 64 bit overflows.
+
 Please refer to :ref:`Asset Chain Parameters` for a full list of parameters to customize your blockchain.
 
 After issuing this command, you will see the p2p port in the terminal window. 
@@ -76,10 +80,10 @@ Use the ``help`` command for a list of commands:
 Secure this Assetchain with Delayed Proof of Work
 =================================================
 
-Your new chain can be secured via dPOW by the Komodo notary nodes giving it Bitcoin level security. The current rate for this is 300 KMD and 800 of the coin to be secured per year. If you are interested in having a new chain notarized, please contact @siu on the Komodo discord. 
+Your new chain can be secured via dPOW by the Komodo notary nodes giving it Bitcoin level security. The current rate for this is 300 KMD and 800 of the coin to be secured per year. If you are interested in having a new chain notarized, please contact @siu or @PTYX on the Komodo discord. 
 
+@PTYX has launched `ChainZilla <https://www.chainzilla.io/>`_ and @siu:matrix.org has launched ChainMakers to provide assetchain creation, electrum server, explorer, dICO services.
 
-
-Please send any critiques or feedback to Alright or gcharang on matrix or discord.
+Please send any critique or feedback to Alright or gcharang on matrix or discord.
 
 `Discord Invite <https://discord.gg/SCdf4eh>`_
