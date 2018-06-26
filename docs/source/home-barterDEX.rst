@@ -1,6 +1,6 @@
-********************
-HOMEPAGE - BarterDEX
-********************
+***********************
+BarterDEX Documentation
+***********************
 
 Welcome to the BarterDEX wiki! 
 

@@ -1,6 +1,6 @@
-*****************
-HOMEPAGE - Komodo
-*****************
+********************
+Komodo Documentation
+********************
 
 Welcome to the komodo wiki! 
 

@@ -1,6 +1,6 @@
-***************
-Using Key Value
-***************
+***************************
+Using the Key-Value feature
+***************************
 
 To search for a key in the whole blockchain database, use the following command:
 

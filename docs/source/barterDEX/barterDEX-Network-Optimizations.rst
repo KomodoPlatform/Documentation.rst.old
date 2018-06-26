@@ -1,7 +1,7 @@
-************************************************************************
-BarterDEX Network Optimisations & Handle BarterDEX on Very FAST Computer
-************************************************************************
-On very fast system ``nanomsg`` can crash. The crash is due to socket exhaustion, ie. no more sockets in the system are available due to the system going so fast. It has to do with the coins loop saturating things and using up all sockets. Nanomsg assumes it can get an open socket. The following magic TCP settings change will get sockets to recycle as fast as possible.
+*******************************************************************************
+BarterDEX Network Optimisations & Configuring BarterDEX on a Very FAST Computer
+*******************************************************************************
+On a very fast system ``nanomsg`` can crash. The crash is due to socket exhaustion, i.e., no more sockets in the system are available due to the system processing so fast. It has to do with the coins loop saturating things and using up all sockets, while ``Nanomsg`` assumes it can get an open socket. The following magic TCP settings change will get sockets to recycle as fast as possible.
 
 The workaround is to create a new conf file and make it run on every boot. You can set them with ``sysctl -w``, but to make them permanent, better put them in a file like ``/etc/sysctl.d/01-barterdex.conf`` and execute ``sudo sysctl -p /etc/sysctl.d/01-barterdex.conf`` afterwards which will set both parameters.
 

@@ -1,6 +1,6 @@
-*****************
-HOMEPAGE - Agama
-*****************
+*******************
+Agama Documentation
+*******************
 
 Welcome to the Agama wiki! 
 

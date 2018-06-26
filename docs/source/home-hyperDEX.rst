@@ -1,6 +1,6 @@
-********************
-HOMEPAGE - HyperDEX
-********************
+**********************
+HyperDEX Documentation
+**********************
 
 Welcome to the HyperDEX wiki! 
 

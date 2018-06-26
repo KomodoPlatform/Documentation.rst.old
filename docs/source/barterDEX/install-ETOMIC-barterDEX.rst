@@ -4,7 +4,7 @@ Step by Step Setup Guide for ETH (ERC20) Token Swap Using barterDEX
 
 .. warning::
 	
-	**WARNING - Dragons ahead!**
+	**Dragons ahead!**
 
 .. note::
 
