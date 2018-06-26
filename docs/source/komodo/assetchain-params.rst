@@ -79,7 +79,7 @@ The following are the (current) rules for staking a block:
 
 	#. There are 64 different segments(``segids``) of addresses, based on the hash of the destination address. ``((nHeight + addrhash.uints[0]) & 0x3f)`` The segid of an address can be found with the ``validateaddress`` command. Each segid will take turns being segid0 at each height. ``(height % 64) = the segid0 for that height.`` All other segid will adjust the elapsed time by ``segid`` seconds.
 
-	#. A new block is eligible to be staked 1 second after median blocktime. For example, segid0 for a given height will be eligible to submit a block 1 second after median blocktime, whereas segid1 will be eligible to submit a block 2 seconds after median blocktime. For the next block, segid0 from the previous block will now be segid63 and will be eligible to submit a block 64 seconds after median blocktime. This means by 64 seconds after the median blocktime, all segids are eligible.
+	#. A new block is eligible to be staked 2 seconds after median blocktime. For example, segid0 for a given height will be eligible to submit a block 2 seconds after median blocktime, whereas segid1 will be eligible to submit a block 4 seconds after median blocktime. For the next block, segid0 from the previous block will now be segid63 and will be eligible to submit a block 128 seconds after median blocktime. This means by 128 seconds after the median blocktime, all segids are eligible.
 
 	#. Coinage calculated from the adjusted time is used to divide hash(address + pastblockhash) to create the value compared against the difficulty to determine if a block is won or not. This means a UTXO is more likely to win a block within a segid based on age of the UTXO and amount of coins.
 
