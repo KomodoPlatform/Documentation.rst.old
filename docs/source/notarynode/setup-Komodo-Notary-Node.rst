@@ -460,6 +460,64 @@ Import privkey
 	chips-cli importprivkey BTCDwif
 	# replace BTCDwif with the key you received earlier (like: UvCbPGo2B5QHKgMN5KFRz10sMzbTSXunRTLB9utqGhNFUZrJrEWa)
 
+Build GameCredits
+
+.. code-block:: shell
+
+	cd ~/GameCredits
+	./autogen.sh
+	./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" -without-gui -without-miniupnpc --disable-tests --disable-bench --with-gui=no
+	make -j$(nproc)
+
+Create ``gamecredits.conf`` file with random username, password, txindex and daemon turned on:
+
+.. code-block:: shell
+
+	cd ~
+	mkdir .gamecredits
+	nano .gamecredits/gamecredits.conf
+
+Add the following lines into your ``gamecredits.conf`` file
+
+.. code-block:: shell
+
+	rpcuser=gamecreditsuser
+	rpcpassword=passworddrowssap
+	txindex=1
+	daemon=1
+	addnode=x.x.x.x
+	addnode=y.y.y.y
+
+Symlinking the binaries
+
+.. code-block:: shell
+
+	sudo ln -sf /home/$USER/GameCredits/src/gamecredits-cli /usr/local/bin/gamecredits-cli
+	sudo ln -sf /home/$USER/GameCredits/src/gamecreditsd /usr/local/bin/gamecreditsd
+	sudo chmod +x /usr/local/bin/gamecredits-cli
+	sudo chmod +x /usr/local/bin/gamecreditsd
+
+Run!
+
+.. code-block:: shell
+
+	gamecreditsd
+
+Check
+
+.. code-block:: shell
+
+	gamecredits-cli getinfo
+
+Import privkey
+
+.. code-block:: shell
+
+	gamecredits-cli importprivkey GAMEwif
+	# replace GAMEwif with the key you received earlier (like: UvCbPGo2B5QHKgMN5KFRz10sMzbTSXunRTLB9utqGhNFUZrJrEWa)
+
+
+
 Now we need to chain everything together. Pondsea came up with a nice handy little script. So let's start
 
 Create a script file at ``/home/username/`` and name it start
