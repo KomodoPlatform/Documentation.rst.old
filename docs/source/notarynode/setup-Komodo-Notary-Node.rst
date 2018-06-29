@@ -471,6 +471,9 @@ Install GameCredits:
 	cd GameCredits/
 	git checkout master
 
+In Debian9 you might need to do ``sudo apt-get install libssl1.0-dev`` or compile the openssl and place it in the Gamecredits folder and point ``gamecreditsd`` at it, so that it wouldn't interfere with other coin daemons.
+
+
 Build Berkeley DB 4.8
 
 .. code-block:: shell

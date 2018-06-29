@@ -2,6 +2,14 @@
 Change Log (Agama-Desktop)
 **************************
 
+v0.2.41
+=======
+
+	* updated electrum servers list
+	* new asset chain zilla
+	* save settings fix
+	* spv remove coin fix
+
 v0.2.40
 =======
 

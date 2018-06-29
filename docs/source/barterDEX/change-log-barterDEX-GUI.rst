@@ -2,6 +2,12 @@
 Change Log (BarterDEX-GUI)
 **************************
 
+v1.1.0
+======
+
+	* New CoinDB setup has been added to be able to get more than 255 coins available in BarterDEX
+	* Updated Marketmaker binaries
+
 v1.0.7
 ======
 
