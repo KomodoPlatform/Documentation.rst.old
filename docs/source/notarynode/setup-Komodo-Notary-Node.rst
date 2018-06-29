@@ -460,6 +460,90 @@ Import privkey
 	chips-cli importprivkey BTCDwif
 	# replace BTCDwif with the key you received earlier (like: UvCbPGo2B5QHKgMN5KFRz10sMzbTSXunRTLB9utqGhNFUZrJrEWa)
 
+Install GameCredits:
+--------------
+
+.. code-block:: shell
+
+	cd ~
+	sudo apt-get update && sudo apt-get install software-properties-common autoconf git build-essential libtool libprotobuf-c-dev libgmp-dev libsqlite3-dev python python3 zip jq libevent-dev pkg-config libssl-dev libcurl4-gnutls-dev cmake -y
+	git clone https://github.com/GameCredits/GameCredits.git
+	cd GameCredits/
+	git checkout master
+
+Build Berkeley DB 4.8
+
+.. code-block:: shell
+
+	GAME_ROOT=$(pwd)
+	BDB_PREFIX="${GAME_ROOT}/db4"
+	mkdir -p $BDB_PREFIX
+	wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
+	echo '12edc0df75bf9abd7f82f821795bcee50f42cb2e5f76a6a281b85732798364ef db-4.8.30.NC.tar.gz' | sha256sum -c
+	tar -xzvf db-4.8.30.NC.tar.gz
+	cd db-4.8.30.NC/build_unix/
+	../dist/configure -enable-cxx -disable-shared -with-pic -prefix=$BDB_PREFIX
+	make -j$(nproc)
+	make install 
+
+Build GameCredits
+
+.. code-block:: shell
+
+	cd ~/GameCredits
+	./autogen.sh
+	./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" -without-gui -without-miniupnpc --disable-tests --disable-bench --with-gui=no
+	make -j$(nproc)
+
+Create ``gamecredits.conf`` file with random username, password, txindex and daemon turned on:
+
+.. code-block:: shell
+
+	cd ~
+	mkdir .gamecredits
+	nano .gamecredits/gamecredits.conf
+
+Add the following lines into your ``gamecredits.conf`` file
+
+.. code-block:: shell
+
+	rpcuser=gamecreditsuser
+	rpcpassword=passworddrowssap
+	txindex=1
+	daemon=1
+	addnode=x.x.x.x
+	addnode=y.y.y.y
+
+Symlinking the binaries
+
+.. code-block:: shell
+
+	sudo ln -sf /home/$USER/GameCredits/src/gamecredits-cli /usr/local/bin/gamecredits-cli
+	sudo ln -sf /home/$USER/GameCredits/src/gamecreditsd /usr/local/bin/gamecreditsd
+	sudo chmod +x /usr/local/bin/gamecredits-cli
+	sudo chmod +x /usr/local/bin/gamecreditsd
+
+Run!
+
+.. code-block:: shell
+
+	gamecreditsd
+
+Check
+
+.. code-block:: shell
+
+	gamecredits-cli getinfo
+
+Import privkey
+
+.. code-block:: shell
+
+	gamecredits-cli importprivkey GAMEwif
+	# replace GAMEwif with the key you received earlier (like: UvCbPGo2B5QHKgMN5KFRz10sMzbTSXunRTLB9utqGhNFUZrJrEWa)
+
+
+
 Now we need to chain everything together. Pondsea came up with a nice handy little script. So let's start
 
 Create a script file at ``/home/username/`` and name it start
