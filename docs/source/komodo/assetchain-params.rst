@@ -14,7 +14,7 @@ This is the ticker symbol for the coin you wish to create. It is recommended to 
 -ac_supply
 ==========
 
-This is the amount of premined coins you would like the chain to have. The node that sets ``-gen`` during the creation process will mine these coins in the genesis block. If this is not set, ``-ac_reward`` must be set, and the default value of 10 coins will be used. If ``-ac_pubkey`` is set, the  premined coins will be mined to the address of the corresponding pubkey. This parameter should be set to a whole number without any decimals places. This should be to set to less than ``1000000000`` to avoid 64 bit overflows. 
+This is the amount of premined coins you would like the chain to have. The node that sets ``-gen`` during the creation process will mine these coins in the genesis block. If this is not set, ``-ac_reward`` must be set, and the default value of 10 coins will be used. If ``-ac_pubkey`` is set, the  premined coins will be mined to the address of the corresponding pubkey. This parameter should be set to a whole number without any decimals places. This should be to set to less than ``2000000000`` to avoid 64 bit overflows. 
 
 Note: An additional fraction of a coin will be added to this based on the chain's parameters. This is used by nodes to verify the genesis block. For example, the DEX chain's ``-ac_supply`` parameter is set to ``999999``, but in reality the genesis block was ``999999.13521376``.
 

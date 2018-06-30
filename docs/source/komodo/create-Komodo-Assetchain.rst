@@ -25,7 +25,7 @@ This is the simplest possible set of parameters. This will create a coin with th
 
 .. note::
 
-	The parameter -ac_supply should be set to a whole number without any decimals places and it should be less than 1000000000 to avoid 64 bit overflows.
+	The parameter -ac_supply should be set to a whole number without any decimals places and it should be less than 2000000000 to avoid 64 bit overflows.
 
 Please refer to :ref:`Asset Chain Parameters` for a full list of parameters to customize your blockchain.
 
