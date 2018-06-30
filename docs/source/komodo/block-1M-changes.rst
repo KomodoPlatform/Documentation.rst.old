@@ -13,4 +13,4 @@ Currently, the rewards mechanism will cap the amount of accrued rewards after 1 
 Mining Free for All
 ===================
 
-Currently, every 2000 blocks, there is a 64 block period in which notary nodes are unable to mine with easy difficulty. After block 1000000, this 64 block period will be removed. This change does not effect the profitability of a POW miner. This is being changed to prevent miners from only mining during these 64 block periods. 
+Currently, every 2000 blocks, there is a 64 block period in which notary nodes are unable to mine with easy difficulty. After block 1000000, this 64 block period will be removed. We have deployed a new method that calibrates the non-notary mining to 25% and this process also performs the calibration to non-notary hashrate that the free for all period was designed to achieve. With the removal of the free for all, the mining returns will not go through any dramatic changes every 2000 blocks, but rather stay relatively constant throughout.
