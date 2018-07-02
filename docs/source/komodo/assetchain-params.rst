@@ -63,17 +63,18 @@ If you'd like to explicitly disable smart contracts set this value to ``0``.
 -ac_staked
 ==========
 
+.. note::
+	This feature is currently only available in the `jl777 branch <https://github.com/jl777/komodo/tree/jl777>`_.  
+
 This is the percentage of blocks the chain will aim to have as POS. For example, a ``ac_staked=90`` chain will have 90% POS blocks/10% POW blocks. This isn't exact, but the POW difficulty will automatically adjust based on the overall percentage of POW mined blocks.
 
 Each staked block will have an additional transaction added to the coinbase in which the coins that staked the block are sent back to the same address. This is used to verify which coins staked the block, and this allows for compatibility with existing Komodo infrastructure such as Agama, BarterDEX and explorers. If ``-ac_staked`` is used in conjunction with ``-ac_perc``, the ``-ac_pubkey`` address will receive slightly more coins for each staked block compared to a mined block because of this extra transaction.
-
-In order to stake, you must use the ``-pubkey`` option while launching the daemon. The address associated with this pubkey must have coins that are able to be staked. The privkey for this address must be imported to the daemon.
 
 The following are the (current) rules for staking a block:
 
 	#. Block timestamps are used as the monotonically increasing timestamp. It is important to have a synced system clock.
 
-	#. In order to stake ``-pubkey`` must be set while starting the daemon. This pubkey's address must be imported to the daemon and have coins that are able to be staked. The ``validateaddress`` command can be used to get the pubkey of an address.
+	#. In order to stake, you must use ``-gen -genproclimit=0`` while launching the daemon or ``komodo-cli -ac_name=<CHAINNAME> setgenerate true 0`` after launching the daemon.
 
 	#. A utxo is not eligible without ``nLockTime`` set and until 6000 seconds has passed from this lock time. ``(100 * expected blocktimes) to be exact``
 
@@ -83,9 +84,24 @@ The following are the (current) rules for staking a block:
 
 	#. Coinage calculated from the adjusted time is used to divide hash(address + pastblockhash) to create the value compared against the difficulty to determine if a block is won or not. This means a UTXO is more likely to win a block within a segid based on age of the UTXO and amount of coins.
 
-To create a chain using this parameter, start the first node with ``-pubkey`` and without ``-gen``. Start the second node with with ``-gen`` and without ``-pubkey``. Wait until the second node mines block 1 and 2. Now, send coins from the second node to the first node's pubkey address. On the first node, import the privkey for the set pubkey and type the command ``setgenerate true 1``. The node will begin to stake. If the chain has a very high precentage for POS, it's important to do ``setgenerate false`` on the mining node immediately after block 2 is mined. Send the premined coins to the staking node's pubkey address then do ``setgenerate true`` on the both nodes.
+To create a chain using this parameter, start the first node with ``-gen -genproclimit=0``. Start the second node with ``-gen -genproclimit=$(nproc)``. Send coins from the second node to the first node, and it will begin staking. The first 100 blocks will allow POW regardless of the ``ac_staked`` value. On a chain using a high percentage for POS, it's vital to have coins staking by block 100. It is also vital to stake coins in all 64 segids. For the time being, you can use the `genaddresses.py` script in `this repo <https://github.com/alrighttt/dockersegid>`_ to generate an address for each segid. This functionality will soon be integrated directly into the daemon. You can use the ``getbalance64`` command to get the balance you currently have in each segid you are staking in. 
 
 
+-ac_public
+==========
+
+.. note::
+	This feature is currently only available in the `jl777 branch <https://github.com/jl777/komodo/tree/jl777>`_. 
+
+If ``ac_public`` is set to 1, zkSNARKs will be disabled. All z address functionalilty is disabled. Therefore, all transactions on the blockchain are public. 
+
+-ac_private
+===========
+
+.. note::
+	This feature is currently only available in the `jl777 branch <https://github.com/jl777/komodo/tree/jl777>`_. 
+
+If ``ac_private`` is set to 1, all transactions other than coinbase transactions(block rewards) must use zkSNARKs. All transparent address functionality other than sending mined coins from transparent addresses is disabled. 
 
 
 Please send any critiques or feedback to Alright or gcharang on matrix or discord.
