@@ -37,7 +37,6 @@ Example
 
 	* **Coin Ticker** : LTC
 	* **Coin Name**: litecoin
-
 	* **rpcport** : 9332
 	* **pubtype** : 48
 	* **taddr** : 0
@@ -45,6 +44,12 @@ Example
 	* **wiftype** : 176
 	* **txfee** : 1000000
 	* **active** : 1
+	
+Need an icon too. After getting confirmation from our specialists, submit a pull request to the repository: https://github.com/jl777/coins
+
+The file https://github.com/jl777/coins/blob/master/coins contains all the info required to list the coin in BarterDEX
+
+The explorer repository of the proposed coin also contaisn some of the info required to connect BarterDEX to the coin's own explorer infrastructure.
 
 Json Output Example:
 --------------------
@@ -64,9 +69,11 @@ Search for the information on Github
 
 All of the information and parameters required are normally contained within but not limited to these files (depends on your coin):
 
-init.cpp https://github.com/litecoin-project/litecoin/blob/master/src/init.cpp
-base58.h  https://github.com/litecoin-project/litecoin/blob/master/src/base58.h
-chainparamsbase.h https://github.com/litecoin-project/litecoin/blob/master/src/chainparamsbase.h
+	* init.cpp: https://github.com/litecoin-project/litecoin/blob/master/src/init.cpp
+
+	* base58.h: https://github.com/litecoin-project/litecoin/blob/master/src/base58.h
+
+	* chainparamsbase.h: https://github.com/litecoin-project/litecoin/blob/master/src/chainparamsbase.h
 
 Additional Information
 ======================
@@ -86,7 +93,7 @@ Adding ERC20 tokens in BarterDEX is very easy. We just need some information abo
 Requirements:
 -------------
 
-	* approve and transferFrom methods are must for the swaps to work
+	* ``approve`` and ``transferFrom`` methods are a must for the swaps to work
 	* Contract address
 	* Ticker Symbol
 	* Name of the token
