@@ -10,6 +10,7 @@ Here you will find more information about BarterDEX
    :maxdepth: 1
    :caption: BarterDEX - Developer - Docs
 
+   barterDEX/get-listed-barterDEX.rst
    barterDEX/barterDEX-API
    barterDEX/zeroconf-API-implementation-BarterDEX-GUI
    barterDEX/setup-Bitcoin-Cash-BarterDEX

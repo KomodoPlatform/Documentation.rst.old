@@ -11,7 +11,8 @@ Welcome to Komodo Platform's documentation!
 .. toctree::
    :maxdepth: 1
    :caption: API Docs for Developers
-
+ 
+   barterDEX/get-listed-barterDEX.rst
    barterDEX/barterDEX-API.rst
    komodo/komodo-API.rst
    komodo/create-Komodo-Assetchain
