@@ -45,14 +45,14 @@ This p2p port must not be blocked by a firewall. If the computers do not have pu
 Connecting with the second node
 ===============================
 
-On the second node, you now need to issue the same command, but with the first node's IP address along with setting ``-gen``.
+On the second node, you now need to issue the same command, but with the first node's IP address along with setting ``-gen -genproclimit=$(nproc)``.
 
 .. code-block:: shell
 
 	cd ~/komodo/src
-	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<IP address of the first node> -gen
+	./komodod -ac_name=EXAMPLECHAIN -ac_supply=1000000 -addnode=<IP address of the first node> -gen -genproclimit=$(nproc)
 
-When this second node connects to the first node, the second node will begin to mine blocks. The premine will be mined in the genesis block to the wallet of the node that set ``-gen``.
+When this second node connects to the first node, the second node will begin to mine blocks. The premine will be mined in the genesis block to the wallet of the node that set ``-gen -genproclimit=$(nproc)``.
 
 You can check the contents of the wallet by executing the following command in another terminal:
 
