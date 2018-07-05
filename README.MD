@@ -12,6 +12,7 @@ To get started,
 
 ```bash
 pip install sphinx sphinx-autobuild
+pip install --user sphinx_rtd_theme
 ```
 `cd` to a directory where you want to clone this project.
 
