@@ -113,7 +113,7 @@ Requirements:
 
 The following is an example using OmiseGo (OMG)
 
-.. code-block::json
+.. code-block:: json
 
 	{
 	  "coin": "OMG",
