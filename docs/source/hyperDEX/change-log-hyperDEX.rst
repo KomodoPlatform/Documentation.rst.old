@@ -4,7 +4,17 @@ Change Log (HyperDEX)
 
 .. note::
 
-	Keep in mind that HyperDEX is currently in alpha release. There is a risk of loss of funds. Only trade in real currency if you can take that risk. We recommend trading in the test currencies ``BEER`` and ``PIZZA`` instead. You can get ``BEER`` for free `here <https://www.atomicexplorer.com/#/faucet>`_.
+	Keep in mind that HyperDEX is currently in alpha release. Although the risk of loss of funds is minimal, it could take some troubleshooting/contact with our supportstaff to resolve issues. Only trade in real currency if you can take that risk. We recommend trading in the test currencies ``BEER`` and ``PIZZA`` instead. You can get ``BEER`` for free `here <https://www.atomicexplorer.com/#/faucet>`_.
+
+Remember to report issues through the ``Feedback`` button in the app.
+
+0.1.0-alpha.8
+=============
+
+	* Update to BarterDEX `Marketmaker v1.0.270 <https://github.com/artemii235/SuperNET/releases/tag/v1.0.270>`_ which contains a bug fix to improve order match rate. `74624bb <https://github.com/hyperdexapp/hyperdex/commit/74624bbdc8a01c55b366f7698542a33b57d1b5df>`_
+	* Improve Content Security Policy `5d27515 <https://github.com/hyperdexapp/hyperdex/commit/5d2751566ac8f305d9df5c5c214cf09bbe7e942a>`_
+	* Add translation files `00b4f84 <https://github.com/hyperdexapp/hyperdex/commit/00b4f84a8a6426d147c9244a66a458122f41fbd1>`_
+	* Add icons for currencies BCBC, MNZ, DNR, EQL `3e3ff11 <https://github.com/hyperdexapp/hyperdex/commit/3e3ff118c567a4b3e1b8b6547eb484d14d8696f2>`_
 
 0.1.0-alpha.7
 =============
