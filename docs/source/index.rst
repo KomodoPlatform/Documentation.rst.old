@@ -70,6 +70,7 @@ Whitepaper
    barterDEX/setup-electrumX-server
    barterDEX/barterDEX-Network-Optimizations
    barterDEX/setup-Bitcoin-Cash-BarterDEX
+   coins/info
 
 .. _using:
 
