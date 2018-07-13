@@ -8,6 +8,67 @@ Change Log (HyperDEX)
 
 Remember to report issues through the ``Feedback`` button in the app.
 
+.. toctree::
+   :maxdepth: 3
+   :caption: Quick Links
+
+   change-log-hyperDEX.rst
+
+0.1.0-alpha.9
+=============
+
+Light theme
+-----------
+
+You can choose a new light theme in the settings. On macOS, it follows the system dark mode by default.
+
+.. image:: /_static/images/hyperdex-light-mode.png
+   :align: center
+   :scale: 50 %
+
+
+Localization
+------------
+
+HyperDEX is now available in 22 languages!
+
+It uses your system language by default. Please let us know if the auto-detection is not working.
+
+We're also looking for feedback on the translations. Report any mistakes or improvements to us on the Discord channel. Also, let us know if you want to help add additional languages or want to help maintain an existing language. You can find the translations `here <https://crowdin.com/project/hyperdex>`_.
+
+Languages:
+
+ * Arabic
+ * Bengali
+ * Chinese Simplified
+ * Chinese Traditional
+ * French
+ * German
+ * Hindi
+ * Indonesian
+ * Italian
+ * Japanese
+ * Korean
+ * Norwegian
+ * Persian
+ * Polish
+ * Russian
+ * Spanish
+ * Swahili
+ * Swedish
+ * Thai
+ * Turkish
+ * Urdu (Pakistan)
+ * Vietnamese
+
+Other changes:
+--------------
+
+ * HyperDEX releases now come with PGP-signed checksums. (Look for the SHASUMS256.txt.asc file) `a2f2ec6 <https://github.com/hyperdexapp/hyperdex/commit/a2f2ec6f02323c40031298f94a824f09ac4ac1a5>`_
+ * Add ChainZilla (ZILLA) currency. `2d9df30 <https://github.com/hyperdexapp/hyperdex/commit/2d9df30ce001aa63acc16006f5d3206f4548db5d>`_
+ * Add dashboard intro. `829f158 <https://github.com/hyperdexapp/hyperdex/commit/829f1586424e842b84e87c4a6183f37a04b01d5a>`_
+
+
 0.1.0-alpha.8
 =============
 
@@ -35,7 +96,7 @@ Remember to report issues through the ``Feedback`` button in the app.
 =============
 
 Note:
------
+
 Don't download this version if you have currencies enabled where the symbol contains a number, see `issue: #356 <https://github.com/lukechilds/hyperdex/issues/356>`_
 
 	* Support for the `Equaliser (EQL) <https://equaliser.org/>`_ currency. `commit: 1c3930b <https://github.com/lukechilds/hyperdex/commit/1c3930b5584c9f528b20d17d9632c36b94777c64>`_
