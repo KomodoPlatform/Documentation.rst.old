@@ -2,6 +2,12 @@
 Change Log (Agama-Desktop)
 **************************
 
+.. toctree::
+   :maxdepth: 3
+   :caption: Quick Links
+
+   change-log-agama-desktop.rst
+
 v0.2.41
 =======
 
