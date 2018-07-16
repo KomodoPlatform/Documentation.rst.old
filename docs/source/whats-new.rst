@@ -21,4 +21,4 @@ What's new!
    :caption: HyperDEX
 
    hyperDEX/change-log-hyperDEX
-   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.8
+   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.9
