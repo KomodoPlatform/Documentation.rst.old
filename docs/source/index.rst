@@ -12,6 +12,7 @@ Welcome to Komodo Platform's documentation!
    :maxdepth: 1
    :caption: API Docs for Developers
  
+   barterDEX/index-coin-configs-install-instructions.rst
    barterDEX/get-listed-barterDEX.rst
    barterDEX/barterDEX-API.rst
    komodo/komodo-API.rst

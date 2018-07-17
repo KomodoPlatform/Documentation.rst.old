@@ -25,25 +25,31 @@ TICKER    NAME
 ======  =====================
 BTC     Bitcoin
 KMD     Komodo
+COLX    ColossusXT
 SPK     Sparks
 ORE     Galactrum
+PAC     PACcoin
 PEW     Brofist
+WAVI    Wavi
 ATB     ATBCoin
+BTNX    BitNexus
+POLIS   Polis
 PYRO    Pyro
 XSN     Stakenet
 GRLC    Garlicoin
 HXX     Hexx
+CRDS    Credits
 DIN     Dinero
 AXE     Axe
-BCBC    Bitcoin\@CBC
+BCBC    Bitcoin@CBC
 BUCK    Buck
 CMM     Commercium
 RAP     Rapture
 RADIUS  Radius
 SEQ     Sequence
 DYN     Dynamic
-SBTC    Superbitcoin
-FJC     Fujicoin
+SBTC    Super Bitcoin
+FJC     FujiCoin
 VRT     Virtus
 FTC     Feather Coin
 BITS    Bitstar
@@ -66,6 +72,7 @@ PIVX    PivX
 HTML    HTML Coin
 MNX     Minexcoin
 LTZ     Litecoinz
+MLM     MktCoin
 BAY     Bitbay
 CRC     Crowdcoin
 ZOI     Zoin
@@ -115,7 +122,6 @@ BTA     Beta
 SMC     Smartcoin
 NMC     Namecoin
 NAV     Navcoin
-MOON    Mooncoin
 EMC2    Einsteinim
 SYS     Syscoin
 I0C     I0Coin
@@ -137,124 +143,157 @@ DGB     Digibyte
 ZET     Zetacoin
 GAME    GameCredits
 LTC     Litecoin
+ROGER   TheHolyRoger
 STAK    Starks
 ======  =====================
 
 ERC20 Tokens
 ============
 
-======  =====================
-TICKER    NAME
-======  =====================
-AE      Aeternity
-AION    Aion
-ANN     Agent Not Needed
-BTCL    BTC Lite
-BTM     Bytom
-CENNZ   Centrality
-ELD     Electrum Dark
-LYS     Lightyears
-OCC     Original Crypto Coin
-PCL     Peculium
-CIX     Cryptonetix
-DROP    Dropil
-DRT     DomRaider
-ELF     aelf
-RLTY    SMARTRealty
-PXT     Populous XBRL Token
-TUSD    TrueUSD
-LALA    LALA World
-USDT    Tether
-BBT     Bitboost
-OCT     Octus
-OMG     OmiseGo
-ICX     ICON
-BNB     Binance Coin
-BTK     BitcoinToken
-DAI     Dai
-DGD     DigixDAO
-DGPT    DigiPulse
-DRGN    Dragonchain
-FLLW    FollowCoin
-FSN     Fusion
-HYD     Hydra
-IOST    IOST
-PPT     Populous
-LRC     Loopring
-MKR     Maker
-SNT     Status
-REP     Augur
-SRN     SIRIN LABS Token
-ZRX     0x
-BAT     Basic Attention Token
-ETHOS   Ethos
-QASH    Qash
-FUN     FunFair
-KNC     Kyber Network
-SALT    Salt
-BNT     Bancor
-ICN     Iconomi
-NAS     Nebulas
-PAY     TenX
-REQ     Request Network
-STORJ   Storj
-STWY    StorweeyToken
-GNO     Gnosis
-RLC     iExec RLC
-ENJ     Enjin Coin
-QSP     Quantstamp
-RDN     Raiden Network Token
-WTC     Waltonchain
-CVC     Civic
-SAN     Santiment
-ANT     Aragon
-LOOM    Loom Network
-MANA    Decentraland
-MCO     Monaco
-MGO     MobileGo
-MTL     Metal
-EDG     Edgeless
-MLN     Melon
-AMB     Amber
-WINGS   Wings
-POWR    Power Ledger
-PRL     Oyster
-RHOC    RChain
-RCN     Ripco Credit Network
-SANC    Sancoj
-SNGLS   SingularDTV
-TAAS    TaaS
-DNT     District0x
-CFI     Cofound.it
-LUN     Lunyr
-ADT     adToken
-AST     AirSwap
-CDT     Blox
-TKN     TokenCard
-HMQ     Humaniq
-BCAP    Bcap
-NMR     Numeraire
-NET     Nimiq
-TRST    Trust
-GUP     Guppy
-1ST     FirstBlood
-TIME    Chronobank
-SWT     Swarm City
-VEN     VeChain
-DICE    Etheroll
-XAUR    Xarum
-XOV     XOVBank
-PLU     Pluton
-HGT     HelloGold
-VSL     vSlice
-IND     Indorse Token
-FYN     FundYourselfNow
-JST     JST (TESTCOIN)
-DEC8    DEC8 (TESTCOIN)
-ETH     Ethereum
-EOS     EOS
-ZIL     Zilliqa
-======  =====================
+=======  ========================
+TICKER     NAME
+=======  ========================
+AE       Aeternity
+AION     Aion
+ANN      Agent Not Needed
+BITSOKO  Bitsoko
+BOX      Beonbox
+BTCL     BTC Lite
+BTM      Bytom
+CENNZ    Centrality
+CMT      CyberMiles
+CS       Credits
+DATA     Streamr DATAcoin
+ELD      Electrum Dark
+ENG      Enigma
+GPN      GPN Coin
+GTO      Gifto
+JOI      JointEDU
+LIKE     LikeCoin
+LINK     ChainLink
+LYS      Lightyears
+MAN      Matrix AI Network
+MMX      Mechanix Token
+MYB      MyBit Token
+NOAH     Noah Coin
+NULS     Nuls
+OCC      Original Crypto Coin
+PCL      Peculium
+POLY     Polymath
+PURC     Peurcoin
+QBIT     Qubitica
+RVT      Rivetz
+SPANK    SpankChain
+STRM41   Stream41
+SUB      Substratum
+THETA    Theta Token
+CIX      Cryptonetix
+DCN      Dentacoin
+DROP     Dropil
+DRT      DomRaider
+ELF      aelf
+RLTY     SMARTRealty
+PXT      Populous XBRL Token
+STORM    Storm
+TUSD     TrueUSD
+WAX      WAX
+KIN      Kin
+LALA     LALA World
+ONNI     Misericordae
+PAT      Pangea Arbitration Token
+USDT     Tether
+BBT      Bitboost
+OCT      Octus
+OMG      OmiseGo
+R        Revain
+UCASH    U.CASH
+ICX      ICON
+BNB      Binance Coin
+BTK      BitcoinToken
+DAI      Dai
+DGD      DigixDAO
+DGPT     DigiPulse
+DRGN     Dragonchain
+FLLW     FollowCoin
+FSN      Fusion
+HYD      Hydra
+IOST     IOST
+PPT      Populous
+LRC      Loopring
+MKR      Maker
+SNT      Status
+REP      Augur
+SRN      SIRIN LABS Token
+ZRX      0x
+BAT      Basic Attention Token
+ETHOS    Ethos
+QASH     Qash
+FUN      FunFair
+KNC      Kyber Network
+SALT     Salt
+BNT      Bancor
+ICN      Iconomi
+NAS      Nebulas
+PAY      TenX
+REQ      Request Network
+STORJ    Storj
+STWY     StorweeyToken
+GNO      Gnosis
+RLC      iExec RLC
+ENJ      Enjin Coin
+QSP      Quantstamp
+RDN      Raiden Network Token
+WTC      Waltonchain
+CVC      Civic
+SAN      Santiment
+ANT      Aragon
+LOOM     Loom Network
+MANA     Decentraland
+MCO      Monaco
+MGO      MobileGo
+MTL      Metal
+EDG      Edgeless
+MLN      Melon
+AMB      Ambrosus
+WINGS    Wings
+POWR     Power Ledger
+PRL      Oyster
+RHOC     RChain
+RCN      Ripio Credit Network
+SANC     Sancoj
+SNGLS    SingularDTV
+TAAS     TaaS
+DNT      District0x
+CFI      Cofound.it
+LUN      Lunyr
+ADT      adToken
+AST      AirSwap
+CDT      Blox
+TKN      TokenCard
+HMQ      Humaniq
+BCAP     Bcap
+NMR      Numeraire
+NET      Nimiq
+TRST     Trust
+GUP      Matchpool
+1ST      FirstBlood
+TIME     Chronobank
+SWT      Swarm City
+VEN      VeChain
+DICE     Etheroll
+XAUR     Xarum
+XOV      XOVBank
+PLU      Pluton
+HGT      HelloGold
+VSL      vSlice
+IND      Indorse Token
+FYN      FundYourselfNow
+JST      JST (TESTCOIN)
+DEC8     DEC8 (TESTCOIN)
+ETH      Ethereum
+EOS      EOS
+ZIL      Zilliqa
+=======  ========================
 
 Komodo Asset Chains
 ===================
@@ -262,6 +301,8 @@ Komodo Asset Chains
 ========  ================
 TICKER      NAME
 ========  ================
+CHAIN     Chainmakers
+GLXT      GLX Token
 EQL       Equaliser
 OOT       Utrum
 PIZZA     PIZZA (TESTCOIN)
@@ -271,6 +312,8 @@ ETOMIC    ETOMIC
 AXO       AXO
 MNZ       Monaize
 REVS      REVS
+VRSC      VerusCoin
+ZILLA     ChainZilla
 JUMBLR    JUMBLR
 SUPERNET  SUPERNET
 WLC       Wireless Coin

@@ -8,11 +8,25 @@ Change Log (HyperDEX)
 
 Remember to report issues through the ``Feedback`` button in the app.
 
-.. toctree::
-   :maxdepth: 3
-   :caption: Quick Links
+.. contents:: Links
+   :depth: 3
 
-   change-log-hyperDEX.rst
+0.1.0-alpha.10
+==============
+
+	* **Automatically fix stuck swaps.** `1d4a0bc <https://github.com/atomiclabs/hyperdex/commit/1d4a0bc7a193f72a82d52077fd3f5f6f545e930c>`_
+	* **Add ability to view the portfolio seed phrase.** `5634172 <https://github.com/atomiclabs/hyperdex/commit/5634172785a5b22ad7f6308a316701dd10ffda2d>`_
+	* **Add ability to rename and delete the portfolio.** `5634172 <https://github.com/atomiclabs/hyperdex/commit/5634172785a5b22ad7f6308a316701dd10ffda2d>`_
+	* Add GLX Token (GLXT) currency. `9ddb1f3 <https://github.com/atomiclabs/hyperdex/commit/9ddb1f3345d02dd1a0933ed7f58aaaf865770592>`_
+	* Add Chainmakers (CHAIN) currency. `8fc85bc <https://github.com/atomiclabs/hyperdex/commit/8fc85bc6f53a62394b54ead4b0032fdc4cf11a38>`_
+	* Add PACcoin ($PAC) currency. `31d55a7 <https://github.com/atomiclabs/hyperdex/commit/31d55a73254bacbcd8e90024ed698d15a26a5673>`_
+	* Add Rapture (RAP) currency. `478bb91 <https://github.com/atomiclabs/hyperdex/commit/478bb9184facd71ba576bf34e31ff11e87f892ec>`_
+	* Update some Electrum servers. `ca94790 <https://github.com/atomiclabs/hyperdex/commit/ca9479058d0b94a3c34228c9c148a71e928b3643>`_
+	* Fix order selection calculation. `87fa824 <https://github.com/atomiclabs/hyperdex/commit/87fa8242cb863286675abed10c44478631397651>`_
+	* Fix Portfolio menu being visible even when logging out. `406c7d1 <https://github.com/atomiclabs/hyperdex/commit/406c7d1276b629390b4054c295d1faa64c6ced99>`_
+	* Fix the dropdown of the currency selector being cut off and make settings scrollable. `90cbbb6 <https://github.com/atomiclabs/hyperdex/commit/90cbbb6477b302b19575f02cf45ecef5ad7a1544>`_
+	* Reset inputs in the Exchange view when currency changes. `98f53c2 <https://github.com/atomiclabs/hyperdex/commit/98f53c289cda974cf2b51a85756a11ea9c2521e7>`_
+	* Update to `BarterDEX Marketmaker v1.0.315. <https://github.com/artemii235/SuperNET/releases/tag/v1.0.315>`_ `b37b40e <https://github.com/atomiclabs/hyperdex/commit/b37b40e1368587df98820e8cccd4539f8fe365ed>`_
 
 0.1.0-alpha.9
 =============
@@ -61,8 +75,8 @@ Languages:
  * Urdu (Pakistan)
  * Vietnamese
 
-Other changes:
---------------
+Other changes
+-------------
 
  * HyperDEX releases now come with PGP-signed checksums. (Look for the SHASUMS256.txt.asc file) `a2f2ec6 <https://github.com/hyperdexapp/hyperdex/commit/a2f2ec6f02323c40031298f94a824f09ac4ac1a5>`_
  * Add ChainZilla (ZILLA) currency. `2d9df30 <https://github.com/hyperdexapp/hyperdex/commit/2d9df30ce001aa63acc16006f5d3206f4548db5d>`_

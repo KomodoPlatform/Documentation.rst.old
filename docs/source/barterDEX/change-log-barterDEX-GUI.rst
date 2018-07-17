@@ -2,11 +2,8 @@
 Change Log (BarterDEX-GUI)
 **************************
 
-.. toctree::
-   :maxdepth: 3
-   :caption: Quick Links
-
-   change-log-barterDEX-GUI.rst
+.. contents:: Links
+   :depth: 3
 
 v1.1.0
 ======
