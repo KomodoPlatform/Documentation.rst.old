@@ -23,8 +23,8 @@ Latest installer
 Agama Mobile
 ============
 
-* Source code: https://github.com/KomodoPlatform/agama-mobile
-* Release: https://github.com/KomodoPlatform/agama-mobile/releases
+* Source code: https://github.com/pbca26/agama-mobile
+* Release: https://github.com/pbca26/agama-mobile/releases
 
 Agama Web Wallet
 ================
@@ -57,10 +57,10 @@ BarterDEX GUI
 HyperDEX
 ========
 
-* Source code: https://github.com/lukechilds/hyperdex
-* Release package: https://github.com/lukechilds/hyperdex/releases
-* Nightly bulds: https://github.com/lukechilds/hyperdex-nightlies/releases/latest
-* Download Instructions: https://github.com/lukechilds/hyperdex/blob/master/README.md
+* Source code: https://github.com/atomiclabs/hyperdex
+* Release package: https://github.com/atomiclabs/hyperdex/releases
+* Nightly bulds: https://github.com/atomiclabs/hyperdex-nightlies/releases/
+* Download Instructions: https://github.com/atomiclabs/hyperdex/blob/master/README.md
 
 CHIPS
 =====
