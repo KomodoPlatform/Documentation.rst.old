@@ -1,6 +1,6 @@
-**********************************************************************************
-Coin Configurations and Installation Instructions for coins supported on BarterDEX
-**********************************************************************************
+****************************************************************************
+Configuration and Installation Instructions for coins supported on BarterDEX
+****************************************************************************
 
 The below configurations and installation instructions for various coins supported by BarterDEX have been verified to work by our Test Engineers while testing their Atomic-Swap compatibility through BarterDEX. But these instructions are provided here for refernce purposes only and in case of any difficulty installing or configuring any coin that doesn't belong to the Komodo Ecosystem, it is recommended to contact the Support channels/Developers of the particular coin directly.
 
@@ -15,6 +15,8 @@ Do ``CTRL + F`` and search for a coin by its TICKER and then NAME if TICKER does
 
 	Should be edited to:
 	 ./configure --with-incompatible-bdb --with-gui=no --disable-tests --disable-bench --without-miniupnpc --disable-zmq
+
+Contabo is the hosting provider for one of the Bob nodes used while testing. The output beneath the word ``Contabo`` is the output from the ``getcoin`` API call on the VPS.
 
 .. contents:: Links
    :depth: 2
