@@ -1,14 +1,19 @@
 sudo: false
-cache: pip3
-language: python
-python:
-    - '3.6'
+language: python - "3.6"
 
 before_install:
     - export PATH=$HOME/.local/bin:$PATH
+    - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
+    - chmod +x miniconda.sh
+    - "./miniconda.sh -b"
+    - export PATH=/home/travis/miniconda2/bin:$PATH
+    - conda update --yes conda
+    - sudo rm -rf /dev/shm
+    - sudo ln -s /run/shm /dev/shm
     - source /etc/environment
 
 install:
+    - conda install --yes python="3.6"
     - pip3 install --user travis-sphinx
     - pip3 install sphinx sphinx-autobuild
     - pip3 install --user sphinx_rtd_theme
