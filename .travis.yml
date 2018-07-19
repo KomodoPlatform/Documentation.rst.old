@@ -1,16 +1,11 @@
 sudo: false
-language: python - "3.6"
-dist: "trusty" # otherwise 'python3-pip' won't be available
-addons:
-  apt:
-    packages:
-      - "python3"
-      - "python3-pip"
+language: python - "2.7"
 
 install:
-    - pip3 install --user travis-sphinx
-    - pip3 install sphinx sphinx-autobuild
-    - pip3 install --user sphinx_rtd_theme
+    - pip install --user travis-sphinx
+    - export PATH=$HOME/.local/bin:$PATH
+    - pip install sphinx sphinx-autobuild
+    - pip install --user sphinx_rtd_theme
 
 script:
     - travis-sphinx build --nowarn
