@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/KomodoPlatform/Documentation.svg?branch=master)](https://travis-ci.com/KomodoPlatform/Documentation)
+
 # README!
 
 Documentation for https://docs.komodoplatform.com/
