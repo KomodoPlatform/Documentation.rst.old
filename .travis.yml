@@ -2,14 +2,19 @@ sudo: false
 cache: pip
 language: python
 python:
-- '3.6'
+    - '3.6'
+
+before_install:
+    - export PATH=$HOME/.local/bin:$PATH
+    - source /etc/environment
 
 install:
-    - pip install tox-travis
-    - pip install codecov
+    - pip install --user travis-sphinx
+    - pip install sphinx sphinx-autobuild
+    - pip install --user sphinx_rtd_theme
 
 script:
-    - travis-sphinx build
+    - travis-sphinx build --nowarn
     
 after_success:
     - travis-sphinx deploy
