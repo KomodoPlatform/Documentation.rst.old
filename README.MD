@@ -1,9 +1,9 @@
 # README!
 
-Documentation for https://komodo-platform.readthedocs.io/
+Documentation for https://docs.komodoplatform.com/
 -----
 
-This documentation is being written using the reStructuredText(reST, .rst) format. To be hosted at http://komodo-platform.readthedocs.io/en/latest/ with the theme sphinx_rtd.
+This documentation is being written using the reStructuredText(reST, .rst) format. To be hosted at https://docs.komodoplatform.com/en/latest/ with the theme sphinx_rtd.
 
 -----
 To suggest edits, fork this repo, edit your fork and submit a PR
