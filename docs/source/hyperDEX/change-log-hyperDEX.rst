@@ -44,7 +44,7 @@ You can choose a new light theme in the settings. On macOS, it follows the syste
 Localization
 ------------
 
-HyperDEX is now available in 22 languages!
+HyperDEX is now available in 22 languages!!!
 
 It uses your system language by default. Please let us know if the auto-detection is not working.
 
