@@ -1,5 +1,5 @@
 sudo: false
-cache: pip
+cache: pip3
 language: python
 python:
     - '3.6'
@@ -9,9 +9,9 @@ before_install:
     - source /etc/environment
 
 install:
-    - pip install --user travis-sphinx
-    - pip install sphinx sphinx-autobuild
-    - pip install --user sphinx_rtd_theme
+    - pip3 install --user travis-sphinx
+    - pip3 install sphinx sphinx-autobuild
+    - pip3 install --user sphinx_rtd_theme
 
 script:
     - travis-sphinx build --nowarn
