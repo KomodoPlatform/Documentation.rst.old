@@ -17,7 +17,7 @@ pip install --user sphinx_rtd_theme
 `cd` to a directory where you want to clone this project.
 
 ```bash
-git clone https://github.com/gcharang/KomodoPlatformdocs.git
+git clone https://github.com/KomodoPlatform/Documentation.git
 ```
 Add images to be used in the directory: docs/source/_static/images/
 
