@@ -1,6 +1,6 @@
 # README!
 
-Documentation for https://komodo-platform.readthedocs.io/
+Documentation for https://docs.komodoplatform.com/
 -----
 
 This documentation is being written using the reStructuredText(reST, .rst) format. To be hosted at http://komodo-platform.readthedocs.io/en/latest/ with the theme sphinx_rtd.

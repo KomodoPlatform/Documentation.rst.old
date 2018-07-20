@@ -14,7 +14,7 @@ Remember to report issues through the ``Feedback`` button in the app.
 0.1.0-alpha.10
 ==============
 
-	* **Automatically fix stuck swaps.** `1d4a0bc <https://github.com/atomiclabs/hyperdex/commit/1d4a0bc7a193f72a82d52077fd3f5f6f545e930c>`_
+	* **Automatically fixes stuck swaps.** `1d4a0bc <https://github.com/atomiclabs/hyperdex/commit/1d4a0bc7a193f72a82d52077fd3f5f6f545e930c>`_
 	* **Add ability to view the portfolio seed phrase.** `5634172 <https://github.com/atomiclabs/hyperdex/commit/5634172785a5b22ad7f6308a316701dd10ffda2d>`_
 	* **Add ability to rename and delete the portfolio.** `5634172 <https://github.com/atomiclabs/hyperdex/commit/5634172785a5b22ad7f6308a316701dd10ffda2d>`_
 	* Add GLX Token (GLXT) currency. `9ddb1f3 <https://github.com/atomiclabs/hyperdex/commit/9ddb1f3345d02dd1a0933ed7f58aaaf865770592>`_
