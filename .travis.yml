@@ -28,7 +28,7 @@ on:
 
 before_deploy:
     - find * -type d | grep -v "\<doc\>" | xargs rm -r || true
-    - mv doc/build/{.,}* .
+    - mv doc/build/{.,}* . || true
     - rm -rf doc
 on:
     branch: dev
