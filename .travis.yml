@@ -27,9 +27,9 @@ after_success:
     branch: master
 
 before_deploy:
-    - ls -a . | grep -v "\<doc\>" | xargs rm -r
-    - mv doc/build/{.,}* .
-    - rm -rf doc
+ - ls -a . | grep -v "\<doc\>" | xargs rm -r
+ - mv doc/build/{.,}* .
+ - rm -rf doc
   on:
     branch: dev
 
