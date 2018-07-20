@@ -30,6 +30,8 @@ before_deploy:
     - find * -type d | grep -v "\<doc\>" | xargs rm -r || true
     - mv doc/build/{.,}* . || true
     - rm -rf doc
+    - rm README.md .travis.yml .git.ignore
+    - touch .nojekyll
 on:
     branch: dev
 
