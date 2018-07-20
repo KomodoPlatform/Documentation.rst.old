@@ -27,7 +27,7 @@ on:
     branch: master
 
 before_deploy:
-    - find * -type d | grep -v "\<doc\>" | xargs rm -r
+    - find * -type d | grep -v "\<doc\>" | xargs rm -r || true
     - mv doc/build/{.,}* .
     - rm -rf doc
 on:
@@ -41,6 +41,6 @@ deploy:
   github-token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   repo: gcharang/KomodoDocs-Preview
-  branch: master
+  target-branch: master
   on:
     branch: dev
