@@ -23,8 +23,8 @@ script:
     
 after_success:
     - travis-sphinx deploy
-  on:
-    branch: master
+    on:
+      branch: master
 
 deploy:
   provider: pages
@@ -32,5 +32,5 @@ deploy:
   github-token: $GH_TOKEN
   keep-history: true
   repo: gcharang/KomodoDocs-Preview
-  on:
-    branch: dev
+    on:
+      branch: dev
