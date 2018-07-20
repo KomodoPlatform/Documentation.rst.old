@@ -23,7 +23,7 @@ script:
     
 after_success:
     - travis-sphinx deploy
-on:
+  on:
     branch: master
 
 before_deploy:
