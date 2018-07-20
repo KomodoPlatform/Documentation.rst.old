@@ -25,7 +25,14 @@ after_success:
     - travis-sphinx deploy
 on:
     branch: master
- 
+
+before_deploy:
+    - ls -a . | grep -v "\<doc\>" | xargs rm -r
+    - mv doc/build/{.,}* .
+    - rm -rf doc
+on:
+    branch: dev
+
 deploy:
 
 -
