@@ -22,15 +22,15 @@ script:
     - travis-sphinx build --nowarn
     
 after_success:
-    - travis-sphinx deploy
-    on:
-      branch: master
+	- travis-sphinx deploy
+	on:
+		branch: master
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
-  repo: gcharang/KomodoDocs-Preview
-    on:
-      branch: dev
+	provider: pages
+	skip-cleanup: true
+	github-token: $GH_TOKEN
+	keep-history: true
+	repo: gcharang/KomodoDocs-Preview
+	on:
+		branch: dev
