@@ -23,9 +23,9 @@ script:
     
 after_success:
     - travis-sphinx deploy
-  on:
+on:
     branch: master
-
+ 
 deploy:
 
 -
@@ -34,6 +34,5 @@ deploy:
   github-token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   repo: gcharang/KomodoDocs-Preview
-  target-branch: master
   on:
     branch: dev
