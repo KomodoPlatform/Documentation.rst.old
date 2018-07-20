@@ -29,7 +29,7 @@ after_success:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+  github-token: $GH_TOKEN
   keep-history: true
   repo: gcharang/KomodoDocs-Preview
   on:
