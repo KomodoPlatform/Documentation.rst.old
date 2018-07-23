@@ -23,3 +23,26 @@ script:
     
 after_success:
     - travis-sphinx deploy
+on:
+    branch: master
+
+before_deploy:
+    - find * -type d | grep -v "\<doc\>" | xargs rm -r || true
+    - mv doc/build/{.,}* . || true
+    - rm -rf doc
+    - rm README.md .travis.yml .git.ignore || true
+    - touch .nojekyll
+on:
+    branch: dev
+
+deploy:
+
+-
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  repo: KomodoPlatform/DocumentationPreview
+  target-branch: master
+  on:
+    branch: dev
