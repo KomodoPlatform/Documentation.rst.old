@@ -34,7 +34,7 @@ Remember to report issues through the ``Feedback`` button in the app.
 Light theme
 -----------
 
-You can choose a new light theme in the settings. On macOS, it follows the system dark mode by default.
+You can now choose a new light theme in the settings. On macOS, it follows the system dark mode by default.
 
 .. image:: /_static/images/hyperdex-light-mode.png
    :align: center
@@ -44,7 +44,7 @@ You can choose a new light theme in the settings. On macOS, it follows the syste
 Localization
 ------------
 
-HyperDEX is now available in 22 languages!
+HyperDEX is now available in 22 languages!!!
 
 It uses your system language by default. Please let us know if the auto-detection is not working.
 

@@ -1,9 +1,11 @@
+[![Build Status](https://travis-ci.com/KomodoPlatform/Documentation.svg?branch=master)](https://travis-ci.com/KomodoPlatform/Documentation)
+
 # README!
 
 Documentation for https://docs.komodoplatform.com/
 -----
 
-This documentation is being written using the reStructuredText(reST, .rst) format. To be hosted at http://komodo-platform.readthedocs.io/en/latest/ with the theme sphinx_rtd.
+This documentation is being written using the reStructuredText(reST, .rst) format. To be hosted at https://docs.komodoplatform.com/en/latest/ with the theme sphinx_rtd.
 
 -----
 To suggest edits, fork this repo, edit your fork and submit a PR
@@ -17,7 +19,7 @@ pip install --user sphinx_rtd_theme
 `cd` to a directory where you want to clone this project.
 
 ```bash
-git clone https://github.com/gcharang/KomodoPlatformdocs.git
+git clone https://github.com/KomodoPlatform/Documentation.git
 ```
 Add images to be used in the directory: docs/source/_static/images/
 
