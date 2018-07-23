@@ -1,7 +1,7 @@
 404
 ===
 
-There seems to be an error you have either accessed an outdated URL or mistyped a web-address.
+There seems to be an error. You have either accessed an outdated URL or mistyped a web-address.
 
 Komodo Platform's documentation is available at https://docs.komodoplatform.com
 
