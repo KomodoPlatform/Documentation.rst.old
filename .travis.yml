@@ -22,7 +22,7 @@ script:
     - travis-sphinx build --nowarn
     
 after_success:
-    - travis-sphinx deploy
+    - travis-sphinx deploy --cname docs.komodoplatform.com
 on:
     branch: master
 
@@ -30,7 +30,7 @@ before_deploy:
     - find * -type d | grep -v "\<doc\>" | xargs rm -r || true
     - mv doc/build/{.,}* . || true
     - rm -rf doc
-    - rm README.md .travis.yml .git.ignore || true
+    - rm README.md .travis.yml .gitignore CNAME || true
     - touch .nojekyll
 on:
     branch: dev
