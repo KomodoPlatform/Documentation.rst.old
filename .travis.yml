@@ -19,10 +19,10 @@ install:
     - pip install --user sphinx_rtd_theme
 
 script:
-    - travis-sphinx build --nowarn
+    - travis-sphinx build --nowarn --cname = docs.komodoplatform.com
     
 after_success:
-    - travis-sphinx deploy
+    - travis-sphinx deploy 
 on:
     branch: master
 
