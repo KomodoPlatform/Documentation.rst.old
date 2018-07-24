@@ -4,7 +4,7 @@
 
 There seems to be an error. You have either accessed an outdated URL or mistyped a web-address.
 Komodo Platform's documentation is available at https://docs.komodoplatform.com
-If you have followed a link that had `en/latest/` in it, remove it and use the rest of the link.
+If you have followed a link that had ``en/latest/`` in it, remove it and use the rest of the link.
 
 .. note::
 
