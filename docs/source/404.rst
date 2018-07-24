@@ -3,9 +3,9 @@
 ***
 
 There seems to be an error. You have either accessed an outdated URL or mistyped a web-address.
-
 Komodo Platform's documentation is available at https://docs.komodoplatform.com
-
 If you have followed a link that had `en/latest/` in it, remove it and use the rest of the link.
 
-Example: If you have followed https://docs.komodoplatform.com/en/latest/komodo/assetchain-params.html and arrived here, you must go to https://docs.komodoplatform.com/komodo/assetchain-params.html
+.. note::
+
+	If you have followed https://docs.komodoplatform.com/en/latest/komodo/assetchain-params.html and arrived here, you must go to https://docs.komodoplatform.com/komodo/assetchain-params.html

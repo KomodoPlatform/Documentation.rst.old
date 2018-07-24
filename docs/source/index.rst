@@ -108,7 +108,7 @@ Whitepaper
 
 .. toctree::
    :maxdepth: 1
-   :caption: Errors
+   :caption: Navigation Error
 
    404.rst
 
