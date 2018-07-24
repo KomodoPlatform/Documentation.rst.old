@@ -105,10 +105,3 @@ Whitepaper
 
    testing/test-komodo-source-jl777-branch
    testing/debug-Komodo
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Navigation Error
-
-   404.rst
-
