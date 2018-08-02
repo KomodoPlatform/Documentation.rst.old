@@ -2,7 +2,7 @@
 Configuration and Installation Instructions for coins supported on BarterDEX
 ****************************************************************************
 
-The below configurations and installation instructions for various coins supported by BarterDEX have been verified to work by our Test Engineers while testing their Atomic-Swap compatibility through BarterDEX. But these instructions are provided here for refernce purposes only and in case of any difficulty installing or configuring any coin that doesn't belong to the Komodo Ecosystem, it is recommended to contact the Support channels/Developers of the particular coin directly.
+The below configurations and installation instructions for various coins supported by BarterDEX have been verified to work by our Test Engineers while testing their Atomic-Swap compatibility through BarterDEX. But these instructions are provided here for reference purpose only and in case of any difficulty installing or configuring any coin that doesn't belong to the Komodo Ecosystem, it is recommended to contact the Support channels/Developers of the particular coin directly.
 
 Do ``CTRL + F`` and search for a coin by its TICKER and then NAME if TICKER doesn't yield results.   
 
