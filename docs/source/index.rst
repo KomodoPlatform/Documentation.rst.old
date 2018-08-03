@@ -29,8 +29,9 @@ Welcome to Komodo Platform's documentation!
 Whitepaper
 ----------
 
-   :download:`Whitepaper </whitepaper/Komodo-Whitepaper-June-3.pdf>`
-   
+   :download:`Whitepaper(pdf) </whitepaper/Komodo-Whitepaper-June-3.pdf>`
+   `Whitepaper(html) <home-whitepaper>`
+
 .. _quicklinks:
 
 .. toctree::
