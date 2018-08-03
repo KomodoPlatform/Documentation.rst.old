@@ -29,8 +29,8 @@ Welcome to Komodo Platform's documentation!
 Whitepaper
 ----------
 
-   :download:`Whitepaper(pdf) </whitepaper/Komodo-Whitepaper-June-3.pdf>`
-   `Whitepaper(html) <home-whitepaper>`
+	* :download:`Whitepaper(pdf) </whitepaper/Komodo-Whitepaper-June-3.pdf>`
+	* html version: :doc:`home-whitepaper`
 
 .. _quicklinks:
 
@@ -40,6 +40,7 @@ Whitepaper
    
    general/list-all-KomodoPlatform-Project-links
    whats-new
+   home-whitepaper
    general-documentation
    home-komodo
    home-agama

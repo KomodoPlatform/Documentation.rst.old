@@ -2,8 +2,8 @@
 Komodo (Advanced Blockchain Technology, Focused On Freedom)
 ***********************************************************
 
-INTRODUCTION TO KOMODO
-======================
+Intoduction to Komodo
+=====================
 
 The Komodo project focuses on empowering users with Freedom through
 blockchain technology. There are many forms of Freedom that Komodo can provide,
@@ -14,13 +14,10 @@ entrepreneurs, investors, and other users form an economic ecosystem.
 The foundational pillar of the Komodo ecosystem is security. Komodo provides
 a unique and innovative form of security that is as strong as the Bitcoin network,
 yet does not require the incredible cost. Every member of the Komodo ecosystem
-receives the benefits of this security. The investor relies on it for everyday use. The en-
-trepreneur relies on it to protect their blockchain innovation at a cost that is affordable
+receives the benefits of this security. The investor relies on it for everyday use. The entrepreneur relies on it to protect their blockchain innovation at a cost that is affordable
 even to small businesses and startups.
 
-Another of Komodo’s powerful technologies is a new method of trading cryptocur-
-rencies directly from one person to another. It is a new kind of "decentralized ex-
-change." Our decentralized exchange removes all forms of middlemen, vouchers, and
+Another of Komodo’s powerful technologies is a new method of trading cryptocurrencies directly from one person to another. It is a new kind of "decentralized exchange." Our decentralized exchange removes all forms of middlemen, vouchers, and
 escrow services. It relies on an underlying concept called the "atomic swap", and we
 are the leaders in this technology.
 
@@ -35,8 +32,7 @@ are there any withdrawal limits. We currently support approximately 95% of the
 cryptocurrencies in existence, including Bitcoin-protocol based coins, Ethereum, and
 Ethereum-based ERC20 tokens.
 
-For the entrepreneur, our decentralized exchange enables the release of new prod-
-ucts to the world without middleman involvement. Furthermore, even entrepreneurs
+For the entrepreneur, our decentralized exchange enables the release of new products to the world without middleman involvement. Furthermore, even entrepreneurs
 who have previously built other blockchain projects outside our ecosystem can easily
 feature their coin on our decentralized exchange. The only requirement is that the
 blockchain product have the proper security elements in the core of the blockchain’s
