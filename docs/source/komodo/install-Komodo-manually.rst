@@ -2,7 +2,7 @@
 Installing Komodo Manually
 **************************
 
-For OSx instructions: :ref:`Installing Komodo on OSx`
+For OSx instructions: :ref:`Installing Komodo on OSX`
 
 For windows instructions: :ref:`Installing Komodo on Windows 64-bit systems`
 
@@ -208,7 +208,7 @@ To backup you can take a copy of this file and make archive of it.
 	# To make archive
 	tar -czvf ~/wallet_backup_21May2017.dat.tgz ~/wallet_backup_21May2017.dat
 
-Installing Komodo on OSx
+Installing Komodo on OSX
 ========================
 
 Requirements
@@ -227,7 +227,7 @@ Now install the dependency packages:
 
 	brew tap discoteq/discoteq; brew install flock
 	brew install autoconf autogen automake
-	brew install gcc5
+	brew install gcc6
 	brew install binutils
 	brew install protobuf
 	brew install coreutils
@@ -236,14 +236,14 @@ Now install the dependency packages:
 
 or
 
-``brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc5 binutils protobuf coreutils wget nanomsg```
+``brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc6 binutils protobuf coreutils wget nanomsg```
 
 Clone the Komodo repository
 ---------------------------
 
 .. code-block:: shell
 
-	git clone https://github.com/KomodoPlatform/komodo
+	git clone https://github.com/jl777/komodo
 
 Get the proving keys:
 ---------------------
