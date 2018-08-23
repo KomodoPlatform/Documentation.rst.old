@@ -52,4 +52,4 @@ on it, and our native privacy features.
 
 We welcome feedback from our readers. If you have any questions or concerns over
 the course of reading this material, please reach out to our team directly. You may
-find our contact information on our accompanying website: komodoplatform.com
+find our contact information on our accompanying website: https://komodoplatform.com
