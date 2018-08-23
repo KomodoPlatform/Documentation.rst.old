@@ -29,8 +29,9 @@ Welcome to Komodo Platform's documentation!
 Whitepaper
 ----------
 
-   :download:`Whitepaper </whitepaper/Komodo-Whitepaper-June-3.pdf>`
-   
+	* :download:`Whitepaper(pdf) </whitepaper/Komodo-Whitepaper-June-3.pdf>`
+	* html version: :doc:`home-whitepaper`
+
 .. _quicklinks:
 
 .. toctree::
@@ -39,9 +40,11 @@ Whitepaper
    
    general/list-all-KomodoPlatform-Project-links
    whats-new
+   home-whitepaper
    general-documentation
    home-komodo
    home-agama
+   home-cc
    home-barterDEX
    home-hyperDEX
    Setup Bob/Marketmaker nodes using easy scripts by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>
