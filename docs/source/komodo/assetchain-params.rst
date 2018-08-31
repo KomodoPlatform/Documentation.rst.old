@@ -62,9 +62,6 @@ This is the network cluster on which the chain can interact with other chains vi
 -ac_staked
 ==========
 
-.. note::
-	This feature is currently only available in the `jl777 branch <https://github.com/jl777/komodo/tree/jl777>`_.  
-
 This is the percentage of blocks the chain will aim to have as POS. For example, a ``ac_staked=90`` chain will have 90% POS blocks/10% POW blocks. This isn't exact, but the POW difficulty will automatically adjust based on the overall percentage of POW mined blocks.
 
 Each staked block will have an additional transaction added to the coinbase in which the coins that staked the block are sent back to the same address. This is used to verify which coins staked the block, and this allows for compatibility with existing Komodo infrastructure such as Agama, BarterDEX and explorers. If ``-ac_staked`` is used in conjunction with ``-ac_perc``, the ``-ac_pubkey`` address will receive slightly more coins for each staked block compared to a mined block because of this extra transaction.
@@ -89,16 +86,10 @@ To create a chain using this parameter, start the first node with ``-gen -genpro
 -ac_public
 ==========
 
-.. note::
-	This feature is currently only available in the `jl777 branch <https://github.com/jl777/komodo/tree/jl777>`_. 
-
 If ``ac_public`` is set to 1, zkSNARKs will be disabled. All z address functionalilty is disabled. Therefore, all transactions on the blockchain are public. 
 
 -ac_private
 ===========
-
-.. note::
-	This feature is currently only available in the `jl777 branch <https://github.com/jl777/komodo/tree/jl777>`_. 
 
 If ``ac_private`` is set to 1, all transactions other than coinbase transactions(block rewards) must use zkSNARKs. All transparent address functionality other than sending mined coins from transparent addresses is disabled. 
 
