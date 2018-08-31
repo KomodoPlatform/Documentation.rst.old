@@ -57,8 +57,7 @@ If ``-ac_pubkey`` is set, but ``-ac_perc`` is not, this simply means the genesis
 -ac_cc
 ======
 
-This is the network cluster on which the chain can interact with other chains via cross chain smart contracts. This functionality is still in testing. If this is set to 1, the chain will have smart contracts enabled, but it will not be able to interact with other chains. If this is set to any number other than 0 or 1, the chain can interact with other chains on the same network cluster. For example, all ``-ac_cc=2`` chains can interact with each other but may not interact with ``-ac_cc=3`` chains. 
-If you'd like to explicitly disable smart contracts set this value to ``0``. 
+This is the network cluster on which the chain can interact with other chains via cross chain smart contracts. This functionality is still in testing. If this is set to 1, the chain will have smart contracts enabled, but it will not be able to interact with other chains. If this is set to any number >1 and <100, the chain can interact with other chains on the same network cluster. For example, all ``-ac_cc=2`` chains can interact with each other but may not interact with ``-ac_cc=3`` chains. If this is set to >100, the chain will be fungible via the burn protocol with other chains on the same network cluster. . 
 
 -ac_staked
 ==========
