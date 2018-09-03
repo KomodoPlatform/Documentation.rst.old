@@ -37,15 +37,7 @@ b. Once the Transactions screen is displayed hover your mouse over the question 
    :align: center
    :scale: 75 %
 
-4. Interest calc edge case fix
-
-a. Steps leading to new functionality
-
-b. ** Missing SCREENSHOT HERE **
-
-.. image:: images/Agama-v0.2.36/image5.png
-   :align: center
-   :scale: 75 %
+4. Interest calc edge case fi
 
 5. Improved seed encryption
 
@@ -87,10 +79,6 @@ d.   Enter created seed then enter a key/passphrase and select Encrypt
 
 6. New ac chain
 
-.. image:: images/Agama-v0.2.36/image11.png
-   :align: center
-   :scale: 75 %
-
 7. Tools -> get multiple kmd balances
 
 a. Open Agama and log in with KMD coin (ensure advanced features are enabled)
@@ -108,11 +96,3 @@ c. In the Address field enter (on separate lines) two KMD public addresses then 
    :scale: 75 %
 
 8. Experimental support for custom asset chains, staking and mining
-
-a. Steps leading to new functionality
-
-b. **Missing SCREENSHOT HERE**
-
-.. image:: images/Agama-v0.2.36/image14.png
-   :align: center
-   :scale: 75 %
