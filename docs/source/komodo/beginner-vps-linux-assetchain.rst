@@ -8,8 +8,8 @@ If you want to test all the latest Komodo features or create your own infrastruc
 
 A common environment used is a VPS (virtual private server) or cloud instance, but you can also use on your PC or bare-metal server.
 
-Stage 0: Rent VPS
-=================
+Stage 0: Rent a VPS
+====================
 
 There are various server providers. Some of them: Hetzner, DigitalOcean, AWS, Google Cloud Platform(GCP)
 
@@ -24,14 +24,13 @@ Recommended servers specifications:
 	* Usually, a configuration like : A CPU with 4 cores, 8 GB RAM, SSD with a capacity >= 100 GB is sufficient. Please note that using a HDD instead of SSD will cause a huge increase in blockchain synchronization times because of the large amount of IOPS (inputs/outputs per second) required.
 	* Regarding the operating system, we recommend Ubuntu (version 16.04+) for beginners. It's the most popular Linux distribution and the majority of Komodo's documentation has been tested and written with this Linux distribution in mind. More information on what Linux is can be found here: https://www.linux.com/what-is-linux
 
-Stage 1: Install OS
-===================
+Stage 1: Install the OS
+=======================
 
 	* The first thing you need is a computer or virtual private server (VPS) with a Linux installation.
 	* Setup Ubuntu on local computer or laptop: https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop
 
 		OR
-
 	* Setup Ubuntu on VPS: Refer to your VPS provider's documentation for the steps to be followed to achive this. 
 
 Stage 2: Initial OS setup

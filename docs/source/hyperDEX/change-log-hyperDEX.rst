@@ -11,6 +11,58 @@ Remember to report issues through the ``Feedback`` button in the app.
 .. contents:: Links
    :depth: 3
 
+0.1.0-alpha.13
+==============
+
+.. note::
+
+	If you have used any previous beta version, you need to delete your trade history as this version has an incompatible format. Right after opening this version, go to the "Debug" menu and choose "Delete Trade History".
+
+	* GTC orders. `0040d04 <https://github.com/atomiclabs/hyperdex/commit/0040d040fb988100cd0052dc97a41d2b6574524b>`_
+	* All orders are now Good 'Till Cancelled (GTC) orders. If you place an order it will stay pending and keep re-broadcasting the order every 10 minutes until it either matches or the user cancels it. `Read more <https://github.com/atomiclabs/hyperdex/pull/481>`_ .
+	* Only show open orders on the exchange view. `a95f256 <https://github.com/atomiclabs/hyperdex/commit/a95f25675a34ea9ada82b531e2fabfe76fba6ec7>`_
+	* Because of GTC, we now only show open orders in the Exchange view. Go to the Trades view to view completed/failed orders.
+	* Add donate button. `e2660ef <https://github.com/atomiclabs/hyperdex/commit/e2660ef3dd3d910e756f4dd6db8e1307da2cfc0c>`_
+	* Add ability to sort orders in the Trades view. `d505b8e <https://github.com/atomiclabs/hyperdex/commit/d505b8e93da4248cc40504dfbff5ef5520d7a9b5>`_
+	* Improve login performance. `8aec0fa <https://github.com/atomiclabs/hyperdex/commit/8aec0faf4466ed28db0346d074fe18dd48483311>`_
+	* Disable Debug Mode by default in production. You can re-enable it in the ``Help`` menu. `e00eff5 <https://github.com/atomiclabs/hyperdex/commit/e00eff53cc68a5fe25281f08be51eb835dbf7697>`_
+	* Update to `BarterDEX Marketmaker v1.0.543 <https://github.com/artemii235/SuperNET/releases/tag/v1.0.543>`_. `34d88e4 <https://github.com/atomiclabs/hyperdex/commit/34d88e4da1ec1ca96ddcb5695f2f5669b00080c0>`_
+
+0.1.0-alpha.12
+==============
+
+.. note::
+	
+	If you're upgrading from ``alpha.10``, you need to delete your trade history as this version has an incompatible format. Right after opening this version, go to the "Debug" menu and choose "Delete Trade History".
+
+	* Switch from CoinMarketCap API to CoinGecko. No more CoinMarketCap-related errors. `dbecfaf <https://github.com/atomiclabs/hyperdex/commit/dbecfaf3ae1efdd621df1536009659a78d77df0e>`_
+	* Improve handling of Marketmaker crashing or being unavailable during login. `f12fe3c <https://github.com/atomiclabs/hyperdex/commit/f12fe3c39207b738731d003d9678628180543dd7>`_
+	* Add initial macOS Touch Bar support. `d494ad4 <https://github.com/atomiclabs/hyperdex/commit/d494ad43f6a9fbcf95b476fad77c97db1fdd93d1>`_
+	* New Crowdin translations. `3a56e46 <https://github.com/atomiclabs/hyperdex/commit/3a56e466f3152a62c74d9127ea452e511be6899f>`_
+	* Fix icon for Trades view. `36725ec <https://github.com/atomiclabs/hyperdex/commit/36725ecb8cc676fbf6e81d5ed504efd10c216c3f>`_
+	* Fix window height on Linux. `631e3b2 <https://github.com/atomiclabs/hyperdex/commit/631e3b287cc1ef3acdbe61f2405aff4a298706c2>`_
+	* Make the hit-target for the modal close button larger. `ece080d <https://github.com/atomiclabs/hyperdex/commit/ece080d2061e43e4a2b37d58830de8b70212796a>`_
+
+0.1.0-alpha.11
+==============
+
+.. note::
+
+	If you have used any previous beta version, you need to delete your trade history as this version has an incompatible format. Right after opening this version, go to the "Debug" menu and choose "Delete Trade History".
+
+	* Support for `ERC20 tokens <https://en.wikipedia.org/wiki/ERC-20>`_. `cbfce65 <https://github.com/atomiclabs/hyperdex/commit/cbfce65f47e6dbc664e61986353171fbe3aa883f>`_
+	* Add Unicoin (MYTH) to default currencies. `7779532 <https://github.com/atomiclabs/hyperdex/commit/77795327dd1fed260f63a046cbe128a8a7588303>`_
+	* Add ability to export trade history to CSV. For example, for use in Excel. (`#450 <https://github.com/atomiclabs/hyperdex/pull/450>) `5bb5c3b <https://github.com/atomiclabs/hyperdex/commit/5bb5c3b912ff1a285690cd60abbf010ed0ee3cff>`_
+	* In the swap details modal, link transactions to block explorer web pages. (`#453 <https://github.com/atomiclabs/hyperdex/pull/453>`_) `7bd9644 <https://github.com/atomiclabs/hyperdex/commit/7bd964460f005b1a3cc04f01cc9f2fbfdceaf998>`_
+	* Limit the amount of swaps shown in the "Recent Swaps" box in the Exchange view. (`#445 <https://github.com/atomiclabs/hyperdex/pull/445>`_) `3e97ea9 <https://github.com/atomiclabs/hyperdex/commit/3e97ea9194105816d0549eacc8af0ded52dc74b9>`_
+	* Render numbers with decimal instead of exponential notation in number input fields. (`#434 <https://github.com/atomiclabs/hyperdex/pull/434>`_) `8c612c5 <https://github.com/atomiclabs/hyperdex/commit/8c612c52b307aa972ef3a27b3afb1ed0bdec0d97>`_
+	* Swap details modal tweaks. `6654b8d <https://github.com/atomiclabs/hyperdex/commit/6654b8d70f9031ea00bfc1115124ec9346f34929>`_ `5e7512d <https://github.com/atomiclabs/hyperdex/commit/5e7512d7da4dad04478702cf106e846e8139bc2b>`_
+	* Add "Help" menu item to report security issues. `cfdbb9a <https://github.com/atomiclabs/hyperdex/commit/cfdbb9af64a90b753849e4f9885fe7d4cfd2bf13>`_
+	* Fix duplicate labels in the portfolio charts. (`#443 <https://github.com/atomiclabs/hyperdex/pull/443>`_) `2c9df69 <https://github.com/atomiclabs/hyperdex/commit/2c9df69aa66928a7217b3429de5c60df413f1d02>`_
+	* Use official HyperDEX PGP key when signing checksums. `6f57087 <https://github.com/atomiclabs/hyperdex/commit/6f5708775a72570475fde2ed4082c2919d0aba09>`_
+	* Update to `BarterDEX Marketmaker v1.0.342 <https://github.com/artemii235/SuperNET/releases/tag/v1.0.342>`_. `e3538f8 <https://github.com/atomiclabs/hyperdex/commit/e3538f87c68ecd18040def3c511fc7cc8b191da8>`_
+	* Translation updates. (#`448 <https://github.com/atomiclabs/hyperdex/pull/448>`_) `e20fa6d <https://github.com/atomiclabs/hyperdex/commit/e20fa6d33bb3c914622e18004e2619f95b35c63b>`_
+
 0.1.0-alpha.10
 ==============
 
