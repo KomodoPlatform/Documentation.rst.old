@@ -14,6 +14,7 @@ Here you will find more information about Komodo (KMD)
    komodo/komodo-API.rst
    komodo/security-setup-Komodo-Node
    komodo/useful-KMD-BTC-commands
+   komodo/beginner-vps-linux-assetchain
    komodo/create-Komodo-Assetchain
    komodo/assetchain-params
    komodo/example-asset-chains.rst

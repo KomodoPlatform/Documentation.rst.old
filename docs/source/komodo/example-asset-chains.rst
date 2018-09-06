@@ -1,6 +1,6 @@
-********************
-Example Asset Chains
-********************
+**********************************************************************************************
+Examples and descriptions of various Blockchains that can be created using Komodo's technology 
+**********************************************************************************************
 
 The purpose of this document is to give a better understanding of asset chain parameters via examples. These chains are grouped simply by the number of parameters used in customizing each. As new parameters are added, the new combinations will be tested and added here. 
 
