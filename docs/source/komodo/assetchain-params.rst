@@ -1,6 +1,6 @@
-**********************
-Asset Chain Parameters
-**********************
+*********************************************************************
+Parameters to customize Blockchains created using Komodo's technology
+*********************************************************************
 
 For instructions on how to create an assetchain see :doc:`create-Komodo-Assetchain`
 
