@@ -57,14 +57,10 @@ If ``-ac_pubkey`` is set, but ``-ac_perc`` is not, this simply means the genesis
 -ac_cc
 ======
 
-This is the network cluster on which the chain can interact with other chains via cross chain smart contracts. This functionality is still in testing. If this is set to 1, the chain will have smart contracts enabled, but it will not be able to interact with other chains. If this is set to any number other than 0 or 1, the chain can interact with other chains on the same network cluster. For example, all ``-ac_cc=2`` chains can interact with each other but may not interact with ``-ac_cc=3`` chains. 
-If you'd like to explicitly disable smart contracts set this value to ``0``. 
+This is the network cluster on which the chain can interact with other chains via cross chain smart contracts. This functionality is still in testing. If this is set to 1, the chain will have smart contracts enabled, but it will not be able to interact with other chains. If this is set to any number >1 and <100, the chain can interact with other chains on the same network cluster. For example, all ``-ac_cc=2`` chains can interact with each other but may not interact with ``-ac_cc=3`` chains. If this is set to >100, the chain will be fungible via the burn protocol with other chains on the same network cluster. . 
 
 -ac_staked
 ==========
-
-.. note::
-	This feature is currently only available in the `jl777 branch <https://github.com/jl777/komodo/tree/jl777>`_.  
 
 This is the percentage of blocks the chain will aim to have as POS. For example, a ``ac_staked=90`` chain will have 90% POS blocks/10% POW blocks. This isn't exact, but the POW difficulty will automatically adjust based on the overall percentage of POW mined blocks.
 
@@ -90,16 +86,10 @@ To create a chain using this parameter, start the first node with ``-gen -genpro
 -ac_public
 ==========
 
-.. note::
-	This feature is currently only available in the `jl777 branch <https://github.com/jl777/komodo/tree/jl777>`_. 
-
 If ``ac_public`` is set to 1, zkSNARKs will be disabled. All z address functionalilty is disabled. Therefore, all transactions on the blockchain are public. 
 
 -ac_private
 ===========
-
-.. note::
-	This feature is currently only available in the `jl777 branch <https://github.com/jl777/komodo/tree/jl777>`_. 
 
 If ``ac_private`` is set to 1, all transactions other than coinbase transactions(block rewards) must use zkSNARKs. All transparent address functionality other than sending mined coins from transparent addresses is disabled. 
 

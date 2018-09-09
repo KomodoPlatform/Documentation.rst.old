@@ -82,7 +82,7 @@ Secure this Assetchain with Delayed Proof of Work
 
 Your new chain can be secured via dPOW by the Komodo notary nodes giving it Bitcoin level security. The current rate for this is 300 KMD and 800 of the coin to be secured per year. If you are interested in having a new chain notarized, please contact @siu or @PTYX on the Komodo discord. 
 
-@PTYX has launched `ChainZilla <https://www.chainzilla.io/>`_ and @siu:matrix.org has launched ChainMakers to provide assetchain creation, electrum server, explorer, dICO services.
+@PTYX has launched `ChainZilla <https://www.chainzilla.io/>`_ and @siu:matrix.org has launched `Chainmakers <https://www.chainmakers.co/>`_ to provide assetchain creation, electrum server setup, explorers, dICO services etc.
 
 Please send any critique or feedback to Alright or gcharang on matrix or discord.
 
