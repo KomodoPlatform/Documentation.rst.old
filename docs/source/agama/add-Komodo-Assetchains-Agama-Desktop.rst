@@ -19,6 +19,6 @@ UI:
 * Drop a 100 x 100 px (better 200 x 200 px) logo into `KomodoPlatform/EasyDEX-GUI:react/src/assets/images/cryptologo@dev <https://github.com/KomodoPlatform/EasyDEX-GUI/tree/dev/react/src/assets/images/cryptologo>`_
 * Add an asset chain explorer `pbca26/agama-wallet-lib:src/coin-helpers.js@dev#L51 <https://github.com/pbca26/agama-wallet-lib/blob/dev/src/coin-helpers.js#L51>`_
 * Add asset chain name to EN translation file [https://github.com/KomodoPlatform/EasyDEX-GUI/blob/dev/react/src/translate/en.js] (`KomodoPlatform/EasyDEX-GUI:react/src/translate/en.js@dev <https://github.com/KomodoPlatform/EasyDEX-GUI/blob/dev/react/src/translate/en.js>`_), look for ``ASSETCHAINS``. 
-* Submit a `PR <https://github.com/KomodoPlatform/Agama>`_ to ``dev`` branch o each repo.
+* Submit a `PR <https://github.com/KomodoPlatform/Agama>`_ to ``dev`` branch on each repo.
 
 Please make sure an asset chain is working in Agama before making a commit. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.
