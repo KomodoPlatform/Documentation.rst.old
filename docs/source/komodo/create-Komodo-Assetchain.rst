@@ -6,7 +6,7 @@ Requirements
 ============
 
 * 2 Computers with the ability to open ports. (simpler if they have static public IP addresses)
-* At least 4gb RAM each
+* At least 4BGB RAM each
 * At least 2 CPU cores each
 * 64-bit Operating System (Ubuntu 16.04 recommended)
 * ``komodod`` built on each, see :ref:`Installing Komodo Manually` (No need to download the Komodo blockchain)
@@ -77,13 +77,13 @@ Use the ``help`` command for a list of commands:
 
 	./komodo-cli -ac_name=EXAMPLECHAIN help
 
-Secure this Assetchain with Delayed Proof of Work
-=================================================
+Secure this Assetchain with Delayed Proof of Work (dPoW)
+========================================================
 
-Your new chain can be secured via dPOW by the Komodo notary nodes giving it Bitcoin level security. The current rate for this is 300 KMD and 800 of the coin to be secured per year. If you are interested in having a new chain notarized, please contact @siu or @PTYX on the Komodo discord. 
+Your new chain can be secured via dPoW by the Komodo Notary Nodes giving it Bitcoin level security. The current rate for this is 300 KMD and 300 of the coin to be secured per year. If you are interested in having a new chain notarized, please contact @siu or @PTYX on the Komodo discord.
 
 @PTYX has launched `ChainZilla <https://www.chainzilla.io/>`_ and @siu:matrix.org has launched `Chainmakers <https://www.chainmakers.co/>`_ to provide assetchain creation, electrum server setup, explorers, dICO services etc.
 
 Please send any critique or feedback to Alright or gcharang on matrix or discord.
 
-`Discord Invite <https://discord.gg/SCdf4eh>`_
+`Discord Invite <https://komodoplatform.com/discord>`_
