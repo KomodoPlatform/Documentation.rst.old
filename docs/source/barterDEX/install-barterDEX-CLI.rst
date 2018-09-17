@@ -12,9 +12,9 @@ For a list of currently supported native coins and instructions for the coin spe
 
 You may want to back up your system or clone it after everything is synced and running correctly BEFORE you start installing coin daemons.
 
-.. _BarterDEX GUI : https://github.com/KomodoPlatform/BarterDEX
+.. _BarterDEX GUI : https://github.com/KomodoPlatform/BarterDEX/releases
 .. _link for the binaries. : https://github.com/KomodoPlatform/BarterDEX/tree/dev/assets/bin/win64
-.. _latest Agama installer : https://artifacts.supernet.org/latest/
+.. _latest Agama installer : https://komodoplatform.com/komodo-wallets
 .. _KomodoOcean-QT : https://github.com/DeckerSU/komodo-qt/releases
 
 Installing Komodo Platform (barterDEX)
