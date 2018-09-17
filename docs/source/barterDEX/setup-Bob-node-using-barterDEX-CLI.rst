@@ -13,7 +13,7 @@ Benefits of being a Bob node:
 Requirements:
 =============
 
-#. barterDEX CLI installed -:doc:`BarterDEX CLI Install guide </barterDEX/install-barterDEX-CLI>`
+#. barterDEX CLI installed - :doc:`BarterDEX CLI Install guide </barterDEX/install-barterDEX-CLI>`
 #. Native coin wallet
 
 APIs needed
