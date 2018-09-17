@@ -13,7 +13,7 @@ Benefits of being a Bob node:
 Requirements:
 =============
 
-#. barterDEX CLI installed - guide
+#. barterDEX CLI installed - :doc:`BarterDEX CLI Install guide </barterDEX/install-barterDEX-CLI>`
 #. Native coin wallet
 
 APIs needed
@@ -42,6 +42,6 @@ For using native mode, coin daemons need to be installed and blockchains fully s
 
 **autoprice**
 
-This is the most important API for Bob or marketmaker. You need to edit this file to your liking. This contains the price, coin name for any pair your are making. Check :doc:`here <barterDEX-API>` for more info on the Api.
+This is the most important API for Bob or marketmaker. You need to edit this file to your liking. This contains the price, coin name for any pair your are making. Check :doc:`here </barterDEX/barterDEX-API>` for more info on all BarterDEX API.
 
 Once you issue the ``./autoprice`` script, you just need to wait for alice/buyer to buy from your order. All the trade info will be shown in your console as they are happening.

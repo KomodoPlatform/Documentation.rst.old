@@ -5,7 +5,7 @@ Setup Komodo Notary Node
 Komodo Notary Nodes
 ===================
 
-**Note:** This is still in *BETA* phase. This is to give you a good understanding on building a Komodo Notary Node, but it is possible that some commands could be deprecated by the time you read it.
+**Note:** This is still in *BETA* phase. This is to give you a good understanding on building a Komodo Notary Node. It is possible that some commands could be deprecated by the time you read it.
 
 If you have any problems, please join ``#notarynode`` on the `Komodo Discord <https://discord.gg/SCdf4eh>`_
 
@@ -65,12 +65,12 @@ The following packages are needed:
 
 .. code-block:: shell
 
-	sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libevent-dev libcurl4-gnutls-dev cmake clang 
+	sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libqrencode-dev libdb++-dev ntp ntpdate nano software-properties-common curl libevent-dev libcurl4-gnutls-dev cmake clang 
 
 Install ``nanomsg``
 -------------------
 
-Something else needs to be done. Libnanomsg needs to be installed.
+Libnanomsg needs to be installed.
 
 .. code-block:: shell
 
@@ -82,8 +82,8 @@ Something else needs to be done. Libnanomsg needs to be installed.
 	sudo make install
 	sudo ldconfig
 
-Installing Bitcoind
--------------------
+Installing ``bitcoind``
+-----------------------
 
 Let us first install Bitcoind, because it takes some time to sync it all up (around 12 hours)
 
@@ -100,9 +100,9 @@ Let's create folder ``.bitcoin``
 	cd ~/
 	mkdir .bitcoin
 	cd .bitcoin
-	vim bitcoin.conf
+	nano bitcoin.conf
 
-Paste this in your ``bitcoin.conf`` (replace recuser and rpcpassword)
+Paste this in your ``bitcoin.conf`` (replace rpcuser and rpcpassword)
 
 .. code-block:: shell
 
@@ -111,6 +111,8 @@ Paste this in your ``bitcoin.conf`` (replace recuser and rpcpassword)
 	txindex=1
 	rpcuser=bitcoinrpc
 	rpcpassword=password
+	bind=127.0.0.1
+	rpcbind=127.0.0.1
 	
 secure the ``bitcoin.conf`` file
 
@@ -159,7 +161,7 @@ When it is finished, let's create ``komodo.conf``
 	cd ~
 	mkdir .komodo
 	cd .komodo
-	vim komodo.conf
+	nano komodo.conf
 
 Add the following lines to the komodo.conf file (replace rpcuser and rpcpassword)
 
@@ -250,7 +252,7 @@ Goto to ``~/SuperNET/iguana`` and create the executable file "wp"
 .. code-block:: shell
 
 	cd ~/SuperNET/iguana
-	vim wp
+	nano wp
 
 Paste this into your wp file and be sure you set the password that you have made above (watch out for the slash at the end)
 
@@ -296,7 +298,7 @@ Create a text file ``~/SuperNET/iguana/userhome.txt`` with just this path in it
 
 .. code-block:: shell
 
-	vim ~/SuperNET/iguana/userhome.txt
+	nano ~/SuperNET/iguana/userhome.txt
 	# and put your home folder in it. Mostly it is home/username (without the front and back slash!)
 
 Copy these files then change them from using port 7778 to 7776
@@ -316,7 +318,7 @@ Now create a new file for the btcpubkey. Enter it as: pubkey=xxxxxxxxxxxxxxxxxxx
 
 .. code-block:: shell
 
-	vim pubkey.txt
+	nano pubkey.txt
 	cp ~/SuperNET/iguana/pubkey.txt ~/komodo/src/pubkey.txt
 
 We have installed all the things we needed, but we have some configurations to do. Komodo is now mining with his own komodo pubkey, but we have to integrate some stuff into komodo. Let's hope you have copied and pasted the part where you got your btcpubkey etc. somewhere. Bring it back up.
@@ -362,7 +364,7 @@ Run the following to confirm it has imported properly.
 
 if ``ismine: true`` it has been successfully imported
 
-Import privateky into assetchains
+Import private key into assetchains
 ---------------------------------
 
 Import your KMD/BTCD WIF into all assetchains
@@ -467,7 +469,7 @@ Install GameCredits:
 
 	cd ~
 	sudo apt-get update && sudo apt-get install software-properties-common autoconf git build-essential libtool libprotobuf-c-dev libgmp-dev libsqlite3-dev python python3 zip jq libevent-dev pkg-config libssl-dev libcurl4-gnutls-dev cmake -y
-	git clone https://github.com/GameCredits/GameCredits.git
+	git clone https://github.com/jl777/GameCredits
 	cd GameCredits/
 	git checkout master
 
@@ -514,6 +516,8 @@ Add the following lines into your ``gamecredits.conf`` file
 	rpcpassword=passworddrowssap
 	txindex=1
 	daemon=1
+	bind=127.0.0.1
+	rpcbind=127.0.0.1
 	addnode=x.x.x.x
 	addnode=y.y.y.y
 
@@ -552,7 +556,7 @@ Create a script file at ``/home/username/`` and name it start
 
 .. code-block:: shell
 
-	vim start
+	nano start
 
 Paste into file and replace the pubkey with your ``btcpubkey`` and save it.
 
@@ -572,12 +576,12 @@ Make it executable
 
 This should bind all the tech stuff together, but not before we make some tweaking to the system. Hagbard came up with the following tweak.
 
-Set ulimit parameters on ubuntu permanent:
+Set ``ulimit`` parameters on Ubuntu permanent:
 ==========================================
 
 By default the number of open files per user in Ubuntu is 1024. In our case this number is too small so you have to increase it.
 
-This is done with the ulimit command:
+This is done with the ``ulimit`` command:
 
 .. code-block:: shell
 
@@ -585,13 +589,13 @@ This is done with the ulimit command:
 	$ulimit -n   # see the number of open files
 	$ulimit -n 1000000  #  set the number open files to 1000000
 
-The problem with this way is that the ulimit parameter is only set currently for this command terminal and user. This means that after a reboot you’ll need to set the parameter again. Do the following to set it permanent:
+The problem with this way is that the ``ulimit`` parameter is only set currently for this command terminal and user. This means that after a reboot you’ll need to set the parameter again. Do the following to set it permanent:
 
 edit ``/etc/security/limits.conf``
 
 .. code-block:: shell
 
-	sudo vim /etc/security/limits.conf
+	sudo nano /etc/security/limits.conf
 
 add these lines:
 
@@ -606,7 +610,7 @@ edit ``/etc/pam.d/common-session``
 
 .. code-block:: shell
 
-	sudo vim /etc/pam.d/common-session
+	sudo nano /etc/pam.d/common-session
 
 add this line:
 
@@ -638,7 +642,7 @@ When the server is rebooted and you are logged in as user (and lands into your h
 	# wait until you see `INIT with 64 notaries`
 	cd ~/komodo/src && ./dpowassets
 
-We are done! If you have given the btcpubkey to James and he has added it to the ``notaries.h`` files (located `jl777/SuperNET:iguana/notaries.h@master <https://github.com/jl777/SuperNET/blob/master/iguana/notaries.h>`_) everything should work now.
+We are done! If you have given the btcpubkey to James and he has added it to the ``notaries.h`` files located (`jl777/SuperNET:iguana/notaries.h@master <https://github.com/jl777/SuperNET/blob/master/iguana/notaries.h>`_) everything should work now.
 
 N00b Q&A
 ========

@@ -6,7 +6,7 @@ Requirements
 ============
 
 * 2 Computers with the ability to open ports. (simpler if they have static public IP addresses)
-* At least 4BGB RAM each
+* At least 4GB RAM each
 * At least 2 CPU cores each
 * 64-bit Operating System (Ubuntu 16.04 recommended)
 * ``komodod`` built on each, see :ref:`Installing Komodo Manually` (No need to download the Komodo blockchain)
