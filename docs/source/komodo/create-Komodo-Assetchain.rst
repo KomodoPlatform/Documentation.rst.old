@@ -27,7 +27,7 @@ This is the simplest possible set of parameters. This will create a coin with th
 
 	The parameter -ac_supply should be set to a whole number without any decimals places and it should be less than 2000000000 to avoid 64 bit overflows.
 
-Please refer to :ref:`Asset Chain Parameters` for a full list of parameters to customize your blockchain.
+Please refer to :doc:`komodo/assetchain-params` for a full list of parameters to customize your blockchain.
 
 After issuing this command, you will see the p2p port in the terminal window. 
 
