@@ -27,7 +27,7 @@ This is the simplest possible set of parameters. This will create a coin with th
 
 	The parameter -ac_supply should be set to a whole number without any decimals places and it should be less than 2000000000 to avoid 64 bit overflows.
 
-Please refer to :doc:`komodo/assetchain-params` for a full list of parameters to customize your blockchain.
+Please refer to :doc:`this doc <komodo/assetchain-params>` for a full list of parameters to customize your blockchain.
 
 After issuing this command, you will see the p2p port in the terminal window. 
 
@@ -80,10 +80,10 @@ Use the ``help`` command for a list of commands:
 Secure this Assetchain with Delayed Proof of Work (dPoW)
 ========================================================
 
-Your new chain can be secured via dPoW by the Komodo Notary Nodes giving it Bitcoin level security. The current rate for this is 300 KMD and 300 of the coin to be secured per year. If you are interested in having a new chain notarized, please contact @siu or @PTYX on the Komodo discord.
+Your new chain can be secured via dPoW by the Komodo Notary Nodes giving it Bitcoin level security. The current cost for this is 300 KMD and 300 of the coin to be secured per year (This is the bare minimum cost based on the amount that needs to be spent as transaction fee on both the chains). If you are interested in having a new chain notarized, please contact @siu or @PTYX on the Komodo discord.
 
 @PTYX has launched `ChainZilla <https://www.chainzilla.io/>`_ and @siu:matrix.org has launched `Chainmakers <https://www.chainmakers.co/>`_ to provide assetchain creation, electrum server setup, explorers, dICO services etc.
 
-Please send any critique or feedback to Alright or gcharang on matrix or discord.
+Please send any critique/feedback to Alright or gcharang on matrix or discord.
 
 `Discord Invite <https://komodoplatform.com/discord>`_
