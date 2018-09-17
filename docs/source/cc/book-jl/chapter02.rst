@@ -1,5 +1,5 @@
 *******************************
-Chapter 02 - CC contract basics
+Chapter 02 - CC Contract Basics
 *******************************
 
 Each CC contract has an eval code, this is just an arbitrary number that is associated with a specific CC contract. The details about a specific CC contract are all determined by the validation logic, that is ultimately what implements a CC contract.
