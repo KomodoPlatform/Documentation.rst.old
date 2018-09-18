@@ -365,7 +365,7 @@ Run the following to confirm it has imported properly.
 if ``ismine: true`` it has been successfully imported
 
 Import private key into assetchains
----------------------------------
+-----------------------------------
 
 Import your KMD/BTCD WIF into all assetchains
 
@@ -577,7 +577,7 @@ Make it executable
 This should bind all the tech stuff together, but not before we make some tweaking to the system. Hagbard came up with the following tweak.
 
 Set ``ulimit`` parameters on Ubuntu permanent:
-==========================================
+==============================================
 
 By default the number of open files per user in Ubuntu is 1024. In our case this number is too small so you have to increase it.
 
