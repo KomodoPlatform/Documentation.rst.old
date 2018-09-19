@@ -11,12 +11,28 @@ Remember to report issues through the ``Feedback`` button in the app.
 .. contents:: Links
    :depth: 3
 
+0.1.0
+=====
+
+	* Update wording Alpha => Beta `a48d294 <https://github.com/atomiclabs/hyperdex/commit/a48d294ab54dc5c58a3e31b934067042aab6a336>`_
+	* Update Alpha => Beta references in translation files `fd4c844 <https://github.com/atomiclabs/hyperdex/commit/fd4c844e59e8986c281afc4437a7fe3788dd1b13>`_
+	* Add Gemini dollar (GUSD) `8c4eace <https://github.com/atomiclabs/hyperdex/commit/8c4eace45fd2fb26f70b7dbbfeb8442acafc55c7>`_
+	* Add Old Capital (OCALL) `35f95d9 <https://github.com/atomiclabs/hyperdex/commit/35f95d9650257640f163c840ae64a1cc581ed104>`_
+	* Add Capital GAS (CALLG) `34f7611 <https://github.com/atomiclabs/hyperdex/commit/34f76112d214dc517c7c2b74f6cb3f6f16bbc7af>`_
+	* Add more currencies and update some Electrum servers `4b9d397 <https://github.com/atomiclabs/hyperdex/commit/4b9d39737a514c0aa11b4d951feb1f9d8d6e96b8>`_
+	* Add PGP badge to readme linking to Keybase proofs `a563f84 <https://github.com/atomiclabs/hyperdex/commit/a563f84d41c6eb4cb0ff097a461499a3bf05c1f4>`_
+	* Fix dashboard currency percentage price change `85b3280 <https://github.com/atomiclabs/hyperdex/commit/85b3280254126538d8014e6583e6f8838b95ba2b>`_
+	* Update BTC donation address. `59cf1fd <https://github.com/atomiclabs/hyperdex/commit/59cf1fd9b120708e631234e50019ad613a8423a2>`_
+
 0.1.0-alpha.13
 ==============
 
 .. note::
 
 	If you have used any previous beta version, you need to delete your trade history as this version has an incompatible format. Right after opening this version, go to the "Debug" menu and choose "Delete Trade History".
+
+Changes
+-------
 
 	* GTC orders. `0040d04 <https://github.com/atomiclabs/hyperdex/commit/0040d040fb988100cd0052dc97a41d2b6574524b>`_
 	* All orders are now Good 'Till Cancelled (GTC) orders. If you place an order it will stay pending and keep re-broadcasting the order every 10 minutes until it either matches or the user cancels it. `Read more <https://github.com/atomiclabs/hyperdex/pull/481>`_ .
@@ -35,6 +51,9 @@ Remember to report issues through the ``Feedback`` button in the app.
 	
 	If you're upgrading from ``alpha.10``, you need to delete your trade history as this version has an incompatible format. Right after opening this version, go to the "Debug" menu and choose "Delete Trade History".
 
+Changes
+-------
+
 	* Switch from CoinMarketCap API to CoinGecko. No more CoinMarketCap-related errors. `dbecfaf <https://github.com/atomiclabs/hyperdex/commit/dbecfaf3ae1efdd621df1536009659a78d77df0e>`_
 	* Improve handling of Marketmaker crashing or being unavailable during login. `f12fe3c <https://github.com/atomiclabs/hyperdex/commit/f12fe3c39207b738731d003d9678628180543dd7>`_
 	* Add initial macOS Touch Bar support. `d494ad4 <https://github.com/atomiclabs/hyperdex/commit/d494ad43f6a9fbcf95b476fad77c97db1fdd93d1>`_
@@ -49,6 +68,9 @@ Remember to report issues through the ``Feedback`` button in the app.
 .. note::
 
 	If you have used any previous beta version, you need to delete your trade history as this version has an incompatible format. Right after opening this version, go to the "Debug" menu and choose "Delete Trade History".
+
+Changes
+-------
 
 	* Support for `ERC20 tokens <https://en.wikipedia.org/wiki/ERC-20>`_. `cbfce65 <https://github.com/atomiclabs/hyperdex/commit/cbfce65f47e6dbc664e61986353171fbe3aa883f>`_
 	* Add Unicoin (MYTH) to default currencies. `7779532 <https://github.com/atomiclabs/hyperdex/commit/77795327dd1fed260f63a046cbe128a8a7588303>`_
