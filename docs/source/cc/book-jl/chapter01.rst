@@ -6,7 +6,7 @@ In the prior chapter the utxo was explained. However, the specific mechanism use
 
 Originally, there was the pay to pubkey script:
 
-.. code-block:: 
+.. code-block:: shell
 
 	<pubkey> <checksig>
 
@@ -14,7 +14,7 @@ About as simple of a payment script that you can get. Basically the pubkey's sig
 
 However, it is here to stay and its script is:
 
-.. code-block:: 
+.. code-block:: shell
 
 	<hash the pubkey> <pubkey> <verify hash matches> <checksig>
 
@@ -24,7 +24,7 @@ In order to spend a ``p2pkh`` (pay to pubkey hash) utxo, you need to divulge the
 
 Originally, bitcoin allowed any type of script opcodes to be used directly. The problem was some of them caused problems and satoshi decided to disable them and only allow standard forms of payments. Thus the ``p2pk`` and ``p2pkh`` became 99%+ of bitcoin transactions. However, going from having a fully scriptable language that can create countless payment scripts (and bugs!), to having just 2 . . . well it was a "short term" limitation. It did last for some years but eventually a compromise ``p2sh`` script was allowed to be standard. This is a pay to script hash, so it can have a standard format as the normal ``p2pkh``, but have infinitely more flexibility.
 
-.. code-block:: 
+.. code-block:: shell
 
 	<hash the script> <script> <verify hash matches>
 
@@ -32,7 +32,7 @@ Wait, something is wrong! If it was just that, then anybody that found out what 
 
 OK, I know that just got really confusing. Let us have a more clear example:
 
-.. code-block:: 
+.. code-block:: shell
 
 	redeemscript <- pay to pubkey
 
