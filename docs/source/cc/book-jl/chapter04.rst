@@ -1,5 +1,5 @@
 ******************************
-Chapter 04 - CC rpc extensions
+Chapter 04 - CC RPC Extensions
 ******************************
 
 Currently, CC contracts need to be integrated at the source level. This limits who is able to create and add new CC contracts, which at first is good, but eventually will be a too strict limitation. The runtime bindings chapter will touch on how to break out of the source based limitation, but there is another key interface level, the RPC.

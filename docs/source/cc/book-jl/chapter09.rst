@@ -1,5 +1,5 @@
 *************************
-Chapter 09 - dice example
+Chapter 09 - Dice Example
 *************************
 
 The dice CC contract is actually more complex in the sequences required than the assets/tokens CC. The reason is the need for realtime response by the dealer node, but also having a way to resolve bets if the dealer node is not online. The dice CC contract shows how to build in such a challenge/response mechanism, which likely will be very useful for many other realtime interactive CC contracts.
@@ -24,50 +24,77 @@ The same values are used, but in different order. The resulting hashes are compa
 The dealer creates a dice plan and then also needs to create entropy transactions. Each win or loss that creates change also creates entropy transactions by the dealer, but timeout transactions wont as it needs to be created by the dealer node to prevent cheating. The dealer ``tx`` are locked into the global dice CC address, as is the dicebet transaction, which selects a specific entropy ``tx`` to "roll" against. Then the dicefinish process by the dealer will spend the dicebet outputs either all to itself for a loss, or the winning amount to th dice bettor's address. For dicebets that are not dicefinish'ed by the dealer, anybody is able to do a timeout completion.
 
 createfunding:
-vins.*: normal inputs
-vout.0: CC vout for funding
-vout.1: owner vout
-vout.2: dice marker address vout for easy searching
-vout.3: normal change
-vout.n-1: opreturn 'F' sbits minbet maxbet maxodds timeoutblocks
+--------------
+
+.. code-block:: shell
+
+	vins.*: normal inputs
+	vout.0: CC vout for funding
+	vout.1: owner vout
+	vout.2: dice marker address vout for easy searching
+	vout.3: normal change
+	vout.n-1: opreturn 'F' sbits minbet maxbet maxodds timeoutblocks
 
 addfunding (entropy):
-vins.*: normal inputs
-vout.0: CC vout for locked entropy funds
-vout.1: tag to owner address for entropy funds
-vout.2: normal change
-vout.n-1: opreturn 'E' sbits fundingtxid hentropy
+---------------------
+
+.. code-block:: shell
+
+	vins.*: normal inputs
+	vout.0: CC vout for locked entropy funds
+	vout.1: tag to owner address for entropy funds
+	vout.2: normal change
+	vout.n-1: opreturn 'E' sbits fundingtxid hentropy
 
 bet:
-vin.0: entropy txid from house (must validate vin0 of 'E')
-vins.1+: normal inputs
-vout.0: CC vout for locked entropy
-vout.1: CC vout for locked bet
-vout.2: tag for bettor's address (txfee + odds)
-vout.3: change
-vout.n-1: opreturn 'B' sbits fundingtxid entropy
+----
+
+.. code-block:: shell
+
+	vin.0: entropy txid from house (must validate vin0 of 'E')
+	vins.1+: normal inputs
+	vout.0: CC vout for locked entropy
+	vout.1: CC vout for locked bet
+	vout.2: tag for bettor's address (txfee + odds)
+	vout.3: change
+	vout.n-1: opreturn 'B' sbits fundingtxid entropy
 
 loser:
-vin.0: normal input
-vin.1: betTx CC vout.0 entropy from bet
-vin.2: betTx CC vout.1 bet amount from bet
-vin.3+: funding CC vout.0 from 'F', 'E', 'W', 'L' or 'T'
-vout.0: funding CC to entropy owner
-vout.1: tag to owner address for entropy funds
-vout.2: change to fundingpk
-vout.n-1: opreturn 'L' sbits fundingtxid hentropy proof
+------
+
+.. code-block:: shell
+
+	vin.0: normal input
+	vin.1: betTx CC vout.0 entropy from bet
+	vin.2: betTx CC vout.1 bet amount from bet
+	vin.3+: funding CC vout.0 from 'F', 'E', 'W', 'L' or 'T'
+	vout.0: funding CC to entropy owner
+	vout.1: tag to owner address for entropy funds
+	vout.2: change to fundingpk
+	vout.n-1: opreturn 'L' sbits fundingtxid hentropy proof
 
 winner:
-same as loser, but vout.2 is winnings
-vout.3: change to fundingpk
-vout.n-1: opreturn 'W' sbits fundingtxid hentropy proof
+-------
+
+.. code-block:: shell
+
+	same as loser, but vout.2 is winnings
+	vout.3: change to fundingpk
+	vout.n-1: opreturn 'W' sbits fundingtxid hentropy proof
 
 timeout:
-same as winner, just without hentropy or proof
+--------
 
-WARNING: there is an attack vector that precludes betting any large amounts, it goes as follows:
-1. do dicebet to get the house entropy revealed
-2. calculate bettor entropy that would win against the house entropy
-3. reorg the chain and make a big bet using the winning entropy calculated in 2.
+.. code-block:: shell
 
-In order to mitigate this, the disclosure of the house entropy needs to be delayed beyond a reasonable reorg depth (notarization). It is recommended for production dice game with significant amounts of money to use such a delayed disclosure method.
+	same as winner, just without hentropy or proof
+
+.. warning:: 
+
+	There is an attack vector that precludes betting any large amounts, it goes as follows:
+
+	1. do dicebet to get the house entropy revealed
+	2. calculate bettor entropy that would win against the house entropy
+	3. reorg the chain and make a big bet using the winning entropy calculated in 2.
+
+In order to mitigate this, the disclosure of the house entropy needs to be delayed beyond a reasonable reorg depth (notarization). It is recommended for production dice games with significant amounts of money to use such a delayed disclosure method.

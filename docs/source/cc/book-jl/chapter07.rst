@@ -1,5 +1,5 @@
 ****************************
-Chapter 07 - rewards example
+Chapter 07 - Rewards Example
 ****************************
 
 The next CC contract in complexity is the rewards CC contract. This is designed to capture what most people like about masternodes, without anything else, ie. the rewards!

@@ -1,5 +1,5 @@
 ****************************
-Chapter 15 - rpc based dapps
+Chapter 15 - RPC based dAPPS
 ****************************
 
 Ultimately, I expect there to be so many new rpc calls (one set from each CC contract), that virtually any dapp can be made with rpc calls. We are just at the beginning now, but it is just a matter of time when we get there.

@@ -1,5 +1,5 @@
 ***************************
-Chapter 08 - assets example
+Chapter 08 - Assets Example
 ***************************
 
 In some respects the assets CC is the most complex, it was actually the first one that I coded. It is however using a simple model, even for the DEX functions, so while it is quite involved, it does not have the challenge/response complexity of dice.

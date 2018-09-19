@@ -1,5 +1,5 @@
 **************************
-Chapter 05 - CC validation
+Chapter 05 - CC Validation
 **************************
 
 CC validation is what its all about, not the "hokey pokey"!

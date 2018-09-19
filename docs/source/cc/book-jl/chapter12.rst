@@ -1,5 +1,5 @@
 ************************************
-Chapter 12 - limitless possibilities
+Chapter 12 - Limitless Possibilities
 ************************************
 
 As can be seen, CC contracts can do a wide range of things and since they are Turing complete, we know that this is true. However, what is more important is the added security gained from using a utxo based system. While in some ways it is more complex to have to deal with utxo, as can be seen by the above examples, it is either solved and made invisible at the rpc level, or actually used as part of the solution.

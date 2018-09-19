@@ -1,5 +1,5 @@
 ***************************
-Chapter 06 - faucet example
+Chapter 06 - Faucet Example
 ***************************
 
 Finally, we are ready for the first actual example of a CC contract. The faucet. This is a very simple contract and it ran into some interesting bugs in the first incarnation.
