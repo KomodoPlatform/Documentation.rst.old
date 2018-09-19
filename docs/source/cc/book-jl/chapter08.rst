@@ -92,8 +92,8 @@ selloffer
 	vout.2: normal output for change (if any)
 	vout.n-1: opreturn [EVAL_ASSETS] ['s'] [assetid] [amount of native coin required] [origpubkey]
 
-cancel:
--------
+cancel
+------
 
 .. code-block:: shell
 
@@ -103,8 +103,8 @@ cancel:
 	vout.1: normal output for change (if any)
 	vout.n-1: opreturn [EVAL_ASSETS] ['x'] [assetid]
 
-fillsell:
----------
+fillsell
+--------
 
 .. code-block:: shell
 

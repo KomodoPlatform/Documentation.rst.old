@@ -23,8 +23,8 @@ The same values are used, but in different order. The resulting hashes are compa
 
 The dealer creates a dice plan and then also needs to create entropy transactions. Each win or loss that creates change also creates entropy transactions by the dealer, but timeout transactions wont as it needs to be created by the dealer node to prevent cheating. The dealer ``tx`` are locked into the global dice CC address, as is the dicebet transaction, which selects a specific entropy ``tx`` to "roll" against. Then the dicefinish process by the dealer will spend the dicebet outputs either all to itself for a loss, or the winning amount to th dice bettor's address. For dicebets that are not dicefinish'ed by the dealer, anybody is able to do a timeout completion.
 
-createfunding:
---------------
+createfunding
+-------------
 
 .. code-block:: shell
 
@@ -35,8 +35,8 @@ createfunding:
 	vout.3: normal change
 	vout.n-1: opreturn 'F' sbits minbet maxbet maxodds timeoutblocks
 
-addfunding (entropy):
----------------------
+addfunding (entropy)
+--------------------
 
 .. code-block:: shell
 
@@ -46,8 +46,8 @@ addfunding (entropy):
 	vout.2: normal change
 	vout.n-1: opreturn 'E' sbits fundingtxid hentropy
 
-bet:
-----
+bet
+---
 
 .. code-block:: shell
 
@@ -59,8 +59,8 @@ bet:
 	vout.3: change
 	vout.n-1: opreturn 'B' sbits fundingtxid entropy
 
-loser:
-------
+loser
+-----
 
 .. code-block:: shell
 
@@ -73,8 +73,8 @@ loser:
 	vout.2: change to fundingpk
 	vout.n-1: opreturn 'L' sbits fundingtxid hentropy proof
 
-winner:
--------
+winner
+------
 
 .. code-block:: shell
 
@@ -82,8 +82,8 @@ winner:
 	vout.3: change to fundingpk
 	vout.n-1: opreturn 'W' sbits fundingtxid hentropy proof
 
-timeout:
---------
+timeout
+-------
 
 .. code-block:: shell
 
@@ -93,8 +93,8 @@ timeout:
 
 	There is an attack vector that precludes betting any large amounts, it goes as follows:
 
-	1. do dicebet to get the house entropy revealed
-	2. calculate bettor entropy that would win against the house entropy
-	3. reorg the chain and make a big bet using the winning entropy calculated in 2.
+	1. Do dicebet to get the house entropy revealed
+	2. Calculate bettor entropy that would win against the house entropy
+	3. Reorg the chain and make a big bet using the winning entropy calculated in 2.
 
 In order to mitigate this, the disclosure of the house entropy needs to be delayed beyond a reasonable reorg depth (notarization). It is recommended for production dice games with significant amounts of money to use such a delayed disclosure method.

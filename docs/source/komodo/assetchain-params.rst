@@ -96,4 +96,4 @@ If ``ac_private`` is set to 1, all transactions other than coinbase transactions
 
 Please send any critiques or feedback to Alright or gcharang on matrix or discord.
 
-`Discord Invite <https://discord.gg/SCdf4eh>`_
+`Discord Invite <https://komodoplatform.com/discord>`_

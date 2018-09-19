@@ -67,8 +67,8 @@ The one final rpc is ``oraclessamples``, which returns the most recent samples o
 
 In order to implement this, the following vin/vout contraints are used:
 
-create:
--------
+create
+------
 
 .. code-block:: shell
 
@@ -77,8 +77,8 @@ create:
 	vout.1: change, if any
 	vout.n-1: opreturn with name and description and format for data
 
-register:
----------
+register
+--------
 
 .. code-block:: shell
 
@@ -88,8 +88,8 @@ register:
 	vout.2: change, if any
 	vout.n-1: opreturn with oracletxid, pubkey and price per data point
 
-subscribe:
-----------
+subscribe
+---------
 
 .. code-block:: shell
 
@@ -98,8 +98,8 @@ subscribe:
 	vout.1: change, if any
 	vout.n-1: opreturn with oracletxid, registered provider's pubkey, amount
 
-data:
------
+data
+----
 
 .. code-block:: shell
 
