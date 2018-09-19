@@ -4,13 +4,17 @@ Chapter 03 - CC vins and vouts
 
 You might want to review the bitcoin basics and other materials to refresh about how bitcoin outputs become inputs. It is a bit complicated, but ultimately it is about one specific amount of coins that are spent, once spent it is combined with the other coins that are also spent in that transaction and then various outputs are created.
 
-vin0 + vin1 + vin2 -> vout0 + vout1
+.. code-block:: shell
+
+	vin0 + vin1 + vin2 -> vout0 + vout1
 
 That is a 3 input, 2 output transaction. The value from the three inputs are combined and then split into vout0 and vout1, each of the vouts gets a spend script that must be satisfied to be able to be spent. Which means for all three of out vins, all the requirements (as specified in the output that created them) are satisfied.
 
 Yes, I know this is a bit too complicated without a nice chart, so we will hope that a nice chart is added here:
 
-[nice chart goes here]
+.. code-block:: shell
+
+	Placeholder text : [nice chart goes here]
 
 Out of all the aspects of the CC contracts, the flexibility that different vins and vouts created was the biggest surprise. When I started writing the first of these a month ago, I had no idea the power inherent in the smart utxo contracts. I was just happy to have a way to lock funds and release them upon some specific conditions.
 
@@ -22,7 +26,9 @@ To recap, we have now a new standard bitcoin output type called a CC output. Fur
 
 Let us go back to the 3+2 transaction example:
 
-vin0 + vin1 + vin2 -> vout0 + vout1
+.. code-block:: shell
+
+	vin0 + vin1 + vin2 -> vout0 + vout1
 
 Given the prior paragraph, try to imagine the possibilities the simple 3+2 transaction can be. Each vin could be a normal vin, from the global contract address, the user's CC address and the vouts can also have this range. Theoretically, there can be 257 * 257 * 257 * 257 * 257 forms of a 3+2 transaction!
 
