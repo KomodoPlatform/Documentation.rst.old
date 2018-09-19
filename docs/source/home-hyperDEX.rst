@@ -14,8 +14,14 @@ Here you will find more information about HyperDEX
 .. toctree::
    :maxdepth: 1
    :caption: Release Notes
-   :glob:
-   :reversed:
 
-   hyperDEX/enhancement-record/*
-   hyperDEX/change-log-hyperDEX   
+   hyperDEX/introduction
+   hyperDEX/change-log-hyperDEX
+   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.12
+   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.10
+   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.9
+   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.8
+   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.6
+   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.5
+   hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.2
+      
