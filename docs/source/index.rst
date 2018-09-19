@@ -45,6 +45,7 @@ Whitepaper
    home-komodo
    home-agama
    home-cc
+   cc/index-book-jl
    home-barterDEX
    home-hyperDEX
    Setup Bob/Marketmaker nodes using easy scripts by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>

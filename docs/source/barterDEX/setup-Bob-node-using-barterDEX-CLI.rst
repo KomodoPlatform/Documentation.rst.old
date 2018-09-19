@@ -36,7 +36,9 @@ This API will set your passphrase and let you use the userpass value in every sc
 
 For using native mode, coin daemons need to be installed and blockchains fully synced. Native is recommended for faster performance and reliability. Edit the `enable` script with the coin names you want to activate for trading.
 
-**[Note:** ``electrum`` **is not recommended to setup a Bob node. It will create connectivity issues and you may run into trouble while trying to match and process swaps.]**
+.. note:: 
+
+	``electrum`` is not recommended to setup a Bob node. It will create connectivity issues and you may run into trouble while trying to match and process swaps.
 
 **autoprice**
 
