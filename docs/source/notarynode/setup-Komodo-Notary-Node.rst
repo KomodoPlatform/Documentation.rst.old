@@ -7,7 +7,7 @@ Komodo Notary Nodes
 
 **Note:** This is still in *BETA* phase. This is to give you a good understanding on building a Komodo Notary Node. It is possible that some commands could be deprecated by the time you read it.
 
-If you have any problems, please join ``#notarynode`` on the `Komodo Discord <https://discord.gg/SCdf4eh>`_
+If you have any problems, please join ``#notarynode`` on the `Komodo Discord <https://komodoplatform.com/discord>`_
 
 Requirements
 ============

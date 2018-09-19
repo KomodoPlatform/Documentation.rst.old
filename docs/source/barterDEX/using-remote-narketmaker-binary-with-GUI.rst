@@ -35,4 +35,4 @@ If there is nothing happening on the GUI for a long time (but you see messages o
 
 If there is nothing happening on the GUI and you can't see any messages remotely, your tunnel might be bad. ``kill -9`` the ssh instance in question and retry as described above.
 
-You may find completely different error. Head over to ``#tradebots`` channel in Komodo Platform `Discord <https://discord.gg/SCdf4eh>`_ for help.
+You may find completely different error. Head over to ``#tradebots`` channel in Komodo Platform `Discord <https://komodoplatform.com/discord>`_ for help.
