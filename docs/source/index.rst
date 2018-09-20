@@ -6,26 +6,6 @@
 Welcome to Komodo Platform's documentation!
 ===========================================
 
-.. _developers:
-
-.. toctree::
-   :maxdepth: 1
-   :caption: API Docs for Developers
- 
-   barterDEX/index-coin-configs-install-instructions.rst
-   barterDEX/get-listed-barterDEX.rst
-   barterDEX/barterDEX-API.rst
-   komodo/komodo-API.rst
-   komodo/create-Komodo-Assetchain
-   komodo/assetchain-params
-   komodo/example-asset-chains
-   general/using-Key-Value
-   agama/add-Komodo-Assetchains-Agama-Desktop
-   agama/add-Bitcoin-Compatible-coin-Agama-Desktop
-   barterDEX/zeroconf-API-implementation-BarterDEX-GUI
-   barterDEX/MarketmakerErrors.rst
-   komodo/block-1M-changes.rst
-
 Whitepaper
 ----------
 
@@ -50,6 +30,26 @@ Whitepaper
    home-hyperDEX
    Setup Bob/Marketmaker nodes using easy scripts by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>
    barterDEX/list-of-all-coins-tradable
+
+.. _developers:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: API Docs for Developers
+ 
+   barterDEX/index-coin-configs-install-instructions.rst
+   barterDEX/get-listed-barterDEX.rst
+   barterDEX/barterDEX-API.rst
+   komodo/komodo-API.rst
+   komodo/create-Komodo-Assetchain
+   komodo/assetchain-params
+   komodo/example-asset-chains
+   general/using-Key-Value
+   agama/add-Komodo-Assetchains-Agama-Desktop
+   agama/add-Bitcoin-Compatible-coin-Agama-Desktop
+   barterDEX/zeroconf-API-implementation-BarterDEX-GUI
+   barterDEX/MarketmakerErrors.rst
+   komodo/block-1M-changes.rst
    
 .. _install-build:
 
