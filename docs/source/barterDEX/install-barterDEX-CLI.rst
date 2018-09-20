@@ -93,7 +93,7 @@ Getting the userpass value
 
 All these scripts are expecting a ``userpass`` file, which contains the definition of the ``$userpass`` variable (found inside scripts) to authenticate API access. This is to prevent malicious webpages from issuing port 7783 calls to steal your money. At first you may not know the value of ``userpass``. To find out, just run the ``client`` script first (as instructed below) and then run ``./setpassphrase``. You will notice your ``userpass`` value at the top of output and you can copy that value and put it into ``~/SuperNET/iguana/dexscripts/userpass`` file. If you don't, all subsequent API calls will get authorisation error.
 
-Open a new terminal and type the following:
+Open a new terminal and type the following (for macOS please use the ``client_osx`` script):
 
 .. code-block:: shell
 
@@ -138,8 +138,8 @@ You can run barterDEX and activate coins for trading without downloading any blo
 
 Native mode is faster and you need to use native wallet running with fully synced blockchain data and your barterDEX seed passphrase imported into the wallet. Edit the ``enable`` script with coin names and run ``./enable`` in terminal window to activate native coins for trading in barterDEX.
 
-Stopping ``killing marketmaker`` / Close the app
-------------------------------------------------
+Stopping ``kill marketmaker`` / Close the app
+---------------------------------------------
 
 If you want to close barterDEX, issue ``pkill -15 marketmaker`` every time. This ensures all BarterDEX process is killed safely.
 
