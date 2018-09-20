@@ -72,12 +72,22 @@ CHIPSln
 
 Source code: https://github.com/jl777/chipsln
 
+Coins
+=====
+
+* Source code: https://github.com/jl777/coins
+
 dICO App
 ========
 
 Needs an update after the final version is publicly available
 
 * Source code: https://github.com/ca333/atomicDEX
+
+Insight Explorer 
+================
+
+* All-in-one Insight explorer setup for Komodo and all assetchains: https://github.com/DeckerSU/komodo-explorers-install
 
 Komodo
 ======
@@ -90,9 +100,7 @@ Source code
 Latest Binary
 -------------
 
-* Linux: https://artifacts.supernet.org/latest/linux/
-* macOS: https://artifacts.supernet.org/latest/osx/
-* Windows: https://artifacts.supernet.org/latest/windows/
+* https://github.com/KomodoPlatform/komodo/releases
 
 Komodo-Qt (KomodoOcean)
 =======================

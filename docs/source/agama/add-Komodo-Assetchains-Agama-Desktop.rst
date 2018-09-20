@@ -7,11 +7,16 @@ The Agama desktop code comprises of two parts. Backend and UI. This assetchain a
 Backend
 =======
 
-* Add a default asset chain port `/routes/ports.js@dev <https://github.com/KomodoPlatform/Agama/blob/dev/routes/ports.js>`_
+* Add a default asset chain port `KomodoPlatform/Agama:routes/ports.js@dev <https://github.com/KomodoPlatform/Agama/blob/dev/routes/ports.js>`_
 * Add an electrum server for your asset (optional) `pbca26/agama-wallet-lib:src/electrum-servers.js@dev#L1 <https://github.com/pbca26/agama-wallet-lib/blob/dev/src/electrum-servers.js#L1>`_
 * Add an asset chain to the list of kmd assets `pbca26/agama-wallet-lib:src/coin-helpers.js@dev#L1 <https://github.com/pbca26/agama-wallet-lib/blob/dev/src/coin-helpers.js#L1>`_
-*  Add asset chain params to this file `/routes/chainParams.js@dev <https://github.com/KomodoPlatform/Agama/blob/dev/routes/chainParams.js>`_
+*  Add asset chain params to this file `KomodoPlatform/Agama:routes/chainParams.js@dev <https://github.com/KomodoPlatform/Agama/blob/dev/routes/chainParams.js>`_
 * Submit a `PR <https://github.com/KomodoPlatform/Agama>`_
+
+Asset chains with block rewards (optional)
+==========================================
+
+* Add ``genproclimit: true`` property to allow mining with multiple CPU threads. Default value is 0 (e.g. -gen -genproclimit=0) in case genproclimit option is not explicitly specified. `KomodoPlatform/Agama:routes/chainParams.js@dev <https://github.com/KomodoPlatform/Agama/blob/dev/routes/chainParams.js>`_
 
 UI:
 ===

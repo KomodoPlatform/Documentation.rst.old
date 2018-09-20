@@ -21,16 +21,23 @@ Here you will find more information about Komodo (KMD)
    komodo/Smartaddress-FAQ
    komodo/using-JUMBLR
 
+* Setup Insight Explorer for Komodo and Assetchains (all-in-one script): https://github.com/DeckerSU/komodo-explorers-install
+
 .. toctree::
    :maxdepth: 1
-   :caption: Notary Node
+   :caption: Notary Node Setup
 
    notarynode/setup-Komodo-Notary-Node
-   notarynode/updating-Komodo-Notary-Node
-   notarynode/update-Komodo-manually
-   notarynode/split-utxo-for-notarization
-   notarynode/monitor-your-Komodo-Notary-Node
    notarynode/assetchains-guide-Komodo-Notary-Node
+   notarynode/update-Komodo-manually
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Notary Node Maintenance
+
+   notarynode/split-utxo-for-notarization
+   notarynode/updating-Komodo-Notary-Node
+   notarynode/monitor-your-Komodo-Notary-Node
    notarynode/useful-commands-Komodo-Notary-Node
 
 Whitepaper
