@@ -23,7 +23,7 @@ Chapters
 ========
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :glob:
 
    book-jl/*
