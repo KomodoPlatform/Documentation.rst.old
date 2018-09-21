@@ -541,7 +541,7 @@ mine the KMD main chain at the dedicated "easy difficulty" level.
 
 Thus, an entrepreneur in our ecosystem can have their own independent blockchain
 that is backed up by the hash rate of the Bitcoin mining network, at only a fraction of
-the cost. In the following section, Part II, we begin our discussion of an entrepreneur’s
-formation and distribution of a Komodo asset chain. In Part III, we discuss in detail
-our method of distribution and trading, using our atomic-swap technology. Part IV
-discusses how with each of these components, users have the option of zero-knowledge privacy. In Part V, we mention our smart-contract technology (our current development focus).
+the cost. In the following section, `Part II <section-2.html>`_, we begin our discussion of an entrepreneur’s
+formation and distribution of a Komodo asset chain. In `Part III <section-3.html>`_, we discuss in detail
+our method of distribution and trading, using our atomic-swap technology. `Part IV <section-4.html>`_
+discusses how with each of these components, users have the option of zero-knowledge privacy. In `Part V <section-5.html>`_, we mention our smart-contract technology (our current development focus).
