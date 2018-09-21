@@ -521,4 +521,654 @@ explained below.
 Trading on Barterdex
 ====================
 
+From our point of view as developers, the most difficult aspect of creating BarterDEX was in matching the inventory of UTXOs between trading partners.
 
+To illustrate this complexity, let us briefly return to the example of Charlie and
+fiat currency. Let us suppose that Charlie has only a $50-dollar bill in his wallet and
+wants to spend $35 dollars at a videoarcade. He needs to trade $35 for the equivalent number of video-game tokens. However, he can only work with the bill that is in his
+wallet to trade for the tokens.
+
+In a typical arcade, this process is simple. There are just two currencies—his dollars
+and the video game tokens—and he will have a human cashier available to manage
+the trade. He gives the $50-dollar bill to the human cashier, and the cashier returns
+$15 dollars in dollar bills, and $35 dollars’ worth of video-game tokens.
+
+In creating BarterDEX, however, our goal is to decentralize all points of control.
+(The "cashier," in this sense, is a centralized authority who could be corrupted or
+could commit human error). That means that we cannot have a human cashier present
+in BarterDEX to trade Charlie’s three UTXOs into their appropriate sizes when he
+wants to swap for other currencies.
+
+A further challenge lies in the number of currencies. For BarterDEX there are not
+just two coins, but many coins, with myriad users, each having a variety of unique
+UTXO sizes in their wallets. In addition, the trading happens in real-time, through
+automation, on a decentralized peer-to-peer network, supporting a countless number
+of separate blockchain projects, while providing a speed and (eventually) liquidity
+comparable to that of a centralized exchange. All of this must be accomplished while
+maintaining a level of security and safety that only decentralization can provide.
+
+Finally, imagine if there were no cashier to break down Charlie’s $50-dollar bill.
+What if instead, he had to approach other arcade customers to barter for their tokens?
+This would create a difficult scenario for Charlie.
+
+In its current iteration (continuing the use of the $50-dollar metaphor as applied
+to UTXOs), we limit BarterDEX’s capability to only perform a trade for Charlie’s
+$50-dollar bill in exchange for the currency that another customer holds. BarterDEX
+does not provide a service whereby Charlie can break down his $50-dollar bill into a
+convenient set of $10-dollar and $5-dollar bills for trading. He must give up his full
+$50-dollar bill for whatever he wants in return.
+
+The process of breaking down UTXO inventory, therefore, is both in the hands of
+the user and in those of the developers creating the standalone GUI apps. We are
+working with our community to simplify this process. Naturally, it is complex and
+will take time. Therefore, we recommend that users who engage with BarterDEX have
+a basic understanding of their UTXO inventory and how they are bartering with other
+users before using it.
+
+How BarterDEX Deals with Order Offers and UTXOs
+-----------------------------------------------
+
+When a BarterDEX user offers a trade to the network, the BarterDEX protocol itself
+does not prioritize the total number of satoshis that the user offers. Instead, BarterDEX simply looks through the user’s inventory for the largest-sized UTXO that is
+below the amount the user offered.
+
+For example, let us suppose that Charlie has 100.01287001 KMD (Komodo coin) in
+his wallet. It is comprised of three UTXOs:
+
++--------------------------------+
+| Charlie’s Initial Wallet State |
++------------+-------------------+
+| UTXO #1:   | 90.00000000 KMD   |
++------------+-------------------+
+| UTXO #2:   | 00.01287001 KMD   |
++------------+-------------------+
+| UTXO #3:   | 10.00000000 KMD   |
++------------+-------------------+
+| Total      | 100.01287001 KMD  |
++------------+-------------------+
+
+Charlie wants to trade 50.00 KMD on the BarterDEX network. He puts out an order
+for an alternate cryptocurrency called DOGE (Doge Coin), and he wants to exchange
+in a 1:1 ratio.
+
+BarterDEX itself will not attempt to manage for Charlie’s misunderstanding of his
+UTXO inventory. (The developer of Charlie’s standalone software could try to help
+him, but that is a separate matter.) Rather, BarterDEX will simply look through his
+inventory for the largest UTXO that is below the total amount he offered. In this
+example, BarterDEX will select his UTXO #3, worth 10 KMD. BarterDEX will then
+calculate the necessary fee, which so happens to be exactly equal to the amount of
+UTXO #2: 0.01287001 KMD.
+
+BarterDEX can then take these two UTXOs and facilitate a trade for DOGE in a 1:1
+price ratio. Charlie’s final wallet appears as so:
+
++------------------------------+
+| Charlie’s Final Wallet State |
++-----------+------------------+
+| UTXO #1:  | 90.00000000 KMD  |
++-----------+------------------+
+| UTXO #3:  | 10.00000000 KMD  |
++-----------+------------------+
+| Total     | 90.00000000 KMD  |
+|           |                  |
+|           | 90.00000000 DOGE |
++-----------+------------------+
+
+It is up to Charlie, or to the creators of any standalone GUI wallet, to manage the
+UTXOs. BarterDEX only manages the matching of the UTXOs once they are created.
+
+Detailed Explanations of the Barterdex Process
+==============================================
+
+With an understanding of the specifics of what BarterDEX is actually trading, we
+can now approach an explanation of how the trading procedure occurs.
+
+Atomic Swaps on The Komodo BarterDEX
+------------------------------------
+
+To facilitate trading among users, BarterDEX implements a variation of the atomic-swap protocol, as described by Tier Nolan on BitcoinTalk.org. The original concept
+provided by Tier Nolan can be said to be "ahead of its time," as it is both complex
+and relies conceptually on technology that yet does not exist. Therefore, to create
+our variation of the atomic-swap protocol, we adapted for the current technology.
+A thorough study of Nolan’s original exposition can provide a solid background
+into the tradeoffs that we made as we selected our final version of our atomic-swap
+protocol.
+
+We emphasize to the reader that the key aspect that we maintained from the original concept is that at each step there are both incentives to proceed to the next step in
+the proper manner, and disincentives to avoid abandoning the procedure. With this
+structure in place, regardless of where the protocol stops, each party receives their
+proper reward. If a party attempts to deviate from the proper path, their funding
+is penalized to the point of eliminating any potential rewards a user could gain by
+acting maliciously. These incentives and disincentives create the foundation for the
+requisite trustless nature of our atomic-swap protocol.
+
+Introducing, Alice and Bob
+--------------------------
+
+To understand why the atomic-swap protocol is necessary, it is first important to
+recall that computer code is executed in linear fashion. Even if we were to assume
+that both parties in a trade may be honest, on a computer the process of taking
+money from each digital wallet and pulling the money into the open must happen
+one wallet at a time. Therefore, one person must send out their money first. The
+atomic- swap protocol protects that person from vulnerability. Without the atomic
+swap, any malicious party involved (whether it be a full-relay node, trading partner,
+or other external agent) would be able to destroy the fairness of the trade.
+
+There are two parties in an atomic swap: the liquidity provider and the liquidity
+receiver. Once the process of an atomic swap begins, the behavior of each party’s
+public trading profile is recorded and added to their reputation on the BarterDEX
+network.
+
+The process of an atomic swap begins with the person who makes the initial request—this is the liquidity receiver. By convention, we call this person, "Alice." Alice
+will need two UTXOs to perform her swap. One UTXO will cover the protocol fee,
+which is roughly 1/777th the size of her desired order. We call this fee the <dexfee>,
+and its primary purpose is to serve as a disincentive to Alice from spamming the
+network with rapid requests.
+
+The second UTXO required of Alice is the actual amount she intends to swap.
+BarterDEX first verifies that she has these funds, but for the moment she retains these funds in the safety of her own digital wallet.
+
+On the other side of the atomic swap, we have the liquidity provider—we call
+this person, "Bob." Bob sees the request on the network for Alice’s atomic swap and
+decides to accept the trade. Now his part of the process begins.
+
+To complete the trade, he must also have two UTXOs, but with one important
+difference: the first UTXO is equal to 112.5% of the amount that Alice requested; the
+second UTXO is exactly equal to the amount that Alice intends to swap. In other
+words, Bob must provide liquidity of 212.5% of the total amount of the currency that
+Alice requests.
+
+The first UTXO (112.5%) Bob now sends out as a security deposit, placed on the
+BarterDEX network. The network’s encryption holds the deposit safely in view, but
+untouchable. We call this UTXO, <bobdeposit>. It will remain there until his side of
+the bargain completes in full, or until Alice’s request for a swap times out. Assuming
+Bob keeps his promises and stays alert, these funds will be automatically returned to
+him at the appropriate moment.
+
+The second UTXO (100%) he retains within the safety of his own wallet for the mo-
+ment.Performing a successful connection between Bob and Alice, and verifying their
+requisite UTXOs, is the most complex and difficult aspect of creating the BarterDEX
+network. Myriad factors are involved in a successful attempt for Bob and Alice to
+connect: human motivation; the experience level of the users; economics; connection
+technology; user hardware setups; normal variations within Internet connections; etc.
+
+We emphasize to users here that the process of performing these actions over a
+peer-to-peer network has almost an artistic element to it. An attempt to successfully
+connect Bob and Alice can be thought of more like fishing, where we must simply cast
+and recast our line until we successfully connect with our target. If a user attempts
+a trade and no response returns from the network, the user should slightly adjust
+the parameters of their offer and try again. As BarterDEX continues to iterate and
+improve, and as the number of users increases, we expect any required effort to
+lessen for users, the network, and the BarterDEX GUI apps.
+
+Alice and Bob Make a Deal
+-------------------------
+
+Assuming Alice and Bob are successfully connected, the process from this point
+forward becomes quite simple:
+
+.. note::
+
+	In some cases, it is possible to perform an atomic swap with fewer steps, but for the sake of brevity we will focus only on this scenario.
+
+A summary of the procedure:
+
+1. Alice requests a swap and sends the <dexfee> to the BarterDEX full-relay nodes.
+	* The full-relay nodes receive her request and publish it to the network
+2. Bob sees the request on the network, accepts it, and sends out <bobdeposit>
+	* <bobdeposit> enters a state of limbo on the BarterDEX network, held safely by encryption, awaiting either Alice to proceed, or for the swap to time out 
+		* If the latter occurs, <bobdeposit> is automatically refunded to Bob via the BarterDEX protocol
+3. Alice now sends her <alicepayment> to Bob
+	* She does not send the payment to Bob directly, but rather into a temporary holding wallet on the BarterDEX exchange, which is encrypted and protected by his private keys
+		* Only Bob has access to this wallet, via the set of privkeys that only he owns
+		* However, the BarterDEX code does not yet allow Bob to unlock this temporary holding wallet; he must continue his end of the bargain first
+		* The <alicepayment> will remain in Bob’s temporary holding wallet for a limited amount of time, giving him the opportunity to proceed
+4. Bob now sends his <bobpayment> to Alice
+	* Again, this is not sent to Alice directly, but rather into yet another temporary holding wallet
+	* Likewise, only Alice has access to the necessary privkeys for this wallet
+	* The <bobpayment> will automatically be refunded if she does not complete her part of the process
+5. Alice now "spends" the <bobpayment>
+	* By the word "spends," we simply mean that she activates her privkeys and moves all the funds to another wallet—most likely to her smart address
+	* BarterDEX registers that Alice’s temporary holding wallet successfully "spent" the funds
+6. Bob "spends" the <alicepayment>
+	* Likewise, Bob simply moves the entirety of the <alicepayment> into a wallet of his own—again, it will most typically be his own smart address
+	* BarterDEX now knows that Bob also successfully received his money
+7. Seeing both temporary holding wallets now empty, the BarterDEX protocol recognizes that the atomic swap was a complete success.
+	* BarterDEX now refunds <bobdeposit> back to Bob and the process is complete.
+
+While it may seem inefficient to have seven transactions for a swap that could be done
+with two, the complexity of this process provides us with the requisite "trustless-ness"
+to maintain user safety.
+
+Incentives and Disincentives to Maintain Good Behavior
+------------------------------------------------------
+
+As we will now explain, at every step along the way there are incentives for each
+side to proceed, and there are various financial protections in place should one side
+fail. Also, because payments are sent to these "temporary holding wallets" that exist
+within the BarterDEX protocol, the protocol itself can assist in the process of moving
+money at the appropriate steps. Let us now examine what is happening at each step.
+
+1 - Alice Sends <dexfee>
+++++++++++++++++++++++++
+
+If Bob accepts the offer to trade, but does not send <bobdeposit>, Alice only stands
+to lose her <dexfee> UTXO. This is only 1/777th of the entire transaction amount, so
+she loses very little. Bob, on the other hand, stands to lose more. Since Bob did not
+follow through with his end of the bargain, the BarterDEX network indicates on his
+public BarterDEX trading profile that he failed in a commitment, thus decreasing his
+profile’s reputation. If Bob continues this behavior as a habit, he may find it difficult
+to discover trading partners.
+
+So long as the frequency of "Bobs" failing is low, the occasional extra <dexfee> paid
+by an Alice is a minor issue. However, if there is a sudden spike in misbehavior, the
+BarterDEX code has in-built contingency plans which can provide refunds to Alice(s),
+should a particular Alice node(s) experience a large loss via <dexfee>s.
+
+2 - Bob Successfully Sends <bobdeposit>
++++++++++++++++++++++++++++++++++++++++
+
+If Alice does not follow with her next step, the <alicepayment>, then Alice loses
+not only the <dexfee>, but she also receives a mark on her public BarterDEX profile.
+She gains nothing, and Bob has no reason to fear as <bobdeposit> will automatically
+return to him via the BarterDEX protocol.
+
+3 - Alice Successfully Sends <alicepayment>
++++++++++++++++++++++++++++++++++++++++++++
+
+If Bob does not proceed with his next step, the <bobpayment>, then after 4 hours
+Alice can simply activate a BarterDEX protocol that will allow her to claim <bobdeposit>. Recall that <bobdeposit> is 112.5% of the original intended trade; Bob has
+every incentive therefore to continue with his end of the bargain, and Alice has noth-
+ing to fear should Bob fail. She even stands to gain a 12.5% bonus, at Bob’s expense.
+
+4 - Bob Sends <bobpayment>
+++++++++++++++++++++++++++
+
+Now, if Alice does not follow by "spending" the <bobpayment> (i.e. taking the
+money out of the temporary holding wallet and into her own smart address), then
+after 2 hours Bob can activate a BarterDEX protocol that allows him to reclaim his
+<bobpayment> immediately. Furthermore, four hours later Bob may activate a refund
+of <bobdeposit>; Bob is safe from Alice, should she fail. For Alice, the BarterDEX protocol allows Alice to reclaim her <alicepayment> after Bob reclaims both of his
+payments.
+
+Everything herein is recorded to the respective users’ BarterDEX trading profiles,
+ensuring their reputations are on the line. Recall also that the BarterDEX protocol
+requires each step to be performed in the proper order, thus ensuring that neither
+party can take any funds before the users’ appropriate moment.
+
+Thus, at this integral stage of the process, every step of the path is intricately interconnected and maintains various levels of protection.
+
+5 - Alice Spends <bobpayment>
++++++++++++++++++++++++++++++
+
+At this point, Alice is entirely through with any risk to her reputation, her <dexfee>
+payment, or of the loss of her time.
+
+If Bob does not follow by also "spending" the <alicepayment>, it is of no concern
+to Alice because she has already received her funds. If Bob is simply sleeping and
+forgets to spend the <alicepayment>, he can only hurt himself.
+
+Naturally, for Bob this is slightly dangerous. Bob’s best course of action is to remain
+alert and spend the <alicepayment> once it is received.
+
+If after four hours, Bob is still sleeping, Alice can still activate the protocol that allows her to claim <bobdeposit>. In this scenario, she receives both the <bobpayment>
+and <bobdeposit>, at only the costs of the <alicepayment> and <dexfee>.
+
+Bob can still make a later claim for the <alicepayment> when he regains his awareness.
+
+6 - Bob Spends <alicepayment>
++++++++++++++++++++++++++++++
+
+Assuming all has gone according to plan, and having spent the <alicepayment>,
+Bob may now reclaim <bobdeposit>. Just as before, if Bob does not refund his own
+deposit, it is his loss; in four hours Alice will be able to activate a claim on <bobdeposit>.
+
+7 - Bob Reclaims <bobdeposit>
++++++++++++++++++++++++++++++
+
+The process is complete. Alice received the <bobpayment>: Bob received the <alicepayment>: Bob has <bobdeposit> back in his own possession. The entire process
+only cost Alice the original <dexfee>. At each step along the way, the side that needs
+to take the next step is motivated to do so, with greater and greater urgency until the
+process is complete.
+
+Additional BarterDEX Atomic Swap Details
+----------------------------------------
+
+The BarterDEX implements the above series of commands in a cross-platform man-
+ner, enabling users to atomic-swap trade with coins of many types, including both native coin daemon’s and those that run on SPV Electrum servers. A swap that is
+not completed immediately can carry on while the time has not expired within the
+BarterDEX protocol.
+
+Naturally, users must understand that outside forces can disable the process and
+thereby damage one of the users. For instance, an Internet outage for Bob could be
+particularly dangerous. Therefore, users are advised only to trade manageable sums
+that they are willing to put at risk, and only with nodes that have reliable reputations.
+
+This atomic-swap protocol, with all its cryptographic validations and intricate key
+exchanges, is less than half of the difficulty Komodo experienced in creating BarterDEX. Relatively speaking, it is "easy" to do an atomic swap in isolation between two
+test nodes, using UTXOs that are carefully prepared for the test.
+
+It is an entirely different matter to open this up to the public at large, including
+the enabling of our orderbooks and order-matching features. Due to the peer-to-peer
+nature of The BarterDEX, on a live network it is impossible to guarantee that a user
+that indicates they would like to begin a swap will receive a successful reply.
+
+For instance, a Bob may see a potential swap that he would like to make, but by
+the time his attempt to accept the swap crosses the expanse of the Internet, someone
+else could have already accepted the swap, thus leaving Bob in his original position.
+There are legion scenarios wherein the initial connection can fail. Once the connection
+is made, however, the rest of the process maintains reliability and user safety.
+
+Failed attempts at establishing a connection only result in the loss of a few seconds
+of the user’s time, and there is no cost associated with the failure. The <dexfee> paid
+by an Alice never occurs, and BarterDEX disregards Bob’s attempt to send <bobdeposit>.
+
+Therefore, while we cannot guarantee that BarterDEX will always form a valid
+connection for each attempt at a trade, we can offer comfort in knowing that the
+users’ losses in these scenarios are insubstantial.
+
+A More Detailed Explanation of the Atomic-Swap Connection Process
+=================================================================
+
+The following is a brief explanation of the complex process by which BarterDEX
+establishes a connection between Alice and Bob.
+
+For BarterDEX to accept a request to begin an atomic swap, the code first needs to
+register and create all the necessary backend elements for the <dexfee>, <AlicePayment>, <BobDeposit>, and <BobPayment>. All four must be specified before BarterDEX can indicate to Alice and Bob that it can successfully support this atomic swap.
+
+This is more complicated than it appears. As we explained earlier, most users do
+not understand the true nature of how funds operate in a cryptocurrency. Rather,
+most simply view their balance as a single conglomerate of coins that they can spend
+at the "satoshi level." This misperception is important to correct to understand how
+BarterDEX performs an atomic swap.
+
+Naturally, because users have varying sizes of UTXOs in their wallets, the true
+challenge in creating BarterDEX was to create a method of maintaining a network
+that would coordinate each user’s list of UTXOs in their wallets, and to allow them
+to match with other users in trading pairs. In addition, BarterDEX also automatically
+calculates the appropriate mining and transaction fees for the blockchains involved,
+according to a speed that maintains an optimized atomic-swap process.
+
+As we created the necessary code to make the atomic swap possible for the public,
+we found that it is not practical to have the user specify which UTXO pair they have
+sitting in their wallet when choosing to make a swap. This would also not be intuitive
+for the user. Furthermore, we did not even want to code a way for an Alice to know
+the UTXOs a Bob has available at the moment of negotiating a trade.
+
+Instead, here is how BarterDEX deals with the complexity of matching these unbroken and mismatching UTXOs to process an atomic swap. It is important to note that
+users are not required to have a sophisticated understanding of the backend UTXO
+process, and may simply trade using either a minimal understanding of UTXO inventories, or at least rely on the support of a cleverly coded standalone BarterDEX GUI
+app.
+
+Assuming Alice has already indicated she desires to perform an atomic swap, BarterDEX calculates out the proper divisions of her UTXOs, defines how they will be
+appropriated during the process, and sends an "Alice Request" to Bob with information regarding her pair of UTXOs (which are the <dexfee> and the <AlicePayment>).
+Also, BarterDEX verifies her desired price and volume.
+
+Bob, the human user (or an artificial-intelligence bot acting on his behalf), indicates
+that he is willing to accept the trade. The automation of the BarterDEX Bob-side
+protocol now takes over in the background. It validates the "Alice Request" to make
+sure the UTXO pair is valid, and then the Bob-side protocol scans through Bob’s
+UTXO inventory for the most efficient way to create both the <BobPayment> and
+<BobDeposit> UTXOs.
+
+The Bob-side protocol understands that the UTXOs will not perfectly match, and
+it will therefore calculate the most efficient method of making any "spare change"
+UTXOs as needed. An additional constraint the protocol needs to consider is that the
+result must match the price and volume Alice wants to pay. Finally, it accounts for the
+requirement that <bobdeposit> be at least 12.5"Alice Request." (Note that BarterDEX
+is directly involved with managing Bob’s UTXOs, but is not involved with managing
+Alice’s UTXO offers.)
+
+Once BarterDEX verifies all these conditions, the Bob-side protocol sends back a
+data packet, labeled "reserved," to the Alice-side protocol to indicate that all is in
+order. All of this is optimized andconducted in a manner that prevents the human
+Bob from having his funds frozen in an unnecessary deposit duty, should the human
+Alice find another "Bob" in the interim.
+
+Next, the Alice-side protocol validates the "reserved" packet from the Bob-side protocol, making sure all the UTXOs are valid, and the protocol verifies that the price
+and volumes are acceptable according to the original intent.
+
+Assuming everything successfully validates, the Alice-side protocol sends a "connect" packet back to the Bob-side protocol with the same parameters, indicating that
+her funds are now "reserved" as well.
+
+Between the "request" being sent and the "reserved" packet being received there is
+a 10-second timeout which prevents Alice from making further trade requests. This
+gives BarterDEX the time necessary to perform all the calculations.
+
+.. note::
+
+	This 10-second timeout also provides a contribution to what we call "whale resistance" during the Komodo dICO process. Whale resistance is a way Komodo and BarterDEX
+resist "whales" from purchasing an entire coin supply and thus forcing an artificial market scarcity.
+
+The Bob-side protocol now validates Alice’s "connect" packet and, assuming everything is in order, the protocol starts a new Bob-side thread of code, thus beginning
+the actual atomic swap. The Alice-side protocol also receives the "connect" packet,
+verifies, and then starts an Alice-side thread of code.
+
+There is one more "negotiation" step that is needed between the Alice-side and Bob-side protocols: in the event the two sides to the protocol do not achieve consensus,
+the entire atomic swap aborts without any payments sent from either party (i.e. "no
+harm, no foul").
+
+(*This final negotiation could have been included earlier, but due to the way the atomic swap
+organically developed during our creation process, it ended up inside the atomic-swap protocol
+itself.*)
+
+The Alice-side and Bob-side protocols have now properly performed their duties,
+and thus completed the most challenging aspect of the atomic-swap protocol. BarterDEX returns control to the humans (or bots acting on their behalf) to send their respective payments.
+
+The DEX Fee: <dexfee>
++++++++++++++++++++++
+
+People will notice that there is a small <dexfee> required as part of the BarterDEX
+protocol. This is 1/777 of the transaction amount and it is calibrated to make spam
+attacks impractical. By forcing a would-be attacker to spend real money, attacking the
+network becomes costly. Without this spam prevention, the BarterDEX could otherwise be attacked at the protocol level by any person performing a plethora of trade
+requests.
+
+The 1/777 fee ends up being equal to 0.1287% of the <alicepayment>; this is already
+far less than the fees paid on an average centralized exchange. Also, centralized exchanges charge both sides of the trade, so even if they charge you 0.2%, they are
+actually harvesting 0.4% in total fees between both parties.
+
+Furthermore, they often have fees and limitations for withdrawing funds, as well
+as a lengthy, challenging, or invasive registration processes. BarterDEX has none of
+these things. Users need only record the passphrase they create when first entering
+the BarterDEX software, and they are prepared to trade.
+
+It is possible that some atomic swaps can initiate, and then fail to complete, which
+raises questions about what happens to the <dexfee>. The <dexfee> is the first charge
+in the protocol; in this sense, there is a <dexfee> charged for these failed atomic swaps.
+
+However, this failure should not be looked upon in isolation. The BarterDEX pro-
+tocol is based on statistics. Statistically speaking, there will be some percentage of
+atomic swaps that start and will not complete. Let us suppose a 15% failure rate at
+this stage of the atomic swap (15% is three times higher than the rate of failure we
+currently observe in our testing). Even in this scenario, the effective <dexfee> cost is
+still only 0.15% to all Alice-side requests across the entire network.
+
+Therefore, if you experience the loss of a <dexfee> transaction for an atomic swap
+that fails to complete (which would be due to a failure to receive a response from Bob),
+know that this is all part of the statistical process. If you find yourself paying more
+than 0.15% of your completed trades in <dexfee>’s, please let us know. This would
+be a highly unusual statistical outlier, and we will therefore want to investigate.
+
+As an organization, when speaking generally to our audience online, we state that
+the <dexfee> is just 0.15%. In this manner, we hope to create the expectation that
+0.15% is normal; if the network performs perfectly, on the other hand, users will get
+a blessing in the form of a lower fee, 0.1287%.
+
+Dealing with Confirmations
+++++++++++++++++++++++++++
+
+Since BarterDEX is trading permanently on blockchains (as opposed to updating an internal database of vouchers, or managing a proxy-token account balance),
+both sides of the trading pair need to wait and watch as miners on the respective
+blockchains calculate transaction confirmations.
+
+Because the payments that occur on one blockchain will proceed regardless of the
+actions on the other blockchain (i.e. a confirmation failure on one chain will not stop
+with the other blockchain performing its duties as normal), it is therefore important
+that the BarterDEX protocol observe and adjust as necessary. Each side of the BarterDEX protocol (Bob-side and Alice-side) watches and attempts to provide a level of
+protection for the human users.
+
+BarterDEX achieves this protection by an array of <setconfirms> API calls, which
+gives each side the option to specify how many confirmations they expect before the
+automated process should be satisfied on behalf of the human users’ interests. The
+setting for the <setconfirms> feature must be decided before the atomic swap begins,
+as the number of confirmations the users choose will persist until the process completes. If the users have differing preferences for the total <numconfirms> they prefer,
+the BarterDEX protocol automatically sets the larger of the two preferences as the requirement for both parties. Furthermore, this feature also includes a <maxconfirms>
+value to prevent one side from specifying an unreasonable or malicious number of
+required confirmations.
+
+Zero Confirmations
+++++++++++++++++++
+
+BarterDEX also supports a high-speed trading mode. Using this feature, a user
+can activate an extremely fast mode of trading: <zeroconf>. This initiates a form of
+atomic-swap trading that does not wait for any confirmations at all. When using this
+feature, atomic swaps can be completed in as little as three seconds. This is a high-risk
+endeavor, naturally, and users should exercise extreme caution when implementing
+it.
+
+One potential application for the <zeroconf> feature is to allow groups of individuals to form their own organizations where they decide personal trust levels, and work
+together to correct any mistakes that are made in their accounting endeavors.
+
+BarterDEX also features a special Trust API that users can enable for themselves
+and groups that they form to indicate how much they trust different traders. By
+default, the Trust API is set to neutral for all users. A group of users can form their
+own organization and develop a trusted network for trading, using the Trust API to
+set each other’s trader profile to Trust = Positive. In such cases, if a user, or a group of
+users, tells the Trust API to set another trader profile to Trust = Negative, that trader’s
+<pubkey> is blacklisted for any of the participating individuals or groups.
+
+Speed Mode: An Experimental Feature Using Time-Locked Deposits
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Using the <zeroconf> protocol, we developed a new feature for the BarterDEX
+network that is functional, but still experimental. It is called "Speed Mode," and it
+adds one additional step to the Alice and Bob process.
+
+Alice places a one-time security deposit of an amount equal to or greater than
+the amount she would like to actively trade without waiting for confirmations. This
+security deposit is sent to a conditional p2sh wallet address (presently controlled by
+the Komodo team). Alice indicates within her security-deposit transaction the amount
+of time the deposit should remain in the wallet. The p2sh wallet will lock the funds
+from Alice’s end until the completion of the expiration date, though the wallet will
+allow the Komodo team to access the funds if necessary. This is called a "time-locked
+deposit." After her chosen date of expiration, she can reclaim her security at any time.
+Note that her KMD funds continue to be eligible for earning 5.1% rewards.
+
+This enables Alice to participate in our experimental Speed Mode feature, a fully
+automated protocol that tracks users’ trading activities and monitors their uncon-
+firmed swaps against their time-locked deposits. While using Speed Mode, Alice can
+trade funds of amounts smaller than her time-locked deposit. (The Bob that accepts
+her request must also be willing to engage in the Speed Mode feature.)
+
+Her trading partners dynamically decrease her trust level as she trades, monitoring
+the amount of her unconfirmed transactions against her total security deposit. Should she reach an unconfirmed trading capacity that is roughly equal to the amount in her
+deposit, the protocol blocks her from participating in the Speed Mode feature until
+her funds obtain more clearance through notarization on their respective networks.
+
+Should Alice attempt to cheat during any period of zero confirmations, the Komodo team can activate the p2sh wallet security deposit and deduct the amount of her offense, and a penalty fee, from her security deposit to compensate the affected
+parties. The remainder will be available for her to reclaim at the date of the original
+expiration, at the latest.
+
+With the security deposit in place, Alice can use the Speed Mode feature to complete a trade in as little as three to five seconds. Note that this feature is new, highly
+experimental, and we recommend users exercise extreme caution when participat-
+ing. If a user cannot activate Speed Mode, BarterDEX defaults to the normal, non-<zeroconf> atomic-swap trading method.
+
+Realtime Metrics
+++++++++++++++++
+
+Nodes on BarterDEX use Realtime metrics (RTmetrics) to filter the possible candidates for atomic-swap matching. All nodes track global stats via a <stats.log> file.
+This log file allows each node to self-update the list of pending swaps on the network.
+By nature, the BarterDEX protocol has filters that give less priority to nodes that are
+already occupied. Additionally, the Alice-side protocol gives less preference to Bob-side protocols that do not have enough UTXO sizes visible in the orderbook. This is
+a new feature, and we expect to optimize and enhance it in future iterations.
+
+Orderbook Propagation
++++++++++++++++++++++
+
+When considering how prices compare between two cryptocurrencies, BarterDEX
+uses the convention of "base/rel," which can be translated as "base currency to rele-
+vant currency." The price is calculated by determining (base currency)/(relevant currency). The relevant currency is the cryptocurrency Alice is using to make the initial
+purchase, and the base is the currency Alice intends to buy.
+
+To construct a public orderbook, a node needs to have price information. Since BarterDEX communicates primarily by means of pubkeys, the price for each currency
+must naturally be obtained from a pubkey. In the long run, for orderbook performance, we will need a specific <txid>/<vout> for each node, as each individual node
+could have hundreds of UTXOs. Currently, propagating all this information globally
+would use an excessive amount of bandwidth, so we therefore use a different solution.
+BarterDEX instead uses a hierarchical orderbook, where the skeleton of the orderbook
+is simply the (pubkey)/(price) for any (base)/(relevant) pair.
+
+.. note:: 
+
+	this means that purchasing a cryptocurrency at the (base)/(relevant) price is directly comparable to selling the cryptocurrency using (relevant)/(base) at a ratio of 1/(price).
+
+Using the (pubkey)/(price) pairing, all that is needed to populate the orderbook
+skeleton is for nodes to broadcast their pubkey and price for any (base)/(rel) pair.
+Nodes that are running a local coin daemon therefore broadcast their lists of UTXOs, which helps to propagate the orderbook. All of this is done in the background, on-demand.
+
+Critical information is broadcast with fully signed encryption to prevent spoofing.
+Thus, all nodes can verify the smart address associated with a pubkey. In this way,
+nodes can validate the price broadcasted. (The electrum SPV coins have their own
+specific SPV-validation process for all UTXOs before they can be approved for trading
+on BarterDEX.)
+
+While all nodes could broadcast their UTXO lists constantly to keep them updated,
+this would result in the network rapidly being overrun with congestion. To eliminate this issue, BarterDEX simply relies on the (pubkey)/(prices) as this is all that is
+necessary to maintain useful orderbooks.
+
+Since there are N*N possible orderbooks (given N currencies), it is not practical
+to have BarterDEX configured to update all possible orderbooks constantly. Instead,
+orderbooks are created on the user end when requested from the raw public data.
+During orderbook creation, if the top entries in the orderbook do not possess any
+listunspent data, a request is made to the network to gather this information.
+
+This process ensures that by the time a trade completes, there is already a request
+for an orderbook, which in turn requests the listunspent data for the most likely pubkeys. The actual order-matchingprocess then iterates through the orderbook, scanning all the locally known UTXOs to find a high- probability counterparty to whom
+BarterDEX can then propose a "request" offer. In practice, early users on BarterDEX
+can currently experience nearly instantaneous responses, assuming all the parameters
+are properly met.
+
+The BarterDEX API
+-----------------
+
+We created an API model that is the same for all coins—with the obvious exceptions
+of the electrum-API call itself, and within some of the returned JSON files that have
+different calls, such as "listunspent."
+
+Furthermore, the underlying technology of BarterDEX enables the API to treat
+all bitcoin-protocol compatible coins with a universal-coin model. Therefore, when
+working with the BarterDEX API, an independent developer working to feature their
+coin on BarterDEX need only use the API "coin" symbol to receive the full set of
+BarterDEX features.
+
+There are several feature requirements in the core code of the blockchain coin,
+and if these features are not included in the core there may be some limitations.
+For example, a coin that is not built on the Bitcoin-protocol Check Lock-Time Verify
+(CLTV) feature can still take advantage of the liquidity-taker side of the BarterDEX
+API. For a coin to work in native mode, it must also have a <gettxout> RPC call.
+
+If the coin has the CLTV OP_CODE, it can be both the liquidity provider and
+the liquidity taker. For coins using SPV, BarterDEX only supports the liquidity-taking
+side (for overall network-performance reasons). Also, we assume that any trader with ambitions of being a serious liquidity provider should also be serious enough to
+install the coin daemon for the coins they are trading, as this will increase their speed
+of processing.
+
+A Brief Discussion on the Future of BarterDEX
+---------------------------------------------
+
+This concludes a high-level summary of the BarterDEX protocol as created by the
+Komodo organization. It is now fully functioning and live, and with the support
+of our community, we have successfully completed roughly one-hundred thousand
+atomic swaps.
+
+We should warn our readers, nevertheless. Every element of the Komodo ecosystem
+is still considered to be highly experimental. We provide no investment advice, nor
+any guarantees of any funds utilized on our network. Use our products only at your
+own risk.
+
+Looking past our upcoming immediate dICOs, BarterDEX will continue to evolve.
+The current iteration has already identified several areas of improvement for the next
+iteration. Several different GUI systems are also under construction by various com-
+munity members, all of which are utilizing the BarterDEX 1.0 API. As we develop
+the BarterDEX API, we are making sure that future iterations are backwards compatible for developer ease-of-use. Improving the user experience and user interface of a
+leading GUI app is a top priority.
