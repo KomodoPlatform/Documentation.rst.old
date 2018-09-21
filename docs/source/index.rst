@@ -9,8 +9,8 @@ Welcome to Komodo Platform's documentation!
 Whitepaper
 ----------
 
-	* :download:`Whitepaper(pdf) </whitepaper/Komodo-Whitepaper-June-3.pdf>`
-	* html version: :doc:`home-whitepaper`
+	* :download:`Whitepaper (pdf) </whitepaper/Komodo-Whitepaper-June-3.pdf>`
+	* HTML version: :doc:`home-whitepaper`
 
 .. _quicklinks:
 
