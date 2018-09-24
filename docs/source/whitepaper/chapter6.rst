@@ -937,8 +937,7 @@ gives BarterDEX the time necessary to perform all the calculations.
 
 .. note::
 
-	This 10-second timeout also provides a contribution to what we call "whale resistance" during the Komodo dICO process. Whale resistance is a way Komodo and BarterDEX
-resist "whales" from purchasing an entire coin supply and thus forcing an artificial market scarcity.
+	This 10-second timeout also provides a contribution to what we call "whale resistance" during the Komodo dICO process. Whale resistance is a way Komodo and BarterDEX resist "whales" from purchasing an entire coin supply and thus forcing an artificial market scarcity.
 
 The Bob-side protocol now validates Alice’s "connect" packet and, assuming everything is in order, the protocol starts a new Bob-side thread of code, thus beginning
 the actual atomic swap. The Alice-side protocol also receives the "connect" packet,
@@ -1172,3 +1171,4 @@ iteration. Several different GUI systems are also under construction by various 
 munity members, all of which are utilizing the BarterDEX 1.0 API. As we develop
 the BarterDEX API, we are making sure that future iterations are backwards compatible for developer ease-of-use. Improving the user experience and user interface of a
 leading GUI app is a top priority.
+

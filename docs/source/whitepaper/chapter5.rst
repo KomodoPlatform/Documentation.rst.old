@@ -90,7 +90,7 @@ new rules.
 For example, the entrepreneur may decide not to use a PoW consensus mechanism,
 but may instead prefer PoS (discussed in `Part I <section-1.html>`_. Other changes can also be made, according to the entrepreneur’s imagination and developer knowledge. So long as
 the new code that the entrepreneur adds to the asset chain does not interfere with
-the overall framework, the asset chain will smoothly integrate with the rest of the Komodo ecosystem. We provide more details on this topic in Part V’s section regarding
+the overall framework, the asset chain will smoothly integrate with the rest of the Komodo ecosystem. We provide more details on this topic in `Part V <section-5.html>`_’s section regarding
 smart contracts.
 
 For the purposes of our discussion, this new asset chain is otherwise the same as
@@ -144,16 +144,11 @@ enter the following command on the second device.
 	./komodod -ac_name=[ENTREPRENUER'S COIN] -ac_supply=[TOTAL COIN SUPPLY] -addnode=[INSERT IP ADDRESS OF FIRST DEVICE]
 
 Note that the first three elements of the command, [./komodod], [-ac_name], and
-[-ac_supply], are the same. It is important that the parameters inserted into these
-commands match exactly. Otherwise, the instances of Komodod running on the separate devices will ignore each other, and the coin will not be mined.
+[-ac_supply], are the same. It is important that the parameters inserted into these commands match exactly. Otherwise, the instances of Komodod running on the separate devices will ignore each other, and the coin will not be mined.
 
 .. note::
 
-	In the second VPS, the [-gen] command is not present. In this circumstance, we are assuming
-that the entrepreneur wants to capture the entire coin supply on the first device. Technically
-speaking, assuming the entrepreneur has ownership over both devices, it does not matter if
-both devices initiate the [-gen] command. Both devices will attempt to mine the first block and
-the superior device will receive the coin supply.
+	In the second VPS, the [-gen] command is not present. In this circumstance, we are assuming that the entrepreneur wants to capture the entire coin supply on the first device. Technically speaking, assuming the entrepreneur has ownership over both devices, it does not matter if both devices initiate the [-gen] command. Both devices will attempt to mine the first block and the superior device will receive the coin supply.
 
 There is another key difference in the command.
 
@@ -297,7 +292,7 @@ to steal coins before the actual dICO, the entrepreneur would have the option to
 wealth.
 
 Furthermore, since the trades happen instantaneously with each bag available for
-sale, the entrepreneur is only in possession of either their own *ENTREPRENEUR’S
+sale, the entrepreneur is only in possession of either their own \*ENTREPRENEUR’S
 COIN+, or the cryptocurrency funds provided by the dICO participants—but not
 both. The entrepreneur is never at risk of losing both their own funds and the funds
 of their audience, which is a strong advantage over today’s ICO model.
