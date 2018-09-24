@@ -282,8 +282,7 @@ When Jumblr looks at the next action, it can perform one of three possible steps
 Option 2: Does nothing
 ++++++++++++++++++++++
 
-	* At each turn, instead of performing any of the above steps, Jumblr can simply
-abstain from any action. This happens approximately half of the time.
+	* At each turn, instead of performing any of the above steps, Jumblr can simply abstain from any action. This happens approximately half of the time.
 
 Through these actions, Jumblr adds a layer of obfuscation on top of the Zcash parameters and zk-SNARK technology by adding privacy to the timing and movements of each step for each user.
 

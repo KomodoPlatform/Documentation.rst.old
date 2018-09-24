@@ -85,4 +85,6 @@ FAQ
 ===
 
 	* How much does KV storage cost?
+
 	A. You pay a transaction fee depending on both the key **and** value size. But it depends on which chain you want to store the kv-entry. You can use a Komodo Asset Chain and pay the fee in the Asset Chain's tokens or you can use KV chain and use it there. But each assetchain has the KV capability. So you could even use your own chain for it (due to difference in costs).
+
