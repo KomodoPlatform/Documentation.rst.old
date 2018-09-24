@@ -91,11 +91,11 @@ v0.8.10
 =======
 
 	* Charts are now hidden, enable from settings
-    * UTXO splitter fix
-    * Faster trade details loading
-    * Hidden Age and UTXOs from orderbook listing, but shows in [i] info button
-    * Minimum amount for 0conf 10.01 KMD
-    * Any trading charts related API calls also are disabled when charts is hidden	
+	* UTXO splitter fix
+	* Faster trade details loading
+	* Hidden Age and UTXOs from orderbook listing, but shows in [i] info button
+	* Minimum amount for 0conf 10.01 KMD
+	* Any trading charts related API calls also are disabled when charts is hidden	
 
 v0.8.9
 ======
