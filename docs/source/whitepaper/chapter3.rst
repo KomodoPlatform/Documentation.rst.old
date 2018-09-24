@@ -114,7 +114,7 @@ The Notarization Process
 ========================
 
 Step One: Gathering the Appropriate Data
-++++++++++++++++++++++++++++++++++++++++
+----------------------------------------
 
 The process of notarization is simple. Roughly every ten to twenty-five minutes,
 the notary nodes perform a special block hash mined on the Komodo blockchain and
@@ -162,7 +162,7 @@ that underlies the Komodo ecosystem, all users will align with the "true" blockc
 history and ignore any malicious actors’ "false" attempts.
 
 Step Two: Notarizing the Data to a Secure Location
-++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------
 
 Naturally, for security purposes this number cannot simply be saved to one person’s local computer, or be written down on a piece of paper. Were the number to be
 in such a centralized location, a would-be attacker could simply destroy the backup,
@@ -201,7 +201,7 @@ ware can continue securing, decentralizing, and distributing the accurate versio
 the Komodo history as though the attack never occurred.
 
 Step Three: Notarizing the PoW Network Information Back to the KMD Main Chain
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------------------------------
 
 One final step remains to complete the loop of security between the KMD main
 chain and the chosen PoW network. The KMD blockchain must record within its own
@@ -237,7 +237,7 @@ nodes would place their next notarization in a competing PoW network (such as Bi
 in the failing PoW network would no longer be required to verify ecosystem accuracy.
 
 Understanding Security and Economic Incentives in the Komodo dPoW Network
--------------------------------------------------------------------------
+=========================================================================
 
 The nature of mining in the Komodo ecosystem serves as an incentive to motivate
 the notary nodes to perform their job well. This setup is also a principle method
@@ -257,7 +257,7 @@ wallet address. This 5.1% reward is given to users out of the funds that would n
 Bitcoin miner as a method of minting new Bitcoin coins.)
 
 "Easy Difficulty" in dPoW: The Key to Notary Nodes’ Financial Incentives
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------------------------
 
 The foundational similarity to understand is that with each block header, clues are
 provided for miners to find the next valid block hash. The specific clue, "difficulty,"
@@ -310,7 +310,7 @@ farms of specialized equipment for mining. The small CPU of a desktop is no long
 useful, and the time of "easy difficulty" on Bitcoin has passed.
 
 The dPoW System has Sixty-Four Elected Notary Nodes
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+---------------------------------------------------
 
 Here is where our dPoW consensus mechanism diverges from the Bitcoin proto-
 col’s limitations. In addition to performing the notarizations of the Komodo ecosystem, notary nodes are also a special type of blockchain miner. They have a certain
@@ -321,7 +321,7 @@ into the trap of directly competing with other PoW networks for hash-rate securi
 status.
 
 Each Notary Node Gets One Chance Per Every Sixty-Five Blocks to Mine on Easy
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+----------------------------------------------------------------------------
 
 Each individual node periodically receives the privilege to mine a block on "easy
 difficulty." In other words, while the rest of the miners in the Komodo ecosystem
@@ -352,7 +352,7 @@ the Komodo ecosystem, and to increase the relative value of this daily ~50 KMD
 reward.
 
 The Free-for-All Period
-+++++++++++++++++++++++
+-----------------------
 
 Every 2000 blocks, the Iguana Core code removes the easy-difficulty mining ability
 from all notary nodes for a sixty-four-block period. This gives the entire ecosystem the

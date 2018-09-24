@@ -956,7 +956,7 @@ The Alice-side and Bob-side protocols have now properly performed their duties,
 and thus completed the most challenging aspect of the atomic-swap protocol. BarterDEX returns control to the humans (or bots acting on their behalf) to send their respective payments.
 
 The DEX Fee: <dexfee>
-+++++++++++++++++++++
+---------------------
 
 People will notice that there is a small <dexfee> required as part of the BarterDEX
 protocol. This is 1/777 of the transaction amount and it is calibrated to make spam
@@ -996,7 +996,7 @@ the <dexfee> is just 0.15%. In this manner, we hope to create the expectation th
 a blessing in the form of a lower fee, 0.1287%.
 
 Dealing with Confirmations
-++++++++++++++++++++++++++
+--------------------------
 
 Since BarterDEX is trading permanently on blockchains (as opposed to updating an internal database of vouchers, or managing a proxy-token account balance),
 both sides of the trading pair need to wait and watch as miners on the respective
@@ -1018,7 +1018,7 @@ value to prevent one side from specifying an unreasonable or malicious number of
 required confirmations.
 
 Zero Confirmations
-++++++++++++++++++
+------------------
 
 BarterDEX also supports a high-speed trading mode. Using this feature, a user
 can activate an extremely fast mode of trading: <zeroconf>. This initiates a form of
@@ -1039,7 +1039,7 @@ users, tells the Trust API to set another trader profile to Trust = Negative, th
 <pubkey> is blacklisted for any of the participating individuals or groups.
 
 Speed Mode: An Experimental Feature Using Time-Locked Deposits
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------
 
 Using the <zeroconf> protocol, we developed a new feature for the BarterDEX
 network that is functional, but still experimental. It is called "Speed Mode," and it
@@ -1075,7 +1075,7 @@ experimental, and we recommend users exercise extreme caution when participat-
 ing. If a user cannot activate Speed Mode, BarterDEX defaults to the normal, non-<zeroconf> atomic-swap trading method.
 
 Realtime Metrics
-++++++++++++++++
+----------------
 
 Nodes on BarterDEX use Realtime metrics (RTmetrics) to filter the possible candidates for atomic-swap matching. All nodes track global stats via a <stats.log> file.
 This log file allows each node to self-update the list of pending swaps on the network.
@@ -1084,7 +1084,7 @@ already occupied. Additionally, the Alice-side protocol gives less preference to
 a new feature, and we expect to optimize and enhance it in future iterations.
 
 Orderbook Propagation
-+++++++++++++++++++++
+---------------------
 
 When considering how prices compare between two cryptocurrencies, BarterDEX
 uses the convention of "base/rel," which can be translated as "base currency to rele-
@@ -1129,7 +1129,7 @@ can currently experience nearly instantaneous responses, assuming all the parame
 are properly met.
 
 The BarterDEX API
------------------
+=================
 
 We created an API model that is the same for all coins—with the obvious exceptions
 of the electrum-API call itself, and within some of the returned JSON files that have
