@@ -4,7 +4,7 @@ Komodo Platorm - Whitepaper
 
 .. toctree::
    :maxdepth: 3
-   :caption: Table Of Contents (Work in Progress)
+   :caption: Table Of Contents
 
    whitepaper/introduction.rst
    whitepaper/section-1.rst
