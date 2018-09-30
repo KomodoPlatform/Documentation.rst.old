@@ -52,7 +52,7 @@ Note: Vout 1 of each coinbase transaction must be the correct amount sent to the
 -ac_pubkey
 ==========
 
-If ``-ac_pubkey`` is set, but ``-ac_perc`` is not, this simply means the genesis block will be mined to the set pubkey's address. This must be set to a 33 byte hex string. You can get the pubkey of an address by using the ``validateaddress`` command in ``komodod``. The address must be imported to the wallet before using ``validateaddress``.
+If ``-ac_pubkey`` is set, but ``-ac_perc`` is not, this simply means the genesis block will be mined to the set pubkey's address. This must be set to a 33 byte hex string. You can get the pubkey of an address by using the ``validateaddress`` command in ``komodo-cli``. The address must be imported to the wallet before using ``validateaddress``.
 
 -ac_cc
 ======
