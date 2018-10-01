@@ -521,23 +521,9 @@ other uses in their business models.
 
 The total yearly cost for the Komodo notary nodes to notarize the KMD main chain
 into the currently chosen PoW chain, Bitcoin, is approximately ~180 BTC/year (a
-value of ~$1.5M USD at the time of the writing of this paper). Funding for the notary nodes to perform this service was raised during the Komodo ICO, and current BTC
-holdings give us many years to come before we will be required to implement any
-business models to replenish our BTC funds.
+value of ~$1.5M USD at the time of the writing of this paper). Funding for the notary nodes to perform this service was raised during the Komodo ICO, and current BTC holdings give us many years to come before we will be required to implement any business models to replenish our BTC funds.
 
-On the other hand, the total cost for the asset chain developer to notarize their
-independent chain into the KMD main chain is but a fraction of the cost. We have
-not yet finalized the details, so please check with our team for the most recent information. In general, to notarize into the KMD main chain, the notary nodes require
-a payment of ~333 KMD for a little over one year’s worth of notarization. They also
-require ~333 of the entrepreneur’s coin, and any additional startup fees necessary to
-cover the required ecosystem services (including a block explorer website, developer
-integration into our multi-coin wallet, etc.).
-
-The payments for notarization services are not designed to generate a profit for the
-notary nodes. Rather, the payments merely cover operating costs for the notarization
-process. (Recall that each notarization is a transaction, and transactions must have a
-financial cost.) The notary nodes instead make their profits through their ability to
-mine the KMD main chain at the dedicated "easy difficulty" level.
+On the other hand, the total cost for the asset chain developer to notarize their independent chain into the KMD main chain is but a fraction of the cost. This security mechanism is not limited to asset chains created within the Komodo ecosystem. In fact, Komodo’s Blockchain Security Services are available to any existing blockchain. With Komodo, any blockchain can be protected with the power of the Bitcoin hashrate for a tiny percentage of the cost. We have not yet finalized the details, so please contact the Komodo Platform team at marketing@komodoplatform.com for more information. 
 
 Thus, an entrepreneur in our ecosystem can have their own independent blockchain
 that is backed up by the hash rate of the Bitcoin mining network, at only a fraction of
