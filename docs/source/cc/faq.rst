@@ -52,4 +52,4 @@ CC are a new type of vout using the bitcoin protocol utxo system. The CC contrac
 
 CC allows us to create colored utxo and a specific set of new rules that govern these colored utxos.
 
-**Didn't find your answer here? Please ask question in the `#crypto-conditions` channel in `Komodo Discord <https://komodoplatform.com/discord>`__**
+**Didn't find your answer here? Please ask your questions in the `#crypto-conditions` channel in** `Komodo Discord <https://komodoplatform.com/discord>`__
