@@ -49,7 +49,7 @@ addfunding (entropy)
 bet
 ---
 
-.. code-block:: shell
+::
 
 	vin.0: entropy txid from house (must validate vin0 of 'E')
 	vins.1+: normal inputs

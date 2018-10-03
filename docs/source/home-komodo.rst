@@ -43,8 +43,8 @@ Here you will find more information about Komodo (KMD)
 Whitepaper
 ----------
 
-   :download:`Whitepaper </whitepaper/Komodo-Whitepaper-June-3.pdf>`
-
+	* PDF version: https://komodoplatform.com/whitepaper/
+	* HTML version: :doc:`home-whitepaper`
 
 .. toctree::
    :maxdepth: 1

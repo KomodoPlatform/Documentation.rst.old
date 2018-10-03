@@ -2577,8 +2577,8 @@ Examples:
 
 	> komodo-cli getaccountaddress 
 	> komodo-cli getaccountaddress ""
-> komodo-cli getaccountaddress "myaccount"
-> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaccountaddress", "params": ["myaccount"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
+	> komodo-cli getaccountaddress "myaccount"
+	> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaccountaddress", "params": ["myaccount"] }' -H 'content-type: text/plain;' http://127.0.0.1:7771/
 
 getaddressesbyaccount "account"
 -------------------------------

@@ -95,7 +95,7 @@ register
 subscribe
 ---------
 
-.. code-block:: shell
+::
 
 	vins.*: normal inputs
 	vout.0: subscription fee to publishers CC address

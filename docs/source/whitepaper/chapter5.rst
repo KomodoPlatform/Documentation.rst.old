@@ -34,7 +34,7 @@ run in the background on a user’s computer. The name of this software is the "
 The First Command to Create a New Coin
 --------------------------------------
 
-.. code-block:: shell
+::
 
 	./komodod -ac_name=[ENTREPRENEUR'S COIN] -ac_supply=[TOTAL COIN SUPPLY] -gen
 
@@ -44,7 +44,7 @@ By default, the initial ``./komodod`` command executed alone would launch the
 Komodo main chain, KMD, on the user’s computer. However, the next part of the
 command tells Komodod to behave differently.
 
-.. code-block:: shell
+::
 
 	-ac_name=[ENTREPRENEUR'S COIN]
 
@@ -139,7 +139,7 @@ acquire the entire coin supply before distribution).
 Having established a secure connection with a second device, the entrepreneur will
 enter the following command on the second device.
 
-.. code-block:: shell
+::
 
 	./komodod -ac_name=[ENTREPRENUER'S COIN] -ac_supply=[TOTAL COIN SUPPLY] -addnode=[INSERT IP ADDRESS OF FIRST DEVICE]
 

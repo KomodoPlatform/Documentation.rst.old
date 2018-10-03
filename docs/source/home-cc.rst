@@ -9,3 +9,5 @@ Documentation for UTXO based smart-contracts using Komodo's Custom Consensus Fra
    cc/activate-cc-independent-chain
    cc/index-book-jl
    cc/faq
+   cc/test-use-write-integrate-cc
+   cc/contracts-index
