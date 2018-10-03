@@ -13,6 +13,7 @@ The most difficult issue about oracles is that they need to be trusted to variou
 At the oracles CC level, it is enough that there is financial incentive to provide good data. Also it is needed to allow multiple vendors for each data that is required and to enable efficient ways to update and query the data.
 
 The following are the rpc calls:
+================================
 
 .. code-block:: shell
 
@@ -64,6 +65,9 @@ For example, if the datapoint is comprised of a ``4byte`` timestamp and an ``8by
 A ``data publisher`` needs to register a ``datafee`` and their ``pubkey`` for a specific ``oracletxid``. ``datafee`` needs to be at least as big as a ``txfee``. Using ``oraclesregister`` the current ``datafee`` can be updated so a ``publisher`` can adapt to market conditions. Once registered, subscribers can prepay for some number of datapoints to a specific ``publisher`` using the ``oraclessubscribe`` rpc. At first, it is likely that the ``publisher`` would pay themselves to enable the posting of initial data points so the potential subscribers can evaluate the quality and consistency of the data.
 
 The one final rpc is ``oraclessamples``, which returns the most recent samples of data from a specific ``publisher``. In order to have a performant solution to track all the potential data streams from all the publishers for all the ``oracletxid``, a baton ``utxo`` is used. This is an output sent to a specific address and expected to have just a single ``utxo`` at any given time to allow for direct lookup. ``oraclessamples`` requires a starting ``txid`` to use and with each datapoint having the prior ``batontxid``, there is a reverse linked list to traverse the most recent data.
+
+VIN/VOUT allocation
+===================
 
 In order to implement this, the following vin/vout contraints are used:
 
