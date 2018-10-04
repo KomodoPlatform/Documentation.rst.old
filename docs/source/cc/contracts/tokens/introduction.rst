@@ -23,17 +23,17 @@ The tokentransfer rpc works like sendmany. The source ``txid/vout`` needs to be 
 Available RPC Calls
 -------------------
 
-	* tokenaddress [pubkey]  
-	* tokenask numtokens tokenid price  
-	* tokenbalance tokenid [pubkey]  
-	* tokenbid numtokens tokenid price  
-	* tokencancelask tokenid asktxid  
-	* tokencancelbid tokenid bidtxid  
-	* tokencreate name supply description  
-	* tokenfillask tokenid asktxid fillunits  
-	* tokenfillbid tokenid bidtxid fillamount  
-	* tokeninfo tokenid  
-	* tokenlist  
-	* tokenorders [tokenid]  
-	* tokentransfer tokenid destpubkey amount
+	* :doc:`tokenaddress [pubkey] <tokenaddress>` 
+	* :doc:`tokenask numtokens tokenid price <tokenask>`  
+	* :doc:`tokenbalance tokenid [pubkey] <tokenbalance>`  
+	* :doc:`tokenbid numtokens tokenid price <tokenbid>`  
+	* :doc:`tokencancelask tokenid asktxid <tokencancelask>`  
+	* :doc:`tokencancelbid tokenid bidtxid <tokencancelbid>`  
+	* :doc:`tokencreate name supply description <tokencreate>`  
+	* :doc:`tokenfillask tokenid asktxid fillunits <tokenfillask>`  
+	* :doc:`tokenfillbid tokenid bidtxid fillamount <tokenfillbid>`  
+	* :doc:`tokeninfo tokenid <tokeninfo>`  
+	* :doc:`tokenlist <tokenlist>`  
+	* :doc:`tokenorders [tokenid] <tokenorders>`  
+	* :doc:`tokentransfer tokenid destpubkey amount <tokentransfer>`
 
