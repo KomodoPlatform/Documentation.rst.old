@@ -4,10 +4,10 @@ Using the Contracts on a Komodo based Blockchain
 
 Currently there are four contracts that can be used on any blockchain created using Komodo. They are:
 
-	* `Tokens <rpc/tokens.html>`_
-	* `Faucet <rpc/faucet.html>`_
-	* `Rewards <rpc/rewards.html>`_
-	* `Dice <rpc/dice.html>`_
+	* :doc:`Tokens </cc/contracts/tokens/introduction>`
+	* :doc:`Faucet </cc/contracts/faucet/introduction>`
+	* :doc:`Rewards </cc/contracts/rewards/introduction>`
+	* :doc:`Dice </cc/contracts/dice/introduction>`
 
 To use the contracts on the blockchain, the start command of the chain should contain the parameter ``-ac-cc`` and it should be greater than `0`.
 
