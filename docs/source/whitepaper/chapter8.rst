@@ -115,6 +115,8 @@ a blockchain platform where people are free to use whatever is most useful for t
 in their entrepreneurial endeavors. Keeping KMD as an optional element empowers
 the members of the Komodo ecosystem with freedom.
 
+.. _chap8-conclusion:
+
 Conclusion
 ==========
 

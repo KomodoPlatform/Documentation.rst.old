@@ -2,7 +2,7 @@
 
 import os
 
-directory = os.fsencode('/home/gcharang/gitrepos/messingAround/fileName-heading')
+directory = os.fsencode('/home/gcharang/gitrepos/Documentation/utils/fileName-heading')
 
 for file in os.listdir(directory):
     filename = os.fsdecode(file)

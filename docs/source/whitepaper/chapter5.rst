@@ -1,3 +1,6 @@
+
+.. _chap5-komodo-solution:
+
 *******************
 The Komodo Solution
 *******************

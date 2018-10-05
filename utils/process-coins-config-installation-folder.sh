@@ -1,6 +1,6 @@
 #!/bin/bash
 for filename in ~/gitrepos/Documentation/coin-configs-install-instructions/*; do
-    filename=${filename//\/home\/gcharang\/gitrepos\/Documentation\/coin\-configs\-install\-instructions\/}
+    filename=${filename//\/home\/gcharang\/gitrepos\/Documentation\/utils\/coin\-configs\-install\-instructions\/}
     echo "$filename" >> output.rst
     if [ ${#filename} = 2 ]; then
       echo "==" >> output.rst
