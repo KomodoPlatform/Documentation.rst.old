@@ -7,19 +7,19 @@ Here are some steps to get a secured Komodo node. These are just some simple bab
 Step 1 - Install a minimal installation of Ubuntu
 =================================================
 
-* Always use a `minimal install <https://help.ubuntu.com/community/Installation/MinimalCD>`_ of Ubuntu! If you don't do this and you use a standard iso of Ubuntu it will setup all kinds of services which you do not need. It will open up ports on your server which could be vulnerable to future exploits. So, the first step for a secured server is a minimal installation.
+* Always use a `minimal install <https://help.ubuntu.com/community/Installation/MinimalCD>`__ of Ubuntu! If you don't do this and you use a standard iso of Ubuntu it will setup all kinds of services which you do not need. It will open up ports on your server which could be vulnerable to future exploits. So, the first step for a secured server is a minimal installation.
 
 When installing a minimal setup of Ubuntu, be sure you select the OpenSSH server at the end of the graphical installation. Otherwise you cannot connect to your server if you are not using a KVM node.
 
 Step 2 - Create your own private SSH keys
 =========================================
 
-* By selecting the OpenSSH server at the installation, you also created a vulnerable spot. Hackers love brute forcing the SSH service. If you use a strong password, you're mostly safe to go for a while. But even when it is strong, it could be hijacked at some point, so it is wise to disable password login. We do this by creating our own SSH key, so we can use that later as the key to the front door of your server. `Click here <https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2>`_ for a tutorial how to create your own SSH key.
+* By selecting the OpenSSH server at the installation, you also created a vulnerable spot. Hackers love brute forcing the SSH service. If you use a strong password, you're mostly safe to go for a while. But even when it is strong, it could be hijacked at some point, so it is wise to disable password login. We do this by creating our own SSH key, so we can use that later as the key to the front door of your server. `Click here <https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2>`__ for a tutorial how to create your own SSH key.
 
 Step 3 - Create another user for your server and disable root account
 =====================================================================
 
-* Root is the uberboss of your server. It can do everything without needing special permissions. So you might understand that this is also a vulnerability issue for your server. Although it is created by default, you should not use it. Only in special cases it is needed. Because root is the first name they try when they try to brute force your server, we need to disable it asap. But before we do that, we need to create a user which get the same root rights as root. Maybe you will ask yourself now "what's the difference?". Simple, the hacker needs to know the name of the new user before they can go on with their brute force attack. It is a tiny step to max security, but a very crucial one. `Click here <https://www.digitalocean.com/community/tutorials/how-to-add-delete-and-grant-sudo-privileges-to-users-on-a-debian-vps>`_ for a tutorial how to create a user with sudo rights on a Debian based system (don't worry, Ubuntu is a Debian based system ;))
+* Root is the uberboss of your server. It can do everything without needing special permissions. So you might understand that this is also a vulnerability issue for your server. Although it is created by default, you should not use it. Only in special cases it is needed. Because root is the first name they try when they try to brute force your server, we need to disable it asap. But before we do that, we need to create a user which get the same root rights as root. Maybe you will ask yourself now "what's the difference?". Simple, the hacker needs to know the name of the new user before they can go on with their brute force attack. It is a tiny step to max security, but a very crucial one. `Click here <https://www.digitalocean.com/community/tutorials/how-to-add-delete-and-grant-sudo-privileges-to-users-on-a-debian-vps>`__ for a tutorial how to create a user with sudo rights on a Debian based system (don't worry, Ubuntu is a Debian based system ;))
 
 Step 4 - Login as the new user and copy your SSH key
 ====================================================

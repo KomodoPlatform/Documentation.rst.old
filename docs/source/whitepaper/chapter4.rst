@@ -35,8 +35,7 @@ exchange to release the project to the world in a decentralized manner. Our dece
 technology (also explained in `Part III <section-3.html>`_), no third-party manipulators can prevent the
 entrepreneur from their crowdsourcing and innovative endeavors.
 
-Through our privacy technology, Jumblr, dICO participants can purchase the product within their inherent right to barter in private. A detailed explanation of Jumblr
-and its method of providing privacy is provided in `Part IV <section-4.html>`_of this paper.
+Through our privacy technology, Jumblr, dICO participants can purchase the product within their inherent right to barter in private. A detailed explanation of Jumblr and its method of providing privacy is provided in `Part IV <section-4.html>`_ of this paper.
 
 The Challenges in Current ICO Platforms
 =======================================

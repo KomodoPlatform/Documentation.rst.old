@@ -6,6 +6,8 @@ Adding a coin to the BarterDEX is as simple as writing one line of code if your 
 
 For ETH compatibles go to: :ref:`How to Add new ERC20 Tokens in BarterDEX`
 
+The exact steps to be followed for submitting a Pull Request on Github are described :doc:`here <add-coin-barterDEX>`
+
 Coin Spec
 =========
 

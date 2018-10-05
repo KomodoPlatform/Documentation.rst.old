@@ -89,7 +89,7 @@ General guidance on reporting issues on discord (Regarding CryptoConditions and 
 
 	* the specific chain parameters so anyone can connect to it
 	* the **EXACT** rpc call and parameters you used
-	* **the most important!** the raw tx generated
+	* **the most important!** : the raw tx generated
 	* clear description of why you think it is a bug. for now you need to look at the raw tx details to make sure all vins are valid, signed and all vouts are sane.
 	* Please don't post things like "I tried X and it didnt work" as that does not help at all at this stage. These are raw transaction level things and until everything works, things won't work at the higher level.
 

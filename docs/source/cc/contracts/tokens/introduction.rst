@@ -23,17 +23,17 @@ The tokentransfer rpc works like sendmany. The source ``txid/vout`` needs to be 
 Available RPC Calls
 -------------------
 
-	* :doc:`tokenaddress [pubkey] <tokenaddress>` 
-	* :doc:`tokenask numtokens tokenid price <tokenask>`  
-	* :doc:`tokenbalance tokenid [pubkey] <tokenbalance>`  
-	* :doc:`tokenbid numtokens tokenid price <tokenbid>`  
-	* :doc:`tokencancelask tokenid asktxid <tokencancelask>`  
-	* :doc:`tokencancelbid tokenid bidtxid <tokencancelbid>`  
-	* :doc:`tokencreate name supply description <tokencreate>`  
-	* :doc:`tokenfillask tokenid asktxid fillunits <tokenfillask>`  
-	* :doc:`tokenfillbid tokenid bidtxid fillamount <tokenfillbid>`  
-	* :doc:`tokeninfo tokenid <tokeninfo>`  
-	* :doc:`tokenlist <tokenlist>`  
-	* :doc:`tokenorders [tokenid] <tokenorders>`  
-	* :doc:`tokentransfer tokenid destpubkey amount <tokentransfer>`
+	* :doc:`tokenaddress [pubkey] <rpc/tokenaddress>` 
+	* :doc:`tokenask numtokens tokenid price <rpc/tokenask>`  
+	* :doc:`tokenbalance tokenid [pubkey] <rpc/tokenbalance>`  
+	* :doc:`tokenbid numtokens tokenid price <rpc/tokenbid>`  
+	* :doc:`tokencancelask tokenid asktxid <rpc/tokencancelask>`  
+	* :doc:`tokencancelbid tokenid bidtxid <rpc/tokencancelbid>`  
+	* :doc:`tokencreate name supply description <rpc/tokencreate>`  
+	* :doc:`tokenfillask tokenid asktxid fillunits <rpc/tokenfillask>`  
+	* :doc:`tokenfillbid tokenid bidtxid fillamount <rpc/tokenfillbid>`  
+	* :doc:`tokeninfo tokenid <rpc/tokeninfo>`  
+	* :doc:`tokenlist <rpc/tokenlist>`  
+	* :doc:`tokenorders [tokenid] <rpc/tokenorders>`  
+	* :doc:`tokentransfer tokenid destpubkey amount <rpc/tokentransfer>`
 

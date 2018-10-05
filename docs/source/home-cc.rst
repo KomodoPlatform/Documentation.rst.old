@@ -11,3 +11,4 @@ Documentation for UTXO based smart-contracts using Komodo's Custom Consensus Fra
    cc/faq
    cc/test-use-write-integrate-cc
    cc/contracts-index
+   cc/contracts-rpc-index
