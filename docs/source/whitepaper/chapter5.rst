@@ -34,7 +34,7 @@ run in the background on a user’s computer. The name of this software is the "
 The First Command to Create a New Coin
 --------------------------------------
 
-.. code-block:: shell
+::
 
 	./komodod -ac_name=[ENTREPRENEUR'S COIN] -ac_supply=[TOTAL COIN SUPPLY] -gen
 
@@ -44,7 +44,7 @@ By default, the initial ``./komodod`` command executed alone would launch the
 Komodo main chain, KMD, on the user’s computer. However, the next part of the
 command tells Komodod to behave differently.
 
-.. code-block:: shell
+::
 
 	-ac_name=[ENTREPRENEUR'S COIN]
 
@@ -62,16 +62,9 @@ This tells Komodod how many total coins there should be in this chain.
 
 This tells Komodod that the user desires to mine this network.
 
-The underlying code of Iguana Core can now make several decisions. First, it will
-check its connection to the Komodo ecosystem to see if there is a coin by the name
-of *ENTREPRENEUR’S COIN+, having a coin supply of [TOTAL COIN SUPPLY]. If
-the coin name and total supply are not found, Komodod will assume that the user
-is attempting to create a new coin, and the [-gen] command tells Komodod that the
-user wants to mine it.
+The underlying code of Iguana Core can now make several decisions. First, it will check its connection to the Komodo ecosystem to see if there is a coin by the name of \*ENTREPRENEUR’S COIN+, having a coin supply of [TOTAL COIN SUPPLY]. If the coin name and total supply are not found, Komodod will assume that the user is attempting to create a new coin, and the [-gen] command tells Komodod that the user wants to mine it.
 
-Komodod now begins the automated process of creating a new asset chain in the
-Komodo ecosystem. Komodod will first make a fresh and empty clone of the KMD
-main chain (though it will not yet generate the actual coins), with only a few differences to the underlying nature of the chain.
+Komodod now begins the automated process of creating a new asset chain in the Komodo ecosystem. Komodod will first make a fresh and empty clone of the KMD main chain (though it will not yet generate the actual coins), with only a few differences to the underlying nature of the chain.
 
 The Features of the New Asset Chain
 -----------------------------------
@@ -139,7 +132,7 @@ acquire the entire coin supply before distribution).
 Having established a secure connection with a second device, the entrepreneur will
 enter the following command on the second device.
 
-.. code-block:: shell
+::
 
 	./komodod -ac_name=[ENTREPRENUER'S COIN] -ac_supply=[TOTAL COIN SUPPLY] -addnode=[INSERT IP ADDRESS OF FIRST DEVICE]
 
@@ -169,16 +162,12 @@ running and set in place, the mining begins. One of the devices will mine the fi
 block and instantly receive the total coin supply of the entire blockchain into the
 user’s chosen wallet.
 
-Both devices sync this information to each other, and the *ENTREPRENEUR’S
-COIN+ now exists in the world. The entrepreneur can also add more and more de-
-vices to the network.
+Both devices sync this information to each other, and the \*ENTREPRENEUR’S COIN+ now exists in the world. The entrepreneur can also add more and more devices to the network.
 
 Notarizing to the Komodo Main Chain
 -----------------------------------
 
-To receive the security of the dPoW consensus mechanism, the entrepreneur simply
-needs to have the elected notary nodes add the *ENTREPENEUR’S COIN+ to their internal list of coins to notarize. This will empower the entrepreneur’s product with
-the same verifiable and decentralized security of the Komodo parent chain.
+To receive the security of the dPoW consensus mechanism, the entrepreneur simply needs to have the elected notary nodes add the \*ENTREPENEUR’S COIN+ to their internal list of coins to notarize. This will empower the entrepreneur’s product with the same verifiable and decentralized security of the Komodo parent chain.
 
 The process of adding a new notarization service can be executed by the notary
 nodes with just a simple command. While we are at this early stage of development,
@@ -285,20 +274,11 @@ unlike a normal node in the typical ICO model. Therefore, even if the whale were
 to place large orders on every node of a dICO, BarterDEX would still be performing
 orders simultaneously for other members of the Komodo ecosystem.
 
-Concerning theft, the dICO provides solutions to both methods of theft in the centralized ICO. Unlike the centralized ICO, once the distribution of the bags takes place
-the effect of their distribution adds a layer of security from a would-be hacker. The
-hacker can only steal funds at the node they manage to penetrate. Were the hacker
-to steal coins before the actual dICO, the entrepreneur would have the option to simply create a *NEW ENTREPRENEUR’S COIN+ again, without losing any personal
-wealth.
+Concerning theft, the dICO provides solutions to both methods of theft in the centralized ICO. Unlike the centralized ICO, once the distribution of the bags takes place the effect of their distribution adds a layer of security from a would-be hacker. The hacker can only steal funds at the node they manage to penetrate. Were the hacker to steal coins before the actual dICO, the entrepreneur would have the option to simply create a \*NEW ENTREPRENEUR’S COIN+ again, without losing any personal wealth.
 
-Furthermore, since the trades happen instantaneously with each bag available for
-sale, the entrepreneur is only in possession of either their own \*ENTREPRENEUR’S
-COIN+, or the cryptocurrency funds provided by the dICO participants—but not
-both. The entrepreneur is never at risk of losing both their own funds and the funds
-of their audience, which is a strong advantage over today’s ICO model.
+Furthermore, since the trades happen instantaneously with each bag available for sale, the entrepreneur is only in possession of either their own \*ENTREPRENEUR’S COIN+, or the cryptocurrency funds provided by the dICO participants—but not both. The entrepreneur is never at risk of losing both their own funds and the funds of their audience, which is a strong advantage over today’s ICO model.
 
-Regarding human error, should one of the node’s databases be corrupted by acci-
-dent or hardware failure, only one node’s coin supply is lost.
+Regarding human error, should one of the node’s databases be corrupted by accident or hardware failure, only one node’s coin supply is lost.
 
 Since the coins are immediately available on the BarterDEX exchange for trading,
 the entrepreneur’s audience has an immediate trading market. This stands in contrast

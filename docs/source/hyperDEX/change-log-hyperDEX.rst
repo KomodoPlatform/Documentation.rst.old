@@ -4,7 +4,7 @@ Change Log (HyperDEX)
 
 .. note::
 
-	Keep in mind that HyperDEX is currently in alpha release. Although the risk of loss of funds is minimal, it could take some troubleshooting/contact with our supportstaff to resolve issues. Only trade in real currency if you can take that risk. We recommend trading in the test currencies ``BEER`` and ``PIZZA`` instead. You can get ``BEER`` for free `here <https://www.atomicexplorer.com/#/faucet>`_.
+	Keep in mind that HyperDEX is currently in alpha release. Although the risk of loss of funds is minimal, it could take some troubleshooting/contact with our supportstaff to resolve issues. Only trade in real currency if you can take that risk. We recommend trading in the test currencies ``BEER`` and ``PIZZA`` instead. You can get ``BEER`` for free `here <https://www.atomicexplorer.com/#/faucet>`__.
 
 Remember to report issues through the ``Feedback`` button in the app.
 
@@ -210,7 +210,7 @@ Don't download this version if you have currencies enabled where the symbol cont
 	* The Buy/Sell buttons are now disabled while the order is placed to prevent accidental double-buy and to reduce chances of marketmaker problems.
 	* HyperDEX will present a confirmation dialog if you try to quit while you have in-progress swaps.
 	* Various user-interface improvements.
-	* All changes: `Github compare <https://github.com/lukechilds/hyperdex/compare/v0.1.0-alpha.2...v0.1.0-alpha.3>`_
+	* All changes: `Github compare <https://github.com/lukechilds/hyperdex/compare/v0.1.0-alpha.2...v0.1.0-alpha.3>`__
 
 0.1.0-alpha.2
 =============
@@ -224,5 +224,5 @@ Don't download this version if you have currencies enabled where the symbol cont
 	* Now shows the "View" button also in the "Open Orders" view.
 	* Added a ``Copy Swap Debug Data`` button to the swap modal dialog, so you can more easily share debug data with us.
 	* ``PIZZA`` and ``BEER`` no longer shows a price since they're just test currencies.
-	* All changes: `Github compare <https://github.com/lukechilds/hyperdex/compare/v0.1.0-alpha.1...v0.1.0-alpha.2>`_
+	* All changes: `Github compare <https://github.com/lukechilds/hyperdex/compare/v0.1.0-alpha.1...v0.1.0-alpha.2>`__
 

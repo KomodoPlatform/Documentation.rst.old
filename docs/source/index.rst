@@ -6,11 +6,12 @@
 Welcome to Komodo Platform's documentation!
 ===========================================
 
-Whitepaper
-----------
+.. toctree::
+   :maxdepth: 1
+   :caption: Whitepaper
 
-	* PDF version: https://komodoplatform.com/whitepaper/
-	* HTML version: :doc:`home-whitepaper`
+   PDF version <https://komodoplatform.com/whitepaper/>
+   home-whitepaper
 
 .. _quicklinks:
 
@@ -20,7 +21,6 @@ Whitepaper
    
    general/list-all-KomodoPlatform-Project-links
    whats-new
-   home-whitepaper
    general-documentation
    home-komodo
    home-agama
@@ -57,10 +57,10 @@ Whitepaper
    :maxdepth: 1
    :caption: Install and Build
 
-   /komodo/install-Komodo-manually
-   /barterDEX/install-barterDEX-CLI
-   /barterDEX/install-ETOMIC-barterDEX
-   /barterDEX/install-barterDEX-CLI-windows
+   komodo/install-Komodo-manually
+   barterDEX/install-barterDEX-CLI
+   barterDEX/install-ETOMIC-barterDEX
+   barterDEX/install-barterDEX-CLI-windows
    general/compile-marketmaker-binary-with-static-nanomsg-in-Linux
    general/compile-marketmaker-binary-with-static-nanomsg-in-MacOS
    
@@ -87,8 +87,7 @@ Whitepaper
    general/using-Key-Value
    barterDEX/0conf-deposit-claim
    barterDEX/using-remote-narketmaker-binary-with-GUI
-   Beginner friendly BarterDEX documantation by jorian (Work in Progress) <https://barterdex.readthedocs.io/en/latest/>
-
+   
 .. _notarynodes:
 
 .. toctree::

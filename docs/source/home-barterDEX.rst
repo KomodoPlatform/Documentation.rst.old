@@ -11,6 +11,7 @@ Here you will find more information about BarterDEX
    :caption: BarterDEX - Developer - Docs
 
    barterDEX/get-listed-barterDEX.rst
+   barterDEX/add-coin-barterDEX
    barterDEX/barterDEX-API
    barterDEX/zeroconf-API-implementation-BarterDEX-GUI
    barterDEX/setup-Bitcoin-Cash-BarterDEX
@@ -47,7 +48,6 @@ Here you will find more information about BarterDEX
    :maxdepth: 1
    :caption: Using BarterDEX CLI
    
-   Beginner friendly BarterDEX documantation by jorian (Work in Progress) <https://barterdex.readthedocs.io/en/latest/>
    barterDEX/enable-native-wallet-coins
    barterDEX/enable-electrum-wallet-coins
    barterDEX/electrum-servers-list

@@ -4,11 +4,11 @@ Chapter 06 - Faucet Example
 
 Finally, we are ready for the first actual example of a CC contract. The faucet. This is a very simple contract and it ran into some interesting bugs in the first incarnation.
 
-The code in `~/komodo/src/cc/faucet.cpp <https://github.com/jl777/komodo/tree/jl777/src/cc/faucet.cpp>`_ is the ultimate documentation for it with all the details, so I will just address the conceptual issues here.
+The code in `~/komodo/src/cc/faucet.cpp <https://github.com/jl777/komodo/tree/jl777/src/cc/faucet.cpp>`__ is the ultimate documentation for it with all the details, so I will just address the conceptual issues here.
 
 The idea is that people send funds to the faucet by locking it in faucet's global CC address and anybody is allowed to create a faucetget transaction that spends it.
 
-There are only 7 functions in `faucet.cpp <https://github.com/jl777/komodo/tree/jl777/src/cc/faucet.cpp>`_, a bit over 200 lines including comments. The first three are for validation, the last four for the rpc calls to use.
+There are only 7 functions in `faucet.cpp <https://github.com/jl777/komodo/tree/jl777/src/cc/faucet.cpp>`__, a bit over 200 lines including comments. The first three are for validation, the last four for the rpc calls to use.
 
 .. code-block:: shell
 

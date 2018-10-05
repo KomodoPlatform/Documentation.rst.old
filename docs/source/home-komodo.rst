@@ -20,8 +20,7 @@ Here you will find more information about Komodo (KMD)
    komodo/example-asset-chains.rst
    komodo/Smartaddress-FAQ
    komodo/using-JUMBLR
-
-* Setup Insight Explorer for Komodo and Assetchains (all-in-one script): https://github.com/DeckerSU/komodo-explorers-install
+   Setup Insight Explorer for Komodo and Assetchains (all-in-one script) <https://github.com/DeckerSU/komodo-explorers-install>
 
 .. toctree::
    :maxdepth: 1
@@ -40,11 +39,12 @@ Here you will find more information about Komodo (KMD)
    notarynode/monitor-your-Komodo-Notary-Node
    notarynode/useful-commands-Komodo-Notary-Node
 
-Whitepaper
-----------
+.. toctree::
+   :maxdepth: 1
+   :caption: Whitepaper
 
-   :download:`Whitepaper </whitepaper/Komodo-Whitepaper-June-3.pdf>`
-
+   PDF version <https://komodoplatform.com/whitepaper/>
+   home-whitepaper
 
 .. toctree::
    :maxdepth: 1
