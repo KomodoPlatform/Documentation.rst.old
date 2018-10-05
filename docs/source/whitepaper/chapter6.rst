@@ -10,6 +10,8 @@ protocol, and the final settlement is executed through an atomic cross-chain pro
 Like any exchange, our decentralized alternative requires liquidity, and we provide
 methods and incentives therein.
 
+.. _chap6-introduction:
+
 Introduction
 ============
 

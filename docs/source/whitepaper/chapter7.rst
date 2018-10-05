@@ -7,6 +7,8 @@ Jumblr is a Komodo technology that enables users to anonymize their cryptocurren
 zk-SNARK addresses—which disconnects the currency trail and anonymizes the
 funds—and then returns the funds to a new transparent address of the user’s choosing. Through a connected Komodo technology, BarterDEX, Jumblr can provide this service not only for Komodo’s native coin, KMD, but also for any cryptocurrency connected to the Komodo ecosystem.
 
+.. _chap7-introduction:
+
 Introduction
 ============
 
@@ -47,6 +49,8 @@ Some cryptocurrencies support mixing as a part of the normal transaction process
 out of a desire to provide constant anonymization. Varying methods for randomizing
 these transaction-mixing patterns exist among the many different brands of relevant
 cryptocurrencies. The most popular is Monero.
+
+.. _chap7-komodo-solution:
 
 The Komodo Solution
 ===================

@@ -9,6 +9,8 @@ Komodo Notary Nodes
 
 If you have any problems, please join ``#notarynode`` on the `Komodo Discord <https://komodoplatform.com/discord>`_
 
+.. _knn-requirements:
+
 Requirements
 ============
 
@@ -51,6 +53,8 @@ Example:
 
 ``0.0001 * aprox. 144 (btc blocks per day) = aprox. 0.0144``
 
+.. _knn-get-started:
+
 Get Started
 ===========
 
@@ -66,6 +70,8 @@ The following packages are needed:
 .. code-block:: shell
 
 	sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libqrencode-dev libdb++-dev ntp ntpdate nano software-properties-common curl libevent-dev libcurl4-gnutls-dev cmake clang 
+
+.. _knn-nanomsg:
 
 Install ``nanomsg``
 -------------------
@@ -152,6 +158,8 @@ Installing Komodo
 	./zcutil/build.sh -j$(nproc)
 
 This can take some time.
+
+.. _knn-create-kmdconf:
 
 When it is finished, let's create ``komodo.conf``
 -------------------------------------------------
