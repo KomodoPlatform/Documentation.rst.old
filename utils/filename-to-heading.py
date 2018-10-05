@@ -22,8 +22,8 @@ for file in os.listdir(directory):
 for file in os.listdir(directory):
     filename = os.fsdecode(file)
     path = str('fileName-heading/' + filename)
-    pathN = str('fileName-heading/' + filenameN)
-    filenameN = filename[:-3]
+    filenameN = str(filename[:-3])
     filenameN = filenameN + '.rst'
+    pathN = str('fileName-heading/' + filenameN)
     os.rename(path,pathN)
 

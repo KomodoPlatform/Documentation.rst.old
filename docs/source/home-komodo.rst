@@ -29,7 +29,8 @@ Here you will find more information about Komodo (KMD)
    notarynode/setup-Komodo-Notary-Node
    notarynode/assetchains-guide-Komodo-Notary-Node
    notarynode/update-Komodo-manually
-   
+   notarynode/generate-privkeys-third-party-coins-from-passphrase
+
 .. toctree::
    :maxdepth: 1
    :caption: Notary Node Maintenance
