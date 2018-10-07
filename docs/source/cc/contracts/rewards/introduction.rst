@@ -13,10 +13,10 @@ APR and minimum deposit are configurable per rewards plan (there can be many act
 Available RPC Calls
 ===================
 
-* :doc:`rewardsaddfunding name fundingtxid amount <>`
-* :doc:`rewardsaddress [pubkey] <>`
-* :doc:`rewardscreatefunding name amount APR mindays maxdays mindeposit <>`
-* :doc:`rewardsinfo fundingtxid <>`
-* :doc:`rewardslist <>`
-* :doc:`rewardslock name fundingtxid amount <>`
-* :doc:`rewardsunlock name fundingtxid [txid] <>`
+* :doc:`rewardsaddfunding name fundingtxid amount <rpc/rewardsaddfunding>`
+* :doc:`rewardsaddress [pubkey] <rpc/rewardsaddress>`
+* :doc:`rewardscreatefunding name amount APR mindays maxdays mindeposit <rpc/rewardscreatefunding>`
+* :doc:`rewardsinfo fundingtxid <rpc/rewardsinfo>`
+* :doc:`rewardslist <rpc/rewardslist>`
+* :doc:`rewardslock name fundingtxid amount <rpc/rewardslock>`
+* :doc:`rewardsunlock name fundingtxid [txid] <rpc/rewardsunlock>`

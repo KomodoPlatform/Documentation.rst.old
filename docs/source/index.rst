@@ -93,13 +93,9 @@ Welcome to Komodo Platform's documentation!
 .. toctree::
    :maxdepth: 1
    :caption: Notary Nodes
+   :glob:
 
-   notarynode/setup-Komodo-Notary-Node
-   notarynode/updating-Komodo-Notary-Node
-   notarynode/update-Komodo-manually
-   notarynode/split-utxo-for-notarization
-   notarynode/assetchains-guide-Komodo-Notary-Node
-   notarynode/useful-commands-Komodo-Notary-Node
+   notarynode/*
    
 .. _testing:
 
