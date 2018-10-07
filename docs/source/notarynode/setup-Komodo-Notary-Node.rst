@@ -477,7 +477,7 @@ Install GameCredits:
 
 	cd ~
 	sudo apt-get update && sudo apt-get install software-properties-common autoconf git build-essential libtool libprotobuf-c-dev libgmp-dev libsqlite3-dev python python3 zip jq libevent-dev pkg-config libssl-dev libcurl4-gnutls-dev cmake -y
-	git clone https://github.com/jl777/GameCredits
+	git clone https://github.com/gamecredits-project/GameCredits
 	cd GameCredits/
 	git checkout master
 
