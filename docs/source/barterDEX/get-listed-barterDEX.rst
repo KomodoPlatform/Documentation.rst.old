@@ -58,7 +58,7 @@ Other info to take note of
 
 4. The coin devs will have to send us an amount of the proposed coin to test the swaps with.
 
-5. Please use the info from coins-db-repo for the newest electrums, explorers and so on
+5. Please use the info from the above repo for the newest electrums, explorers and so on
 
 6. Electrum servers are in the electrums-directory. Every coin has its own file there: https://github.com/jl777/coins/tree/master/electrums
 
