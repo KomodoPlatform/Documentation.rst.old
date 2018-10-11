@@ -77,8 +77,8 @@ Coins
 
 * Source code: https://github.com/jl777/coins
 
-CrytoConditions
-===============
+CryptoConditions
+================
 
 * Source code: https://github.com/jl777/komodo/tree/dev/src/cc
 * Mastering CryptoConditions: https://github.com/KomodoPlatform/Mastering_CryptoConditions
