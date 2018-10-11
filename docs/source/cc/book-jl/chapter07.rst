@@ -54,6 +54,7 @@ lock
 	vout.n-1: opreturn 'L' sbits fundingtxid
 
 unlock
+------
 
 .. code-block:: shell
 

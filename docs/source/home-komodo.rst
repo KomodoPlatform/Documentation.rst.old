@@ -35,6 +35,7 @@ Here you will find more information about Komodo (KMD)
    :maxdepth: 1
    :caption: Notary Node Maintenance
 
+   Notary Node Statistics <https://komodostats.com>
    notarynode/split-utxo-for-notarization
    notarynode/updating-Komodo-Notary-Node
    notarynode/monitor-your-Komodo-Notary-Node

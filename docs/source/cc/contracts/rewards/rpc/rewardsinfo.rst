@@ -28,7 +28,7 @@ Example Command:
 
 .. code-block:: shell
 
-    ./komodo-cli -ac_name=ATEST rewardsinfo c0c5165902fd21728aed707888db082a72a013def8902c21626c1e5214f00fae
+    ./komodo-cli -ac_name=CCNG rewardsinfo e020151cd81647b20aa45a0e6850216ae52d3e895443bbe1ae97dea3ae6767bd
 
 Output:
 -------
@@ -36,14 +36,15 @@ Output:
 .. code-block:: json
 
     {
-      "result": "success",
-      "fundingtxid": "c0c5165902fd21728aed707888db082a72a013def8902c21626c1e5214f00fae",
-      "name": "FREE",
-      "sbits": 1162170950,
-      "APR": "5.00000000",
-      "minseconds": 86400,
-      "maxseconds": 864000,
-      "mindeposit": "10.00000000",
-      "funding": "1000.00000000"
+        "result": "success",
+        "fundingtxid": "e020151cd81647b20aa45a0e6850216ae52d3e895443bbe1ae97dea3ae6767bd",
+        "name": "FREE",
+        "sbits": 1162170950,
+        "APR": "5.00000000",
+        "minseconds": 86400,
+        "maxseconds": 864000,
+        "mindeposit": "10.00000000",
+        "funding": "1100.00000000",
+        "locked": "200.00000000"
     }
 

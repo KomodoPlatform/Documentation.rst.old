@@ -77,6 +77,12 @@ Coins
 
 * Source code: https://github.com/jl777/coins
 
+CryptoConditions
+================
+
+* Source code: https://github.com/jl777/komodo/tree/dev/src/cc
+* Mastering CryptoConditions: https://github.com/KomodoPlatform/Mastering_CryptoConditions
+
 dICO App
 ========
 
@@ -121,6 +127,22 @@ Marketmaker-cli
 
 * Source code: https://github.com/KomodoPlatform/marketmaker-cli
 * Release binary: https://github.com/eliezio/marketmaker-cli/releases
+
+Marketmaker 2.0
+===============
+
+* Source code: https://github.com/artemii235/SuperNET
+* MM2 Doc: https://github.com/artemii235/SuperNET/blob/master/iguana/exchanges/mm2.md
+
+Scaling Test
+============
+
+* Source code: https://github.com/blackjok3rtt/ScaleTestV2
+* Scaletest Containers: https://github.com/patchkez/scaletest_containers
+* Transaction Visualization: https://github.com/smk762/txscl_vis
+* Tx Blaster: https://github.com/Meshbits/TxBlaster
+* Speedtest: https://github.com/dwygit/komodotools/tree/master/dwy/speedtest
+* Signup Pad: http://pad.supernet.org/Stress_Test_Signups
 
 SuperNET, Iguana ``source code``
 ================================

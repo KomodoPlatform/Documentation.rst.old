@@ -12,12 +12,12 @@ Example Command:
 
 .. code-block:: shell
 
-    ./komodo-cli -ac_name=ATEST rewardslist
+    ./komodo-cli -ac_name=CCNG rewardslist
 
 Output:
 
 ::
 
     [
-      "6a9f3a0a7a570bce1022a13f5f9b613d1431fa11dba9a09e10fe54b6998ff8d5"
+      "e020151cd81647b20aa45a0e6850216ae52d3e895443bbe1ae97dea3ae6767bd"
     ]
