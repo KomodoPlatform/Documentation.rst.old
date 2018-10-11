@@ -8,12 +8,12 @@ APR, minimum deposit, required holding period are all configurable in each ``rew
 
 The flow of a Rewards plan is as follows:
 
-    * Anyone can create a new plan using the ``rewardscreatefunding`` RPC
-    * Anyone can add funding to the plan using the ``rewardsaddfunding`` RPC
-    * Anyone can query the list of all active plans using the ``rewardslist`` RPC
-    * Then get the details of a particular plan by using the ``rewardsinfo`` RPC
-    * After finding a plan that suits, any user can lock funds using the ``rewardslock`` RPC
-    * After the minimum lock time is met, the user can use the ``rewardsunlock`` RPC to unlock the funds and get the additional rewards too.
+    * Anyone can create a new plan using ``rewardscreatefunding`` 
+    * Anyone can add funding to the plan using ``rewardsaddfunding`` 
+    * Anyone can query the list of all active plans using ``rewardslist`` 
+    * Then get the details of a particular plan by using ``rewardsinfo`` 
+    * After finding a plan that suits, any user can lock funds using ``rewardslock`` 
+    * After the minimum lock time is met, the user can use ``rewardsunlock`` to unlock the funds and get the additional rewards too.
 
 .. note::
 
