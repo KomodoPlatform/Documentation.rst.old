@@ -1,6 +1,6 @@
-**********
-Faucet RPC
-**********
+******
+Faucet
+******
 
 This is a Faucet contract. Enables anyone to setup and operate an onchain-faucet. For each faucet, there is an address to which anyone can send their funds and the address will be serving anyone who requests it as long as their address satisfies some constraints.
 
