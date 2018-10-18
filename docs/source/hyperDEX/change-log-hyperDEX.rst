@@ -11,6 +11,31 @@ Remember to report issues through the ``Feedback`` button in the app.
 .. contents:: Links
    :depth: 3
 
+0.1.4
+=====
+
+    * Fix ``Document update conflict`` error. (`#531 <https://github.com/atomiclabs/hyperdex/pull/531>`__) `a4a5914 <https://github.com/atomiclabs/hyperdex/commit/a4a59144a540d8af224bff8eaf7c9a2208b5d305>`_
+    * Silence ``new Buffer()`` deprecation warnings on macOS and Window (`but not on Linux <https://github.com/atomiclabs/hyperdex/issues/535#issuecomment-425848117>`__). `5036501 <https://github.com/atomiclabs/hyperdex/commit/50365013fe0e94b5f8c58e447a062cca499857a0>`_
+    * Fix Gemini dollar (GUSD) fiat price. (`#538 <https://github.com/atomiclabs/hyperdex/pull/538>`__) `406c639 <https://github.com/atomiclabs/hyperdex/commit/406c639c759702f5c7a2dbd0fcec4f67e01eb97a>`_
+    * Persist the window size and position. (`#534 <https://github.com/atomiclabs/hyperdex/pull/534>`__) `420a443 <https://github.com/atomiclabs/hyperdex/commit/420a443369623ee9eb6e4d4d77609b0faf7430ba>`_
+    * Rename ``EQL`` to ``EQLI`` in the list of default currencies. `5750560 <https://github.com/atomiclabs/hyperdex/commit/575056075278db372a724cde549743e0ba000bb2>`_
+    * Warn about withdrawing the whole balance. (`#533 <https://github.com/atomiclabs/hyperdex/pull/533>`__) `20b2834 <https://github.com/atomiclabs/hyperdex/commit/20b283403d8e122ff7ab1b9010658ab83d17ea4b>`_
+
+0.1.3
+=====
+
+    * Fix missing EQLI icon. `ecb82c8 <https://github.com/atomiclabs/hyperdex/commit/ecb82c82debf937fa6f219060988dee59d5be4c8>`_
+
+0.1.2
+=====
+
+    * Update to BarterDEX Marketmaker v1.0.707 to fix slow login time. `16ed5d9 <https://github.com/atomiclabs/hyperdex/commit/16ed5d9fd361527107a466af9f52adc8f1042f34>`_
+
+0.1.1
+=====
+
+    * Fixes login issue on Windows. `0af57df <https://github.com/atomiclabs/hyperdex/commit/0af57df815bc727646d463fadd9ed9a630d9d215>`_
+
 0.1.0
 =====
 
