@@ -393,7 +393,7 @@ Where:
 
     Please keep in mind that oraclefeed dapp must be running for gatewayswithdraw to work.
 
-   After the ``tokenconvert`` transaction is mined, you can call the ``gatewayswithdraw`` RPC from the node that owns the ``pubkey`` used in ``tokenconvert``.
+After the ``tokenconvert`` transaction is mined, you can call the ``gatewayswithdraw`` RPC from the node that owns the ``pubkey`` used in ``tokenconvert``.
 
 .. code-block:: shell
 
@@ -414,4 +414,4 @@ Examples:
 
     ./komodo-cli -ac_name=ORCL1 gatewayswithdraw 1023f2c31f8d5e06854cd8c3ef103679b8d2af2c4ba14ea16646dd2a10332c55 KMD 030cb918b90dc084cdb08fcda4297d0db9c86422987df0cafa47ffef57eb6ef647 0.000001
  
- That's it, if you've followed these steps you might be more familiar with gatewaysCC now and tokenized some KMD.
+That's it, if you've followed these steps you might be more familiar with gatewaysCC now and tokenized some KMD.
