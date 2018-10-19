@@ -9,6 +9,8 @@ Currently there are four contracts that can be used on any blockchain created us
 	* :doc:`Rewards </cc/contracts/rewards/introduction>`
 	* :doc:`Dice </cc/contracts/dice/introduction>`
 
+A high level overview of the Komodo Custom Consensus Framework: :ref:`How to write UTXO based CryptoConditions contracts for KMD chains - by jl777`  
+
 To use the contracts on the blockchain, the start command of the chain should contain the parameter ``-ac-cc`` and it should be greater than `0`.
 
 A brief overview of the ``-ac-cc`` parameter:
