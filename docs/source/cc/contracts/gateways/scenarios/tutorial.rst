@@ -395,6 +395,22 @@ Where:
 
 After the ``tokenconvert`` transaction is mined, you can call the ``gatewayswithdraw`` RPC from the node that owns the ``pubkey`` used in ``tokenconvert``.
 
+.. note::
+
+    Before executing ``gatewayswithdraw``, import the private key for Gateways-deposit address from the asset chain on which you are operating the Gateway to the KMD chain which is on the same node which is running the ``oraclefeed`` dapp.
+
+    This is to make the gateway node able to honour the KMD withdrawal transactions by using the funds deposited to the gateway wallet balance.
+    
+    Commands to execute on the assetchain that is running the Gateway:
+
+    * Get <Gateway deposit address> from "deposit" field of the output from: ``./komodo-cli -ac_name=ORCL gatewaysinfo <bindtxid>``
+    * To get the private key: ``./komodo-cli -ac_name=ORCL dumprivkey <Gateway deposit address>``
+
+    Execute this command on the node running the ``oraclefeed`` dapp
+
+    * ``./komodo-cli importprivkey <private key>``
+
+
 .. code-block:: shell
 
     ./komodo-cli -ac_name=ORCL1 gatewayswithdraw bindtxid coin withdrawpub amount
