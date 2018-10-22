@@ -2,7 +2,7 @@
 A Note to Exchanges
 *******************
 
-There is a small chance that an outbound transaction will give an error due to mismatched values in wallet calculations. There is a parameter called ``-exchange`` that you can run the Komodo daemon (``komodod``) with, that solves this proble. 
+There is a small chance that an outbound transaction will give an error due to mismatched values in wallet calculations. There is a parameter called ``-exchange`` that you can run the Komodo daemon (``komodod``) with, that solves this problem. 
 
 .. warning:: 
 
