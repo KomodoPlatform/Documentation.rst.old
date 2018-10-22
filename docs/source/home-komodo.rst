@@ -21,6 +21,7 @@ Here you will find more information about Komodo (KMD)
    komodo/Smartaddress-FAQ
    komodo/using-JUMBLR
    Setup Insight Explorer for Komodo and Assetchains (all-in-one script) <https://github.com/DeckerSU/komodo-explorers-install>
+   komodo/note-exchanges
 
 .. toctree::
    :maxdepth: 1
