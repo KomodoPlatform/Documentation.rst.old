@@ -10,7 +10,7 @@ A new feature has been added to the Komodo daemon (``komodod``) that changes the
 The new behavour is as follows:
 
     * 0 confirmations mean, tx is not confirmed yet
-    * 1 confirmation means this tx is confirmed on the network, but not dPoW'd yet (Explorers may show different confirmation values and wouldn't match till the next notarization happens. ```rawconfirmations``` value will match, which is only visible if you are quering via CLI.)
+    * 1 confirmation means this tx is confirmed on the network, but not dPoW'd yet (Explorers may show different confirmation values and wouldn't match till the next notarization happens. ``rawconfirmations`` value will match, which is only visible if you are quering via CLI.)
     * any other confirmation number means the tx is secure with dPoW
 
 This feature is helpful for exchanges mainly and for users who prefer security. This will work automatically for Native mode for KMD or any other assetchain. SPV mode doesn't have this feature implemented and will not show dPoW Conf data. Upon seeing a confirmation number more than 1, exchanges can simply credit the deposit to a user being sure that the tx is secure and can't be double-spent.
@@ -21,25 +21,25 @@ A practical example of how number of confirmations are displayed after this upda
 Stage 1
 -------
 
-* ```"confirmations": 0,```
+* ``"confirmations": 0,``
 
 Stage 2
 -------
 
-* ```"confirmations": 1,```
-* ```"rawconfirmations": 1```
+* ``"confirmations": 1,``
+* ``"rawconfirmations": 1``
 
 Stage 3: After 5 Blocks are added
 ---------------------------------
 
-* ```"confirmations": 1,```
-* ```"rawconfirmations": 5,```
+* ``"confirmations": 1,``
+* ``"rawconfirmations": 5,``
 
 Stage 4: After 12 Blocks are added and when a BTC notarization happens
 ----------------------------------------------------------------------
 
-* "confirmations": 12,
-* "rawconfirmations": 12,
+* ``"confirmations": 12,``
+* ``"rawconfirmations": 12,``
 
 .. note::
 
