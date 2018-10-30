@@ -16,7 +16,7 @@ As the docs are full of code samples and command-line outputs, it's best viewed 
 :ref:`client`, :ref:`client-osx`, :ref:`convaddress`, :ref:`debug`, :ref:`disable`, 
 :ref:`electrum`, :ref:`enable`, :ref:`getcoin`, :ref:`getcoins`, :ref:`getpeers`, :ref:`getpeersIP`, 
 :ref:`help`, :ref:`jpg`, :ref:`millis`, :ref:`notarizations`, :ref:`parselog`, 
-:ref:`setpassphrase`, :ref:`sleep`, :ref:`stop`, :ref:`trust`, :ref:`trusted`
+:ref:`passphrase`, :ref:`sleep`, :ref:`stop`, :ref:`trust`, :ref:`trusted`
 
 :ref:`Category: BarterDEX Trading <BarterDEX Trading>`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1467,8 +1467,8 @@ Sample Output:
 	    "unknown": 0
 	}
 
-setpassphrase
-^^^^^^^^^^^^^
+passphrase
+^^^^^^^^^^
 
 This method helps the GUI build to take input of the passphrase and generate userpass. This is the second API to run in BarterDEX. On the first call it will display the userpass value at the top of output.
 
