@@ -9,6 +9,7 @@ Backend
 
 * Add a default asset chain port `KomodoPlatform/Agama:routes/ports.js@dev <https://github.com/KomodoPlatform/Agama/blob/dev/routes/ports.js>`_
 * Add an electrum server for your asset (optional) `pbca26/agama-wallet-lib:src/electrum-servers.js@dev#L1 <https://github.com/pbca26/agama-wallet-lib/blob/dev/src/electrum-servers.js#L1>`_
+* Add a fixed fee for your asset (required if you submit electrum servers list) `pbca26/agama-wallet-lib:src/fees.js@dev#L1 <https://github.com/pbca26/agama-wallet-lib/blob/dev/src/fees.js#L1>`_
 * Add an asset chain to the list of kmd assets `pbca26/agama-wallet-lib:src/coin-helpers.js@dev#L1 <https://github.com/pbca26/agama-wallet-lib/blob/dev/src/coin-helpers.js#L1>`_
 *  Add asset chain params to this file `KomodoPlatform/Agama:routes/chainParams.js@dev <https://github.com/KomodoPlatform/Agama/blob/dev/routes/chainParams.js>`_
 * Submit a `PR <https://github.com/KomodoPlatform/Agama>`_
