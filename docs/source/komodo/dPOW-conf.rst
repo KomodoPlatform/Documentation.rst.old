@@ -7,7 +7,7 @@ Introduction
 
 A new feature has been added to the Komodo daemon (``komodod``) that changes the behaviour of the value displayed for ``"confirmations":`` which is output on calling ``gettxout``, ``listunspent`` or ``getblock`` through the ``komodo-cli``
 
-The new behavour is as follows:
+The new behaviour is as follows:
 
     * 0 confirmations mean, tx is not confirmed yet
     * 1 confirmation means this tx is confirmed on the network, but not dPoW'd yet (Explorers may show different confirmation values and wouldn't match till the next notarization happens. ``rawconfirmations`` value will match, which is only visible if you are quering via CLI.)
@@ -48,7 +48,7 @@ Stage 4: After 12 Blocks are added and when a BTC notarization happens
 
 As seen in the above example, the value corresponding to the ``"confirmations":`` is greater than 1 only after the transaction/block is secured by dPOW. So exchanges can just keep track of the value of ``"confirmations":`` and consider the transaction as final when the value is not either ``0 or 1`` as any value grater than ``1`` for the ``"confirmations":`` field means the transaction is dPoW'd and secure.
 
-It has been implemaented in such a way that exchanges can integrate this double-spend mechanism with no major code changes if they have been checking for the number of confirmations from ``komodod`` previously. Essentially, confirmations have been made dPOW aware: Confirmations will never go above 1 until a transaction is notarized.
+It has been implemented in such a way that exchanges can integrate this double-spend prevention mechanism with no major code changes if they have been checking for the number of confirmations from ``komodod`` previously. Essentially, confirmations have been made dPOW aware: Confirmations will never go above 1 until a transaction is notarized.
 
-So confirmations <= 1 means not notarized, confirmations > 1 means notarized. Since all exchanges wait for more than 1 confirmation, their systems will only work on notarized transactions. 
+So ``confirmations <= 1`` means not notarized, ``confirmations > 1`` means notarized. Since all exchanges wait for more than ``1 confirmation``, their systems will only work on notarized transactions. 
 
