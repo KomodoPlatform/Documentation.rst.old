@@ -17,7 +17,7 @@ Oracles contract is useful for making offchain data available on-chain.
 The contract can be used as follows:
 
     * Anyone can create an Oracle using ``oraclescreate`` which takes a name, description, expected format of the data as arguments.
-    * Anyone can register to provide data to an Oracle already created using ``oraclesregister`` which takes the transaction-id of an Oracle already created and datafee (fee required for each upload of data ) as arguments.
+    * Anyone can register as a publisher of data for an Oracle using ``oraclesregister`` which takes the transaction-id of an Oracle already created and datafee (fee required for each upload of data ) as arguments.
     * ``oracleslist`` , ``oraclesinfo`` , ``oraclessamples`` can be used in that specific order to find the available Oracles, their publishers and data samples from any specific publisher.  
     * Anyone can subscribe to a particular publisher for an Oracle through ``oraclessubscribe``
     * A publisher can publish data using ``oraclesdata`` and collect the ``datafee`` 
@@ -39,6 +39,7 @@ The various formats of data that can be registered for an Oracle and their symbo
       'h' -> 32 byte hash"
 
 Example:
+--------
 
 .. code-block:: shell
 
