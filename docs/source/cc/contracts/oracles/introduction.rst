@@ -50,12 +50,12 @@ Example:
 Available RPC Calls
 ===================
 
-    * :doc:`oraclesaddress [pubkey] <oraclesaddress>`
-    * :doc:`oraclescreate name description format <oraclescreate>`
-    * :doc:`oraclesinfo oracletxid <oraclesinfo>`
-    * :doc:`oracleslist <oracleslist>`
-    * :doc:`oraclesregister oracletxid datafee <oraclesregister>`
-    * :doc:`oraclessubscribe oracletxid publisher datafee <oraclessubscribe>`
-    * :doc:`oraclesdata oracletxid hexstr <oraclesdata>`
-    * :doc:`oraclessamples oracletxid batonutxo num <oraclessamples>`
+    * :doc:`oraclesaddress [pubkey] <rpc/oraclesaddress>`
+    * :doc:`oraclescreate name description format <rpc/oraclescreate>`
+    * :doc:`oraclesinfo oracletxid <rpc/oraclesinfo>`
+    * :doc:`oracleslist <rpc/oracleslist>`
+    * :doc:`oraclesregister oracletxid datafee <rpc/oraclesregister>`
+    * :doc:`oraclessubscribe oracletxid publisher datafee <rpc/oraclessubscribe>`
+    * :doc:`oraclesdata oracletxid hexstr <rpc/oraclesdata>`
+    * :doc:`oraclessamples oracletxid batonutxo num <rpc/oraclessamples>`
 
