@@ -35,6 +35,7 @@ Example Command:
     ./komodo-cli -ac_name=ATEST dicefund KMDDice 777777 0.777 7.77 777 7
 
 Output:
+-------
 
 .. code-block:: json
 
