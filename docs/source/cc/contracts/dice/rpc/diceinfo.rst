@@ -5,7 +5,7 @@ diceinfo
 Dice Info
 =========
 
-Displays informationa about the specific Dice Contract using ``fundingtxid``. Use ``dicelist`` to get a list of tx hashes that you can use here.
+Displays information about the specific Dice Contract using ``fundingtxid``. Use ``dicelist`` to get a list of tx hashes that you can use here.
 
 Usage:
 ------

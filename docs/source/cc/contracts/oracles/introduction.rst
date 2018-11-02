@@ -24,6 +24,27 @@ The contract can be used as follows:
 
 A tutorial describing the usage of Oracles contract is :doc:`here <scenarios/tutorial>`
 
+The various formats of data that can be registered for an Oracle and their symbols are as follows:
+
+::
+
+      's' -> <256 char string
+      'S' -> <65536 char string
+      'd' -> <256 binary data
+      'D' -> <65536 binary data
+      'c' -> 1 byte signed little endian number, 'C' if unsigned
+      't' -> 2 byte signed little endian number, 'T' if unsigned
+      'i' -> 4 byte signed little endian number, 'I' if unsigned
+      'l' -> 8 byte signed little endian number, 'L' if unsigned
+      'h' -> 32 byte hash"
+
+Example:
+
+.. code-block:: shell
+
+    ./komodo-cli -ac_name=ORCL oraclescreate "Oracle1" "testing oracle" "L"
+    # "L" is when the data to be submitted is a 8 byte unsigned little endian number
+
 .. _oracles-rpc:
 
 Available RPC Calls
