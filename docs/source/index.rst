@@ -31,6 +31,18 @@ Welcome to Komodo Platform's documentation!
    Setup Bob/Marketmaker nodes using easy scripts by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>
    barterDEX/list-of-all-coins-tradable
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Create a new Blockchain using Komodo
+
+   komodo/create-Komodo-Assetchain
+   komodo/assetchain-params
+   komodo/example-asset-chains
+   agama/add-Komodo-Assetchains-Agama-Desktop
+   agama/add-Bitcoin-Compatible-coin-Agama-Desktop
+   barterDEX/get-listed-barterDEX.rst
+   barterDEX/setup-electrumX-server
+
 .. _developers:
 
 .. toctree::
@@ -38,15 +50,10 @@ Welcome to Komodo Platform's documentation!
    :caption: API Docs for Developers
  
    barterDEX/index-coin-configs-install-instructions.rst
-   barterDEX/get-listed-barterDEX.rst
+
    barterDEX/barterDEX-API.rst
    komodo/komodo-API.rst
-   komodo/create-Komodo-Assetchain
-   komodo/assetchain-params
-   komodo/example-asset-chains
    general/using-Key-Value
-   agama/add-Komodo-Assetchains-Agama-Desktop
-   agama/add-Bitcoin-Compatible-coin-Agama-Desktop
    barterDEX/zeroconf-API-implementation-BarterDEX-GUI
    barterDEX/MarketmakerErrors.rst
    komodo/block-1M-changes.rst
@@ -72,7 +79,6 @@ Welcome to Komodo Platform's documentation!
    
    barterDEX/setup-Bob-node-using-barterDEX-CLI
    barterDEX/setup-FR-full-relay-node-barterDEX
-   barterDEX/setup-electrumX-server
    barterDEX/barterDEX-Network-Optimizations
    barterDEX/setup-Bitcoin-Cash-BarterDEX
    coins/info
