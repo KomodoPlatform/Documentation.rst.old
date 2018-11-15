@@ -128,7 +128,10 @@ Clone ``SuperNET`` repo and compile ``marketmaker`` for ETH swaps
 	git submodule update --init --recursive
 	mkdir build
 	cd build
-	cmake ..
+    wget https://cmake.org/files/v3.12/cmake-3.12.3-Linux-x86_64.tar.gz
+    tar -xvf cmake-3.12.3-Linux-x86_64.tar.gz
+    ./cmake-3.12.3-Linux-x86_64/bin/cmake ..
+    make -j$(nproc)
 	cmake --build . --target marketmaker-mainnet
 	cmake --build . --target marketmaker-testnet
 	cd ~/SuperNET/build/iguana/exchanges/

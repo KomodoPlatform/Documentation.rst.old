@@ -29,7 +29,7 @@ Linux:
 .. code-block:: shell
 
 	sudo apt-get update
-	sudo apt-get install cmake git libcurl4-openssl-dev build-essential
+	sudo apt-get install cmake git libcurl4-openssl-dev build-essential libsodium-dev
 
 Install ``nanomsg``
 -------------------
