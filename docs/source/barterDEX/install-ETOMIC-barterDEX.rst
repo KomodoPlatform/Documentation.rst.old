@@ -45,22 +45,6 @@ to add the repository and continue from the ``sudo apt-get update`` command.
 	sudo ln -s /usr/bin/gcc-7 /usr/bin/gcc
 	sudo ln -s /usr/bin/g++-7 /usr/bin/g++
 
-Install ``cmake 3.10.2``
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-	wget https://cmake.org/files/v3.10/cmake-3.10.2-Linux-x86_64.sh
-	chmod +x cmake-3.10.2-Linux-x86_64.sh
-	sudo ./cmake-3.10.2-Linux-x86_64.sh --prefix=/usr
-
-	# OR on Ubuntu 16.04 you can use repository:
-	sudo add-apt-repository ppa:nschloe/cmake-nightly
-	sudo apt-get update
-	sudo apt install cmake
-
-``accept license`` when it asks "Do you want to include the subdirectory cmake-3.10.2-Linux-x86_64" choose ``NO``
-
 Install ``LevelDB``
 ^^^^^^^^^^^^^^^^^^^
 
@@ -128,8 +112,10 @@ Clone ``SuperNET`` repo and compile ``marketmaker`` for ETH swaps
 	git submodule update --init --recursive
 	mkdir build
 	cd build
-	cmake ..
-	cmake --build . --target marketmaker-mainnet
+    wget https://cmake.org/files/v3.12/cmake-3.12.3-Linux-x86_64.tar.gz
+    tar -xvf cmake-3.12.3-Linux-x86_64.tar.gz
+    ./cmake-3.12.3-Linux-x86_64/bin/cmake ..
+    cmake --build . --target marketmaker-mainnet
 	cmake --build . --target marketmaker-testnet
 	cd ~/SuperNET/build/iguana/exchanges/
 	strip marketmaker-mainnet
