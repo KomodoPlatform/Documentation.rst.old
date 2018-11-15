@@ -10,7 +10,7 @@ Step by Step Setup Guide for ETH (ERC20) Token Swap Using barterDEX
 
 	**THIS GUIDE IS HIGHLY EXPERIMENTAL, DON'T TRY UNLESS YOU KNOW WHAT YOU ARE DOING!**
 
-**This guide will set you up with ETH swaps in BarterDEX. If you are not looking for non ETH based token swap, please follow this** :doc:`installation guide </barterDEX/install-barterDEX-CLI>` **. The project is still in development. It is for ETH testnet, but mainnet for the BTC protocol coins. This guide may change accordingly in the future. Make sure you are following the latest guide before reporting anything is broken.**
+**This guide will set you up with ETH swaps in BarterDEX. If you are not looking for non ETH based token swap, please follow this** :doc:`installation guide </barterDEX/install-barterDEX-CLI>` **. The project is still in development. This guide may change accordingly in the future. Make sure you are following the latest guide before reporting anything is broken.**
 
 Installation steps
 ==================
@@ -45,27 +45,6 @@ to add the repository and continue from the ``sudo apt-get update`` command.
 	sudo ln -s /usr/bin/gcc-7 /usr/bin/gcc
 	sudo ln -s /usr/bin/g++-7 /usr/bin/g++
 
-Install ``LevelDB``
-^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-	cd ~
-	git clone https://github.com/google/leveldb.git
-	cd leveldb
-	make  
-	sudo scp -r out-static/lib* out-shared/lib* /usr/local/lib/
-	cd include
-	sudo scp -r leveldb /usr/local/include/
-	sudo ldconfig
-
-Delete local ``nanomsg`` from home directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-	cd ~
-	rm -rf nanomsg
 
 MacOS
 -----
