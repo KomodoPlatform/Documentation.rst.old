@@ -31,6 +31,8 @@ Welcome to Komodo Platform's documentation!
    Setup Bob/Marketmaker nodes using easy scripts by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>
    barterDEX/list-of-all-coins-tradable
 
+.. _blockchain-starter-kit:
+
 .. toctree::
    :maxdepth: 1
    :caption: Create a new Blockchain using Komodo
@@ -47,7 +49,7 @@ Welcome to Komodo Platform's documentation!
 
 .. toctree::
    :maxdepth: 1
-   :caption: API Docs for Developers
+   :caption: Docs for Developers
  
    barterDEX/index-coin-configs-install-instructions.rst
 
