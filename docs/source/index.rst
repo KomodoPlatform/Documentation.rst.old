@@ -37,6 +37,7 @@ Welcome to Komodo Platform's documentation!
    :maxdepth: 1
    :caption: Create a new Blockchain using Komodo
 
+   komodo/checklist-new-coins
    komodo/create-Komodo-Assetchain
    komodo/assetchain-params
    komodo/example-asset-chains
@@ -52,7 +53,6 @@ Welcome to Komodo Platform's documentation!
    :caption: Docs for Developers
  
    barterDEX/index-coin-configs-install-instructions.rst
-
    barterDEX/barterDEX-API.rst
    komodo/komodo-API.rst
    general/using-Key-Value
