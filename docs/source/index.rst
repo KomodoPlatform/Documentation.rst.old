@@ -6,7 +6,7 @@
 Welcome to Komodo Platform's documentation!
 ===========================================
 
-There is an updated Developer site being built at https://developers.komodoplatform.com please use it and `give us feedback <https://komodoplatform.com/discord>`__. 
+There is an updated Developer site being built at https://developers.komodoplatform.com . Please use it and `give us feedback <https://komodoplatform.com/discord>`__. 
 
 .. toctree::
    :maxdepth: 1
