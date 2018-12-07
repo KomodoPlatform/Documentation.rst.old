@@ -1,5 +1,5 @@
 ***************************
-Komodo Platorm - Whitepaper
+Komodo Platform - Whitepaper
 ***************************
 
 .. toctree::
