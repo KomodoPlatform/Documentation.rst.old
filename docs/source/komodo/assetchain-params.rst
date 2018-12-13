@@ -32,7 +32,7 @@ This is the number of blocks between each block reward halving. This parameter w
 
 -ac_decay
 =========
-This is the percentage the block reward will decrease by each block reward halving. For example, if this is set to ``750000000``, the block reward will drop 25% from the previous block reward each halving. This parameter will have no effect if ``-ac_reward`` is not set.  
+This is the percentage the block reward will decrease by each block reward halving. For example, if this is set to ``75000000``, the block reward will drop 25% from the previous block reward each halving. This parameter will have no effect if ``-ac_reward`` is not set.  
 This is the formula that ``-ac_decay`` follows:
 
 .. code-block:: shell
