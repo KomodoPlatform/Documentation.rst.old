@@ -28,11 +28,13 @@ This is the block height in which block rewards will end. Every block after this
 
 -ac_halving
 ===========
+
 This is the number of blocks between each block reward halving. This parameter will have no effect if ``-ac_reward`` is not set. The lowest possible value is ``1440`` (~1 day). If this parameter is set, but ``-ac_decay`` is not, the reward will decrease by 50% each halving. 
 
 -ac_decay
 =========
-This is the percentage the block reward will decrease by each block reward halving. For example, if this is set to ``75000000``, the block reward will drop 25% from the previous block reward each halving. This parameter will have no effect if ``-ac_reward`` is not set.  
+
+This is the percentage by which the block reward will decrease on each block reward halving. For example, if this is set to ``75000000``, the block reward will drop 25% from the previous block reward each halving. This parameter will have no effect if ``-ac_reward`` is not set.  
 This is the formula that ``-ac_decay`` follows:
 
 .. code-block:: shell
@@ -52,7 +54,7 @@ Note: Vout 1 of each coinbase transaction must be the correct amount sent to the
 -ac_pubkey
 ==========
 
-If ``-ac_pubkey`` is set, but ``-ac_perc`` is not, this simply means the genesis block will be mined to the set pubkey's address. This must be set to a 33 byte hex string. You can get the pubkey of an address by using the ``validateaddress`` command in ``komodo-cli``. The address must be imported to the wallet before using ``validateaddress``.
+This must be set to a string that has 66 characters (a 33 byte hex encoded string). If ``-ac_pubkey`` is set, but ``-ac_perc`` is not, this simply means the genesis block will be mined to the set pubkey's address. You can get the pubkey of an address by using the ``validateaddress`` command in ``komodo-cli``. The address must be imported to the wallet before using ``validateaddress``.
 
 -ac_cc
 ======
