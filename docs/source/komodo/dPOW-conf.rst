@@ -46,7 +46,7 @@ Stage 4: After 12 Blocks are added and when a BTC notarization happens
     In the above example, the number of blocks added(12) when a notarization happens is selected arbitrarily, and a notarization may happen after any number of blocks.
 
 
-As seen in the above example, the value corresponding to the ``"confirmations":`` is greater than 1 only after the transaction/block is secured by dPOW. So exchanges can just keep track of the value of ``"confirmations":`` and consider the transaction as final when the value is not either ``0 or 1`` as any value grater than ``1`` for the ``"confirmations":`` field means the transaction is dPoW'd and secure.
+As seen in the above example, the value corresponding to the ``"confirmations":`` is greater than 1 only after the transaction/block is secured by dPOW. So exchanges can just keep track of the value of ``"confirmations":`` and consider the transaction as final when the value is neither ``0 nor 1``; any value grater than ``1`` for the ``"confirmations":`` field means the transaction is dPoW'd and secure.
 
 It has been implemented in such a way that exchanges can integrate this double-spend prevention mechanism with no major code changes if they have been checking for the number of confirmations from ``komodod`` previously. Essentially, confirmations have been made dPOW aware: Confirmations will never go above 1 until a transaction is notarized.
 
