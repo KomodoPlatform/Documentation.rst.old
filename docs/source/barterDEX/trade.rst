@@ -2,7 +2,7 @@
 Trade
 *****
 
-Don't forget: Coins for trade pairs need to be active in the exchange, both :doc:`native<enable-native-wallet-coins>` and :doc:`electrum <enable-electrum-wallet-coins>` wallets can be used.
+Don't forget: Coins for trade pairs need to be active in the exchange, either :doc:`native <enable-native-wallet-coins>` or :doc:`electrum <enable-electrum-wallet-coins>` wallets can be used.
 
 LOOKING AT THE ORDERBOOK
 ========================
@@ -34,7 +34,7 @@ You will need to edit this script based on the info the orderbook prints. The sc
 
 *After editing the* ``./buy`` *file with your order parameters, execute it and you should have a trade going.*
 
-**IMPORTANT: For better results and security (dust attack vector)** ``./buy`` **only execute trades that are at least 10% of the offered bob(ask) order. For example, if a bob order (an ask in the orderbook) of 10 REVS is offered at a price of 1.25 komodo per REV the autotrade command should be with a relvolume of at least:**
+**IMPORTANT: For better results and security (dust attack vector)** ``./buy`` **only execute trades that are at least 10% of the offered bob(ask) order. For example, if a bob order (an ask in the orderbook) of 10 REVS is offered at a price of 1.25 komodo per REV the autotrade command should be with a relvolume of at least: 1 REV**
 
 .. code-block:: shell
 
