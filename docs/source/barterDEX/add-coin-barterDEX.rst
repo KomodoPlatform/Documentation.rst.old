@@ -18,7 +18,7 @@ When submitting a pull request to add coin to BarterDEX, make sure you have comp
 0. The coin must be tested with BarterDEX atomic swaps
 ======================================================
 
-When submitting your coin addition request please submit the three transctions (``bobdeposit``, ``alicepayment`` and ``bobpayment``) URL which are produced by the :doc:`atomic swap <trade>` performed by the marketmaker API. This means that before going through the further steps in this doc and submit the data to this coins database `repo <https://github.com/jl777/coins>`_ , you would have performaed an atomic swap. The further steps explain the expected files/values to be submitted.
+When submitting your coin addition request, please submit the URLs of the three transctions (``bobdeposit``, ``alicepayment`` and ``bobpayment``) which are produced by the :doc:`atomic swap <trade>` performed by the marketmaker API. This means that before going through the further steps in this doc and submit the data to this coins database `repo <https://github.com/jl777/coins>`_ , you would have performed an atomic swap. The further steps explain the expected files/values to be submitted.
 
 You can learn about performing an atomic swap :doc:`here <install-barterDEX-CLI>` and :doc:`here <trade>`.
 
@@ -34,7 +34,7 @@ Example:
 1. Coin info added to ``coins`` file (Required)
 ===============================================
 
-You need the following info in JSON format added to `coins <https://github.com/jl777/coins/blob/master/coins>`_ file:
+You need to add the following info in JSON format to `coins <https://github.com/jl777/coins/blob/master/coins>`_ file:
 
 ::
 
@@ -75,19 +75,19 @@ You need the following info in JSON format added to `coins <https://github.com/j
 Bitcoin Protocol specific JSON
 ------------------------------
 
-``"coin"`` must be the coin ticker.
+    * ``"coin"`` must be the coin ticker.
 
-``"name"`` must be coin's name, in all small letters. This is the value which is expected to be default data directory name for that coin. For example if the coin's name is Litecoin then it's expected data directory on Linux is ``~/.litecoin/``, on Mac ``~/Library/Applications Support/Litecoin/``, on Windows ``%AppData%\Litecoin``. Please keep this key's value in small letters only.
+    * ``"name"`` must be coin's name, in all small letters. This is the value which is expected to be default data directory name for that coin. For example if the coin's name is Litecoin then it's expected data directory on Linux is ``~/.litecoin/``, on Mac ``~/Library/Applications Support/Litecoin/``, on Windows ``%AppData%\Litecoin``. Please keep this key's value in small letters only.
 
-``"confpath"`` must be ONLY used in case the expected data directory name of the coin/project is different to the ``"name"``'s value, as explained in last point. Please refer to Example 2 for better understanding. Make sure to use the exact format for ``confpath``. You don't need to change the word ``USERHOME``, it remains as is. Make sure you have a ``/``. after ``USERHOME``. And then the expected coin/project's data directory path and it's expected ``.conf`` file name.
+    * ``"confpath"`` must be ONLY used in case the expected data directory name of the coin/project is different to the ``"name"``'s value, as explained in last point. Please refer to Example 2 for better understanding. Make sure to use the exact format for ``confpath``. You don't need to change the word ``USERHOME``, it remains as is. Make sure you have a ``/``. after ``USERHOME``. And then the expected coin/project's data directory path and it's expected ``.conf`` file name.
 
-``"fname"`` must be coin's full name.
+    * ``"fname"`` must be coin's full name.
 
-``"rpcport"`` must be coin's default RPC port. It is expected that it doesn't conflict with any existing coin in the coins db.
+    * ``"rpcport"`` must be coin's default RPC port. It is expected that it doesn't conflict with any existing coin in the coins db.
 
-``"pubtype"``, ``"p2shtype"``, and ``"wiftype"`` is the also very specific information about coin's parameters. This is specific to Bitcoin Protocol compatible coins only, and such information can be found in source code of the project. These parameters information can be expected in files like ``src/init.cpp``, ``src/base58.h``, and ``src/chainparamsbase.h`` if the project is following the **bitcoin** source code directory/files structure. If the parameters info is unclear then please have these confirmed by that coin/project's developers and make sure it's correct information.
+    * ``"pubtype"``, ``"p2shtype"``, and ``"wiftype"`` is the also very specific information about coin's parameters. This is specific to Bitcoin Protocol compatible coins only, and such information can be found in source code of the project. These parameters information can be expected in files like ``src/init.cpp``, ``src/base58.h``, and ``src/chainparamsbase.h`` if the project is following the **bitcoin** source code directory/files structure. If the parameters info is unclear then please have these confirmed by that coin/project's developers and make sure it's correct information.
 
-``"txfee"`` is a value of default transactions fee, which must be specified in satoshis. BarterDEX uses this as the default transaction fee value when makes atomic swaps transactions.
+    * ``"txfee"`` is a value of default transactions fee, which must be specified in satoshis. BarterDEX uses this as the default transaction fee value when makes atomic swaps transactions.
 
 Ethereum Protocol specific JSON
 -------------------------------

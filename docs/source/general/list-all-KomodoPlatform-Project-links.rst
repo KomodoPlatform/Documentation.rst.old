@@ -13,16 +13,16 @@ Source code
 * Backend: https://github.com/KomodoPlatform/Agama/
 * UI: https://github.com/KomodoPlatform/EasyDEX-GUI/
 
-Latest installer
-----------------
+Latest Releases
+---------------
 
-* Linux: https://artifacts.supernet.org/latest/installer_linux.html
-* macOS: https://artifacts.supernet.org/latest/installer_osx.html
-* Windows: https://artifacts.supernet.org/latest/installer_windows.html
+* https://komodoplatform.com/komodo-wallets
 
 Agama Mobile
 ============
 
+* Android: https://play.google.com/store/apps/details?id=com.supernet.agama
+* iOS: https://testflight.apple.com/join/AQkscRcq
 * Source code: https://github.com/pbca26/agama-mobile
 * Release: https://github.com/pbca26/agama-mobile/releases
 
@@ -67,10 +67,15 @@ CHIPS
 
 * Source code: https://github.com/jl777/chips3
 
-CHIPSln
-=======
+CHIPS``ln``
+===========
 
-Source code: https://github.com/jl777/chipsln
+* Source code: https://github.com/jl777/chipsln
+
+CHIPS ``bet``
+=============
+
+* Source code: https://github.com/sg777/bet
 
 Coins
 =====
@@ -86,9 +91,19 @@ CryptoConditions
 dICO App
 ========
 
-Needs an update after the final version is publicly available
+* Source code: https://github.com/KomodoPlatform/dicoapp-e
 
-* Source code: https://github.com/ca333/atomicDEX
+Developer Docs
+==============
+
+* Source code: https://github.com/KomodoPlatform/developer-docs/
+* Website: https://developers.komodoplatform.com/
+
+Documentation
+=============
+
+* Source code: https://github.com/KomodoPlatform/Documentation
+* Website: https://docs.komodoplatform.com
 
 Insight Explorer 
 ================
