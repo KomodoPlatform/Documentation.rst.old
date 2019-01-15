@@ -5,6 +5,33 @@ Change Log (Agama-Desktop)
 .. contents:: Links
    :depth: 3
 
+v0.3.2
+======
+
+    * Latest Komodo binary with ``z_mergetoaddress`` fix
+    * Other minor Agama improvements
+
+v0.3.1
+======
+
+    * Latest Komodo binary 0.3.1
+    * Offline Signing improvements
+    * Various bug fixes and imporovements
+    * ZILLA params updated to not to activate Sapling
+
+v0.3.0
+======
+
+    * Major Update
+    * Latest Komodo binary (`release notes <https://github.com/KomodoPlatform/komodo/blob/master/doc/release-notes/release-notes-0.3.0.md>`__)
+    * Sapling ready
+    * Offline Signing (`Guide <https://support.komodoplatform.com/en/support/solutions/articles/29000026631-sign-transactions-offline-and-broadcast-online-using-agama>`__)
+    * CLI display bug fixed
+    * Coin pricing update
+    * ETH & ERC20 token support (`list <https://komodoplatform.com/komodo-integrates-eth-erc20-tokens-to-agama-wallet/>`__)
+    * Added SUQA, Bitzec
+    * Removed BCBC and ARG
+
 v0.2.43
 =======
 
