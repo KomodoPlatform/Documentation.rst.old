@@ -67,8 +67,8 @@ CHIPS
 
 * Source code: https://github.com/jl777/chips3
 
-CHIPS``ln``
-===========
+CHIPS ``ln``
+============
 
 * Source code: https://github.com/jl777/chipsln
 
