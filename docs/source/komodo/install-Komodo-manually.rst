@@ -207,7 +207,7 @@ If you are in a hurry, most of the time the below steps can be used to update th
 
 .. note:::
 
-	``build.sh`` method will take longer as compared to ``make`` command. ``make`` command should work most of the time. But in case it doesn't, just use the ``build.sh`` method.
+	``build.sh`` method will take longer as compared to ``make`` command. ``make`` command should work most of the time. But in case it doesn't, just use the ``build.sh`` method. You may have to issue the ``build.sh`` command multiple times until it compiles. If you have issues compiling and your local source is messed up, you can always start with fresh clone. Just delete or rename the current source dir and start fresh.
 
 IMPORTANT: Backup your wallet
 -----------------------------
