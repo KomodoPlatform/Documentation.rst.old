@@ -2,10 +2,6 @@
 How to Activate CryptoConditions on an Existing Komodo based Independent Chain
 ******************************************************************************
 
-.. note::
-
-	This feature is scheduled to be available in the ``master`` branch after the hardfork at the 1 Million block of the Komodo Blockchain.  
-
 If you have an existing assetchain based on Komodo platform without CryptoConditions (CC) enabled, you can activate it at any time. Komodo daemon now supports the command-line parameter ``-ac_ccactivate=height`` , using which you can activate CC on a non-CC enabled chain in a future block height.
 
 Example
@@ -15,13 +11,13 @@ The first existing chain which doesn't have CC enabled, whose startup command lo
 
 .. code-block:: shell
 
-	./komodod -ac_name=COQUITEST2 -ac_supply=72000000 -addnode=24.54.206.138 &
+	./komodod -ac_name=EXAMPLE -ac_supply=72000000 -addnode=24.54.206.138 &
 
 It was a very easy way to start a chain using Komodo technology, with very few parameters. In order to activate CC in this chain, all we have to do is the following:
 
 .. code-block:: shell
 
-	./komodod -ac_name=COQUITEST2 -ac_supply=72000000 -ac_ccactivate=140 -addnode=24.54.206.138 &
+	./komodod -ac_name=EXAMPLE -ac_supply=72000000 -ac_ccactivate=140 -addnode=24.54.206.138 &
 
 ``-ac_ccactivate=140`` means, CryptoConditions are activated at block 140. You can set this parameter to any block height you want the CC to be activated.
 
