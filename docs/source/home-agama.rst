@@ -21,3 +21,10 @@ Here you will find more information about Agama
 
    agama/release-notes/*
    agama/change-log-agama-desktop
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Agama - User - Docs
+
+   agama/create-multisig-address
+   agama/sign-multisig-transaction

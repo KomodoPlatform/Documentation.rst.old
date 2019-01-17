@@ -13,6 +13,7 @@ Here you will find more information about Komodo (KMD)
    komodo/install-Komodo-manually
    komodo/komodo-API.rst
    komodo/security-setup-Komodo-Node
+   komodo/encrypt-wallet
    komodo/useful-KMD-BTC-commands
    komodo/beginner-vps-linux-assetchain
    komodo/create-Komodo-Assetchain

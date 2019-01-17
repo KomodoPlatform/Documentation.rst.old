@@ -5,6 +5,7 @@ General Documentation
 .. toctree::
    :maxdepth: 1
    
+   komodo/convert-pubkey-address
    general/compile-marketmaker-binary-with-static-nanomsg-in-Linux
    general/compile-marketmaker-binary-with-static-nanomsg-in-MacOS
    general/using-Key-Value
