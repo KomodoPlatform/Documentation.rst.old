@@ -44,7 +44,7 @@ Now with this output the next signer will need to do a similar process, but this
 	:alt: toogle-on
 
 .. image:: http://i.imgur.com/sg82YbS.png
-	;alt: toggle-off
+	:alt: toggle-off
 
 
 The subsequent signers will just need to set the ``complete script`` of the multisig address, the output of the first signer and their ``privete key (WIF or seed)``:
@@ -52,5 +52,5 @@ The subsequent signers will just need to set the ``complete script`` of the mult
 .. image:: http://i.imgur.com/7IQj5SH.png
 	:alt: second-signer
 
-once you press ``verify transaction`` an option to send the transaction will show and you will be able to send the transaction IF all required signatures are done. If any other signature is required then this process will need to be repeated by the number of signers needed.
+Once you press ``verify transaction`` an option to send the transaction will show and you will be able to send the transaction IF all required signatures are done. If any other signature is required then this process will need to be repeated by the number of signers needed.
 

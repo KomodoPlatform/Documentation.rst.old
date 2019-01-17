@@ -26,5 +26,5 @@ Here you will find more information about Agama
    :maxdepth: 1
    :caption: Agama - User - Docs
 
-   agama/create-multisig-transaction
+   agama/create-multisig-address
    agama/sign-multisig-transaction

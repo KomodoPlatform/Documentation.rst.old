@@ -1,9 +1,9 @@
-******************************
+**********************************
 Encrypt Komodo **wallet.dat** File
-******************************
+**********************************
 
 How to Encrypt Komodo **wallet.dat** with password to make it more secure?
-======================================================================
+==========================================================================
 
 Komodo supports ``encryptwallet`` RPC to secure your **wallet.dat** file. After encrypting your wallet, you need to unlock it before making any transaction or dumping privkey of an address. This prevents unauthorized access to your KMD and other assetchains.
 

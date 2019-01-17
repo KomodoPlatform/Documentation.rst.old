@@ -16,18 +16,23 @@ After you activate your favorite coin in lite mode, go to ``Tools`` section and 
   
 .. note::
 
-    A multisig address is a special address that will require different people to sign each transaction with their own private keys. To create a multisig address you will need all your peers to share with you the `pubkey` which will be used to sign transactions (these keys should be very well backed up by each owner). You can find your ``pubkey`` from the ``receive`` section:
+    A multisig address is a special address that will require different people to sign each transaction with their own private keys. To create a multisig address you will need all your peers to share with you the `pubkey` which will be used to sign transactions (these public-keys and their corresponding private-keys should be very well backed up by each owner). You can find your ``pubkey`` from the ``receive`` section as shown in the following image.
 
 .. image:: http://i.imgur.com/yS4JVmA.png
 	:alt: get-pubkey
 
-In ``Generate multisig address`` you will select how many total ``pubkeys`` you will want as signers and how many signers will be needed to make a transaction.
-For example if you select 2 of 3, you will have 3 total ``pubkeys`` that can sign but at least 2 will be needed to make a transaction. Also select which coin you will be making this address for. Finally, list all 3 (or total of keys needed) in the text box.
+Generating the address
+======================
+
+* In the ``Generate multisig address`` section, you can select how many total ``pubkeys`` you will want as signers and how many signers will be needed to make a transaction.
+* For example if you select ``2 of 3``, you will have 3 total ``pubkeys`` that can sign but at least 2 will be needed to make a transaction. 
+* Next, select which coin you will be making this address for. 
+* Finally, list all 3 (or total of keys needed) in the text box.
 
 .. image:: http://i.imgur.com/wqXrzTh.png
 	:alt: generate-multisig
 
-Once you generate the multisig address you will get several outputs:
+Once you generate the multisig address, you will get several outputs:
 
 * **Address**: ``bQE41eaXq2eC2jWtM95XqWe8TRNF8uVjv5``
 * **Redeem script**:
@@ -59,6 +64,6 @@ Once you generate the multisig address you will get several outputs:
     
     Store this information as well as possible, you can distribute it between your peer signers so that each one can store this information. This will be vital in the capability of moving funds from this address.
 
-Now you have a multisig address with no funds in it. Please go to ``Multi-signature transaction`` section to be able to send from the multisig address.
+Now you have a multisig address with no funds in it. You have to use the ``Multi-signature transaction`` section to be able to send from the multisig address as shown in :doc:`this guide <sign-multisig-transaction>`.
 
 
