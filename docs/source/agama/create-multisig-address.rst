@@ -1,6 +1,6 @@
-**************************************
-Generate a multisig adress using Agama
-**************************************
+***************************************
+Generate a multisig address using Agama
+***************************************
 
 First step to generate a multisig address in Agama is to download latest Agama release: `Download Agama Wallet <https://komodoplatform.com/komodo-wallets/>`_
 
@@ -10,6 +10,10 @@ After downloading Agama for your preferred OS, run it and select ``Activate Coin
 	:alt: Agama-login 
 
 After you activate your favorite coin in lite mode, go to ``Tools`` section and select ``Generate multisig address``
+
+.. note::
+
+    If you don't see Tools section, follow this guide to activate Advanced features https://support.komodoplatform.com/en/support/solutions/articles/29000024423-activate-advanced-features
 
 .. image:: http://i.imgur.com/BMm5nb7.png
 	:alt: Agama-generate-multisig
@@ -43,8 +47,6 @@ Once you generate the multisig address, you will get several outputs:
 
 * **Script pub key**: ``a9147e1adc17cf2c33f516b222b83eb4f8f53e088a0887``
 * **and finally the complete script you will need to use for future transactions**:
-
-.. _multisig-complete-script:
 
 .. code-block:: json
 

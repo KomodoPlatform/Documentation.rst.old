@@ -36,7 +36,7 @@ Convert Pubkey to Komodo Address
     
     print(P2PKHBitcoinAddress.from_pubkey(x(PUBKEY)))
 
-* Open a terminal and ``cd`` to the directory where the file is saved.
+* Open a terminal and ``cd`` to the directory where the file is located.
 * Run ``python3 pubkey-address.py`` in the terminal.
 * Input the pubkey at the prompt and hit ``Enter``.
 * The Komodo address will be displayed.

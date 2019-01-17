@@ -4,12 +4,53 @@ Change Log (HyperDEX)
 
 .. note::
 
-	Keep in mind that HyperDEX is currently in alpha release. Although the risk of loss of funds is minimal, it could take some troubleshooting/contact with our supportstaff to resolve issues. Only trade in real currency if you can take that risk. We recommend trading in the test currencies ``BEER`` and ``PIZZA`` instead. You can get ``BEER`` for free `here <https://www.atomicexplorer.com/#/faucet>`__.
+	Keep in mind that HyperDEX is currently in beta release. Although the risk of loss of funds is minimal, it could take some troubleshooting/contact with our supportstaff to resolve issues. Only trade in real currency if you can take that risk. We recommend trading in the test currencies ``BEER`` and ``PIZZA`` instead. You can get ``BEER`` for free `here <https://www.atomicexplorer.com/#/faucet>`__.
 
 Remember to report issues through the ``Feedback`` button in the app.
 
 .. contents:: Links
    :depth: 3
+
+0.4.0
+=====
+
+    * Drop support for macOS 10.9 `4600c1a <https://github.com/atomiclabs/hyperdex/commit/4600c1acb7c8c3fed2a9afc5639aeb1201b56c80>`__
+    * Remove ``QMC`` currency (Its Electrum servers are down) `6c706d9 <https://github.com/atomiclabs/hyperdex/commit/6c706d99e437ea370d3af7026b31db5a4deda80e>`__
+    * Remove ``BCBC`` currency (Its Electrum servers are down) `ca25377 <https://github.com/atomiclabs/hyperdex/commit/ca25377006d6975322dceeec850b8fb005aaf872>`__
+    * Update Electrum servers and some currency data (#588) `ca25377 <https://github.com/atomiclabs/hyperdex/commit/ca25377006d6975322dceeec850b8fb005aaf872>`__
+    * Update to BarterDEX Marketmaker v1.0.1096 `b3c6f0b <https://github.com/atomiclabs/hyperdex/commit/b3c6f0b450663f6d92c267bef918142d218eecb4>`__
+    * Add "Debug" menu item to show the file of the current portfolio (`#579 <https://github.com/atomiclabs/hyperdex/pull/579>`_) `e1aae1f <https://github.com/atomiclabs/hyperdex/commit/e1aae1f875eb5d283f0e3f8625f6ed0d3faa419b>`__
+
+0.3.0
+=====
+
+    * Add Pungo Token (``PGT``) currency. `b84139d <https://github.com/atomiclabs/hyperdex/commit/b84139d81b6da4c418b098bd7ef89a3ab42d9e06>`__
+    * Remove ``DNR``, ``ARG``, ``MAC``, and ``CALL`` currencies. See `#577 (comment) <https://github.com/atomiclabs/hyperdex/pull/577#issuecomment-445567840>`__. `69b388d <https://github.com/atomiclabs/hyperdex/commit/69b388d25c40d77de437cf0fa467a6e1b0ee3d98>`__
+    * Update LTC and BCH Electrum servers. `69b388d <https://github.com/atomiclabs/hyperdex/commit/69b388d25c40d77de437cf0fa467a6e1b0ee3d98>`__
+    * Fix the dashboard price history graph. `b0d9d7d <https://github.com/atomiclabs/hyperdex/commit/b0d9d7d61db593589d1e4ea668be1f683d7e0c42>`__
+    * Move enabled currencies from the app settings to the portfolio data. It is automatically migrated. This means portfolios can have different enabled currencies. `37996ed <https://github.com/atomiclabs/hyperdex/commit/37996edd80f8aa1671758d0d66edf3dc81448078>`__
+    * Update to `BarterDEX Marketmaker v1.0.1026 <https://github.com/artemii235/SuperNET/releases/tag/v1.0.1026>`__. `d04da2e <https://github.com/atomiclabs/hyperdex/commit/d04da2e16d4801ad65595a44ace512a81ce1c34f>`__
+
+0.2.1
+=====
+
+    * Make the swap list rows clickable. You now click anywhere in the row instead of the "View" button. `5768b3e <https://github.com/atomiclabs/hyperdex/commit/5768b3ef897649b6d1853e5634b17f3b5ed5993a>`__
+    * Add filters to the trade history. `6074f21 <https://github.com/atomiclabs/hyperdex/commit/6074f21d37d001495e588d8387a1b1b0055d51bb>`__
+    * Add a copy button to the modal that shows your seed phrase. `be63d25 <>https://github.com/atomiclabs/hyperdex/commit/be63d250e049fb6d75e2d35e9bc3dc8bcb44048c`__
+    * Fix a small zero being accidentally shown after the wallet currency price. `9d9769e <https://github.com/atomiclabs/hyperdex/commit/9d9769e47abd945ebe977d3fa578cfe0ad3ca99e>`__
+    * Fix the price history fetching error handling. `fb23e32 <https://github.com/atomiclabs/hyperdex/commit/fb23e3284a4ba7c6a671502fa2e2850c179e3b74>`__
+    * In the Dashboard view, show 6 fractional digits for currencies worth less than 1. `1cab80f <https://github.com/atomiclabs/hyperdex/commit/1cab80f13e538e4f4c201d2195b7822032cd04fb>`__
+    * Update to `BarterDEX Marketmaker v1.0.861 <https://github.com/artemii235/SuperNET/releases/tag/v1.0.861>`__. `700fed4 <https://github.com/atomiclabs/hyperdex/commit/700fed480170f72721a70adc6bdb2b79596f428b>`__
+
+0.2.0
+=====
+
+    * Update Electrum servers for ``VIA``, ``VTC``, ``BTG``. `bd63e9e <https://github.com/atomiclabs/hyperdex/commit/bd63e9e2ff08320eac6e4668d079399bec9c5536>`__
+    * Update Electrum servers for ``CRW`` and ``CHAIN``. `12b61a4 <https://github.com/atomiclabs/hyperdex/commit/12b61a4e97068b4af69c0e5d3541fb04bd15fa66>`__
+    * Add QMCoin (``QMC``) currency. `1d4ed32 <https://github.com/atomiclabs/hyperdex/commit/1d4ed3234b482e769124725c7e979eef5cd72d24>`__
+    * Add Etheera (``ETA``) currency. `793fb4a <https://github.com/atomiclabs/hyperdex/commit/793fb4acf371197d3764d9f0673d5ee2fde44e03>`__
+    * Hide the empty Swap view. (It will come back sometime in the future) `c6c795e <https://github.com/atomiclabs/hyperdex/commit/c6c795e8ab5e3ca063ffda6fd9bcc5f6e9ccc0e2>`__
+    * Improve errors. `9cdd7ff <https://github.com/atomiclabs/hyperdex/commit/9cdd7ffa1f3cf7037a3db7955730062cc39110d8>`__
 
 0.1.4
 =====
