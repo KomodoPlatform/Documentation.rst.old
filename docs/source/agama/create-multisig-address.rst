@@ -44,6 +44,8 @@ Once you generate the multisig address, you will get several outputs:
 * **Script pub key**: ``a9147e1adc17cf2c33f516b222b83eb4f8f53e088a0887``
 * **and finally the complete script you will need to use for future transactions**:
 
+.. _multisig-complete-script:
+
 .. code-block:: json
 
     {
@@ -62,7 +64,7 @@ Once you generate the multisig address, you will get several outputs:
 
 .. note::
     
-    Store this information as well as possible, you can distribute it between your peer signers so that each one can store this information. This will be vital in the capability of moving funds from this address.
+    Store this information as well as possible, you can distribute it between your peer signers so that each one can store this information. This will be vital for moving funds from this address.
 
 Now you have a multisig address with no funds in it. You have to use the ``Multi-signature transaction`` section to be able to send from the multisig address as shown in :doc:`this guide <sign-multisig-transaction>`.
 
