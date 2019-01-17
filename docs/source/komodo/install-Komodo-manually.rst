@@ -17,7 +17,7 @@ Currently, you will need:
 
 * Linux (easiest with a Debian-based distribution)
 * 64-bit
-* 4GB of free memory
+* Minimum 4GB of free RAM (8GB+ recommended)
 
 Get Started
 -----------
@@ -27,14 +27,14 @@ Log in as the user to your system, and issue these commands to make sure your Li
 .. code-block:: shell
 
 	sudo apt-get update
-	sudo apt-get upgrade (and say Y when it wants to upgrade stuff)
+	sudo apt-get upgrade -y
 
 Install the dependency packages:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
-	sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common curl libcurl4-gnutls-dev cmake clang
+	sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libqt4-dev libqrencode-dev libdb++-dev ntp ntpdate software-properties-common curl libcurl4-gnutls-dev cmake clang -y
 
 Install ``nanomsg``
 -------------------
@@ -65,7 +65,7 @@ Installing Komodo
 	git checkout dev
 	./zcutil/fetch-params.sh
 
-``-j8`` uses 8 threads - replace ``8`` with number of threads you want to use or use the ``nproc`` variable
+``-j8`` uses 8 threads - replace ``8`` with number of threads you want to use or use the ``nproc`` variable to use all threads.
 
 .. code-block:: shell
 
@@ -84,15 +84,21 @@ When it is finished, let's create ``komodo.conf``
 	cd .komodo
 	nano komodo.conf
 
-Add the following lines to the ``komodo.conf`` file (replace ``rpcuser`` and ``rpcpassword``)
+Add the following lines to the ``komodo.conf`` file (replace ``rpcuser`` and ``rpcpassword`` with your own)
 
 .. code-block:: shell
 
-	rpcuser=username	
-	rpcpassword=password
+	rpcuser=usernameChangeItToSomethingSecure	
+	rpcpassword=passwordChangeItToSomethingSecure
 	txindex=1
 	bind=127.0.0.1
 	rpcbind=127.0.0.1
+	addnode=78.47.196.146
+	addnode=5.9.102.210
+	addnode=178.63.69.164
+	addnode=88.198.65.74
+	addnode=5.9.122.241
+	addnode=144.76.94.38
 
 * Press ``CTRL+O`` to save the changes.
 * Press ``CTRL+X`` to exit nano editor.
@@ -102,15 +108,14 @@ Now you can start komodod daemon to sync with the network
 .. code-block:: shell
 
 	cd ~
-	cd komodo
-	./src/komodod -addnode=78.47.196.146 -daemon
+	cd komodo/src
+	./komodod &
 
 You might see some outputs in terminal where you started the ``komodod`` daemon. So, open a new tab or new terminal window and go to Komodo data directory to see updated logs of Komodo:
 
 .. code-block:: shell
 
-	cd ~/.komodo/
-	tail -f debug.log
+	tail -f ~/.komodo/debug.log
 
 After ``tail`` command it will start showing logs update to you as it syncs with the network. If you want to terminate this command just press ``CTRL+C``.
 
@@ -200,14 +205,12 @@ If you are in a hurry, most of the time the below steps can be used to update th
 
 .. code-block:: shell
 
-	cd ~/komodo/src/
+	cd ~/komodo
 	git checkout dev
 	git pull
 	make -j$(nproc)
 
-.. note:::
-
-	``build.sh`` method will take longer as compared to ``make`` command. ``make`` command should work most of the time. But in case it doesn't, just use the ``build.sh`` method.
+**Note:** ``build.sh`` method will take longer as compared to ``make`` command. ``make`` command should work most of the time. But in case it doesn't, just use the ``build.sh`` method. You may have to issue the ``build.sh`` command multiple times until it compiles. If you have issues compiling and your local source is messed up, you can always start with fresh clone. Just delete (``rm -rf komodo``) or rename (``mv komodo anything``) the current source dir and start fresh.
 
 IMPORTANT: Backup your wallet
 -----------------------------
@@ -257,7 +260,7 @@ Now install the dependency packages:
 
 	brew tap discoteq/discoteq; brew install flock
 	brew install autoconf autogen automake
-	brew install gcc6
+	brew install gcc@6
 	brew install binutils
 	brew install protobuf
 	brew install coreutils
@@ -266,7 +269,7 @@ Now install the dependency packages:
 
 or
 
-``brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc6 binutils protobuf coreutils wget nanomsg```
+``brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc@6 binutils protobuf coreutils wget nanomsg```
 
 Clone the Komodo repository
 ---------------------------
@@ -317,6 +320,12 @@ and create the configuration file by entering this in terminal:
 	echo "txindex=1" >> ~/Library/Application\ Support/Komodo/komodo.conf
 	echo "bind=127.0.0.1" >> ~/Library/Application\ Support/Komodo/komodo.conf
 	echo "rpcbind=127.0.0.1" >> ~/Library/Application\ Support/Komodo/komodo.conf
+	echo "addnode=5.9.102.210" >> ~/Library/Application\ Support/Komodo/komodo.conf
+	echo "addnode=78.47.196.146" >> ~/Library/Application\ Support/Komodo/komodo.conf
+	echo "addnode=178.63.69.164" >> ~/Library/Application\ Support/Komodo/komodo.conf
+	echo "addnode=88.198.65.74" >> ~/Library/Application\ Support/Komodo/komodo.conf
+	echo "addnode=5.9.122.241" >> ~/Library/Application\ Support/Komodo/komodo.conf
+	echo "addnode=144.76.94.38" >> ~/Library/Application\ Support/Komodo/komodo.conf
 
 Run Komodo
 ----------
@@ -326,7 +335,7 @@ If the build went well, run komodo:
 .. code-block:: shell
 
 	cd ~/komodo/src
-	./komodod -daemon
+	./komodod &
 
 To track progress of downloading the Komodo blockchain:
 
@@ -338,6 +347,7 @@ or get info with the getinfo command:
 
 .. code-block:: shell
 
+	cd ~/komodo/src
 	./komodo-cli getinfo
 
 Installing Komodo on Windows 64-bit systems
@@ -365,36 +375,35 @@ When Notepad opens, click ``Yes`` to create the komodo.conf file. Copy the infor
 
 .. code-block:: shell
 
-	rpcuser=yourRpcUserName 
-	rpcpassword=yourSecurePassword 
+	rpcuser=usernameChangeItToSomethingSecure	
+	rpcpassword=passwordChangeItToSomethingSecure
 	daemon=1
  	rpcallowip=127.0.0.1 
 	rpcbind=127.0.0.1
 	server=1
-	listen=1
+	txindex=1
 	addnode=5.9.102.210
 	addnode=78.47.196.146
 	addnode=178.63.69.164
 	addnode=88.198.65.74
 	addnode=5.9.122.241
 	addnode=144.76.94.38
-	txindex=1
-	maxconnections=1
 
 After pasting, save and exit Notepad.
 
-4. So now that you have created your ``komodo.conf`` file you are ready to download the `zk-snark proving key <https://z.cash/downloads/sprout-proving.key>`_ and `verifying key <https://z.cash/downloads/sprout-verifying.key>`_.
-While the keys are downloading let's paste following command to create the directory for ZcashParams:
+4. Create the directory for ZcashParams:
 
 .. code-block:: shell
 
 	mkdir “%HOMEPATH%\AppData\Roaming\ZcashParams”
 
-Once the keys have finished downloading, we'll paste this command to move the keys to our newly created ZcashParams directory: 
+And download following files in ``ZcashParams`` folder: 
 
-.. code-block:: shell
-
-	move “%HOMEPATH%\Downloads\sprout-proving.key” “%HOMEPATH%\AppData\Roaming\ZcashParams” && move “%HOMEPATH%\Downloads\sprout-verifying.key” “%HOMEPATH%\AppData\Roaming\ZcashParams”
+- [sprout-proving.key](https://z.cash/downloads/sprout-proving.key)
+- [sprout-verifying.key](https://z.cash/downloads/sprout-verifying.key)
+- [sapling-spend.params](https://z.cash/downloads/sapling-spend.params)
+- [sapling-output.params](https://z.cash/downloads/sapling-output.params)
+- [sprout-groth16.params](https://z.cash/downloads/sprout-groth16.params)
 
 5. Now we can run ``komodod.exe``
 
@@ -416,6 +425,9 @@ Once the keys have finished downloading, we'll paste this command to move the ke
 
 Downloads:
 
-a. Windows Binaries: https://artifacts.supernet.org/latest/windows
-b. Zk-snark proving keys: https://z.cash/downloads/sprout-proving.key
-c. Verifying keys: https://z.cash/downloads/sprout-verifying.key
+- Windows Binaries: https://github.com/KomodoPlatform/komodo/releases
+- [sprout-proving.key](https://z.cash/downloads/sprout-proving.key)
+- [sprout-verifying.key](https://z.cash/downloads/sprout-verifying.key)
+- [sapling-spend.params](https://z.cash/downloads/sapling-spend.params)
+- [sapling-output.params](https://z.cash/downloads/sapling-output.params)
+- [sprout-groth16.params](https://z.cash/downloads/sprout-groth16.params)
