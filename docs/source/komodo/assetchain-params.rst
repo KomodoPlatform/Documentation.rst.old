@@ -66,9 +66,9 @@ This chain's block reward will grow linearly from 0 to 100 over 1000 blocks then
 
 This parameter has two different functionailites depending on the configuation of the chain params. 
 
-If this parameter is used without ``-ac_founders`` the chain will follow an inflation tax model. The ``-ac_perc`` parameter is the percentage added to the block reward and transactions that will be sent to the ``-ac_pubkey`` address. ``-ac_pubkey`` must be set for this functionality. For example, if ``-ac_reward=100000000`` and ``-ac_perc=10000000``, for each block mined, the miner receives 1 coin along with the ``-ac_pubkey`` address receiving 0.1 coin. For every transaction sent, the pubkey address will receive 10% of the overall transaction value. This 10% is not taken from the user, rather it is created at this point. Each transaction inflates the overall supply. 
+If this parameter is used without ``-ac_founders`` the chain will follow an inflation tax model. The ``-ac_perc`` parameter is the percentage added to the block reward and transactions that will be sent to the ``-ac_pubkey`` address. ``-ac_pubkey`` must be set for this functionality. For example, if ``-ac_reward=100000000`` and ``-ac_perc=10000000``, for each block mined, the miner receives 1 coin along with the ``-ac_pubkey`` address receiving 0.1 coin. For every transaction sent, the pubkey address will receive 10% of the overall transaction value. This 10% is not taken from the user, rather it is created at this point. Each transaction inflates the overall supply. The maximum amount of coins created per block by this mechanism is capped at ``(1000000 * <percentage>)``.
 
-Note: Vout 1 of each coinbase transaction must be the correct amount sent to the corresponding pubkey. The ``vout`` type for all coinbase vouts must be ``pubkey`` as opposed to ``pubkeyhash``. This only affects a miner trying to use a stratum. Blackjok3r's coinbase overide method can be used. Please see `this repo <https://github.com/blackjokertt#disable-coinbase-mode>`_ for details. 
+Note: Vout 1 of each coinbase transaction must be the correct amount sent to the corresponding pubkey. The ``vout`` type for all coinbase vouts must be ``pubkey`` as opposed to ``pubkeyhash``. This only affects a miner trying to use a stratum. Blackjok3r's coinbase overide method can be used. Please see `this repo <https://github.com/blackjok3rtt/knomp#disable-coinbase-mode>`_ for details. 
 
 Please see ``-ac_founders`` for founder's reward functionality. 
 
@@ -82,14 +82,14 @@ This parameter can be used to enforce a "founder's reward". If this parameter is
 -ac_pubkey
 ==========
 
-This parameter should not be set unless the chain uses ``-ac_founders``, ``-ac_perc`` or ``-ac_import=PUBKEY``. This should be set to a 66 character string(compressed pubkey).  You can get the pubkey of an address by using the ``validateaddress`` command in ``komodo-cli``. The address must be imported to the wallet before using ``validateaddress``. 
+This parameter should not be set unless the chain uses ``-ac_founders``, ``-ac_perc`` or ``-ac_import=PUBKEY``. This should be set to a 66 character string(compressed pubkey).  You can get the pubkey of an address by using the ``validateaddress`` command in ``komodo-cli``. The address must be imported to the wallet before using ``validateaddress``. If this parameter is used, block 1(premine) will be mined to this address.
 
 Note: This must be set to a compresssed pubkey as opposed to an uncompressed pubkey. To simplify, the pubkey must start with ``02`` or ``03``.
 
 -ac_script
 ==========
 
-This parameter enables the ``-ac_founders`` founder's reward to be sent to a multisig address or any p2sh address. This parameter should only be used in combination with ``-ac_founders``. If ``-ac_script`` is set, ``-ac_pubkey`` must not be. 
+This parameter enables the ``-ac_founders`` founder's reward to be sent to a multisig address or any p2sh address. If this parameter is used, block 1(premine) will be mined to this address. This parameter should only be used in combination with ``-ac_founders``. If ``-ac_script`` is set, ``-ac_pubkey`` must not be. 
 
 This should be set to the ``"hex"`` value of ``"scriptPubKey"``. To get this value, first create a multisig address with ``createmultisig`` command in ``komodo-cli``.
 
@@ -130,7 +130,7 @@ This "hex" value is what ``-ac_script`` must be set to. For example, ``-ac_scrip
 -ac_cc
 ======
 
-This is the network cluster on which the chain can interact with other chains via cross chain smart contracts. This functionality is still in testing. If this is set to 1, the chain will have smart contracts enabled, but it will not be able to interact with other chains. If this is set to any number >1 and <100, the chain can interact with other chains on the same network cluster. For example, all ``-ac_cc=2`` chains can interact with each other but may not interact with ``-ac_cc=3`` chains. If this is set to >100, the chain will be fungible via the burn protocol with other chains on the same network cluster.
+This is the network cluster on which the chain can interact with other chains via cross chain `crypto conditions <https://developers.komodoplatform.com/basic-docs/start-here/cc-overview.html>`__. This functionality is still in testing. If this is set to 1, the chain will have crypto conditions enabled, but it will not be able to interact with other chains. If this is set to any number >1 and <100, the chain can validate transactions on chains on the same network cluster via the `MoMoM protocol <https://komodoplatform.com/komodo-platforms-new-scalability-tech/>`__. For example, all ``-ac_cc=2`` chains can interact with each other but may not interact with ``-ac_cc=3`` chains. This cross-chain validation relies on both chains being notarized by the same notary node network. If this is set to >100, the chain will be fungible via the burn protocol with other chains on the same network cluster.
 
 -ac_staked
 ==========
@@ -195,14 +195,28 @@ Setting ``-ac_txpow=1`` will enforce a transaction rate limiter. It's an effecti
 -ac_algo
 ========
 
-By default, all assetchains will use equihash as their mining algorithm. This parameter allows for verushash to be used if ``-ac_algo=verushash`` is set. Currently, this is verushash1.0. The updated version of verushash is not currently supported. This serves as a proof of concept for adding support for additional mining algorithms.
+By default, all assetchains will use equihash as their mining algorithm. This parameter allows for verushash to be used if ``-ac_algo=verushash`` is set. This is verushash1.0. The updated version of verushash is not currently supported. This serves as a proof of concept for adding support for additional mining algorithms.
 
-``-ac_algo`` is not compatible with ``-ac_staked``
+Testing is being done to make ``-ac_algo`` compatible with ``-ac_staked``. Currently, this combination is not recommended.
 
 -ac_veruspos
 ============
 
 This parameter can be used as an alternative to ``-ac_staked``. The chain will use Verus's proof of stake implementation instead. The only valid value for this parameter is ``-ac_veruspos=50``. It does not have the same segid mechanism as ``-ac_staked``. It is not recommended to use this parameter for a production chain unless thorough testing is done first.
+
+
+-ac_ccenable
+============
+
+This parameter can be used to limit which crypto conditions will be enabled. If this parameter is used, ``-ac_cc`` must be set. If ``-ac_cc`` is set, but ``-ac_ccenable`` is not, all crypto conditions will be enabled. This must be set to the corresponding eval codes in decimal separated by commas for the desired crypto conditions. These eval codes can be found `here <https://github.com/jl777/komodo/blob/master/src/cc/eval.h>`__. Please note that this disables spending crypto condition UTXOs for every eval code not specified. However, this does not limit creating these UTXOs. 
+
+This is labeled as in testing because currently it does not disable the rpc commands of the disabled crypto conditions. This means using these rpc commands will result in unspendable UTXOs. 
+
+For example, this chain will limit crypto conditions to faucet and rewards:
+::
+	komodod -ac_name=EXAMPLE -ac_supply=0 -ac_reward=100000000 -ac_cc=2 -ac_ccenable=228,229
+
+
 
 Please send any critiques or feedback to Alright or gcharang on matrix or discord.
 
