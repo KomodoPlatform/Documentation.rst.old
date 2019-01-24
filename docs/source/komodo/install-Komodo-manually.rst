@@ -16,7 +16,7 @@ Requirements
 Currently, you will need:
 
 * Linux (easiest with a Debian-based distribution)
-  * For Ubuntu, we recommend using only the 16.04 or 18.04 releases
+* For Ubuntu, we recommend using only the 16.04 or 18.04 releases
 * 64-bit
 * Minimum 4GB of free RAM (8GB+ recommended)
 
