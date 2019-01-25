@@ -2,7 +2,7 @@
 ElectrumX guide for barterDEX
 *****************************
 
-Here are the steps required to run electrumx for KMD. Replace the variables according to your setup.
+Here are the steps required to run electrumx for KMD. Replace the variables according to your setup. You need to setup minimum 2 electrum servers for same coin to ensure stable operation.
 
 * ``$user`` is the username under which electrumx will run
 * ``$rpcuser`` and ``$rpcpass`` are from the config of the wallet daemon
