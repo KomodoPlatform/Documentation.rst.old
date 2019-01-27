@@ -17,6 +17,7 @@ Here you will find more information about HyperDEX
    :caption: Release Notes
 
    hyperDEX/change-log-hyperDEX
+   hyperDEX/enhancement-record/HyperDEX-0.3.0
    hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.14
    hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.12
    hyperDEX/enhancement-record/HyperDEX-0.1.0-alpha.10
