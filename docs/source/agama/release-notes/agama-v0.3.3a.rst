@@ -5,7 +5,7 @@ Agama-v0.3.3a-Updates
 Enhancements
 ============
 
-1. Navigate to native folder option· `Github details <>`__
+1. Navigate to native folder option· `Github details <https://github.com/KomodoPlatform/Agama/issues/167>`__
 
 a. The following new options have been added to the Debug menu in Agama: Contact help desk, Add Github issue, Show Agama data folder, Show Komodo data folder, Show komodo-cli folder
 
