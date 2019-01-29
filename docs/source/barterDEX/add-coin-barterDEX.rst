@@ -10,8 +10,8 @@ This repository is the coins database which is accssed by the graphical applicat
 
 .. note::
 
-    * The filenames in each subdirectory needs to match the coin's symbol exactly, this is the unique field that gets indexed.
-    * For icons, please use .png files.
+    * The filenames in each subdirectory need to match the coin's symbol exactly, this is the unique field that gets indexed.
+    * For icons, please use **.png** files.
 
 When submitting a pull request to add coin to BarterDEX, make sure you have completed this checklist:
 
