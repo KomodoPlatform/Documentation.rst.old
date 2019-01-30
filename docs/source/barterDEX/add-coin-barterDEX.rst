@@ -2,27 +2,23 @@
 How to submit a Pull Request to add a coin to BarterDEX
 ******************************************************* 
 
-First go through :doc:`get-listed-barterDEX` to make sure that all the requirements are satisfied by the coin.
-
-The relavent repository is https://github.com/jl777/coins
-
-This repository is the coins database which is accssed by the graphical applications like the `BarterDEX GUI <https://github.com/KomodoPlatform/BarterDEX>`_.
+    * First go through :doc:`get-listed-barterDEX` to make sure that all the requirements are satisfied by the coin.
+    * The relevant repository is https://github.com/jl777/coins
+    * This repository is the coins database which is accessed by the graphical applications like the `BarterDEX GUI <https://github.com/KomodoPlatform/BarterDEX>`_ or `HyperDEX <https://github.com/atomiclabs/hyperdex>`__.
 
 .. note::
 
-    * The filenames in each subdirectory needs to match the coin's symbol exactly, this is the unique field that gets indexed.
-    * For icons, please use .png files.
+    * The filenames in each subdirectory need to match the coin's symbol exactly, this is the unique field that gets indexed.
+    * For icons, please use **.png** files.
 
-When submitting a pull request to add coin to BarterDEX, make sure you have completed this checklist:
+When submitting a pull request to add a coin to BarterDEX, make sure you have completed this checklist:
 
 0. The coin must be tested with BarterDEX atomic swaps
 ======================================================
 
-When submitting your coin addition request, please submit the URLs of the three transctions (``bobdeposit``, ``alicepayment`` and ``bobpayment``) which are produced by the :doc:`atomic swap <trade>` performed by the marketmaker API. This means that before going through the further steps in this doc and submit the data to this coins database `repo <https://github.com/jl777/coins>`_ , you would have performed an atomic swap. The further steps explain the expected files/values to be submitted.
-
-You can learn about performing an atomic swap :doc:`here <install-barterDEX-CLI>` and :doc:`here <trade>`.
-
-Or you can contact the team at coinintegration@komodoplatform.com to get help if required.
+    * When submitting your coin addition request, please submit the URLs of the three transctions (``bobdeposit``, ``alicepayment`` and ``bobpayment``) which are produced by the :doc:`atomic swap <trade>` performed through the marketmaker API. This means that before going through the further steps in this doc and submit the data to this coins database `repo <https://github.com/jl777/coins>`_ , you would have performed an atomic swap. The further steps explain the expected files/values to be submitted.
+    * You can learn about performing an atomic swap :doc:`here <install-barterDEX-CLI>` and :doc:`here <trade>`.
+    * Or you can contact the team at coinintegration@komodoplatform.com or in the ``#dev-tradebots`` channel in our `Discord <https://komodoplatform.com/discord>`__ to get help if required.
 
 Example:
 --------
@@ -75,37 +71,37 @@ You need to add the following info in JSON format to `coins <https://github.com/
 Bitcoin Protocol specific JSON
 ------------------------------
 
-    * ``"coin"`` must be the coin ticker.
+    * The value of the key ``"coin"`` must be the coin ticker.
 
-    * ``"name"`` must be coin's name, in all small letters. This is the value which is expected to be default data directory name for that coin. For example if the coin's name is Litecoin then it's expected data directory on Linux is ``~/.litecoin/``, on Mac ``~/Library/Applications Support/Litecoin/``, on Windows ``%AppData%\Litecoin``. Please keep this key's value in small letters only.
+    * The value of the key ``"name"`` must be coin's name, in all small letters. This is the value which is expected to be the default data directory name for that coin in Linux. For example if the coin's name is Litecoin then it's expected data directory on Linux is ``~/.litecoin/``, on Mac - ``~/Library/Applications Support/Litecoin/``, on Windows - ``%AppData%\Litecoin``. Please keep this key's value in small letters only.
 
-    * ``"confpath"`` must be ONLY used in case the expected data directory name of the coin/project is different to the ``"name"``'s value, as explained in last point. Please refer to Example 2 for better understanding. Make sure to use the exact format for ``confpath``. You don't need to change the word ``USERHOME``, it remains as is. Make sure you have a ``/``. after ``USERHOME``. And then the expected coin/project's data directory path and it's expected ``.conf`` file name.
+    * ``"confpath"`` must be used **ONLY** in case the expected data directory name of the coin/project is different to the key - ``"name"``'s value, as explained in last point. Please refer to Example 2 above for better understanding. Make sure to use the exact format for ``confpath``. You don't need to change the word ``USERHOME``, it remains as is. Make sure you have a ``/``. after ``USERHOME``. And then the expected coin/project's data directory path and its expected ``.conf`` file name.
 
-    * ``"fname"`` must be coin's full name.
+    * ``"fname"`` must be the coin's full name.
 
-    * ``"rpcport"`` must be coin's default RPC port. It is expected that it doesn't conflict with any existing coin in the coins db.
+    * ``"rpcport"`` must be coin's default RPC port. It is expected that it doesn't conflict with any other existing coin in the coins db.
 
-    * ``"pubtype"``, ``"p2shtype"``, and ``"wiftype"`` is the also very specific information about coin's parameters. This is specific to Bitcoin Protocol compatible coins only, and such information can be found in source code of the project. These parameters information can be expected in files like ``src/init.cpp``, ``src/base58.h``, and ``src/chainparamsbase.h`` if the project is following the **bitcoin** source code directory/files structure. If the parameters info is unclear then please have these confirmed by that coin/project's developers and make sure it's correct information.
+    * ``"pubtype"``, ``"p2shtype"``, and ``"wiftype"`` is also the very specific information about the coin's parameters. This is specific to Bitcoin Protocol compatible coins only, and such information can be found in the source code of the project. These parameters' information can be expected in files like ``src/init.cpp``, ``src/base58.h``, and ``src/chainparamsbase.h`` if the project is following the **bitcoin** source code directory/files structure. If the parameters info is unclear then please have these confirmed by that coin/project's developers and make sure it's correct.
 
-    * ``"txfee"`` is a value of default transactions fee, which must be specified in satoshis. BarterDEX uses this as the default transaction fee value when makes atomic swaps transactions.
+    * ``"txfee"`` is a value of default transactions fee, which must be specified in satoshis. BarterDEX uses this as the default transaction fee value for the coin, when making the atomic swap transactions.
 
 Ethereum Protocol specific JSON
 -------------------------------
 
-Ethereum protocol specific coin/project add request are the most simplest. ``"coin"``, ``"name"``, and ``"fname"`` information is same as explained in bitcoin protocol specific json section.
+    * Ethereum protocol specific coin/project addition requests are very simple. ``"coin"``, ``"name"``, and ``"fname"`` information is same as explained in the above bitcoin protocol specific json section.
 
-``"rpcport"`` must remain default for all ERC20 token/coins. Make sure its only specified as ``80``.
+    * ``"rpcport"`` must remain default for all ERC20 token/coins. Make sure its only specified as ``80``.
 
-``"etomic"`` must be the ERC20 token/coin's smart contract address.
+    * ``"etomic"`` must be the ERC20 token/coin's smart contract address.
 
 2. Icon file (Required)
 =======================
 
-    * The icon file is required.
-    * Icon must be a .png format file.
-    * Dimentions of icon file is 82x82 pixels.
-    * Icon file name MUST be in **small letters**.
-    * Icon file location is `icons <https://github.com/jl777/coins/blob/master/icons>`_ directory.
+    * An icon that represents the coin is required.
+    * The icon file must be in the **.png** format.
+    * Dimentions of icon file: ``82x82`` pixels.
+    * The icon file's name **MUST** be in **small letters**.
+    * The icon file should be submitted to the directory: `icons <https://github.com/jl777/coins/blob/master/icons>`_ through a Pull Request.
 
 3. Explorer URL (Required)
 ==========================
@@ -119,9 +115,9 @@ Ethereum protocol specific coin/project add request are the most simplest. ``"co
 4. Electrum Servers (Optional)
 ==============================
 
-    * Electrum file name must be coin's ticker name matching the ``"coin"`` value as specified in coins file.
+    * Electrum file name must be coin's ticker name matching the ``"coin"`` value as specified in the `coins <https://github.com/jl777/coins/blob/master/coins>`__ file.
     * Electrum file name must not have any file extension. It is a file without any ``.`` extension.
-    * Electrum file name must be all in **capital** letters.
+    * Electrum file name must be in all **capital** letters.
     * It must be a valid JSON format as shown in the following example:
 
 .. code-block:: json
@@ -163,7 +159,7 @@ Ethereum protocol specific coin/project add request are the most simplest. ``"co
         }
     ]
 
-* At least minimum 2 or more Electrum servers information must be provided.
-* Contact information must be provided in case the server admin needs to be contact in urgent cases when required. It can be any contact information out of the examples provided. Or may be add your own service/contact information as it suites you.
+* A minimum of 2 or more Electrum servers information must be provided.
+* Contact information must be provided in case the server admin needs to be contacted in urgent cases when required. It can be any contact information out of the examples provided. Or may be add your own service/contact information as it suites you.
 * The address and port of electrum server are required. The address of electrum server can either be a DNS or an IP address.
 

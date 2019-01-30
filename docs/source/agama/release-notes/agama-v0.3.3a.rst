@@ -19,21 +19,21 @@ c. The Add Github issue option will open the following URL: https://github.com/K
 
 d. The Show Agama data folder option will open the following folders in their respective OS:
 
-    * Windows - %appdata%Roaming/Agama
-    * Linux - ~/.Agama
-    * Mac - ~/Library/Application Support/Agama
+    * Windows: %appdata%Roaming/Agama
+    * Linux: ~/.Agama
+    * Mac: ~/Library/Application Support/Agama
 
 e. The Show Komodo data folder option will open the following folders in their respective OS:
 
-    * Windows - %appdata%Roaming/Komodo
-    * Linux - ~/.komodo
-    * Mac - ~/Library/Application Support/Komodo
+    * Windows: %appdata%Roaming/Komodo
+    * Linux: ~/.komodo
+    * Mac: ~/Library/Application Support/Komodo
 
 f. The Show komodo-cli folder option will open the following folders in their respective OS:
 
-    * Windows - C:\Program Files\AgamaApp\resources\app\assets\bin\win64
-    * Linux - ~/.komodo/zcutil
-    * Mac - ~/Library/Application Support/Komodo
+    * Windows: C:\Program Files\AgamaApp\resources\app\assets\bin\win64
+    * Linux: ~/.komodo/zcutil
+    * Mac: ~/Library/Application Support/Komodo
 
 2. Add change log
 
