@@ -6,8 +6,9 @@ First step to generate a multisig address in Agama is to download latest Agama r
 
 After downloading Agama for your preferred OS, run it and select ``Activate Coin``:
 
-.. image:: http://i.imgur.com/Bga3lso.png
-	:alt: Agama-login 
+.. image:: /_static/images/Agama/create-multisig-address/image1.png
+   :align: center
+   :alt: Agama-login 
 
 After you activate your favorite coin in lite mode, go to ``Tools`` section and select ``Generate multisig address``
 
@@ -15,15 +16,17 @@ After you activate your favorite coin in lite mode, go to ``Tools`` section and 
 
     If you don't see Tools section, follow this guide to activate Advanced features https://support.komodoplatform.com/en/support/solutions/articles/29000024423-activate-advanced-features
 
-.. image:: http://i.imgur.com/BMm5nb7.png
-	:alt: Agama-generate-multisig
+.. image:: /_static/images/Agama/create-multisig-address/image2.png
+   :align: center
+   :alt: Agama-generate-multisig
   
 .. note::
 
     A multisig address is a special address that will require different people to sign each transaction with their own private keys. To create a multisig address you will need all your peers to share with you the `pubkey` which will be used to sign transactions (these public-keys and their corresponding private-keys should be very well backed up by each owner). You can find your ``pubkey`` from the ``receive`` section as shown in the following image.
 
-.. image:: http://i.imgur.com/yS4JVmA.png
-	:alt: get-pubkey
+.. image:: /_static/images/Agama/create-multisig-address/image3.png
+   :align: center
+   :alt: get-pubkey
 
 Generating the address
 ======================
@@ -33,8 +36,9 @@ Generating the address
 * Next, select which coin you will be making this address for. 
 * Finally, list all 3 (or total of keys needed) in the text box.
 
-.. image:: http://i.imgur.com/wqXrzTh.png
-	:alt: generate-multisig
+.. image:: /_static/images/Agama/create-multisig-address/image4.png
+   :align: center
+   :alt: generate-multisig
 
 Once you generate the multisig address, you will get several outputs:
 
