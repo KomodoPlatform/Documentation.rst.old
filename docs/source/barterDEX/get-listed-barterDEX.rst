@@ -79,8 +79,7 @@ Json Output Example:
 Note:
 -----
 
-	For **taddr** , 1 means yes and 0 means no and it refers to the coin having transparent and zaddresses. Mostly this is for zcash forks.
-
+	The key **taddr** , is for zcash forks. It refers to the coin having transparent and zaddresses. The value that has to be passed is the value taken from the file ``src/chainparams.cpp`` from the wallets source code and it is the first value present in both ``base58Prefixes[PUBKEY_ADDRESS]`` and ``base58Prefixes[SCRIPT_ADDRESS]``, but converted to decimal, not the HEX. So if ``base58Prefixes[PUBKEY_ADDRESS]`` = **{0x1C,0xB8}** , the ``taddr`` is 0x1C coverted to decimal: 0x1C in HEX = 28 in decimal. the **"taddr"** : **28**
 
 Search for the information on Github
 ====================================
