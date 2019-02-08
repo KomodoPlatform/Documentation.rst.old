@@ -2,7 +2,7 @@
 Using Remote marketmaker binary with GUI
 ****************************************
 
-**Note that the below instructions are for any unixoid OS. Use with CAUTION!** For using Putty in Windows follow this `how-to <blog.devolutions.net/2017/4/how-to-configure-an-ssh-tunnel-on-putty>`_ - the section titled 'Local Port Forwarding'. You'd obviously have to adapt hostnames and port numbers.
+**Note that the below instructions are for any unixoid OS. Use with CAUTION!** For using Putty in Windows follow this `how-to <https://blog.devolutions.net/2017/4/how-to-configure-an-ssh-tunnel-on-putty>`__ - the section titled 'Local Port Forwarding'. You'd obviously have to adapt hostnames and port numbers.
 
 To have your local GUI talk to a remote marketmaker using an SSH tunnel, we will just block the marketmaker port (7783 per default) with our SSH tunnel before the local marketmaker is started. After that, any data sent to ``http://localhost:7783`` will effectively be forwarded in a secure manner to your remote server. Execute the below command in a shell or terminal window, in your local computer. You don't have to be in a certain directory to do it.
 
