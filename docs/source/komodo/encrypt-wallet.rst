@@ -62,6 +62,10 @@ Example:
 
 This above command will unlock your wallet for 60 seconds and will **NOT** return any output in your console. You can perform any actions with your wallet without any restrictions in the next 60 seconds. Change the timeout numbers to your liking.
 
+.. tip::
+
+    Issuing the above command again while the wallet is still unlocked will just reset the timeout and the value of the new timeout becomes the time limit at which the wallet is locked again.
+
 Lock Wallet
 ===========
 
