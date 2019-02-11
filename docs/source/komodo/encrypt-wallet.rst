@@ -1,11 +1,11 @@
-**********************************
-Encrypt Komodo **wallet.dat** File
-**********************************
+************************************
+Encrypt Komodo's **wallet.dat** File
+************************************
 
 How to Encrypt Komodo **wallet.dat** with password to make it more secure?
 ==========================================================================
 
-Komodo supports ``encryptwallet`` RPC to secure your **wallet.dat** file. After encrypting your wallet, you need to unlock it before making any transaction or dumping privkey of an address. This prevents unauthorized access to your KMD and other assetchains.
+Komodo supports ``encryptwallet`` RPC to secure your **wallet.dat** file. After encrypting your wallet, you need to unlock it before making any transaction or dumping privkey of an address. This prevents unauthorized access to the coins stored in your wallet.
 
 Requirements:
 -------------
@@ -61,6 +61,21 @@ Example:
     ./komodo-cli walletpassphrase Y0urSecureP@$$phras3 60
 
 This above command will unlock your wallet for 60 seconds and will **NOT** return any output in your console. You can perform any actions with your wallet without any restrictions in the next 60 seconds. Change the timeout numbers to your liking.
+
+.. tip::
+
+    Issuing the above command again while the wallet is still unlocked will just reset the timeout and the value of the new timeout becomes the time limit at which the wallet is locked again.
+
+Lock Wallet
+===========
+
+If you want to lock the wallet before the ``timeout`` specified is reached, use the command ``walletlock``
+
+Example:
+
+.. code-block:: shell
+
+    ./komodo-cli walletlock
 
 How to change password?
 =======================
