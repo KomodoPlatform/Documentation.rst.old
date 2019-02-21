@@ -34,3 +34,9 @@ Index of Contracts
    dice/scenarios/tutorial
    oracles/scenarios/tutorial
    gateways/scenarios/tutorial
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Misc
+   
+   oracles/scenarios/script-data-conversion
