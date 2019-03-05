@@ -145,6 +145,7 @@ GAME    GameCredits
 LTC     Litecoin
 ROGER   TheHolyRoger
 STAK    Starks
+ECA	Electra
 ======  =====================
 
 ERC20 Tokens
@@ -293,7 +294,6 @@ DEC8     DEC8 (TESTCOIN)
 ETH      Ethereum
 EOS      EOS
 ZIL      Zilliqa
-ECA	 Electra
 =======  ========================
 
 Komodo Asset Chains
