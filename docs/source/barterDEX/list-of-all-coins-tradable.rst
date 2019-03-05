@@ -293,6 +293,7 @@ DEC8     DEC8 (TESTCOIN)
 ETH      Ethereum
 EOS      EOS
 ZIL      Zilliqa
+ECA	 Electra
 =======  ========================
 
 Komodo Asset Chains
