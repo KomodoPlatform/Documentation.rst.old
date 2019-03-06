@@ -250,6 +250,11 @@ Installing Komodo on OSX
 Requirements
 ------------
 
+Ensure commandline tools from apple/xcode are installed. Issue the following command in a terminal.
+.. code-block:: shell
+
+	xcode-select --install
+
 Packages are installed through ``homebrew``, make sure to install it:
 
 .. code-block:: shell
@@ -261,6 +266,8 @@ Now install the dependency packages:
 
 .. code-block:: shell
 
+	brew update
+	brew upgrade
 	brew tap discoteq/discoteq; brew install flock
 	brew install autoconf autogen automake
 	brew install gcc@6
@@ -269,10 +276,6 @@ Now install the dependency packages:
 	brew install coreutils
 	brew install wget
 	brew install nanomsg
-
-or
-
-``brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc@6 binutils protobuf coreutils wget nanomsg```
 
 Clone the Komodo repository
 ---------------------------
