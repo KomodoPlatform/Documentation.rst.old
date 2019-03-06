@@ -251,6 +251,7 @@ Requirements
 ------------
 
 Ensure commandline tools from apple/xcode are installed. Issue the following command in a terminal.
+
 .. code-block:: shell
 
 	xcode-select --install
