@@ -254,21 +254,20 @@ Ensure commandline tools from apple/xcode are installed. Issue the following com
 
 .. code-block:: shell
 
-	xcode-select --install
+    xcode-select --install
 
-Packages are installed through ``homebrew``, make sure to install it:
+``brew`` is needed to install dependencies. If you have latest ``brew`` installed in your system already, skip this and install the deps directly.
 
 .. code-block:: shell
 
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-Now install the dependency packages:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+These are the dependencies needed to install with ``brew``.
 
 .. code-block:: shell
 
-	brew update
-	brew upgrade
+    brew update
+    brew upgrade
 	brew tap discoteq/discoteq; brew install flock
 	brew install autoconf autogen automake
 	brew install gcc@6
@@ -285,7 +284,7 @@ Clone the Komodo repository
 
 	git clone https://github.com/jl777/komodo
 
-Get the proving keys:
+Get the Zcash params:
 ---------------------
 
 .. code-block:: shell
@@ -293,15 +292,15 @@ Get the proving keys:
 	cd komodo
 	./zcutil/fetch-params.sh
 
-And now build Komodo
---------------------
+Compile Komodo
+--------------
 
 .. code-block:: shell
 
 	git checkout dev
 	./zcutil/build-mac.sh
 
-This can take some time, so let's create a configuration file in the mean time.
+This can take some time, so let's create a configuration file in the mean time using a fresh terminal.
 
 Create configuration file
 -------------------------
