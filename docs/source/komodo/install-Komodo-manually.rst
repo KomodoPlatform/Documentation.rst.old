@@ -254,15 +254,9 @@ Ensure commandline tools from apple/xcode are installed. Issue the following com
 
 .. code-block:: shell
 
-<<<<<<< HEAD
     xcode-select --install
 
 ``brew`` is needed to install dependencies. If you have latest ``brew`` installed in your system already, skip this and install the deps directly.
-=======
-	xcode-select --install
-
-Packages are installed through ``homebrew``, make sure to install it:
->>>>>>> master
 
 .. code-block:: shell
 
@@ -272,13 +266,8 @@ These are the dependencies needed to install with ``brew``.
 
 .. code-block:: shell
 
-<<<<<<< HEAD
     brew update
     brew upgrade
-=======
-	brew update
-	brew upgrade
->>>>>>> master
 	brew tap discoteq/discoteq; brew install flock
 	brew install autoconf autogen automake
 	brew install gcc@6
