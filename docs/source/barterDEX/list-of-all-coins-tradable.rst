@@ -145,6 +145,7 @@ GAME    GameCredits
 LTC     Litecoin
 ROGER   TheHolyRoger
 STAK    Starks
+ECA	Electra
 ======  =====================
 
 ERC20 Tokens
