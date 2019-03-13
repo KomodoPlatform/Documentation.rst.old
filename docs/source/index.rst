@@ -30,6 +30,7 @@ There is an updated Developer site being built at https://developers.komodoplatf
    cc/index-book-jl
    home-barterDEX
    home-hyperDEX
+   komodo/npm-module-komodo-rewards
    Setup Bob/Marketmaker nodes using easy scripts by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>
    barterDEX/list-of-all-coins-tradable
 
