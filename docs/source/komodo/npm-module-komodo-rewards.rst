@@ -71,4 +71,5 @@ License
 -------
 
 MIT © Atomic Labs
+
 MIT © Luke Childs    
