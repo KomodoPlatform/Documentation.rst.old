@@ -2,7 +2,7 @@
 Dice
 ****
 
-**Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-dice.html for the latest Documentation.**
+Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-dice.html for the latest Documentation.
 
 The diceplan creator needs to be running ``dicestatus`` in a crontask or some regular frequency. This finishes any unfinished bets and also creates entropy tx.
 

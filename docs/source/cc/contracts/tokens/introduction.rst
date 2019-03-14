@@ -2,7 +2,7 @@
 Tokens
 ******
 
-**Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-tokens.html for the latest Documentation.**
+Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-tokens.html for the latest Documentation.
 
 Introduction to Tokens contract enabled by Komodo's Custom Consensus Framework
 ==============================================================================
@@ -21,21 +21,4 @@ How would those tokens move?
 ----------------------------
 
 The tokentransfer rpc works like sendmany. The source ``txid/vout`` needs to be specified  as it is critical to match outputs with inputs. If you send to burn address, it is burnt.
-
-Available RPC Calls
--------------------
-
-	* :doc:`tokenaddress [pubkey] <rpc/tokenaddress>` 
-	* :doc:`tokenask numtokens tokenid price <rpc/tokenask>`  
-	* :doc:`tokenbalance tokenid [pubkey] <rpc/tokenbalance>`  
-	* :doc:`tokenbid numtokens tokenid price <rpc/tokenbid>`  
-	* :doc:`tokencancelask tokenid asktxid <rpc/tokencancelask>`  
-	* :doc:`tokencancelbid tokenid bidtxid <rpc/tokencancelbid>`  
-	* :doc:`tokencreate name supply description <rpc/tokencreate>`  
-	* :doc:`tokenfillask tokenid asktxid fillunits <rpc/tokenfillask>`  
-	* :doc:`tokenfillbid tokenid bidtxid fillamount <rpc/tokenfillbid>`  
-	* :doc:`tokeninfo tokenid <rpc/tokeninfo>`  
-	* :doc:`tokenlist <rpc/tokenlist>`  
-	* :doc:`tokenorders [tokenid] <rpc/tokenorders>`  
-	* :doc:`tokentransfer tokenid destpubkey amount <rpc/tokentransfer>`
 

@@ -15,5 +15,4 @@ To claim faucet funds, the used pubkey and address must be fresh without any fun
 
 Faucet sends 0.1 coins and requires about 30 seconds of CPU time.
 
-A tutorial describing the usage of the Faucet contract is :doc:`here <scenarios/tutorial>`
 

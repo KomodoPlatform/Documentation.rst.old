@@ -12,6 +12,7 @@ Index of Contracts
    dice/introduction.rst
    oracles/introduction.rst
    gateways/introduction.rst
+   channels/introduction.rst
 
 .. toctree::
    :maxdepth: 1

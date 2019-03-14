@@ -2,7 +2,7 @@
 Oracles
 *******
 
-**Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-oracles.html for the latest Documentation.**
+Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-oracles.html for the latest Documentation.
 
 For an introduction to CC in general, see: :ref:`Using the Contracts on a Komodo based Blockchain`
 
@@ -23,8 +23,6 @@ The contract can be used as follows:
     * ``oracleslist`` , ``oraclesinfo`` , ``oraclessamples`` can be used in that specific order to find the available Oracles, their publishers and data samples from any specific publisher.  
     * Anyone can subscribe to a particular publisher for an Oracle through ``oraclessubscribe``
     * A publisher can publish data using ``oraclesdata`` and collect the ``datafee`` 
-
-A tutorial describing the usage of Oracles contract is :doc:`here <scenarios/tutorial>`
 
 The various formats of data that can be registered for an Oracle and their symbols are as follows:
 

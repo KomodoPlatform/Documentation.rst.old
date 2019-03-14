@@ -19,7 +19,7 @@ Requirements:
 APIs needed
 ===========
 
-You will only need :ref:`client`, :ref:`setpassphrase`, :ref:`enable`, :ref:`autoprice` to be a marketmaker in barterDEX. All the API usage is explained in the below steps.
+You will only need :ref:`client`, ``setpassphrase``, :ref:`enable`, :ref:`autoprice` to be a marketmaker in barterDEX. All the API usage is explained in the below steps.
 
 Steps:
 ------

@@ -2,7 +2,7 @@
 Rewards
 *******
 
-**Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-rewards.html for the latest Documentation.**
+Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-rewards.html for the latest Documentation.
 
 Rewards contract allows us to create a master-node like rewards program. Which gives a user the ability to earn rewards by locking coins.
 
