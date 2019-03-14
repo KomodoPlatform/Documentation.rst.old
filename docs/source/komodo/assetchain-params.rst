@@ -54,7 +54,8 @@ A ``-ac_end`` value of ``0`` indicates that the era will last indefinitely. A ``
 
 For example, this can be used for a "slow start":
 ::
-	./komodod -ac_name=EXAMPLE -ac_reward=0,10000000000 -ac_end=1000,0 -ac_decay=100000000,100000000 -ac_halving=1 -ac_eras=2
+
+    ./komodod -ac_name=EXAMPLE -ac_reward=0,10000000000 -ac_end=1000,0 -ac_decay=100000000,100000000 -ac_halving=1 -ac_eras=2
 
 This chain's block reward will grow linearly from 0 to 100 over 1000 blocks then stay at 100 block reward indefinitely. 
 
@@ -68,7 +69,7 @@ This parameter has two different functionailites depending on the configuation o
 
 If this parameter is used without ``-ac_founders`` the chain will follow an inflation tax model. The ``-ac_perc`` parameter is the percentage added to the block reward and transactions that will be sent to the ``-ac_pubkey`` address. ``-ac_pubkey`` must be set for this functionality. For example, if ``-ac_reward=100000000`` and ``-ac_perc=10000000``, for each block mined, the miner receives 1 coin along with the ``-ac_pubkey`` address receiving 0.1 coin. For every transaction sent, the pubkey address will receive 10% of the overall transaction value. This 10% is not taken from the user, rather it is created at this point. Each transaction inflates the overall supply. The maximum amount of coins created per block by this mechanism is capped at ``(1000000 * <percentage>)``.
 
-Note: Vout 1 of each coinbase transaction must be the correct amount sent to the corresponding pubkey. The ``vout`` type for all coinbase vouts must be ``pubkey`` as opposed to ``pubkeyhash``. This only affects a miner trying to use a stratum. Blackjok3r's coinbase overide method can be used. Please see `this repo <https://github.com/blackjok3rtt/knomp#disable-coinbase-mode>`_ for details. 
+Note: Vout 1 of each coinbase transaction must be the correct amount sent to the corresponding pubkey. The ``vout`` type for all coinbase vouts must be ``pubkey`` as opposed to ``pubkeyhash``. This only affects a miner trying to use a stratum. Blackjok3r's coinbase overide method can be used. Please see `this repo <https://github.com/blackjok3rtt/knomp#disable-coinbase-mode>`__ for details. 
 
 Please see ``-ac_founders`` for founder's reward functionality. 
 
@@ -95,6 +96,7 @@ This should be set to the ``"hex"`` value of ``"scriptPubKey"``. To get this val
 
 Example:
 ::
+
 	komodo-cli -ac_name=EXAMPLE createmultisig 2 "[\"RMnZJpfLbFHUxMS3HM5gkvtFKeduhr96Ec\",\"RW2Yx4Tk9WGfUvhbJTXGFiRhr7PKcVtrm5\",\"RQ1uqBj9yk94BcxEZodbeNqb3jWv8pLeA4\"]"
 	{
 	  "address": "bGHcUFb7KsVbSFiwcBxRufkFiSuhqTnAaV",
@@ -102,14 +104,18 @@ Example:
 	}
 
 On a test chain, send this address some coins then look at the resulting transaction with ``getrawtransaction <txid> 1``:
+
 ::
+
 	komodo-cli -ac_name=EXAMPLE sendtoaddress bGHcUFb7KsVbSFiwcBxRufkFiSuhqTnAaV 10
 	ef0d05f14ea2a5bfa1c99142c2e3d78c851223d7476ed2e57b61b6e07f741f0f
 
 	komodo-cli -ac_name=EXAMPLE getrawtransaction ef0d05f14ea2a5bfa1c99142c2e3d78c851223d7476ed2e57b61b6e07f741f0f 1
 
 Look at the output to the address:
+
 ::
+
     {
       "value": 10.00000000,
       "valueSat": 1000000000,
@@ -179,6 +185,7 @@ These parameters can be used to enforce "coinbase locking".
 
 For example:
 ::
+
 	komodod -ac_name=EXAMPLE -ac_supply=0 -ac_reward=10000000000 -ac_halving=10000 -ac_timelockgte=10000000000 -ac_timeunlockfrom=10000 -ac_timeunlockto=100000
 
 The first 10000 block rewards on this chain will be locked until a random block between 10000 and 100000.
@@ -213,7 +220,9 @@ This parameter can be used to limit which crypto conditions will be enabled. If 
 This is labeled as in testing because currently it does not disable the rpc commands of the disabled crypto conditions. This means using these rpc commands will result in unspendable UTXOs. 
 
 For example, this chain will limit crypto conditions to faucet and rewards:
+
 ::
+
 	komodod -ac_name=EXAMPLE -ac_supply=0 -ac_reward=100000000 -ac_cc=2 -ac_ccenable=228,229
 
 

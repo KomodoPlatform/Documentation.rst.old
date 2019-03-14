@@ -2,6 +2,8 @@
 Oracles
 *******
 
+Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-oracles.html for the latest Documentation.
+
 For an introduction to CC in general, see: :ref:`Using the Contracts on a Komodo based Blockchain`
 
 To enable and test contracts:
@@ -21,8 +23,6 @@ The contract can be used as follows:
     * ``oracleslist`` , ``oraclesinfo`` , ``oraclessamples`` can be used in that specific order to find the available Oracles, their publishers and data samples from any specific publisher.  
     * Anyone can subscribe to a particular publisher for an Oracle through ``oraclessubscribe``
     * A publisher can publish data using ``oraclesdata`` and collect the ``datafee`` 
-
-A tutorial describing the usage of Oracles contract is :doc:`here <scenarios/tutorial>`
 
 The various formats of data that can be registered for an Oracle and their symbols are as follows:
 
@@ -45,18 +45,4 @@ Example:
 
     ./komodo-cli -ac_name=ORCL oraclescreate "Oracle1" "testing oracle" "L"
     # "L" is when the data to be submitted is a 8 byte unsigned little endian number
-
-.. _oracles-rpc:
-
-Available RPC Calls
-===================
-
-    * :doc:`oraclesaddress [pubkey] <rpc/oraclesaddress>`
-    * :doc:`oraclescreate name description format <rpc/oraclescreate>`
-    * :doc:`oraclesinfo oracletxid <rpc/oraclesinfo>`
-    * :doc:`oracleslist <rpc/oracleslist>`
-    * :doc:`oraclesregister oracletxid datafee <rpc/oraclesregister>`
-    * :doc:`oraclessubscribe oracletxid publisher datafee <rpc/oraclessubscribe>`
-    * :doc:`oraclesdata oracletxid hexstr <rpc/oraclesdata>`
-    * :doc:`oraclessamples oracletxid batonutxo num <rpc/oraclessamples>`
 

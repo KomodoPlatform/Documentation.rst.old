@@ -2,6 +2,8 @@
 Dice
 ****
 
+Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-dice.html for the latest Documentation.
+
 The diceplan creator needs to be running ``dicestatus`` in a crontask or some regular frequency. This finishes any unfinished bets and also creates entropy tx.
 
 Additionally, you need to create txids with hashed entropy, basically any dice tx other than a dicebet will add hashed entropy, but you need to create a few at first via ``diceaddfunds``.
@@ -23,16 +25,4 @@ When the ``dicefinish`` completes a bet for either win or loss, it attaches the 
 Technically I generate 2 ``256 bit`` numbers from the two entropy values. I just ``SHA256(house entropy + bettor entropy)`` for the house and ``SHA256(bettor entropy + house entropy)`` for the bettor. Then for ``odds of > 1``, the entropy value is divided by the ``odds`` and the two numbers compared. The bettor value adjusted by odds needs to be bigger than the house value.
 
 I think the payout matches the risk. for a 1:1, the two values are directly compared and a win is 2x what was bet.
-
-Available RPC calls
-===================
-
-* :doc:`diceaddfunds name fundingtxid amount <rpc/diceaddfunds>`
-* :doc:`diceaddress [pubkey] <rpc/diceaddress>`
-* :doc:`dicebet name fundingtxid amount odds <rpc/dicebet>`
-* :doc:`dicefinish name fundingtxid bettxid <rpc/dicefinish>`
-* :doc:`dicefund name funds minbet maxbet maxodds timeoutblocks <rpc/dicefund>`
-* :doc:`diceinfo fundingtxid <rpc/diceinfo>`
-* :doc:`dicelist <rpc/dicelist>`
-* :doc:`dicestatus name fundingtxid bettxid <rpc/dicestatus>`
 

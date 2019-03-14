@@ -10,7 +10,7 @@ Step 1: Create an Assetchain/Coin, Setup Insight based Explorer, Electrum Server
     1) :doc:`Create a new assetchain or coin <create-Komodo-Assetchain>`. Different Parameters to customize your coin are :doc:`here <assetchain-params>`
     2) Install explorer: `DeckerSU/komodo-explorers-install <https://github.com/DeckerSU/komodo-explorers-install>`_
     3) :doc:`Setup Electrum SPV server </barterDEX/setup-electrumX-server>`
-    4) :doc:`Integrate into Agama GUI wallet <agama/add-Komodo-Assetchains-Agama-Desktop>` 
+    4) :doc:`Integrate into Agama GUI wallet <../agama/add-Komodo-Assetchains-Agama-Desktop>` 
 
 We have used Zaddex (ZEX) coin as example for some part of this doc. Please change to your coin name where ever applicable.
 
