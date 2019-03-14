@@ -2,6 +2,8 @@
 Rewards
 *******
 
+**Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-rewards.html for the latest Documentation.**
+
 Rewards contract allows us to create a master-node like rewards program. Which gives a user the ability to earn rewards by locking coins.
 
 APR, minimum deposit, required holding period are all configurable in each ``rewards`` plan (there can be many active at any given time).
@@ -19,13 +21,3 @@ The flow of a Rewards plan is as follows:
 
     If you create a plan with ``mindeposit: 10000``, make sure you have added 10000 + tx fees using the ``rewardsaddfunding`` call after creating the plan. The Rewards contract won't allow locking of funds greater than the amount already locked in a single transaction as it needs to assure that it will have the required funds to pay.
 
-Available RPC Calls
-===================
-
-* :doc:`rewardsaddfunding name fundingtxid amount <rpc/rewardsaddfunding>`
-* :doc:`rewardsaddress [pubkey] <rpc/rewardsaddress>`
-* :doc:`rewardscreatefunding name amount APR mindays maxdays mindeposit <rpc/rewardscreatefunding>`
-* :doc:`rewardsinfo fundingtxid <rpc/rewardsinfo>`
-* :doc:`rewardslist <rpc/rewardslist>`
-* :doc:`rewardslock name fundingtxid amount <rpc/rewardslock>`
-* :doc:`rewardsunlock name fundingtxid [txid] <rpc/rewardsunlock>`

@@ -2,6 +2,8 @@
 Faucet
 ******
 
+Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-faucet.html for the latest Documentation.
+
 Introduction
 ============
 
@@ -15,12 +17,3 @@ Faucet sends 0.1 coins and requires about 30 seconds of CPU time.
 
 A tutorial describing the usage of the Faucet contract is :doc:`here <scenarios/tutorial>`
 
-.. _faucet-rpc:
-
-Available RPC Calls
-===================
-
-* :doc:`faucetaddress [pubkey] <rpc/faucetaddress>` - will show the faucet contract address
-* :doc:`faucetfund amount <rpc/faucetfund>` - donate/send your funds to the faucet
-* :doc:`faucetget <rpc/faucetget>` - request funds from faucet
-* :doc:`faucetinfo <rpc/faucetinfo>` - displays faucet funds balance

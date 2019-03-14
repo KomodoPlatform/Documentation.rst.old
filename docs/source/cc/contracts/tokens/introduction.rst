@@ -2,6 +2,8 @@
 Tokens
 ******
 
+**Visit https://developers.komodoplatform.com/basic-docs/cryptoconditions/cc-tokens.html for the latest Documentation.**
+
 Introduction to Tokens contract enabled by Komodo's Custom Consensus Framework
 ==============================================================================
 
