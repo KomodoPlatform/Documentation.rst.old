@@ -37,7 +37,7 @@ RPC clients and wrappers
 KMDLabs
 =======
 
-- https://github.com/KMDLabs/StakedNotary - scipts to easyly run a Staked Notary
+* https://github.com/KMDLabs/StakedNotary - scipts to easily run a Staked Notary
 * https://github.com/KMDLabs/pos64staker - An automated staker for PoS assetchains
 
 Notary stats
