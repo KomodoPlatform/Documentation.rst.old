@@ -18,6 +18,8 @@ Proof of Concept
 * https://github.com/imylomylo/komodo-cakeshop - Work in progress; An integrated development environment and SDK
 * https://github.com/tonymorony/Komodoku - Sudoku  CC
 * https://github.com/KMDLabs/trollbox - On chain real time chat for KMD assetchains
+* https://www.dragonhound.tech/
+ - Source code: https://github.com/smk762/Dragonhound - GPS tracking a wandering hound with Particle.io via Komodo cryptoconditions oracles, displayed on Leaflet
  
 Turnkey Solutions to run Komodo
 ===============================
@@ -39,6 +41,7 @@ KMDLabs
 
 * https://github.com/KMDLabs/StakedNotary - scripts to easily run a Staked Notary
 * https://github.com/KMDLabs/pos64staker - An automated staker for PoS assetchains
+* https://github.com/smk762/kmd_pulp - random assortment of small scripts for use in the Komodo ecosystem
 
 Notary stats
 ============
@@ -71,7 +74,7 @@ Miscellaneous
 * https://github.com/n41r0j/airdrop - an Airdrop + Snapshot tool, written in Rust
 * https://github.com/libscott/libcryptoconditions - Interledger crypto-conditions implemented in C, including simple JSON api 
 * https://github.com/libscott/hoek - Komodo clientside tools
-* https://www.dragonhound.tech/
+
 
 Ledger reward claim
 ===================
