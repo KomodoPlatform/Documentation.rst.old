@@ -40,7 +40,7 @@ KMDLabs
 =======
 
 * https://github.com/KMDLabs/StakedNotary - scripts to easily run a Staked Notary
-* https://github.com/KMDLabs/pos64staker - An automated staker for PoS assetchains
+* https://github.com/KMDLabs/pos64staker - An automated staker for PoS assetchains, has an auto bootstrapper, and a dilithium menu
 * https://github.com/smk762/kmd_pulp - random assortment of small scripts for use in the Komodo ecosystem
 
 Notary stats
