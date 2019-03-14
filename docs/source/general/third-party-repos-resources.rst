@@ -19,7 +19,7 @@ Proof of Concept
 * https://github.com/tonymorony/Komodoku - Sudoku  CC
 * https://github.com/KMDLabs/trollbox - On chain real time chat for KMD assetchains
 * https://www.dragonhound.tech/
- - Source code: https://github.com/smk762/Dragonhound - GPS tracking a wandering hound with Particle.io via Komodo cryptoconditions oracles, displayed on Leaflet
+ * Source code: https://github.com/smk762/Dragonhound - GPS tracking a wandering hound with Particle.io via Komodo cryptoconditions oracles, displayed on Leaflet
  
 Turnkey Solutions to run Komodo
 ===============================
