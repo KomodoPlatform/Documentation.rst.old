@@ -16,3 +16,4 @@ General Documentation
    :caption: List of all KomodoPlatform projects
 
    general/list-all-KomodoPlatform-Project-links
+   general/third-party-repos-resources
