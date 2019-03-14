@@ -5,7 +5,7 @@ Number of confirmations displayed based on dPOW status
 Introduction
 ============
 
-A new feature has been added to the Komodo daemon (``komodod``) that changes the behaviour of the value displayed for ``"confirmations":`` which is output on calling ``gettxout``, ``listunspent`` or ``getblock`` through the ``komodo-cli``
+A new feature has been added to the Komodo daemon (``komodod``) that changes the behaviour of the value displayed for ``"confirmations":`` which is output on calling ``getrawtransaction``, ``decoderawtransaction``, ``gettxout``, ``listunspent`` or ``getblock`` through the ``komodo-cli``
 
 The new behaviour is as follows:
 
