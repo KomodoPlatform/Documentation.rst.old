@@ -16,7 +16,9 @@ Proof of Concept
 * http://oracle.earth/ - Live demo of Oracles CC module
 * https://github.com/tonymorony/komodo_cryptoconditions_tui - TUI for various CC modules written in python
 * https://github.com/imylomylo/komodo-cakeshop - Work in progress; An integrated development environment and SDK
-
+* https://github.com/tonymorony/Komodoku - Sudoku  CC
+* https://github.com/KMDLabs/trollbox - On chain real time chat for KMD assetchains
+ 
 Turnkey Solutions to run Komodo
 ===============================
 
@@ -32,6 +34,25 @@ RPC clients and wrappers
 * https://github.com/ca333/komodoAPI-cpp - Komodo Core API for cpp
 * https://github.com/atomiclabs/get-komodo-rewards - npm module to calculate KMD rewards of a UTXO 
 
+KMDLabs
+=======
+
+- https://github.com/KMDLabs/StakedNotary - scipts to easyly run a Staked Notary
+* https://github.com/KMDLabs/pos64staker - An automated staker for PoS assetchains
+
+Notary stats
+============
+
+* https://notarystats.info
+* https://komodostats.com/ 
+
+Guides for Notary Nodes
+=======================
+
+* https://github.com/chainstrike/nntools/tree/master/guides
+* https://github.com/KomodoPlatform/NotaryNodes - Candidate Proposals
+* https://github.com/goldenman-kmd/komodo-utils
+
 Explorers and Other tools
 =========================
 
@@ -42,17 +63,20 @@ Mining Software
 ===============
 
 - https://github.com/webworker01/knomp - A NOMP based stratum for the Komodo platform
+- https://github.com/himu007/OptiminerEquihash 
 
 Miscellanious
 =============
 
 * https://github.com/n41r0j/airdrop - an Airdrop + Snapshot tool, written in Rust
+* https://github.com/libscott/libcryptoconditions - Interledger crypto-conditions implemented in C, including simple JSON api 
+* https://github.com/libscott/hoek - Komodo clientside tools
 
 Ledger reward claim
 ===================
 
 - https://atomiclabs.github.io/ledger-kmd-reward-claim/ - by Atomic Labs
-    - Source Cpde: https://github.com/atomiclabs/ledger-kmd-reward-claim
+    - Source Code: https://github.com/atomiclabs/ledger-kmd-reward-claim
 - https://magnumwallet.co/ - Closed Source, use at your own risk.
 
 
