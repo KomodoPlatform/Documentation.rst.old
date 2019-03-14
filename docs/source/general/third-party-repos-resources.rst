@@ -37,7 +37,7 @@ RPC clients and wrappers
 KMDLabs
 =======
 
-* https://github.com/KMDLabs/StakedNotary - scipts to easily run a Staked Notary
+* https://github.com/KMDLabs/StakedNotary - scripts to easily run a Staked Notary
 * https://github.com/KMDLabs/pos64staker - An automated staker for PoS assetchains
 
 Notary stats
@@ -65,12 +65,13 @@ Mining Software
 - https://github.com/webworker01/knomp - A NOMP based stratum for the Komodo platform
 - https://github.com/himu007/OptiminerEquihash 
 
-Miscellanious
+Miscellaneous
 =============
 
 * https://github.com/n41r0j/airdrop - an Airdrop + Snapshot tool, written in Rust
 * https://github.com/libscott/libcryptoconditions - Interledger crypto-conditions implemented in C, including simple JSON api 
 * https://github.com/libscott/hoek - Komodo clientside tools
+* https://www.dragonhound.tech/
 
 Ledger reward claim
 ===================
