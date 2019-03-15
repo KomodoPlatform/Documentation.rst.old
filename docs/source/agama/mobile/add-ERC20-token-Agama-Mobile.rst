@@ -8,7 +8,7 @@ Agama wallet library
 ====================
 
 * Add a contract ID `pbca26/agama-wallet-lib:src/eth-erc20-contract-id.js@dev <https://github.com/pbca26/agama-wallet-lib/blob/dev/src/eth-erc20-contract-id.js>`_
-* Add token decimals (optional, only if it's different from default 18 value) pbca26/agama-wallet-lib:src/eth-erc20-decimals.js@dev <https://github.com/pbca26/agama-wallet-lib/blob/dev/src/eth-erc20-decimals.js>`_
+* Add token decimals (optional, only if it's different from default 18 value)  `pbca26/agama-wallet-lib:src/eth-erc20-decimals.js@dev <https://github.com/pbca26/agama-wallet-lib/blob/dev/src/eth-erc20-decimals.js>`_
 * Submit a PR, use dev branch!
 
 MeteorJS app
