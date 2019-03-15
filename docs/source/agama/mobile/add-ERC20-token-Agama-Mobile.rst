@@ -19,7 +19,7 @@ MeteorJS app
 * Drop a 60 x 60 px logo into `/public/images/cryptologo/btc@dev <https://github.com/KomodoPlatform/agama-mobile/tree/dev/public/images/cryptologo/btc>`_
 * Add explorer url to whitelist `/mobile-config.js@dev#L118 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/mobile-config.js#L118>`_
 * Add asset chain ticker to coins file `/imports/ui/actions/coins.js@dev#L39 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/imports/ui/actions/coins.js#L39>`_
-* Add asset chain name to translation file `/imports/ui/translate/en.js@dev#L344 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/imports/ui/translate/en.js#L344>`_.
+* Add the ERC20 token name to translation file `/imports/ui/translate/en.js@dev#L344 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/imports/ui/translate/en.js#L344>`_.
 * Submit a PR, use dev branch!
 
 
