@@ -36,6 +36,6 @@ How to get network parameters
     * PUBKEY_ADDRESS conversion example (KMD): ``60 dec -> 0x3c hex``
     * In case if ``SECRET_KEY`` consists of two decimal numbers (e.g. ``63 + 128``) sum them up and use the result (``192``) on the converter website listed above.
 
-If you can't find ``chainparams.cpp`` in your code base, try checking one of the files listed :doc:`here ../barterDEX/get-listed-barterDEX.html#search-for-the-information-on-github>`_
+If you can't find ``chainparams.cpp`` in your code base, try checking one of the files listed :ref:`here <search-info-on-github>`
 
 Please make sure an asset chain is working in Agama before making a commit. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.
