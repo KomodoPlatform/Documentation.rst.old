@@ -8,10 +8,11 @@ Here you will find more information about Agama
 
 .. toctree::
    :maxdepth: 1
-   :caption: Agama - Developer - Docs
+   :caption: Coin additions to Agama Desktop
 
    agama/add-Komodo-Assetchains-Agama-Desktop
    agama/add-Bitcoin-Compatible-coin-Agama-Desktop
+   agama/add-ERC20-token-Agama-Desktop
 
 .. toctree::
    :maxdepth: 1
