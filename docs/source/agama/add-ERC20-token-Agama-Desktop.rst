@@ -15,7 +15,7 @@ UI:
 ===
 
 * Drop a 100 x 100 px (better 200 x 200 px) logo into `KomodoPlatform/EasyDEX-GUI:react/src/assets/images/cryptologo/eth@dev <https://github.com/KomodoPlatform/EasyDEX-GUI/tree/dev/react/src/assets/images/cryptologo/eth>`_
-* Add ERC20 token name to coins translation file `KomodoPlatform/EasyDEX-GUI:react/src/translate/coins.js@dev#L183 <https://github.com/KomodoPlatform/EasyDEX-GUI/blob/dev/react/src/translate/coins.js#L183>`_, look for "CRYPTO". 
+* Add ERC20 token name to coins translation file `KomodoPlatform/EasyDEX-GUI:react/src/translate/coins.js@dev#L183 <https://github.com/KomodoPlatform/EasyDEX-GUI/blob/dev/react/src/translate/coins.js#L183>`_, look for ``CRYPTO``. 
 * Submit a PR to ``dev`` branch on each repo.
 
 How to get required contract info

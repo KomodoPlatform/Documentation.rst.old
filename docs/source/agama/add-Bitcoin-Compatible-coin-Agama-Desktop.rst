@@ -17,7 +17,7 @@ UI:
 ===
 
 * Drop a 100 x 100 px (better 200 x 200 px) logo into `KomodoPlatform/EasyDEX-GUI:react/src/assets/images/cryptologo/btc@dev <https://github.com/KomodoPlatform/EasyDEX-GUI/tree/dev/react/src/assets/images/cryptologo/btc>`_ .
-* Add your coin name to EN translation file `KomodoPlatform/EasyDEX-GUI:react/src/translate/coins.js@dev <https://github.com/KomodoPlatform/EasyDEX-GUI/blob/dev/react/src/translate/coins.js>`_, look for "CRYPTO".
+* Add your coin name to EN translation file `KomodoPlatform/EasyDEX-GUI:react/src/translate/coins.js@dev <https://github.com/KomodoPlatform/EasyDEX-GUI/blob/dev/react/src/translate/coins.js>`_, look for ``CRYPTO``.
 * Add your coin to coins helper file `KomodoPlatform/EasyDEX-GUI:react/src/util/coinHelper.js@dev#L300 <https://github.com/KomodoPlatform/EasyDEX-GUI/blob/dev/react/src/util/coinHelper.js#L300>`_.
 * Submit a PR to ``dev`` branch of each repo .
 
