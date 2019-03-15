@@ -14,9 +14,9 @@ Agama wallet library
 MeteorJS app
 ============
 
-* Drop a 60 x 60 px logo into `/public/images/cryptologo/eth@dev <>`_ 
-* Add ERC20 ticker to coins file `/imports/ui/actions/coins.js@dev#L80 <>`_
-* Add asset chain name to translation file `/imports/ui/translate/en.js@dev#L475 <>`_.
+* Drop a 60 x 60 px logo into `/public/images/cryptologo/eth@dev <https://github.com/KomodoPlatform/agama-mobile/tree/dev/public/images/cryptologo/eth>`_ 
+* Add ERC20 ticker to coins file `/imports/ui/actions/coins.js@dev#L80 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/imports/ui/actions/coins.js#L80>`_
+* Add asset chain name to translation file `/imports/ui/translate/en.js@dev#L475 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/imports/ui/translate/en.js#L475>`_.
 * Submit a PR, use dev branch!
 
 
