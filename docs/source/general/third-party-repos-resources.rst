@@ -24,7 +24,7 @@ Proof of Concept
 Turnkey Solutions to run Komodo
 ===============================
 
-* https://github.com/imylomylo/cakeshopinabox - a one-click, easy-to-deploy blockchain+services server: a cakeshop in a box
+* https://github.com/Komodo-Cakeshop/cakeshopinabox - a one-click, easy-to-deploy blockchain+services server: a cakeshop in a box
 * https://github.com/imylomylo/docker-komodod - dockerized Komodo installation 
 
 RPC clients and wrappers
