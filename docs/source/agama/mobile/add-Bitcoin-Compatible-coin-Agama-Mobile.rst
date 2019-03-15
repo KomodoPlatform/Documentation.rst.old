@@ -20,7 +20,7 @@ MeteorJS app
 * Add explorer url to whitelist `/mobile-config.js@dev#L118 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/mobile-config.js#L118>`_
 * Add coin ticker to coins file `/imports/ui/actions/coins.js@dev#L39 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/imports/ui/actions/coins.js#L39>`_
 * Add coin name to translation file `/imports/ui/translate/en.js@dev#L344 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/imports/ui/translate/en.js#L344>`_.
-*Submit a PR, use dev branch!
+* Submit a PR, use dev branch!
 
 How to get network parameters
 =============================
