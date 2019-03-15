@@ -16,6 +16,14 @@ Here you will find more information about Agama
 
 .. toctree::
    :maxdepth: 1
+   :caption: Coin additions to Agama Mobile
+
+   agama/add-Komodo-Assetchains-Agama-Mobile
+   agama/add-Bitcoin-Compatible-coin-Agama-Mobile
+   agama/add-ERC20-token-Agama-Mobile   
+
+.. toctree::
+   :maxdepth: 1
    :caption: Release Notes
    :glob:
    :reversed:
