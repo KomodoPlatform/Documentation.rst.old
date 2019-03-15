@@ -1,6 +1,6 @@
-**************************************
-Add Komodo Assetchains to Agama Mobile
-**************************************
+********************************
+Add ERC20 Tokens to Agama Mobile
+********************************
 
 The Agama mobile code comprises of two parts. Agama wallet library and MeteorJS app. This assetchain adding guide will cover both. All the files needs changing are linked. If you want to add Bitcoin compatible coins follow :doc:`this guide <add-Bitcoin-Compatible-coin-Agama-Mobile>`.
 
