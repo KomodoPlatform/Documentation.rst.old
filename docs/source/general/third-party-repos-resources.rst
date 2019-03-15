@@ -65,7 +65,9 @@ Explorers and Other tools
 Mining Software
 ===============
 
-- https://github.com/webworker01/knomp - A NOMP based stratum for the Komodo platform
+- https://github.com/blackjok3rtt/knomp - A NOMP based stratum for the Komodo platform; it works with any possible assetchain as long as the daemon itself is able to mine blocks
+- https://bitcointalk.org/index.php?topic=1707546.0 - EWBF's CUDA Zcash miner
+- https://github.com/TheComputerGenie/KMD-solo-mining - A local stratum pool for solo mining Komodo
 - https://github.com/himu007/OptiminerEquihash 
 
 Miscellaneous
