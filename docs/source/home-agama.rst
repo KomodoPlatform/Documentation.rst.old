@@ -8,7 +8,7 @@ Here you will find more information about Agama
 
 .. toctree::
    :maxdepth: 1
-   :caption: Coin additions to Agama Desktop
+   :caption: Coin Integrations to Agama Desktop
 
    agama/add-Komodo-Assetchains-Agama-Desktop
    agama/add-Bitcoin-Compatible-coin-Agama-Desktop
@@ -16,11 +16,11 @@ Here you will find more information about Agama
 
 .. toctree::
    :maxdepth: 1
-   :caption: Coin additions to Agama Mobile
+   :caption: Coin Integrations to Agama Mobile
 
-   agama/add-Komodo-Assetchains-Agama-Mobile
-   agama/add-Bitcoin-Compatible-coin-Agama-Mobile
-   agama/add-ERC20-token-Agama-Mobile   
+   agama/mobile/add-Komodo-Assetchains-Agama-Mobile
+   agama/mobile/add-Bitcoin-Compatible-coin-Agama-Mobile
+   agama/mobile/add-ERC20-token-Agama-Mobile   
 
 .. toctree::
    :maxdepth: 1
