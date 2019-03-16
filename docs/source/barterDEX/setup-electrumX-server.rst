@@ -16,8 +16,6 @@ General part
 
 	git clone https://github.com/cipig/electrumx -b kmdassets
 	cd electrumx
-	vi setup.py
-		install_requires=['aiorpcX >= 0.5.5', 'plyvel', 'pylru', 'aiohttp >= 1', 'x11_hash', 'uvloop', 'scrypt'],
 	sudo python3.6 setup.py install
 
 Coin specific part
