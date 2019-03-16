@@ -38,4 +38,4 @@ How to get network parameters
 
 If you can't find ``chainparams.cpp`` in your code base, try checking one of the files listed :ref:`here <search-info-on-github>`
 
-Please make sure the BTC compatible coin is working in Agama before making a commit. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.
+Please make sure the BTC compatible coin is working in Agama before making a PR. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.

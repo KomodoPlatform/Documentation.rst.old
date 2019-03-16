@@ -27,4 +27,4 @@ UI:
 * Add asset chain name to coins translation file `KomodoPlatform/EasyDEX-GUI:react/src/translate/coins.js@dev <https://github.com/KomodoPlatform/EasyDEX-GUI/blob/dev/react/src/translate/coins.js>`_, look for ``ASSETCHAINS``. 
 * Submit a PR to ``dev`` branch on each repo.
 
-Please make sure an assetchain is working in Agama before making a commit. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.
+Please make sure an assetchain is working in Agama before making a PR. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.

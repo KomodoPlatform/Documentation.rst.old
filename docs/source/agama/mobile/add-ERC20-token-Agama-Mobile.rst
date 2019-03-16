@@ -19,4 +19,4 @@ MeteorJS app
 * Add the ERC20 token name to translation file `/imports/ui/translate/en.js@dev#L475 <https://github.com/KomodoPlatform/agama-mobile/blob/dev/imports/ui/translate/en.js#L475>`_.
 * Submit a PR, use dev branch!
 
-Please make sure the ERC20 Token is working in Agama before making a commit. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.
+Please make sure the ERC20 Token is working in Agama before making a PR. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.

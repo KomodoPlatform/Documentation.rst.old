@@ -25,4 +25,4 @@ How to get required contract info
 * Example: https://etherscan.io/token/0x5ca9a71b1d01849c0a95490cc00559717fcf0d1d
 * After you open the page you should see number of decimals used for a contract.
 
-Please make sure a ERC20 token is working in Agama before making a commit. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.
+Please make sure an ERC20 token is working in Agama before making a PR. Pull requests containing partial information or not working assets/servers will remain unmerged until all requirements are fulfilled.
