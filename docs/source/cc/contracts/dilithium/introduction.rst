@@ -186,8 +186,7 @@ Response:
 	}
 
 
-The ``"destpubtxid"`` value here can be thought of as the Dilithium address. The handle and ``-pubkey=`` address used to registered to it are tied to this Dilithium public key, ``PKVcJ9qdMr5kFxLXTvCwqtk8Z9ukHUmCjg``. 
-.. FIXME 
+The ``"destpubtxid"`` value here can be thought of as the Dilithium address. The handle and ``-pubkey=`` address used to registered to it are tied to this Dilithium public key, ``PMrTr4qgErBbDkwxuSdfRNXkrSMoxbhb2R``.  
 
 The Dilithium keypair can later be changed. Currently, the ``-pubkey=`` address associated with the handle cannot be changed.
 
