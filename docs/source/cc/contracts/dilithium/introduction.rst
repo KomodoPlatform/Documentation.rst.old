@@ -20,6 +20,8 @@ Throughout this document, we will use the test chain, MUSIG. Replace ``MUSIG`` w
 
 Please follow :ref:`Installing Komodo Manually` , if you have not done this already. Please note, that the process is different because we are using a custom cclib module that is not typically included in komodod unless komodod is explictily built for this module. Follow the above guide, when you get to the ``build.sh`` step, do this instead: 
 
+.. FIXME 
+
 .. code-block:: shell
 
 	cd ~/komodo/src/cc
@@ -27,7 +29,6 @@ Please follow :ref:`Installing Komodo Manually` , if you have not done this alre
 	cd ..
 	make
 	../zcutil/build.sh -j$(nproc)
-
 
 
 The general flow of the Dilithium CC is this. 
@@ -185,7 +186,10 @@ Response:
 	}
 
 
-The ``"destpubtxid"`` value here can be thought of as the Dilithium address. The handle and ``-pubkey=`` address used to registered to it are tied to this Dilithium public key, ``PKVcJ9qdMr5kFxLXTvCwqtk8Z9ukHUmCjg``. The Dilithium keypair can later be changed. Currently, the ``-pubkey=`` address associated with the handle cannot be changed.
+The ``"destpubtxid"`` value here can be thought of as the Dilithium address. The handle and ``-pubkey=`` address used to registered to it are tied to this Dilithium public key, ``PKVcJ9qdMr5kFxLXTvCwqtk8Z9ukHUmCjg``. 
+.. FIXME 
+
+The Dilithium keypair can later be changed. Currently, the ``-pubkey=`` address associated with the handle cannot be changed.
 
 Now we can send some coins t->q using the ``send`` rpc command. The paramters must be ``<handle>,<destpubtxid>,<amount>``.
 
