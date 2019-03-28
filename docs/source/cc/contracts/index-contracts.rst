@@ -13,6 +13,7 @@ Index of Contracts
    oracles/introduction.rst
    gateways/introduction.rst
    channels/introduction.rst
+   dilithium/introduction.rst
 
 .. toctree::
    :maxdepth: 1
