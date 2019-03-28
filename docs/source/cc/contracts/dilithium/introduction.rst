@@ -18,9 +18,7 @@ Throughout this document, we will use the test chain, MUSIG. Replace ``MUSIG`` w
 
 	./komodod -ac_name=MUSIG -ac_supply=100000 -ac_reward=10000000 -ac_cclib=sudoku -ac_cc=2 -addnode=5.9.102.210 -addnode=195.201.20.230 -addnode=195.201.137.5
 
-Please follow :ref:`Installing Komodo Manually` , if you have not done this already. Please note, that the process is different because we are using a custom cclib module that is not typically included in komodod unless komodod is explictily built for this module. Follow the above guide, when you get to the ``build.sh`` step, do this instead: 
-
-.. FIXME 
+Please follow :ref:`Installing Komodo Manually` , if you have not done this already. Please note, that the process is different because we are using a custom cclib module that is not typically included in komodod unless komodod is explictily built for this module. Follow the above guide, once you finish the ``./zcutil/build.sh`` step, do this: 
 
 .. code-block:: shell
 
