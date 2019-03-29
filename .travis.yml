@@ -22,7 +22,7 @@ script:
     - travis-sphinx build --nowarn
     
 after_success:
-    - travis-sphinx deploy --cname docs.komodoplatform.com
+    - travis-sphinx deploy --cname aaaaaaaaaaaaaa.komodoplatform.com
 on:
     branch: master
 
